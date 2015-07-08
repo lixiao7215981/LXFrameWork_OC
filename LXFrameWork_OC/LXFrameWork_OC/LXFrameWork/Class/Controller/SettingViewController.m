@@ -15,6 +15,9 @@
     [super viewDidLoad];
     
     [self addCellDataList];
+    
+    
+    [self setBackBtn];
 }
 
 - (void)viewDidAppear:(BOOL)animated
