@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor clearColor];
     // 设置tableview
     for (UIView *view in self.view.subviews) {
         if ([view isKindOfClass:[UITableView class]] && view.tag == 0) {
@@ -105,22 +105,35 @@
     return group.footerTitle;
 }
 
-- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    BaseCellItemGroup *group = self.dataList[section];
-    return group.headView;
-}
-
-- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    BaseCellItemGroup *group = self.dataList[section];
-    return group.footerView;
-}
+//- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    BaseCellItemGroup *group = self.dataList[section];
+//    return group.headView;
+//}
+//
+//- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//    BaseCellItemGroup *group = self.dataList[section];
+//    return group.footerView;
+//}
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self.view endEditing:YES];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    UIColor *color = [UIColor whiteColor];
+    CGFloat offsetY = scrollView.contentOffset.y;
+    NSLog(@"%f",offsetY);
+    if (offsetY > 0) {
+        CGFloat alpha = 1 - ((64 - offsetY) / 64);
+        [self.navView setNavigationBarBackColor:[color colorWithAlphaComponent:alpha]];
+    } else {
+        [self.navView setNavigationBarBackColor:[color colorWithAlphaComponent:0]];
+    }
 }
 
 #pragma mark - 懒加载

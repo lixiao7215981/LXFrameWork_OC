@@ -11,6 +11,7 @@
 		4EA374B31B4D2D4700680B92 /* navigationbar_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EA374B21B4D2D4600680B92 /* navigationbar_back@2x.png */; };
 		4EA374B61B4D39DD00680B92 /* BlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA374B51B4D39DD00680B92 /* BlockButton.m */; };
 		4EA374B91B4D4D2000680B92 /* ViewTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA374B81B4D4D2000680B92 /* ViewTwoController.m */; };
+		4EA374BF1B4D5AA300680B92 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA374BE1B4D5AA300680B92 /* TestTableViewController.m */; };
 		4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB853381B4A1A3A00C35F6D /* BasePullTableViewController.m */; };
 		4EB8533E1B4A1A3A00C35F6D /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8533A1B4A1A3A00C35F6D /* BaseTableViewController.m */; };
 		4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8533C1B4A1A3A00C35F6D /* BaseViewController.m */; };
@@ -57,6 +58,8 @@
 		4EA374B51B4D39DD00680B92 /* BlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButton.m; sourceTree = "<group>"; };
 		4EA374B71B4D4D2000680B92 /* ViewTwoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTwoController.h; sourceTree = "<group>"; };
 		4EA374B81B4D4D2000680B92 /* ViewTwoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTwoController.m; sourceTree = "<group>"; };
+		4EA374BD1B4D5AA300680B92 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
+		4EA374BE1B4D5AA300680B92 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		4EB853371B4A1A3A00C35F6D /* BasePullTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePullTableViewController.h; sourceTree = "<group>"; };
 		4EB853381B4A1A3A00C35F6D /* BasePullTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePullTableViewController.m; sourceTree = "<group>"; };
 		4EB853391B4A1A3A00C35F6D /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 				4EB8BAE21B2EB19600315CEF /* ViewController.m */,
 				4EA374B71B4D4D2000680B92 /* ViewTwoController.h */,
 				4EA374B81B4D4D2000680B92 /* ViewTwoController.m */,
+				4EA374BD1B4D5AA300680B92 /* TestTableViewController.h */,
+				4EA374BE1B4D5AA300680B92 /* TestTableViewController.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				4ED167171B4A6C5500B3C618 /* UIView+Extension.m in Sources */,
 				4EB8BAE81B2EB19600315CEF /* ViewController.m in Sources */,
 				4EB853451B4A1D2600C35F6D /* BaseCellItemGroup.m in Sources */,
+				4EA374BF1B4D5AA300680B92 /* TestTableViewController.m in Sources */,
 				4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */,
 				4ED1670D1B4A4EC400B3C618 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				4ED1670B1B4A4EC400B3C618 /* ALView+PureLayout.m in Sources */,

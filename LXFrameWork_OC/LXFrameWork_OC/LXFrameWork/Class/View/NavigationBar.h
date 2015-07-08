@@ -33,4 +33,7 @@
 @property (nonatomic,strong) UIView *rightView;
 
 
+- (void) setNavigationBarBackColor:(UIColor *) color;
+
+
 @end

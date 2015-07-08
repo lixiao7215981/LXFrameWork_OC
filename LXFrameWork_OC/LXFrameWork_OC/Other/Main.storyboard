@@ -51,13 +51,24 @@
                                     <segue destination="u1K-yF-H5X" kind="show" id="mf5-er-sGY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJD-5j-X8l">
+                                <rect key="frame" x="221" y="388" width="159" height="30"/>
+                                <state key="normal" title="点击我跳转到TableView">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8ed-KQ-w17" kind="show" id="ytq-RR-iZ9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="4qr-RA-vbk" secondAttribute="centerY" id="7Bh-II-B3h"/>
                             <constraint firstAttribute="centerX" secondItem="dyE-xA-Rmd" secondAttribute="centerX" id="Csl-pJ-gmF"/>
                             <constraint firstItem="dyE-xA-Rmd" firstAttribute="top" secondItem="4qr-RA-vbk" secondAttribute="bottom" constant="20" id="VkG-zO-wpX"/>
+                            <constraint firstItem="kJD-5j-X8l" firstAttribute="top" secondItem="dyE-xA-Rmd" secondAttribute="bottom" constant="23" id="Yx4-t0-gRA"/>
                             <constraint firstAttribute="centerX" secondItem="4qr-RA-vbk" secondAttribute="centerX" id="aSB-dO-5Bu"/>
+                            <constraint firstAttribute="centerX" secondItem="kJD-5j-X8l" secondAttribute="centerX" id="czV-kj-GKf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9QE-tg-EkL"/>
@@ -65,6 +76,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-216" y="266"/>
+        </scene>
+        <!--Test Table View Controller-->
+        <scene sceneID="zy7-MM-WIx">
+            <objects>
+                <viewController id="8ed-KQ-w17" customClass="TestTableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BZw-FM-IPR"/>
+                        <viewControllerLayoutGuide type="bottom" id="tTA-za-Ny1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LoU-Jq-ObK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qSM-6W-PoH">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8ed-KQ-w17" id="8iG-nd-tV4"/>
+                                    <outlet property="delegate" destination="8ed-KQ-w17" id="FN0-FS-Mpk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qSM-6W-PoH" firstAttribute="leading" secondItem="LoU-Jq-ObK" secondAttribute="leading" id="7lT-cc-Oxp"/>
+                            <constraint firstItem="qSM-6W-PoH" firstAttribute="top" secondItem="LoU-Jq-ObK" secondAttribute="top" id="7p3-9l-M0C"/>
+                            <constraint firstAttribute="bottom" secondItem="qSM-6W-PoH" secondAttribute="bottom" id="ML9-Yt-8BX"/>
+                            <constraint firstItem="qSM-6W-PoH" firstAttribute="top" secondItem="LoU-Jq-ObK" secondAttribute="top" constant="64" id="e65-g3-ljc"/>
+                            <constraint firstAttribute="trailing" secondItem="qSM-6W-PoH" secondAttribute="trailing" id="ley-u2-v7y"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7p3-9l-M0C"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMi-TJ-yGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-108" y="969"/>
         </scene>
         <!--View Two Controller-->
         <scene sceneID="paL-p4-buv">

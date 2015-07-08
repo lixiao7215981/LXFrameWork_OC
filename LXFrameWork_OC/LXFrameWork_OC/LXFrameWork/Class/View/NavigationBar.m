@@ -16,7 +16,7 @@
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         _backView = [[UIView alloc] initWithFrame:frame];
-        _backView.backgroundColor = [UIColor whiteColor];
+        _backView.backgroundColor = [UIColor clearColor];
         [self addSubview:_backView];
         
         _btnView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, frame.size.width, frame.size.height - 20)];
@@ -68,6 +68,11 @@
     [centerView autoAlignAxisToSuperviewMarginAxis:ALAxisHorizontal];
     [centerView autoAlignAxisToSuperviewMarginAxis:ALAxisVertical];
     [centerView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ?150 :rect.size.width, 44)];
+}
+
+- (void) setNavigationBarBackColor:(UIColor *) color
+{
+    self.backView.backgroundColor = color;
 }
 
 @end
