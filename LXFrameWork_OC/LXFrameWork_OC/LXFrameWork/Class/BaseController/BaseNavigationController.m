@@ -30,8 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 拖拽手势
-//    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragging:)];
-//    [self.view addGestureRecognizer:recognizer];
+    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragging:)];
+    [self.view addGestureRecognizer:recognizer];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -47,53 +47,24 @@
     [self createScreenShot];
 }
 
-+ (void)initialize
-{
-    [super initialize];
-    // 设置导航条的背景图片,改变整个导航条的颜色
-    //    [self setUpNavagationBarColorFont];
-}
-
-#pragma  mark - 初始化设置
-
-/**
- *  设置导航条的背景图片,改变整个导航条的颜色
- */
-+ (void) setUpNavagationBarColorFont
-{
-    
-    UINavigationBar *bar = [UINavigationBar appearance];
-    [bar setBackgroundImage:[UIImage imageNamed:@"top_navigation_background"] forBarMetrics:UIBarMetricsDefault];
-    NSDictionary *dict = @{
-                           NSForegroundColorAttributeName :[UIColor whiteColor],
-                           NSFontAttributeName : [UIFont systemFontOfSize:20]
-                           };
-    [bar setTitleTextAttributes:dict];
-    [bar setTintColor:[UIColor whiteColor]];
-}
-
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if([viewController isKindOfClass:[BaseTableViewController class]]) {
-        BaseTableViewController *BsTable = (BaseTableViewController *) viewController;
-        BsTable.tableView.y += 64;
-        BsTable.tableView.height -= 64;
+        BaseTableViewController *baseTable = (BaseTableViewController *) viewController;
+        baseTable.tableView.y += 64;
+        baseTable.tableView.height -= 64;
+    }
+    if (self.viewControllers.count > 0) {
+        BaseViewController *baseView = (BaseViewController *) viewController;
+        [baseView setBackBtn];
+        viewController.hidesBottomBarWhenPushed = YES;
     }
     
-    // 因为第一次 push 的控制器是首页的控制器，不用添加两个按钮图标，所以第一次调用的时候，viewControllers为0
-//    if (self.viewControllers.count> 0) {
-//        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWitchTaget:self action:@selector(back) Image:@"navigationbar_back_withtext" highlightImage:@"navigationbar_back_black"];
-//        
-//        //        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWitchTaget:self action:@selector(more) Image:@"navigationbar_more" highlightImage:@"navigationbar_more_highlighted"];
-//        
-//        // 跳转到其他控制器，隐藏屏幕下方的TabBarController 导航条
-//        viewController.hidesBottomBarWhenPushed = YES;
-//    }
+    //产生截图
+    [self createScreenShot];
     
     [super pushViewController:viewController animated:animated];
     
-    //产生截图
-//    [self createScreenShot];
 }
 
 -(void) back
@@ -207,7 +178,7 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 
 @end

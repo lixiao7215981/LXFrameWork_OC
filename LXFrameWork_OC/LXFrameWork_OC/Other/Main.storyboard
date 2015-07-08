@@ -48,7 +48,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="u1K-yF-H5X" kind="show" id="ite-0y-c6D"/>
+                                    <segue destination="u1K-yF-H5X" kind="show" id="mf5-er-sGY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="-216" y="266"/>
         </scene>
-        <!--View Controller-->
+        <!--View Two Controller-->
         <scene sceneID="paL-p4-buv">
             <objects>
-                <viewController id="u1K-yF-H5X" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="u1K-yF-H5X" customClass="ViewTwoController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f28-sc-LpV"/>
                         <viewControllerLayoutGuide type="bottom" id="vkS-ze-1nb"/>

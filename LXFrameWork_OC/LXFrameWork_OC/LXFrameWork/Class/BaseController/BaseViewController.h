@@ -22,12 +22,12 @@ typedef UIView* (^ViewBlock)();
 - (void)setLeftView:(ViewBlock) leftViewBlock ;
 
 /**
- *  设置邮编View
+ *  设置右边View
  */
 - (void)setRightView:(ViewBlock) rightViewBlock ;
 
 /**
- *  设置左边View
+ *  设置中间View
  */
 - (void)setCenterView:(ViewBlock) centerViewBlock ;
 

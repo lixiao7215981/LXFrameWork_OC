@@ -8,45 +8,34 @@
 
 #import "BaseViewController.h"
 #import "NavigationBar.h"
+
 @implementation BaseViewController
+
+#define BaseNavBarTextFont [UIFont systemFontOfSize:16]
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self.navigationController.navigationBar removeFromSuperview];
-    
-    _navView = [[NavigationBar alloc] initWithFrame:CGRectMake(0, 0,self.view.frame.size.width, 64)];
-    [self.view insertSubview:_navView atIndex:0];
-    
-    
-    [self setLeftBtnWithImage:nil orTitle:@"左边" ClickOption:^() {
-        NSLog(@"点击了左边按钮");
-    }];
-    
-    [self setRightBtnWithImage:nil orTitle:@"右边" ClickOption:^() {
-        NSLog(@"点击了右边按钮");
-    }];
-    [self setTitle:@"我爱洗澡皮肤好好"];
-    
+    [self.view insertSubview:self.navView atIndex:0];
 }
 
 - (void)setLeftView:(ViewBlock)leftViewBlock
 {
     UIView *leftView = leftViewBlock();
-    _navView.leftView = leftView;
+    self.navView.leftView = leftView;
 }
 
 - (void)setRightView:(ViewBlock)rightViewBlock
 {
     UIView *rightView = rightViewBlock();
-    _navView.rightView = rightView;
+    self.navView.rightView = rightView;
 }
 
 - (void)setCenterView:(ViewBlock)centerViewBlock
 {
     UIView *centerView = centerViewBlock();
-    _navView.centerView = centerView;
+    self.navView.centerView = centerView;
 }
 
 - (UIButton *)setBackBtn
@@ -65,7 +54,7 @@
 {
     UILabel *centerTitle = [[UILabel alloc] init];
     centerTitle.textAlignment = NSTextAlignmentCenter;
-    centerTitle.font = [UIFont systemFontOfSize:17];
+    centerTitle.font = BaseNavBarTextFont;
     centerTitle.textColor = [UIColor blackColor];
     centerTitle.text = title;
     [self setCenterView:^UIView *{
@@ -77,6 +66,8 @@
 - (UIButton *)setLeftBtnWithImage:(UIImage *)image orTitle:(NSString *)title ClickOption:(ClickButton)clickOption
 {
     BlockButton *button = [[BlockButton alloc] init];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    button.titleLabel.font = BaseNavBarTextFont;
     __weak typeof(self) baseView  = self;
     [self setLeftView:^UIView *{
         if (image) {
@@ -95,6 +86,8 @@
 - (UIButton *)setRightBtnWithImage:(UIImage *)image orTitle:(NSString *)title ClickOption:(ClickButton) clickOption
 {
     BlockButton *button = [[BlockButton alloc] init];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    button.titleLabel.font = BaseNavBarTextFont;
     __weak typeof(self) baseView  = self;
     [self setRightView:^UIView *{
         if (image) {
@@ -122,6 +115,16 @@
     if (btn.ClickOption) {
         btn.ClickOption();
     }
+}
+
+#pragma mark - 懒加载
+- (NavigationBar *)navView
+{
+    if (!_navView) {
+        _navView = [[NavigationBar alloc] init];
+        _navView = [[NavigationBar alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 64)];
+    }
+    return _navView;
 }
 
 @end

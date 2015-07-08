@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SettingViewController.h"
 #import "UIView+Extension.h"
+#import "ViewTwoController.h"
 
 @interface ViewController ()
 
@@ -18,8 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor greenColor];
-}
+    self.view.backgroundColor = [UIColor greenColor];}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -32,5 +32,10 @@
     [self.navigationController pushViewController:setting animated:YES];
 }
 
+- (IBAction)jupmClick2:(UIButton *)sender {
+    ViewTwoController *controller = [[ViewTwoController alloc] init];
+    controller.view.frame = self.view.bounds;
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 @end

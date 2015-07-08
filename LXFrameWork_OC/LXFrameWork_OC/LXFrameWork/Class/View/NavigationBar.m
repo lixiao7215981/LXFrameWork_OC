@@ -14,12 +14,20 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _centerView = [[UIView alloc] initWithFrame:frame];
-        _centerView.backgroundColor = [UIColor lightGrayColor];
-        [self addSubview:_centerView];
+        self.backgroundColor = [UIColor clearColor];
+        _backView = [[UIView alloc] initWithFrame:frame];
+        _backView.backgroundColor = [UIColor whiteColor];
+        [self addSubview:_backView];
+        
         _btnView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, frame.size.width, frame.size.height - 20)];
         _btnView.backgroundColor = [UIColor clearColor];
         [self addSubview:_btnView];
+        
+        UIView *lineView = [UIView newAutoLayoutView];
+        lineView.backgroundColor = [UIColor lightGrayColor];
+        [self addSubview:lineView];
+        [lineView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
+        [lineView autoSetDimension:ALDimensionHeight toSize:0.5];
     }
     return self;
 }
