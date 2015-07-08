@@ -7,11 +7,14 @@
 //
 
 #import "BaseCellItem.h"
+#import <UIKit/UIKit.h>
 
 @interface BaseCenterTitleCellItem : BaseCellItem
 
 @property (nonatomic,copy) NSString *centerTitle;
 
-+(instancetype)createBaseCellItemWithIcon:(NSString *) icon AndTitle:(NSString *)title SubTitle:(NSString *) subTitle ClickOption:(cellOption) option AndCenterTitle:(NSString *) centerTitle;
+@property (nonatomic,strong) UIColor *color;
+
++(instancetype)createBaseCellItemWithIcon:(NSString *) icon AndTitle:(NSString *)title SubTitle:(NSString *) subTitle ClickOption:(cellOption) option AndCenterTitle:(NSString *) centerTitle WithColor:(UIColor *) color;
 
 @end

@@ -12,7 +12,7 @@
 
 +(instancetype)createBaseCellItemWithIcon:(NSString *)icon AndTitle:(NSString *)title SubTitle:(NSString *)subTitle ClickOption:(cellOption)option
 {
-    BaseCellItem *baseCellItem = [[BaseCellItem alloc] init];
+    BaseCellItem *baseCellItem = [[self alloc] init];
     baseCellItem.icon = icon;
     baseCellItem.title = title;
     baseCellItem.subTitle = subTitle;

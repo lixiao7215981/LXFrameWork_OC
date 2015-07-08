@@ -13,7 +13,9 @@
 + (instancetype)createBaseCellItemWithIcon:(NSString *)icon AndTitle:(NSString *)title SubTitle:(NSString *)subTitle ClickOption:(cellOption)option AndDetailClass:(Class)detailClass
 {
     BaseArrowCellItem *baseArrorwCellItem = [super createBaseCellItemWithIcon:icon AndTitle:title SubTitle:subTitle ClickOption:option];
-    baseArrorwCellItem.detailClass = detailClass;
+    if (detailClass) {
+        baseArrorwCellItem.detailClass = detailClass;
+    }
     return baseArrorwCellItem;
 }
 

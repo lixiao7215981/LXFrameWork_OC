@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "SettingViewController.h"
+#import "UIView+Extension.h"
 
 @interface ViewController ()
 
@@ -16,13 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor greenColor];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
+
+- (IBAction)jupmClick:(UIButton *)sender {
+    SettingViewController *setting = [[SettingViewController alloc] init];
+    setting.view.frame = self.view.bounds;
+    [self.navigationController pushViewController:setting animated:YES];
+}
+
 
 @end
