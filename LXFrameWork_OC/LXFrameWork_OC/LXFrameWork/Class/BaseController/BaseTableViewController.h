@@ -17,16 +17,14 @@
 
 @interface BaseTableViewController : BaseViewController
 
-/**
- *  自定义的TableView
- */
+/** 自定义的TableView */
 @property (nonatomic,strong) UITableView *tableView;
 
-/**
- *  UITableView数据源
- */
+/** UITableView数据源 */
 @property (nonatomic,strong) NSMutableArray *dataList;
 
+/** TableView 实时滚动展示NavigationBar */
+@property (nonatomic,assign) BOOL displayNav;
 
 
 @end

@@ -15,19 +15,20 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        
         _backView = [[UIView alloc] initWithFrame:frame];
-        _backView.backgroundColor = [UIColor clearColor];
+        _backView.backgroundColor = [UIColor whiteColor];
         [self addSubview:_backView];
         
         _btnView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, frame.size.width, frame.size.height - 20)];
         _btnView.backgroundColor = [UIColor clearColor];
         [self addSubview:_btnView];
         
-        UIView *lineView = [UIView newAutoLayoutView];
-        lineView.backgroundColor = [UIColor lightGrayColor];
-        [self addSubview:lineView];
-        [lineView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
-        [lineView autoSetDimension:ALDimensionHeight toSize:0.5];
+        _lineView = [UIView newAutoLayoutView];
+        _lineView.backgroundColor = [UIColor lightGrayColor];
+        [self addSubview:_lineView];
+        [_lineView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
+        [_lineView autoSetDimension:ALDimensionHeight toSize:0.5];
     }
     return self;
 }
@@ -72,7 +73,12 @@
 
 - (void) setNavigationBarBackColor:(UIColor *) color
 {
-    self.backView.backgroundColor = color;
+    _backView.backgroundColor = color;
+}
+
+- (void)setNavigationBarLineBackColor:(UIColor *)color
+{
+    _lineView.backgroundColor = color;
 }
 
 @end

@@ -16,26 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
-    // 设置tableview
+    // 设置tableview -> 从Xib中加载
     for (UIView *view in self.view.subviews) {
         if ([view isKindOfClass:[UITableView class]] && view.tag == 0) {
             self.tableView = (UITableView *)view;
             break;
         }
     }
-    
+    // xib 中未找到TableView 手动创建
     if (!self.tableView) {
         self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
         [self.view addSubview:self.tableView];
     }
+    // 设置TableView
     self.tableView.tableFooterView = [[UIView alloc] init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [self.view bringSubviewToFront:self.navView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)dealloc
+{
+    self.tableView.delegate = nil;
+    self.tableView.dataSource = nil;
 }
 
 #pragma mark - Table view data source
@@ -118,6 +121,7 @@
 //}
 
 #pragma mark - UIScrollViewDelegate
+
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self.view endEditing:YES];
@@ -125,14 +129,37 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    UIColor *color = [UIColor whiteColor];
+    if (!_displayNav) return;
+    UIColor *writeColor = [UIColor whiteColor];
+    UIColor *blockColor = [UIColor lightGrayColor];
     CGFloat offsetY = scrollView.contentOffset.y;
-    NSLog(@"%f",offsetY);
     if (offsetY > 0) {
         CGFloat alpha = 1 - ((64 - offsetY) / 64);
-        [self.navView setNavigationBarBackColor:[color colorWithAlphaComponent:alpha]];
+        [self.navView setNavigationBarBackColor:[writeColor colorWithAlphaComponent:alpha]];
+        [self.navView setNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:alpha]];
     } else {
-        [self.navView setNavigationBarBackColor:[color colorWithAlphaComponent:0]];
+        [self.navView setNavigationBarBackColor:[writeColor colorWithAlphaComponent:0]];
+        [self.navView setNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:0]];
+    }
+}
+
+
+#pragma mark - Method
+
+/**
+ *  实时滚动展示NavigationBar
+ */
+- (void)setDisplayNav:(BOOL)displayNav
+{
+    _displayNav = displayNav;
+    if (displayNav) {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        [self.navView setNavigationBarBackColor:[UIColor clearColor]];
+        [self.navView setNavigationBarLineBackColor:[UIColor clearColor]];
+    }else{
+        self.automaticallyAdjustsScrollViewInsets = YES;
+        [self.navView setNavigationBarBackColor:[UIColor whiteColor]];
+        [self.navView setNavigationBarLineBackColor:[UIColor lightGrayColor]];
     }
 }
 

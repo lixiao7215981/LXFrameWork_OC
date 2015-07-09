@@ -20,6 +20,10 @@
  */
 @property (nonatomic,strong) UIView *btnView;
 /**
+ *  NavBar 底部的线
+ */
+@property (nonatomic,strong) UIView *lineView;
+/**
  *  NavBar 左边View
  */
 @property (nonatomic,strong) UIView *leftView;
@@ -33,7 +37,14 @@
 @property (nonatomic,strong) UIView *rightView;
 
 
+#pragma mark - Method
+/**
+ *  动态设置 NavBar BackGroundColor
+ */
 - (void) setNavigationBarBackColor:(UIColor *) color;
-
+/**
+ *  动态设置 NavBar LineBackColor
+ */
+- (void) setNavigationBarLineBackColor:(UIColor *) color;
 
 @end

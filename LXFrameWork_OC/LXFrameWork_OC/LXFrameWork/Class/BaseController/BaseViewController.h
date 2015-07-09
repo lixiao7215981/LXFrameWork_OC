@@ -14,7 +14,11 @@
 
 typedef UIView* (^ViewBlock)();
 
+/***  NavBar的View */
 @property (nonatomic,strong) NavigationBar *navView;
+
+
+#pragma mark - Method
 
 /**
  *  设置左边View
@@ -38,7 +42,6 @@ typedef UIView* (^ViewBlock)();
 
 /**
  *  设置 NavigationController Title
- *
  */
 - (UILabel *) setTitle:(NSString *) title;
 

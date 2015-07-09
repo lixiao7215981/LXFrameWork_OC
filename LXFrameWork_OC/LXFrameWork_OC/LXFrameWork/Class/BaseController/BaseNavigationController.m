@@ -51,8 +51,10 @@
 {
     if([viewController isKindOfClass:[BaseTableViewController class]]) {
         BaseTableViewController *baseTable = (BaseTableViewController *) viewController;
-        baseTable.tableView.y += 64;
-        baseTable.tableView.height -= 64;
+//        baseTable.view.y += 64;
+//        baseTable.view.height -= 64;
+//        baseTable.tableView.y += 64;
+//        baseTable.tableView.height -= 64;
     }
     if (self.viewControllers.count > 0) {
         BaseViewController *baseView = (BaseViewController *) viewController;

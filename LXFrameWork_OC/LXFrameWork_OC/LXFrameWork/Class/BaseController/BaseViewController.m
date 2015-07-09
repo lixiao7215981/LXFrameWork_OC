@@ -16,8 +16,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // 添加自定义的NavigationBar
     [self.navigationController.navigationBar removeFromSuperview];
-    [self.view insertSubview:self.navView atIndex:0];
+    [self.view addSubview:self.navView];
+    [self.view bringSubviewToFront:self.navView];
 }
 
 - (void)setLeftView:(ViewBlock)leftViewBlock
