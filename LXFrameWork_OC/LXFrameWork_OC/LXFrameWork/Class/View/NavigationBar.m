@@ -15,15 +15,19 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
-        _backViewBackColor = [UIColor whiteColor];
-        _backView = [[UIView alloc] initWithFrame:frame];
-        _backView.backgroundColor = _backViewBackColor;
+        // 设置背景View
+        _backView = [UIView newAutoLayoutView];
+        _backView.backgroundColor = _backViewBackColor = [UIColor whiteColor];
         [self addSubview:_backView];
+        [_backView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
         
-        _btnView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, frame.size.width, frame.size.height - 20)];
+        // 设置按钮View
+        _btnView = [UIView newAutoLayoutView];
         _btnView.backgroundColor = [UIColor clearColor];
         [self addSubview:_btnView];
+        [_btnView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(20, 0, 0, 0)];
         
+        // 设置底部线
         _lineView = [UIView newAutoLayoutView];
         _lineView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5];
         [self addSubview:_lineView];
@@ -68,7 +72,7 @@
     [_btnView addSubview:centerView];
     [centerView autoAlignAxisToSuperviewMarginAxis:ALAxisHorizontal];
     [centerView autoAlignAxisToSuperviewMarginAxis:ALAxisVertical];
-    [centerView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ?150 :rect.size.width, 44)];
+    [centerView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ?200 :rect.size.width, 44)];
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor

@@ -18,11 +18,13 @@
     // 添加自定义的NavigationBar
     [self.navigationController.navigationBar removeFromSuperview];
     [self.view addSubview:self.navView];
+    [self.navView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
+    [self.navView autoSetDimension:ALDimensionHeight toSize:64];
     if (!self.view.backgroundColor) {
         self.view.backgroundColor = [UIColor whiteColor];
     }
     
-    //    self.navView.backgroundColor = [UIColor redColor];
+    //        self.navView.backgroundColor = [UIColor redColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -51,7 +53,7 @@
 
 - (UIButton *)setBackBtn
 {
-    UIButton *button = [[UIButton alloc] init];
+    UIButton *button = [UIButton newAutoLayoutView];
     __weak typeof(self) baseView  = self;
     [self setLeftView:^UIView *{
         [button setImage:[UIImage imageNamed:@"navigationbar_back"] forState:UIControlStateNormal];
@@ -63,7 +65,7 @@
 
 - (UILabel *)setTitle:(NSString *)title
 {
-    UILabel *centerTitle = [[UILabel alloc] init];
+    UILabel *centerTitle = [UILabel newAutoLayoutView];
     centerTitle.textAlignment = NSTextAlignmentCenter;
     centerTitle.font = BaseNavBarTextFont;
     centerTitle.textColor = [UIColor blackColor];
@@ -76,7 +78,7 @@
 
 - (UIButton *)setLeftBtnWithImage:(UIImage *)image orTitle:(NSString *)title ClickOption:(ClickButton)clickOption
 {
-    BlockButton *button = [[BlockButton alloc] init];
+    BlockButton *button = [BlockButton newAutoLayoutView];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     button.titleLabel.font = BaseNavBarTextFont;
     __weak typeof(self) baseView  = self;
@@ -132,8 +134,9 @@
 - (NavigationBar *)navView
 {
     if (!_navView) {
-        _navView = [[NavigationBar alloc] init];
-        _navView = [[NavigationBar alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 64)];
+        _navView = [NavigationBar newAutoLayoutView];
+//        _navView = [[NavigationBar alloc] init];
+//        _navView = [[NavigationBar alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 64)];
     }
     return _navView;
 }

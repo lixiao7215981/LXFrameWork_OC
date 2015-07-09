@@ -25,8 +25,9 @@
     }
     // xib 中未找到TableView 手动创建
     if (!self.tableView) {
-        self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+        self.tableView = [UITableView newAutoLayoutView];
         [self.view addSubview:self.tableView];
+        [self.tableView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     }
     // 设置TableView
     self.tableView.tableFooterView = [[UIView alloc] init];
@@ -154,6 +155,7 @@
     _displayNav = displayNav;
     if (displayNav) {
         self.automaticallyAdjustsScrollViewInsets = NO;
+        self.tableView.showsVerticalScrollIndicator = NO;
         [self.navView setScrollNavigationBarBackColor:[UIColor clearColor]];
         [self.navView setScrollNavigationBarLineBackColor:[UIColor clearColor]];
     }

@@ -12,6 +12,7 @@
 #import "CodeCreateViewController.h"
 #import "CodeCreateTableViewController.h"
 #import "CodeCreatePullTableViewController.h"
+#import "SystemDebugTableViewController.h"
 
 @interface MainViewController ()
 
@@ -22,8 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UILabel *label = [self setTitle:@"测试各种环境"];
+    UILabel *label = [self setTitle:@"测试各种环境环境环境环境"];
     label.textColor = [UIColor redColor];
+    
+    __weak typeof(self) nav = self;
+    [self setRightBtnWithImage:nil orTitle:@"调试" ClickOption:^{
+        SystemDebugTableViewController *debug = [[SystemDebugTableViewController alloc] init];
+        [nav.navigationController pushViewController:debug animated:YES];
+    }];
 }
 
 - (IBAction)XibCreateView:(UIButton *)sender {

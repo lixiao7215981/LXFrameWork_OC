@@ -1,0 +1,9 @@
+platform :ios, '7.0'
+pod 'SSZipArchive'
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'MJRefresh'
+pod 'MBProgressHUD'
+pod 'PureLayout'
+pod 'ZipArchive'
+
