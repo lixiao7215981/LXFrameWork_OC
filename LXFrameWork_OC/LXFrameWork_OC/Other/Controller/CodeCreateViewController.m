@@ -1,22 +1,25 @@
 //
-//  ViewTwoController.m
+//  CodeCreateViewController.m
 //  LXFrameWork_OC
 //
-//  Created by 李晓 on 15/7/8.
+//  Created by 李晓 on 15/7/9.
 //  Copyright (c) 2015年 LXFrameWork. All rights reserved.
 //
 
-#import "ViewTwoController.h"
+#import "CodeCreateViewController.h"
 
-@interface ViewTwoController ()
+@interface CodeCreateViewController ()
 
 @end
 
-@implementation ViewTwoController
+@implementation CodeCreateViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSLog(@"%@",self.view.backgroundColor);
+    UIView *readView = [[UIView alloc] initWithFrame:CGRectMake(0 ,0 , 100, 100)];
+    readView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:readView];
 }
 
 - (void)didReceiveMemoryWarning {

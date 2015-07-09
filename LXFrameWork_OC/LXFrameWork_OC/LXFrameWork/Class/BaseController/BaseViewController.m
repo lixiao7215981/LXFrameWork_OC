@@ -18,9 +18,17 @@
     // 添加自定义的NavigationBar
     [self.navigationController.navigationBar removeFromSuperview];
     [self.view addSubview:self.navView];
-    [self.view bringSubviewToFront:self.navView];
+    if (!self.view.backgroundColor) {
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
     
-    self.navView.backgroundColor = [UIColor whiteColor];
+    //    self.navView.backgroundColor = [UIColor redColor];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.view bringSubviewToFront:self.navView];
 }
 
 - (void)setLeftView:(ViewBlock)leftViewBlock

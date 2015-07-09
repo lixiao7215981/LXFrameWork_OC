@@ -1,13 +1,13 @@
 //
-//  ViewTwoController.h
+//  MainViewController.h
 //  LXFrameWork_OC
 //
-//  Created by 李晓 on 15/7/8.
+//  Created by 李晓 on 15/7/9.
 //  Copyright (c) 2015年 LXFrameWork. All rights reserved.
 //
 
 #import "BaseViewController.h"
 
-@interface ViewTwoController : BaseViewController
+@interface MainViewController : BaseViewController
 
 @end

@@ -47,7 +47,7 @@
 //        baseTable.tableView.y += 64;
 //        baseTable.tableView.height -= 64;
     }
-    if (self.viewControllers.count > 0) {
+    if (self.viewControllers.count > 0 && [viewController isKindOfClass:[BaseViewController class]]) {
         BaseViewController *baseView = (BaseViewController *) viewController;
         [baseView setBackBtn];
         viewController.hidesBottomBarWhenPushed = YES;
