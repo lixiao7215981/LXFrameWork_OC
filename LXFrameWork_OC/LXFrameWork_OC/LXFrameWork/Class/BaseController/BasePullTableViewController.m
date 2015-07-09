@@ -7,6 +7,7 @@
 //
 
 #import "BasePullTableViewController.h"
+#import "MJRefresh.h"
 
 @interface BasePullTableViewController()
 
@@ -16,14 +17,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    MJRefreshNormalHeader *headRefresh =  [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    MJRefreshAutoNormalFooter *footerRefresh = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.tableView.header = headRefresh;
+    self.tableView.footer = footerRefresh;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void) loadNewData
+{
+    
 }
 
-
+- (void)loadMoreData
+{
+    
+}
 
 
 @end

@@ -11,6 +11,7 @@
 #import "XibCreateTableViewController.h"
 #import "CodeCreateViewController.h"
 #import "CodeCreateTableViewController.h"
+#import "CodeCreatePullTableViewController.h"
 
 @interface MainViewController ()
 
@@ -47,5 +48,9 @@
     [self.navigationController pushViewController:createTableView animated:YES];
 }
 
+- (IBAction)CodePullTableView:(UIButton *)sender {
+    CodeCreatePullTableViewController *pullTable = [[CodeCreatePullTableViewController alloc] init];
+    [self.navigationController pushViewController:pullTable animated:YES];
+}
 
 @end
