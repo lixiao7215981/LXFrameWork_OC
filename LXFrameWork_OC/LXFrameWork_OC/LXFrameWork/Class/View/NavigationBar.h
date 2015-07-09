@@ -16,6 +16,10 @@
  */
 @property (nonatomic,strong) UIView *backView;
 /**
+ *  NavigationBar 做背景Color
+ */
+@property (nonatomic,strong) UIColor *backViewBackColor;
+/**
  *  left,right,center 所在View
  */
 @property (nonatomic,strong) UIView *btnView;
@@ -41,10 +45,10 @@
 /**
  *  动态设置 NavBar BackGroundColor
  */
-- (void) setNavigationBarBackColor:(UIColor *) color;
+- (void) setScrollNavigationBarBackColor:(UIColor *) color;
 /**
  *  动态设置 NavBar LineBackColor
  */
-- (void) setNavigationBarLineBackColor:(UIColor *) color;
+- (void) setScrollNavigationBarLineBackColor:(UIColor *) color;
 
 @end

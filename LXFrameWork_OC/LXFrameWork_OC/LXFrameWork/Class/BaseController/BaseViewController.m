@@ -7,7 +7,6 @@
 //
 
 #import "BaseViewController.h"
-#import "NavigationBar.h"
 
 @implementation BaseViewController
 
@@ -20,6 +19,8 @@
     [self.navigationController.navigationBar removeFromSuperview];
     [self.view addSubview:self.navView];
     [self.view bringSubviewToFront:self.navView];
+    
+    self.navView.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)setLeftView:(ViewBlock)leftViewBlock

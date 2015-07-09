@@ -130,16 +130,16 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (!_displayNav) return;
-    UIColor *writeColor = [UIColor whiteColor];
-    UIColor *blockColor = [UIColor lightGrayColor];
+    UIColor *NavBackColor = self.navView.backViewBackColor;
+    UIColor *blockColor = [[UIColor lightGrayColor]colorWithAlphaComponent:0.5];
     CGFloat offsetY = scrollView.contentOffset.y;
     if (offsetY > 0) {
         CGFloat alpha = 1 - ((64 - offsetY) / 64);
-        [self.navView setNavigationBarBackColor:[writeColor colorWithAlphaComponent:alpha]];
-        [self.navView setNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:alpha]];
+        [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:alpha]];
+        [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:alpha]];
     } else {
-        [self.navView setNavigationBarBackColor:[writeColor colorWithAlphaComponent:0]];
-        [self.navView setNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:0]];
+        [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:0]];
+        [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:0]];
     }
 }
 
@@ -154,12 +154,8 @@
     _displayNav = displayNav;
     if (displayNav) {
         self.automaticallyAdjustsScrollViewInsets = NO;
-        [self.navView setNavigationBarBackColor:[UIColor clearColor]];
-        [self.navView setNavigationBarLineBackColor:[UIColor clearColor]];
-    }else{
-        self.automaticallyAdjustsScrollViewInsets = YES;
-        [self.navView setNavigationBarBackColor:[UIColor whiteColor]];
-        [self.navView setNavigationBarLineBackColor:[UIColor lightGrayColor]];
+        [self.navView setScrollNavigationBarBackColor:[UIColor clearColor]];
+        [self.navView setScrollNavigationBarLineBackColor:[UIColor clearColor]];
     }
 }
 

@@ -24,7 +24,7 @@
     [self.dataList addObject:group];
     
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-    headView.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.5];
+    headView.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.3];
     self.tableView.tableHeaderView = headView;
     
     self.displayNav = YES;

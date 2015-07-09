@@ -7,10 +7,6 @@
 //
 
 #import "BaseNavigationController.h"
-#import "UIView+Extension.h"
-#import "UIBarButtonItem+Extension.h"
-#import "BaseViewController.h"
-#import "BasePullTableViewController.h"
 
 #define ratio 0.7
 
@@ -32,11 +28,6 @@
     // 拖拽手势
     UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragging:)];
     [self.view addGestureRecognizer:recognizer];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated

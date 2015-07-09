@@ -15,9 +15,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
-        
+        _backViewBackColor = [UIColor whiteColor];
         _backView = [[UIView alloc] initWithFrame:frame];
-        _backView.backgroundColor = [UIColor whiteColor];
+        _backView.backgroundColor = _backViewBackColor;
         [self addSubview:_backView];
         
         _btnView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, frame.size.width, frame.size.height - 20)];
@@ -25,7 +25,7 @@
         [self addSubview:_btnView];
         
         _lineView = [UIView newAutoLayoutView];
-        _lineView.backgroundColor = [UIColor lightGrayColor];
+        _lineView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5];
         [self addSubview:_lineView];
         [_lineView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
         [_lineView autoSetDimension:ALDimensionHeight toSize:0.5];
@@ -71,12 +71,18 @@
     [centerView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ?150 :rect.size.width, 44)];
 }
 
-- (void) setNavigationBarBackColor:(UIColor *) color
+- (void)setBackgroundColor:(UIColor *)backgroundColor
+{
+    _backViewBackColor = backgroundColor;
+    _backView.backgroundColor = backgroundColor;
+}
+
+- (void) setScrollNavigationBarBackColor:(UIColor *) color
 {
     _backView.backgroundColor = color;
 }
 
-- (void)setNavigationBarLineBackColor:(UIColor *)color
+- (void)setScrollNavigationBarLineBackColor:(UIColor *)color
 {
     _lineView.backgroundColor = color;
 }
