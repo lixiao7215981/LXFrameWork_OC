@@ -83,7 +83,10 @@
         BaseArrowCellItem *arrowItem = (BaseArrowCellItem *)item;
         if (arrowItem.detailClass) {
             UIViewController *VC = [[arrowItem.detailClass alloc] init];
-            VC.navigationItem.title = item.title;
+            if ([VC isKindOfClass:[BaseViewController class]]) {
+                BaseViewController *baseViewController = (BaseViewController *)VC;
+                [baseViewController setTitle:item.title];
+            }
             [self.navigationController pushViewController:VC animated:YES];
         }
     }

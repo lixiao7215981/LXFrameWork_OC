@@ -40,13 +40,6 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    if([viewController isKindOfClass:[BaseTableViewController class]]) {
-        BaseTableViewController *baseTable = (BaseTableViewController *) viewController;
-//        baseTable.view.y += 64;
-//        baseTable.view.height -= 64;
-//        baseTable.tableView.y += 64;
-//        baseTable.tableView.height -= 64;
-    }
     if (self.viewControllers.count > 0 && [viewController isKindOfClass:[BaseViewController class]]) {
         BaseViewController *baseView = (BaseViewController *) viewController;
         [baseView setBackBtn];
@@ -57,18 +50,6 @@
     [self createScreenShot];
     
     [super pushViewController:viewController animated:animated];
-    
-}
-
--(void) back
-{
-    // self 本身就是一个当行控制器，self.navigationController 这里就是空的
-    [self popViewControllerAnimated:YES];
-}
-
--(void) more
-{
-    [self popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark - 手势拖拽切换控制器方法
