@@ -10,6 +10,18 @@
 		4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA374B01B4CD25700680B92 /* NavigationBar.m */; };
 		4EA374B31B4D2D4700680B92 /* navigationbar_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EA374B21B4D2D4600680B92 /* navigationbar_back@2x.png */; };
 		4EA374B61B4D39DD00680B92 /* BlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA374B51B4D39DD00680B92 /* BlockButton.m */; };
+		4EA445761B4FDA9300844282 /* CALayer+SetColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445651B4FDA9300844282 /* CALayer+SetColor.m */; };
+		4EA445771B4FDA9300844282 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445661B4FDA9300844282 /* Foundation+Log.m */; };
+		4EA445781B4FDA9300844282 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445691B4FDA9300844282 /* NSDate+Extension.m */; };
+		4EA445791B4FDA9300844282 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4456B1B4FDA9300844282 /* NSString+Extension.m */; };
+		4EA4457A1B4FDA9300844282 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4456D1B4FDA9300844282 /* NSString+Hash.m */; };
+		4EA4457B1B4FDA9300844282 /* NSString+RegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4456F1B4FDA9300844282 /* NSString+RegularExpression.m */; };
+		4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445711B4FDA9300844282 /* UIImage+Extension.m */; };
+		4EA4457D1B4FDA9300844282 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445731B4FDA9300844282 /* UITextView+Extension.m */; };
+		4EA445891B4FDB8800844282 /* BSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445811B4FDB8800844282 /* BSConst.m */; };
+		4EA4458A1B4FDB8800844282 /* BaseTabBarService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445831B4FDB8800844282 /* BaseTabBarService.m */; };
+		4EA4458B1B4FDB8800844282 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445861B4FDB8800844282 /* HttpTool.m */; };
+		4EA4458C1B4FDB8800844282 /* PlistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445881B4FDB8800844282 /* PlistTool.m */; };
 		4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB853381B4A1A3A00C35F6D /* BasePullTableViewController.m */; };
 		4EB8533E1B4A1A3A00C35F6D /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8533A1B4A1A3A00C35F6D /* BaseTableViewController.m */; };
 		4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8533C1B4A1A3A00C35F6D /* BaseViewController.m */; };
@@ -61,6 +73,30 @@
 		4EA374B21B4D2D4600680B92 /* navigationbar_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_back@2x.png"; sourceTree = "<group>"; };
 		4EA374B41B4D39DD00680B92 /* BlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockButton.h; sourceTree = "<group>"; };
 		4EA374B51B4D39DD00680B92 /* BlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockButton.m; sourceTree = "<group>"; };
+		4EA445641B4FDA9300844282 /* CALayer+SetColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+SetColor.h"; sourceTree = "<group>"; };
+		4EA445651B4FDA9300844282 /* CALayer+SetColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+SetColor.m"; sourceTree = "<group>"; };
+		4EA445661B4FDA9300844282 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		4EA445671B4FDA9300844282 /* LXSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSingleton.h; sourceTree = "<group>"; };
+		4EA445681B4FDA9300844282 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		4EA445691B4FDA9300844282 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		4EA4456A1B4FDA9300844282 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		4EA4456B1B4FDA9300844282 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		4EA4456C1B4FDA9300844282 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		4EA4456D1B4FDA9300844282 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		4EA4456E1B4FDA9300844282 /* NSString+RegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RegularExpression.h"; sourceTree = "<group>"; };
+		4EA4456F1B4FDA9300844282 /* NSString+RegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegularExpression.m"; sourceTree = "<group>"; };
+		4EA445701B4FDA9300844282 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		4EA445711B4FDA9300844282 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		4EA445721B4FDA9300844282 /* UITextView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extension.h"; sourceTree = "<group>"; };
+		4EA445731B4FDA9300844282 /* UITextView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extension.m"; sourceTree = "<group>"; };
+		4EA445801B4FDB8800844282 /* BSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSConst.h; sourceTree = "<group>"; };
+		4EA445811B4FDB8800844282 /* BSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSConst.m; sourceTree = "<group>"; };
+		4EA445821B4FDB8800844282 /* BaseTabBarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarService.h; sourceTree = "<group>"; };
+		4EA445831B4FDB8800844282 /* BaseTabBarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarService.m; sourceTree = "<group>"; };
+		4EA445851B4FDB8800844282 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		4EA445861B4FDB8800844282 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
+		4EA445871B4FDB8800844282 /* PlistTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistTool.h; sourceTree = "<group>"; };
+		4EA445881B4FDB8800844282 /* PlistTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistTool.m; sourceTree = "<group>"; };
 		4EB853371B4A1A3A00C35F6D /* BasePullTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePullTableViewController.h; sourceTree = "<group>"; };
 		4EB853381B4A1A3A00C35F6D /* BasePullTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePullTableViewController.m; sourceTree = "<group>"; };
 		4EB853391B4A1A3A00C35F6D /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
@@ -135,6 +171,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EA4457F1B4FDB8800844282 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4EA445801B4FDB8800844282 /* BSConst.h */,
+				4EA445811B4FDB8800844282 /* BSConst.m */,
+				4EA445821B4FDB8800844282 /* BaseTabBarService.h */,
+				4EA445831B4FDB8800844282 /* BaseTabBarService.m */,
+			);
+			name = Other;
+			path = View/Other;
+			sourceTree = "<group>";
+		};
+		4EA445841B4FDB8800844282 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				4EA445851B4FDB8800844282 /* HttpTool.h */,
+				4EA445861B4FDB8800844282 /* HttpTool.m */,
+				4EA445871B4FDB8800844282 /* PlistTool.h */,
+				4EA445881B4FDB8800844282 /* PlistTool.m */,
+			);
+			name = Tool;
+			path = View/Tool;
+			sourceTree = "<group>";
+		};
 		4EB853361B4A1A3A00C35F6D /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +282,8 @@
 				4EB8BAE91B2EB49C00315CEF /* Category */,
 				4EB8BAEB1B2EB49C00315CEF /* Model */,
 				4EB8BAED1B2EB49C00315CEF /* View */,
+				4EA4457F1B4FDB8800844282 /* Other */,
+				4EA445841B4FDB8800844282 /* Tool */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -250,6 +312,22 @@
 		4EB8BAE91B2EB49C00315CEF /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				4EA445641B4FDA9300844282 /* CALayer+SetColor.h */,
+				4EA445651B4FDA9300844282 /* CALayer+SetColor.m */,
+				4EA445661B4FDA9300844282 /* Foundation+Log.m */,
+				4EA445671B4FDA9300844282 /* LXSingleton.h */,
+				4EA445681B4FDA9300844282 /* NSDate+Extension.h */,
+				4EA445691B4FDA9300844282 /* NSDate+Extension.m */,
+				4EA4456A1B4FDA9300844282 /* NSString+Extension.h */,
+				4EA4456B1B4FDA9300844282 /* NSString+Extension.m */,
+				4EA4456C1B4FDA9300844282 /* NSString+Hash.h */,
+				4EA4456D1B4FDA9300844282 /* NSString+Hash.m */,
+				4EA4456E1B4FDA9300844282 /* NSString+RegularExpression.h */,
+				4EA4456F1B4FDA9300844282 /* NSString+RegularExpression.m */,
+				4EA445701B4FDA9300844282 /* UIImage+Extension.h */,
+				4EA445711B4FDA9300844282 /* UIImage+Extension.m */,
+				4EA445721B4FDA9300844282 /* UITextView+Extension.h */,
+				4EA445731B4FDA9300844282 /* UITextView+Extension.m */,
 				4ED167181B4A6C8500B3C618 /* UIBarButtonItem+Extension.h */,
 				4ED167191B4A6C8500B3C618 /* UIBarButtonItem+Extension.m */,
 				4ED167151B4A6C5500B3C618 /* UIView+Extension.h */,
@@ -514,17 +592,29 @@
 				4EB8BB031B2EC59C00315CEF /* BaseSwitchCellItem.m in Sources */,
 				4EB8BB001B2EC32D00315CEF /* BaseCenterTitleCellItem.m in Sources */,
 				4EB8BAFA1B2EBF8F00315CEF /* BaseCellItem.m in Sources */,
+				4EA445891B4FDB8800844282 /* BSConst.m in Sources */,
 				4ED1671A1B4A6C8500B3C618 /* UIBarButtonItem+Extension.m in Sources */,
 				4ED167141B4A6BA000B3C618 /* BaseNavigationController.m in Sources */,
 				4EC4F74C1B4E4B0A00ACEE5F /* XibCreateTableViewController.m in Sources */,
 				4EC4F7361B4E2A4500ACEE5F /* TestTableViewController.m in Sources */,
+				4EA445781B4FDA9300844282 /* NSDate+Extension.m in Sources */,
 				4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */,
+				4EA4458A1B4FDB8800844282 /* BaseTabBarService.m in Sources */,
 				4EC4F7951B4E699600ACEE5F /* SystemDebugTableViewController.m in Sources */,
+				4EA4457A1B4FDA9300844282 /* NSString+Hash.m in Sources */,
 				4EC4F7431B4E479D00ACEE5F /* MainViewController.m in Sources */,
+				4EA4457B1B4FDA9300844282 /* NSString+RegularExpression.m in Sources */,
+				4EA4457D1B4FDA9300844282 /* UITextView+Extension.m in Sources */,
 				4EC4F7491B4E4AE900ACEE5F /* CodeCreateViewController.m in Sources */,
+				4EA445761B4FDA9300844282 /* CALayer+SetColor.m in Sources */,
 				4EB8BAFD1B2EC18B00315CEF /* BaseArrowCellItem.m in Sources */,
+				4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */,
+				4EA445771B4FDA9300844282 /* Foundation+Log.m in Sources */,
+				4EA4458C1B4FDB8800844282 /* PlistTool.m in Sources */,
 				4EC4F7921B4E553C00ACEE5F /* CodeCreatePullTableViewController.m in Sources */,
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
+				4EA445791B4FDA9300844282 /* NSString+Extension.m in Sources */,
+				4EA4458B1B4FDB8800844282 /* HttpTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
