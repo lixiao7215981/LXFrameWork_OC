@@ -18,8 +18,6 @@
 		4EA4457B1B4FDA9300844282 /* NSString+RegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4456F1B4FDA9300844282 /* NSString+RegularExpression.m */; };
 		4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445711B4FDA9300844282 /* UIImage+Extension.m */; };
 		4EA4457D1B4FDA9300844282 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445731B4FDA9300844282 /* UITextView+Extension.m */; };
-		4EA445891B4FDB8800844282 /* BSConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445811B4FDB8800844282 /* BSConst.m */; };
-		4EA4458A1B4FDB8800844282 /* BaseTabBarService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445831B4FDB8800844282 /* BaseTabBarService.m */; };
 		4EA4458B1B4FDB8800844282 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445861B4FDB8800844282 /* HttpTool.m */; };
 		4EA4458C1B4FDB8800844282 /* PlistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445881B4FDB8800844282 /* PlistTool.m */; };
 		4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB853381B4A1A3A00C35F6D /* BasePullTableViewController.m */; };
@@ -89,10 +87,6 @@
 		4EA445711B4FDA9300844282 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		4EA445721B4FDA9300844282 /* UITextView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extension.h"; sourceTree = "<group>"; };
 		4EA445731B4FDA9300844282 /* UITextView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extension.m"; sourceTree = "<group>"; };
-		4EA445801B4FDB8800844282 /* BSConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSConst.h; sourceTree = "<group>"; };
-		4EA445811B4FDB8800844282 /* BSConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSConst.m; sourceTree = "<group>"; };
-		4EA445821B4FDB8800844282 /* BaseTabBarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarService.h; sourceTree = "<group>"; };
-		4EA445831B4FDB8800844282 /* BaseTabBarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarService.m; sourceTree = "<group>"; };
 		4EA445851B4FDB8800844282 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		4EA445861B4FDB8800844282 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		4EA445871B4FDB8800844282 /* PlistTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistTool.h; sourceTree = "<group>"; };
@@ -176,10 +170,6 @@
 		4EA4457F1B4FDB8800844282 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				4EA445801B4FDB8800844282 /* BSConst.h */,
-				4EA445811B4FDB8800844282 /* BSConst.m */,
-				4EA445821B4FDB8800844282 /* BaseTabBarService.h */,
-				4EA445831B4FDB8800844282 /* BaseTabBarService.m */,
 				4EA445901B4FE18C00844282 /* ImportClass.h */,
 			);
 			name = Other;
@@ -596,14 +586,12 @@
 				4EB8BB031B2EC59C00315CEF /* BaseSwitchCellItem.m in Sources */,
 				4EB8BB001B2EC32D00315CEF /* BaseCenterTitleCellItem.m in Sources */,
 				4EB8BAFA1B2EBF8F00315CEF /* BaseCellItem.m in Sources */,
-				4EA445891B4FDB8800844282 /* BSConst.m in Sources */,
 				4ED1671A1B4A6C8500B3C618 /* UIBarButtonItem+Extension.m in Sources */,
 				4ED167141B4A6BA000B3C618 /* BaseNavigationController.m in Sources */,
 				4EC4F74C1B4E4B0A00ACEE5F /* XibCreateTableViewController.m in Sources */,
 				4EC4F7361B4E2A4500ACEE5F /* TestTableViewController.m in Sources */,
 				4EA445781B4FDA9300844282 /* NSDate+Extension.m in Sources */,
 				4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */,
-				4EA4458A1B4FDB8800844282 /* BaseTabBarService.m in Sources */,
 				4EC4F7951B4E699600ACEE5F /* SystemDebugTableViewController.m in Sources */,
 				4EA4457A1B4FDA9300844282 /* NSString+Hash.m in Sources */,
 				4EC4F7431B4E479D00ACEE5F /* MainViewController.m in Sources */,
