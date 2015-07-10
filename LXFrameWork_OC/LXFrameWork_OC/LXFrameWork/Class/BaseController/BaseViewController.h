@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "NavigationBar.h"
-#import "BlockButton.h"
+
+typedef void (^ClickButton)();
 
 @interface BaseViewController : UIViewController
 

@@ -1,0 +1,18 @@
+//
+//  PCH.pch
+//  LXFrameWork_OC
+//
+//  Created by 李晓 on 15/7/10.
+//  Copyright (c) 2015年 LXFrameWork. All rights reserved.
+//
+
+#ifndef LXFrameWork_OC_PCH_pch
+#define LXFrameWork_OC_PCH_pch
+
+#ifdef __OBJC__
+
+#import "ImportClass.h"
+
+#endif
+
+#endif

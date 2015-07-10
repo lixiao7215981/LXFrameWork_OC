@@ -7,7 +7,6 @@
 //
 
 #import "BasePullTableViewController.h"
-#import "MJRefresh.h"
 
 @interface BasePullTableViewController()
 

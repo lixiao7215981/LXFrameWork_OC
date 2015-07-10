@@ -6,11 +6,11 @@
 //  Copyright (c) 2015年 LXFrameWork. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
-@interface BlockButton : UIButton
 
 typedef void (^ClickButton)();
+
+@interface BlockButton : UIButton
 
 @property (nonatomic,copy) ClickButton ClickOption;
 

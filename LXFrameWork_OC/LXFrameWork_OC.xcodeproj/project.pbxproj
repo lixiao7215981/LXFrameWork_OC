@@ -97,6 +97,8 @@
 		4EA445861B4FDB8800844282 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		4EA445871B4FDB8800844282 /* PlistTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistTool.h; sourceTree = "<group>"; };
 		4EA445881B4FDB8800844282 /* PlistTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistTool.m; sourceTree = "<group>"; };
+		4EA445901B4FE18C00844282 /* ImportClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportClass.h; sourceTree = "<group>"; };
+		4EA445931B4FE22800844282 /* PCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCH.pch; sourceTree = "<group>"; };
 		4EB853371B4A1A3A00C35F6D /* BasePullTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePullTableViewController.h; sourceTree = "<group>"; };
 		4EB853381B4A1A3A00C35F6D /* BasePullTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePullTableViewController.m; sourceTree = "<group>"; };
 		4EB853391B4A1A3A00C35F6D /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				4EA445811B4FDB8800844282 /* BSConst.m */,
 				4EA445821B4FDB8800844282 /* BaseTabBarService.h */,
 				4EA445831B4FDB8800844282 /* BaseTabBarService.m */,
+				4EA445901B4FE18C00844282 /* ImportClass.h */,
 			);
 			name = Other;
 			path = View/Other;
@@ -419,6 +422,7 @@
 				4EC4F7331B4E2A4500ACEE5F /* Info.plist */,
 				4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */,
 				4EC4F7351B4E2A4500ACEE5F /* main.m */,
+				4EA445931B4FE22800844282 /* PCH.pch */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -722,6 +726,7 @@
 			baseConfigurationReference = 48C3068DB3CF22787447B733 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LXFrameWork_OC/Other/System/PCH.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/LXFrameWork_OC/Other/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -734,6 +739,7 @@
 			baseConfigurationReference = 3711CAE618F8FD882AFBE865 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LXFrameWork_OC/Other/System/PCH.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/LXFrameWork_OC/Other/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
