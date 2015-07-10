@@ -16,7 +16,6 @@
     return [NSArray arrayWithContentsOfFile:path];
 }
 
-
 + (NSArray *) loadTabBarCenterViewWithName:(NSString *) name
 {
     return [self loadPlistWithName:name AndType:nil];
