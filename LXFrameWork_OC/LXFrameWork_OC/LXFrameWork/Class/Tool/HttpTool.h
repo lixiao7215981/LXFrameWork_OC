@@ -6,7 +6,6 @@
 //  Copyright (c) 2015年 BookStore. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <AFNetworking.h>
 
 typedef enum {
