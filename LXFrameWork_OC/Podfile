@@ -3,7 +3,7 @@ pod 'SSZipArchive'
 pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'MJRefresh'
-pod 'MBProgressHUD'
+pod 'SVProgressHUD'
 pod 'PureLayout'
 pod 'ZipArchive'
 

@@ -17,6 +17,8 @@
 
 // 全局使用的分类引用
 #ifdef __OBJC__
+#import "ImportClass.h"
+
 #import "BaseTableViewController.h"
 #import "BaseNavigationController.h"
 #import "SystemDebugTableViewController.h"
@@ -34,8 +36,10 @@
 #import "LXSingleton.h"
 
 
-#import "MJRefresh.h"
-#import "PureLayout.h"
+#import <MJRefresh.h>
+#import <PureLayout.h>
+#import <AFNetworking.h>
+#import <SVProgressHUD.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
 #endif
