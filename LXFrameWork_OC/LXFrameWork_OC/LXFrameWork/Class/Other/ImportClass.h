@@ -17,7 +17,6 @@
 
 // 全局使用的分类引用
 #ifdef __OBJC__
-#import "ImportClass.h"
 
 #import "BaseTableViewController.h"
 #import "BaseNavigationController.h"
