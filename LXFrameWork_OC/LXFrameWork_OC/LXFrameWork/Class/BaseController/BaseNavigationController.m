@@ -7,6 +7,7 @@
 //
 
 #import "BaseNavigationController.h"
+#import "BaseViewController.h"
 
 #define ratio 0.7
 

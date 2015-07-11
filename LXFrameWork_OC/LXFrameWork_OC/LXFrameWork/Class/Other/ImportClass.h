@@ -18,6 +18,28 @@
 // 全局使用的分类引用
 #ifdef __OBJC__
 
+#import "BaseTableViewController.h"
+#import "BaseNavigationController.h"
+#import "SystemDebugTableViewController.h"
+#import "HttpTool.h"
+#import "PlistTool.h"
+#import "BlockButton.h"
+#import "AppDelegate.h"
+#import "UIView+Extension.h"
+#import "NSString+Extension.h"
+#import "UIImage+Extension.h"
+#import "UITextView+Extension.h"
+#import "NSString+Extension.h"
+#import "NSString+Hash.h"
+#import "NSString+RegularExpression.h"
+#import "LXSingleton.h"
+
+#import <MJRefresh.h>
+#import <PureLayout.h>
+#import <AFNetworking.h>
+#import <SVProgressHUD.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+
 #endif
 
 // SYSTEM
@@ -60,4 +82,8 @@
 
 // 打印frame
 #define kFrameLog(f) NSLog(@"%@",NSStringFromCGRect(f));
+
+@interface ImportClass : NSObject
+
+@end
 

@@ -5,34 +5,14 @@
 //  Created by 李晓 on 15/7/10.
 //  Copyright (c) 2015年 LXFrameWork. All rights reserved.
 //
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #ifndef LXFrameWork_OC_PCH_pch
 #define LXFrameWork_OC_PCH_pch
 
 #ifdef __OBJC__
-
-#import "BaseTableViewController.h"
-#import "BaseNavigationController.h"
-#import "SystemDebugTableViewController.h"
-#import "HttpTool.h"
-#import "PlistTool.h"
-#import "BlockButton.h"
-#import "AppDelegate.h"
-#import "UIView+Extension.h"
-#import "NSString+Extension.h"
-#import "UIImage+Extension.h"
-#import "UITextView+Extension.h"
-#import "NSString+Extension.h"
-#import "NSString+Hash.h"
-#import "NSString+RegularExpression.h"
-#import "LXSingleton.h"
-
-#import <MJRefresh.h>
-#import <PureLayout.h>
-#import <AFNetworking.h>
-#import <SVProgressHUD.h>
-#import <SDWebImage/UIImageView+WebCache.h>
-
+#import "ImportClass.h"
 
 
 #endif

@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "BlockButton.h"
 
 @implementation BaseViewController
 

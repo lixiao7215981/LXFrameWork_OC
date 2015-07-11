@@ -7,7 +7,6 @@
 //
 
 
-
 typedef void (^ClickButton)();
 
 @interface BlockButton : UIButton

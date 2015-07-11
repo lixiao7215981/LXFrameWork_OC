@@ -24,7 +24,7 @@
 
 - (void) loadNewData
 {
-    
+  
 }
 
 - (void)loadMoreData

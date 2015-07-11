@@ -6,7 +6,6 @@
 //  Copyright (c) 2015年 LXFrameWork. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 #import "BaseCellItemGroup.h"
 #import "BaseCellItem.h"
@@ -14,6 +13,7 @@
 #import "BaseCenterTitleCellItem.h"
 #import "BaseSwitchCellItem.h"
 #import "BaseTableViewCell.h"
+#import <MJRefresh.h>
 
 @interface BaseTableViewController : BaseViewController
 
