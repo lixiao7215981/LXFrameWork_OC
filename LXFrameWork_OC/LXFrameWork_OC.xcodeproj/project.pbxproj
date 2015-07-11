@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E56B7E11B51799600184403 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E01B51799600184403 /* HttpTool.m */; };
 		4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */; };
 		4E72C19C1B4FEE6400C16C1E /* PlistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1991B4FEE6400C16C1E /* PlistTool.m */; };
 		4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA374B01B4CD25700680B92 /* NavigationBar.m */; };
@@ -66,6 +67,8 @@
 		3711CAE618F8FD882AFBE865 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		48C3068DB3CF22787447B733 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		48E89BED168C7F6717F38ADC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E56B7DF1B51799600184403 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		4E56B7E01B51799600184403 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		4E72C1921B4FEE6400C16C1E /* BaseTabBarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarService.h; sourceTree = "<group>"; };
 		4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarService.m; sourceTree = "<group>"; };
 		4E72C1941B4FEE6400C16C1E /* ImportClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportClass.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 		4E72C1951B4FEE6400C16C1E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				4E56B7DF1B51799600184403 /* HttpTool.h */,
+				4E56B7E01B51799600184403 /* HttpTool.m */,
 				4E72C1981B4FEE6400C16C1E /* PlistTool.h */,
 				4E72C1991B4FEE6400C16C1E /* PlistTool.m */,
 			);
@@ -605,6 +610,7 @@
 				4EC4F7921B4E553C00ACEE5F /* CodeCreatePullTableViewController.m in Sources */,
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
 				4EA445791B4FDA9300844282 /* NSString+Extension.m in Sources */,
+				4E56B7E11B51799600184403 /* HttpTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

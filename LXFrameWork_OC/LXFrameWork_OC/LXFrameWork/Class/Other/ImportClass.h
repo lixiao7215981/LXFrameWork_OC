@@ -21,7 +21,7 @@
 #import "BaseTableViewController.h"
 #import "BaseNavigationController.h"
 #import "SystemDebugTableViewController.h"
-//#import "HttpTool.h"
+#import "HttpTool.h"
 #import "PlistTool.h"
 #import "BlockButton.h"
 #import "AppDelegate.h"
@@ -36,7 +36,6 @@
 
 #import <MJRefresh.h>
 #import <PureLayout.h>
-#import <AFNetworking.h>
 #import <SVProgressHUD.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
