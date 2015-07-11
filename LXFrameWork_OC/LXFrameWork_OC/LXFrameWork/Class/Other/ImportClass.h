@@ -21,7 +21,7 @@
 #import "BaseTableViewController.h"
 #import "BaseNavigationController.h"
 #import "SystemDebugTableViewController.h"
-#import "HttpTool.h"
+//#import "HttpTool.h"
 #import "PlistTool.h"
 #import "BlockButton.h"
 #import "AppDelegate.h"
