@@ -36,7 +36,7 @@
 
 #import <MJRefresh.h>
 #import <PureLayout.h>
-//#import <AFNetworking.h>
+#import <AFNetworking.h>
 #import <SVProgressHUD.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
