@@ -15,16 +15,6 @@
 #define NSLog(...)
 #endif
 
-#ifndef OS_OBJECT_HAVE_OBJC_SUPPORT
-#if defined(__OBJC__) && defined(__OBJC2__) && !defined(__OBJC_GC__) && !defined(COCOAPODS) && ( \
-__MAC_OS_X_VERSION_MIN_REQUIRED >= __MAC_10_8 || \
-__IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0)
-#define OS_OBJECT_HAVE_OBJC_SUPPORT 1
-#else
-#define OS_OBJECT_HAVE_OBJC_SUPPORT 0
-#endif
-#endif
-
 // 全局使用的分类引用
 #ifdef __OBJC__
 
