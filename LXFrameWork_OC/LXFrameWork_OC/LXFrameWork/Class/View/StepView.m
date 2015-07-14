@@ -28,7 +28,9 @@
     if (self) {
         self.stepHeadView = [UIView newAutoLayoutView];
         [self addSubview:self.stepHeadView];
-        [self.stepHeadView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
+        [self.stepHeadView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+        [self.stepHeadView autoPinEdgeToSuperviewEdge:ALEdgeRight];
+        [self.stepHeadView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:64];
         [self.stepHeadView autoSetDimension:ALDimensionHeight toSize:44];
         
         self.stepFootView = [UIView newAutoLayoutView];
