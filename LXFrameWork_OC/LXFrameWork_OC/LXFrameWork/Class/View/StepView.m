@@ -75,6 +75,8 @@
         _selectBtn = (UIButton *)[self viewWithTag:_page];
         _selectBtn.selected = YES;
         _tempView = [self.delegate viewForRowAtFootView:self Count:_page];
+        _tempView.translatesAutoresizingMaskIntoConstraints = NO;
+        [_tempView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
         [self.stepFootView addSubview:_tempView];
     }
 }
@@ -88,6 +90,8 @@
         _selectBtn = (UIButton *)[self viewWithTag:_page];
         _selectBtn.selected = YES;
         _tempView = [self.delegate viewForRowAtFootView:self Count:_page];
+        _tempView.translatesAutoresizingMaskIntoConstraints = NO;
+        [_tempView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
         [self.stepFootView addSubview:_tempView];
     }
 }
