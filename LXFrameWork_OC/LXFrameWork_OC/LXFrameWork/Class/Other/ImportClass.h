@@ -18,7 +18,7 @@
 // 全局使用的分类引用
 #ifdef __OBJC__
 
-#import "BaseTableViewController.h"
+#import "BasePullTableViewController.h"
 #import "PlistTool.h"
 #import "BlockButton.h"
 #import "AppDelegate.h"

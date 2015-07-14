@@ -7,8 +7,13 @@
 //
 
 #import "CodeCreateViewController.h"
+#import "StepView.h"
 
-@interface CodeCreateViewController ()
+@interface CodeCreateViewController ()<StepViewControllerDelegate>
+{
+    StepView *_stepView;
+}
+@property (nonatomic,strong) NSMutableArray *dataList;
 
 @end
 
@@ -16,25 +21,54 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",self.view.backgroundColor);
-    UIView *readView = [[UIView alloc] initWithFrame:CGRectMake(0 ,0 , 100, 100)];
-    readView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:readView];
+    
+    //    NSLog(@"%@",self.view.backgroundColor);
+    //    UIView *readView = [[UIView alloc] initWithFrame:CGRectMake(0 ,0 , 100, 100)];
+    //    readView.backgroundColor = [UIColor redColor];
+    //    [self.view addSubview:readView];
+    [self.dataList addObject:@"输入手机号"];
+    [self.dataList addObject:@"输入验证码"];
+    [self.dataList addObject:@"设置密码"];
+    
+    StepView *stepView = [StepView newAutoLayoutView];
+    [self.view addSubview:stepView];
+    [stepView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
+    [stepView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:64];
+    stepView.delegate = self;
+    _stepView = stepView;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (NSArray *) titleArrayAtHeadView:(StepView *)StepView
+{
+    return self.dataList;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UIView *)viewForRowAtFootView:(StepView *)StepView Count:(NSInteger)number
+{
+    NSLog(@"%ld",number);
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 500)];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 20, 50, 50)];
+    btn.backgroundColor = [UIColor blueColor];
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+    [view addSubview:btn];
+    view.backgroundColor = [UIColor redColor];
+    return view;
 }
-*/
+
+- (void) btnClick
+{
+    [_stepView nextPage];
+}
+
+
+
+- (NSMutableArray *)dataList
+{
+    if (!_dataList) {
+        _dataList = [[NSMutableArray alloc] init];
+    }
+    return _dataList;
+}
 
 @end
