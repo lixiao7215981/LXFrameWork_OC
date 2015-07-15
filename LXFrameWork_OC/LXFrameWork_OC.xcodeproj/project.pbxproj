@@ -13,6 +13,7 @@
 		4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F81B54FAD600184403 /* InterchangeButton.m */; };
 		4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */; };
 		4E72C19C1B4FEE6400C16C1E /* PlistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1991B4FEE6400C16C1E /* PlistTool.m */; };
+		4EA29A761B56005E0084E72D /* StepNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA29A751B56005E0084E72D /* StepNextView.m */; };
 		4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA374B01B4CD25700680B92 /* NavigationBar.m */; };
 		4EA374B31B4D2D4700680B92 /* navigationbar_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EA374B21B4D2D4600680B92 /* navigationbar_back@2x.png */; };
 		4EA374B61B4D39DD00680B92 /* BlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA374B51B4D39DD00680B92 /* BlockButton.m */; };
@@ -83,6 +84,8 @@
 		4E72C1941B4FEE6400C16C1E /* ImportClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportClass.h; sourceTree = "<group>"; };
 		4E72C1981B4FEE6400C16C1E /* PlistTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistTool.h; sourceTree = "<group>"; };
 		4E72C1991B4FEE6400C16C1E /* PlistTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistTool.m; sourceTree = "<group>"; };
+		4EA29A741B56005E0084E72D /* StepNextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepNextView.h; sourceTree = "<group>"; };
+		4EA29A751B56005E0084E72D /* StepNextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepNextView.m; sourceTree = "<group>"; };
 		4EA374AF1B4CD25700680B92 /* NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBar.h; sourceTree = "<group>"; };
 		4EA374B01B4CD25700680B92 /* NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBar.m; sourceTree = "<group>"; };
 		4EA374B21B4D2D4600680B92 /* navigationbar_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_back@2x.png"; sourceTree = "<group>"; };
@@ -382,6 +385,8 @@
 				4E56B7F51B54F5FF00184403 /* StepView.m */,
 				4E56B7F71B54FAD600184403 /* InterchangeButton.h */,
 				4E56B7F81B54FAD600184403 /* InterchangeButton.m */,
+				4EA29A741B56005E0084E72D /* StepNextView.h */,
+				4EA29A751B56005E0084E72D /* StepNextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -592,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EC4F7461B4E4AD300ACEE5F /* XibCreateViewController.m in Sources */,
+				4EA29A761B56005E0084E72D /* StepNextView.m in Sources */,
 				4EC4F73D1B4E2A4500ACEE5F /* AppDelegate.m in Sources */,
 				4ED167171B4A6C5500B3C618 /* UIView+Extension.m in Sources */,
 				4EB853451B4A1D2600C35F6D /* BaseCellItemGroup.m in Sources */,

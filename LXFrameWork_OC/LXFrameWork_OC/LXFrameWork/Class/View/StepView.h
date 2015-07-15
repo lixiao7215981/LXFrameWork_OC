@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StepNextView.h"
 @class StepView;
 
 @protocol StepViewControllerDelegate <NSObject>
@@ -21,7 +22,7 @@
 /**
  *  返回每个步骤标题所对应的View
  */
-- (UIView *) viewForRowAtFootView :(StepView *)StepView Count:(NSInteger) number;
+- (StepNextView *) viewForRowAtFootView :(StepView *)StepView Count:(NSInteger) number;
 
 @end
 

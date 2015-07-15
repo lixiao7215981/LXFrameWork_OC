@@ -57,6 +57,7 @@
 + (void)HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
     AFHTTPResponseSerializer *ser = [AFHTTPResponseSerializer serializer];
     if (serializer == JSONResponseSerializer) {
         ser = [AFJSONResponseSerializer serializer];
@@ -80,6 +81,7 @@
 {
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
     AFHTTPResponseSerializer *ser = [AFHTTPResponseSerializer serializer];
     if (serializer == JSONResponseSerializer) {
         ser = [AFJSONResponseSerializer serializer];

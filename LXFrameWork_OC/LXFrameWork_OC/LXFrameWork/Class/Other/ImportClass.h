@@ -33,6 +33,7 @@
 
 #import <PureLayout.h>
 #import <SVProgressHUD.h>
+#import <MJExtension.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
 #endif

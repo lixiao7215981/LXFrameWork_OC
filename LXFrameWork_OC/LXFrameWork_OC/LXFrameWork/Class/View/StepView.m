@@ -15,7 +15,7 @@
 @interface StepView()
 {
     UIButton *_selectBtn;
-    UIView *_tempView;
+    StepNextView *_tempView;
     NSInteger _page;
 }
 @end
@@ -75,9 +75,9 @@
         _selectBtn = (UIButton *)[self viewWithTag:_page];
         _selectBtn.selected = YES;
         _tempView = [self.delegate viewForRowAtFootView:self Count:_page];
+        [self.stepFootView addSubview:_tempView];
         _tempView.translatesAutoresizingMaskIntoConstraints = NO;
         [_tempView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
-        [self.stepFootView addSubview:_tempView];
     }
 }
 
@@ -90,9 +90,9 @@
         _selectBtn = (UIButton *)[self viewWithTag:_page];
         _selectBtn.selected = YES;
         _tempView = [self.delegate viewForRowAtFootView:self Count:_page];
+        [self.stepFootView addSubview:_tempView];
         _tempView.translatesAutoresizingMaskIntoConstraints = NO;
         [_tempView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
-        [self.stepFootView addSubview:_tempView];
     }
 }
 
