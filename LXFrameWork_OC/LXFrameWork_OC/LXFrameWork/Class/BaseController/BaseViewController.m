@@ -11,7 +11,7 @@
 
 @implementation BaseViewController
 
-#define BaseNavBarTextFont [UIFont systemFontOfSize:16]
+#define BaseNavBarTextFont [UIFont systemFontOfSize:17]
 
 - (void)viewDidLoad
 {
@@ -82,7 +82,6 @@
     BlockButton *button = [BlockButton newAutoLayoutView];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     button.titleLabel.font = BaseNavBarTextFont;
-    __weak typeof(self) baseView  = self;
     [self setLeftView:^UIView *{
         if (image) {
             [button setImage:image forState:UIControlStateNormal];
@@ -91,7 +90,6 @@
             [button setTitle:title forState:UIControlStateNormal];
         }
         button.ClickOption = clickOption;
-        [button addTarget:baseView action:@selector(clickBtnOption:) forControlEvents:UIControlEventTouchUpInside];
         return button;
     }];
     return button;
@@ -102,7 +100,6 @@
     BlockButton *button = [[BlockButton alloc] init];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     button.titleLabel.font = BaseNavBarTextFont;
-    __weak typeof(self) baseView  = self;
     [self setRightView:^UIView *{
         if (image) {
             [button setImage:image forState:UIControlStateNormal];
@@ -111,7 +108,6 @@
             [button setTitle:title forState:UIControlStateNormal];
         }
         button.ClickOption = clickOption;
-        [button addTarget:baseView action:@selector(clickBtnOption:) forControlEvents:UIControlEventTouchUpInside];
         return button;
     }];
     return button;
@@ -124,20 +120,13 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)clickBtnOption:(BlockButton *) btn
-{
-    if (btn.ClickOption) {
-        btn.ClickOption();
-    }
-}
-
 #pragma mark - 懒加载
 - (NavigationBar *)navView
 {
     if (!_navView) {
         _navView = [NavigationBar newAutoLayoutView];
-//        _navView = [[NavigationBar alloc] init];
-//        _navView = [[NavigationBar alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 64)];
+        //        _navView = [[NavigationBar alloc] init];
+        //        _navView = [[NavigationBar alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 64)];
     }
     return _navView;
 }

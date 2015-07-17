@@ -112,17 +112,34 @@
     return group.footerTitle;
 }
 
-//- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    BaseCellItemGroup *group = self.dataList[section];
-//    return group.headView;
-//}
-//
-//- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-//{
-//    BaseCellItemGroup *group = self.dataList[section];
-//    return group.footerView;
-//}
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    BaseCellItemGroup *group = self.dataList[section];
+    return group.headView;
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    BaseCellItemGroup *group = self.dataList[section];
+    return group.footerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    BaseCellItemGroup *group = self.dataList[section];
+    if (group.headView) {
+        return group.headView.height;
+    }
+    return 0;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    BaseCellItemGroup *group = self.dataList[section];
+    if (group.footerView) {
+        return group.footerView.height;
+    }
+    return 0;
+}
 
 #pragma mark - UIScrollViewDelegate
 
