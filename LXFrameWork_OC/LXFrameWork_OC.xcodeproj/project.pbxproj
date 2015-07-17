@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0663F61B58D9CC0038EA5A /* BaseIconItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0663F51B58D9CC0038EA5A /* BaseIconItem.m */; };
 		4E56B7E11B51799600184403 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E01B51799600184403 /* HttpTool.m */; };
 		4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E61B54AD3400184403 /* NSMutableURLRequest+Upload.m */; };
 		4E56B7F61B54F5FF00184403 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F51B54F5FF00184403 /* StepView.m */; };
@@ -71,6 +72,8 @@
 		3711CAE618F8FD882AFBE865 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		48C3068DB3CF22787447B733 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		48E89BED168C7F6717F38ADC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0663F41B58D9CC0038EA5A /* BaseIconItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseIconItem.h; sourceTree = "<group>"; };
+		4E0663F51B58D9CC0038EA5A /* BaseIconItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseIconItem.m; sourceTree = "<group>"; };
 		4E56B7DF1B51799600184403 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		4E56B7E01B51799600184403 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		4E56B7E51B54AD3400184403 /* NSMutableURLRequest+Upload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Upload.h"; sourceTree = "<group>"; };
@@ -368,6 +371,8 @@
 				4EB8BB021B2EC59C00315CEF /* BaseSwitchCellItem.m */,
 				4EB853431B4A1D2600C35F6D /* BaseCellItemGroup.h */,
 				4EB853441B4A1D2600C35F6D /* BaseCellItemGroup.m */,
+				4E0663F41B58D9CC0038EA5A /* BaseIconItem.h */,
+				4E0663F51B58D9CC0038EA5A /* BaseIconItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -608,6 +613,7 @@
 				4EB8533E1B4A1A3A00C35F6D /* BaseTableViewController.m in Sources */,
 				4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */,
 				4EB8BB031B2EC59C00315CEF /* BaseSwitchCellItem.m in Sources */,
+				4E0663F61B58D9CC0038EA5A /* BaseIconItem.m in Sources */,
 				4EB8BB001B2EC32D00315CEF /* BaseCenterTitleCellItem.m in Sources */,
 				4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */,
 				4E56B7F61B54F5FF00184403 /* StepView.m in Sources */,

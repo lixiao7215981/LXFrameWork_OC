@@ -57,10 +57,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BaseTableViewCell *cell = nil;
-    cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView andCellStyle:UITableViewCellStyleDefault];
     BaseCellItemGroup *group = self.dataList[indexPath.section];
     BaseCellItem *item = group.item[indexPath.row];
+    
+    BaseTableViewCell *cell = nil;
+    cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView andCellStyle:UITableViewCellStyleDefault];
+    
     cell.items = item;
     return cell;
 }
@@ -129,16 +131,31 @@
     BaseCellItemGroup *group = self.dataList[section];
     if (group.headView) {
         return group.headView.height;
+    }else if(group.headTitle){
+        return 23;
     }
     return 0;
 }
+
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     BaseCellItemGroup *group = self.dataList[section];
     if (group.footerView) {
         return group.footerView.height;
+    }else if(group.footerTitle){
+        return 23;
     }
     return 0;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BaseCellItemGroup *group = self.dataList[indexPath.section];
+    BaseCellItem *item = group.item[indexPath.row];
+    if ([item isKindOfClass:[BaseIconItem class]]) {
+        return 70;
+    }
+    return 44;
 }
 
 #pragma mark - UIScrollViewDelegate

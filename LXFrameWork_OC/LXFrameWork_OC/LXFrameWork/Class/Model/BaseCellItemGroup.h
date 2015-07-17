@@ -22,11 +22,11 @@
 /**
  *  分组的头部View
  */
-@property (nonatomic,copy) UIView *headView;
+@property (nonatomic,strong) UIView *headView;
 /**
  *  分组的尾部View
  */
-@property (nonatomic,copy) UIView *footerView;
+@property (nonatomic,strong) UIView *footerView;
 /**
  *  分组的数据
  */

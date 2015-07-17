@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseCellItem.h"
+#import "BaseIconItem.h"
 #import "BaseArrowCellItem.h"
 #import "BaseCenterTitleCellItem.h"
 #import "BaseSwitchCellItem.h"
+#import "UIView+Extension.h"
 
 @interface BaseTableViewCell : UITableViewCell
 
