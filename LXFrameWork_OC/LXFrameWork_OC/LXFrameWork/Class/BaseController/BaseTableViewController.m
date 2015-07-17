@@ -62,7 +62,6 @@
     
     BaseTableViewCell *cell = nil;
     cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView andCellStyle:UITableViewCellStyleDefault];
-    
     cell.items = item;
     return cell;
 }
@@ -131,7 +130,7 @@
     BaseCellItemGroup *group = self.dataList[section];
     if (group.headView) {
         return group.headView.height;
-    }else if(group.headTitle){
+    }else if(group.headTitle.length){
         return 23;
     }
     return 0;
@@ -142,7 +141,7 @@
     BaseCellItemGroup *group = self.dataList[section];
     if (group.footerView) {
         return group.footerView.height;
-    }else if(group.footerTitle){
+    }else if(group.footerTitle.length){
         return 23;
     }
     return 0;

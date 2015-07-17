@@ -10,7 +10,7 @@
 #import "PureLayout.h"
 
 #define centerCellTextFont 17.0f
-#define titleTextFont 15.0f
+#define titleTextFont 16.0f
 #define detailTextFont 13.0f
 #define iconSizeWH 55
 
@@ -80,23 +80,23 @@
     imageView.clipsToBounds = YES;
     [imageView autoSetDimensionsToSize:CGSizeMake(iconSizeWH, iconSizeWH)];
     [imageView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    [imageView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:20];
+    [imageView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:15];
     
     UILabel *title = [UILabel newAutoLayoutView];
     [self addSubview:title];
     title.textColor = [UIColor blackColor];
     title.font = [UIFont boldSystemFontOfSize:titleTextFont];
     title.text = _items.title;
-    [title autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    [title autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:20];
+    [title autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
+    [title autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:18];
     
     UILabel *detailTitle = [UILabel newAutoLayoutView];
     [self addSubview:detailTitle];
     detailTitle.textColor = [UIColor grayColor];
     detailTitle.font = [UIFont boldSystemFontOfSize:detailTextFont];
     detailTitle.text = _items.subTitle;
-    [detailTitle autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    [detailTitle autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:40];
+    [detailTitle autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:18];
+    [detailTitle autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:title withOffset:5];
     self.accessoryView = self.imgArrowView;
     self.selectionStyle = UITableViewCellSelectionStyleDefault;
 }

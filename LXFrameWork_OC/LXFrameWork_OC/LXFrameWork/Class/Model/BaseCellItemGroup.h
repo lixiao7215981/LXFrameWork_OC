@@ -32,7 +32,6 @@
  */
 @property (nonatomic,strong) NSArray *item;
 
-
 + (instancetype)createGroupWithHeadTitle:(NSString *) headTitle AndFooterTitle:(NSString *) footerTitle OrItem:(NSArray *) item;
 
 + (instancetype)createGroupWithHeadView:(UIView *) headView AndFootView:(UIView *) footerView OrItem:(NSArray *)item;

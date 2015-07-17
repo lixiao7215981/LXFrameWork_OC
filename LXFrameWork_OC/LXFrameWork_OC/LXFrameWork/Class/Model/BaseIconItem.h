@@ -10,4 +10,10 @@
 
 @interface BaseIconItem : BaseCellItem
 
+/**
+ *  默认TableViewSectionView
+ */
+@property (nonatomic,strong) UIView *sectionView;
+
+
 @end

@@ -10,4 +10,12 @@
 
 @implementation BaseIconItem
 
+
+- (UIView *)sectionView
+{
+    _sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 10)];
+    _sectionView.backgroundColor = kRGBColor(231, 231, 231, 1);
+    return _sectionView;
+}
+
 @end

@@ -17,20 +17,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    BaseIconItem *iconItem = [BaseIconItem createBaseCellItemWithIcon:@"bg_login" AndTitle:@"用户名" SubTitle:nil ClickOption:nil];
+    BaseIconItem *iconItem = [BaseIconItem createBaseCellItemWithIcon:@"bg_login" AndTitle:@"用户名" SubTitle:@"绑定手机:18612791505" ClickOption:nil];
     
     UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 20)];
     view1.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
     
     UIView *view2 = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 20)];
     view2.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
-//        BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadView: view1 AndFootView:view2 OrItem:@[iconItem]];
-    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadTitle:@"" AndFooterTitle:@"asdfasdf" OrItem:@[iconItem]];
+    
+        BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadView: iconItem.sectionView AndFootView:iconItem.sectionView OrItem:@[iconItem]];
+//    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadTitle:@"" AndFooterTitle:@"" OrItem:@[iconItem]];
     
     
     
-    BaseCellItem *item = [BaseCellItem createBaseCellItemWithIcon:nil AndTitle:@"1111" SubTitle:nil ClickOption:nil];
-    BaseCellItemGroup *group = [BaseCellItemGroup createGroupWithItem:@[item]];
+    BaseCellItem *item = [BaseCellItem createBaseCellItemWithIcon:nil AndTitle:@"啊但是发生地方" SubTitle:nil ClickOption:nil];
+     BaseCellItem *item2 = [BaseCellItem createBaseCellItemWithIcon:nil AndTitle:@"啊但是发生地方" SubTitle:nil ClickOption:nil];
+     BaseCellItem *item3 = [BaseCellItem createBaseCellItemWithIcon:nil AndTitle:@"啊撒旦发射点法" SubTitle:nil ClickOption:nil];
+     BaseCellItem *item4 = [BaseCellItem createBaseCellItemWithIcon:nil AndTitle:@"啊撒旦发射点法" SubTitle:nil ClickOption:nil];
+    BaseCellItemGroup *group = [BaseCellItemGroup createGroupWithItem:@[item,item2,item3,item4]];
     [self.dataList addObject:group1];
     [self.dataList addObject:group];
 }
