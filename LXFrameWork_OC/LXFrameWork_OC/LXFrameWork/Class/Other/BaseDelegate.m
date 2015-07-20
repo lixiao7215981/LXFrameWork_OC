@@ -1,19 +1,19 @@
 //
-//  AppDelegate.m
+//  BaseDelegate.m
 //  LXFrameWork_OC
 //
 //  Created by 李晓 on 15/6/15.
 //  Copyright (c) 2015年 LXFrameWork. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "BaseDelegate.h"
 #import <IQKeyboardManager.h>
 #import <SVProgressHUD.h>
-@interface AppDelegate ()
+@interface BaseDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation BaseDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

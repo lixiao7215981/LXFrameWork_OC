@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  BaseDelegate.h
 //  LXFrameWork_OC
 //
 //  Created by 李晓 on 15/6/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface BaseDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
