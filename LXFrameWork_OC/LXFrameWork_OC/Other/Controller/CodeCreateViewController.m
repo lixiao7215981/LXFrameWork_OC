@@ -9,10 +9,8 @@
 #import "CodeCreateViewController.h"
 #import "StepView.h"
 
-@interface CodeCreateViewController ()<StepViewControllerDelegate>
-{
-    StepView *_stepView;
-}
+@interface CodeCreateViewController ()
+
 @property (nonatomic,strong) NSMutableArray *dataList;
 
 @end
@@ -22,20 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //    NSLog(@"%@",self.view.backgroundColor);
-    //    UIView *readView = [[UIView alloc] initWithFrame:CGRectMake(0 ,0 , 100, 100)];
-    //    readView.backgroundColor = [UIColor redColor];
-    //    [self.view addSubview:readView];
     [self.dataList addObject:@"输入手机号"];
     [self.dataList addObject:@"输入验证码"];
     [self.dataList addObject:@"设置密码"];
     
-    StepView *stepView = [StepView newAutoLayoutView];
-    [self.view addSubview:stepView];
-    [stepView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
-    [stepView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:64];
-    stepView.delegate = self;
-    _stepView = stepView;
+    [self reloadData];
 }
 
 
@@ -58,7 +47,7 @@
 
 - (void) btnClick
 {
-    [_stepView nextPage];
+    [self toPage:5];
 }
 
 

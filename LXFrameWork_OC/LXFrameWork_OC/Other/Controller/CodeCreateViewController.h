@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
-@interface CodeCreateViewController : BaseViewController
+#import "BaseStepViewController.h"
+@interface CodeCreateViewController : BaseStepViewController
 
 @end

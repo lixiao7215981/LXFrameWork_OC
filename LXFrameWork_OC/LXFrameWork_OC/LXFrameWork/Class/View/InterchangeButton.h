@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  Image 和 Title 交换位置的Button
+ */
 @interface InterchangeButton : UIButton
 
 @end

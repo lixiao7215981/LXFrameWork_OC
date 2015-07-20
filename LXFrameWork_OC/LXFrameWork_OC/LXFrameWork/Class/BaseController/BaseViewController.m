@@ -37,6 +37,11 @@
     //        self.navView.backgroundColor = [UIColor redColor];
 }
 
+- (void)dealloc
+{
+    self.returnKeyHandler = nil;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

@@ -50,6 +50,7 @@
 		4EC4F7921B4E553C00ACEE5F /* CodeCreatePullTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7911B4E553C00ACEE5F /* CodeCreatePullTableViewController.m */; };
 		4EC4F7951B4E699600ACEE5F /* SystemDebugTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7941B4E699600ACEE5F /* SystemDebugTableViewController.m */; };
 		4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECECF981B5C9BA50036B721 /* BaseDelegate.m */; };
+		4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECECFAA1B5D0A690036B721 /* BaseStepViewController.m */; };
 		4ED167101B4A581200B3C618 /* Arrow_Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED1670E1B4A581200B3C618 /* Arrow_Left@2x.png */; };
 		4ED167111B4A581200B3C618 /* Arrow_Left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED1670F1B4A581200B3C618 /* Arrow_Left@3x.png */; };
 		4ED167141B4A6BA000B3C618 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167131B4A6BA000B3C618 /* BaseNavigationController.m */; };
@@ -156,6 +157,8 @@
 		4EC4F7941B4E699600ACEE5F /* SystemDebugTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemDebugTableViewController.m; sourceTree = "<group>"; };
 		4ECECF971B5C9BA50036B721 /* BaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDelegate.h; sourceTree = "<group>"; };
 		4ECECF981B5C9BA50036B721 /* BaseDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDelegate.m; sourceTree = "<group>"; };
+		4ECECFA91B5D0A690036B721 /* BaseStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStepViewController.h; sourceTree = "<group>"; };
+		4ECECFAA1B5D0A690036B721 /* BaseStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStepViewController.m; sourceTree = "<group>"; };
 		4ED1670E1B4A581200B3C618 /* Arrow_Left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow_Left@2x.png"; sourceTree = "<group>"; };
 		4ED1670F1B4A581200B3C618 /* Arrow_Left@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow_Left@3x.png"; sourceTree = "<group>"; };
 		4ED167121B4A6BA000B3C618 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 				4EB8533C1B4A1A3A00C35F6D /* BaseViewController.m */,
 				4ED167121B4A6BA000B3C618 /* BaseNavigationController.h */,
 				4ED167131B4A6BA000B3C618 /* BaseNavigationController.m */,
+				4ECECFA91B5D0A690036B721 /* BaseStepViewController.h */,
+				4ECECFAA1B5D0A690036B721 /* BaseStepViewController.m */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -628,6 +633,7 @@
 				4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */,
 				4EC4F7951B4E699600ACEE5F /* SystemDebugTableViewController.m in Sources */,
 				4EA4457A1B4FDA9300844282 /* NSString+Hash.m in Sources */,
+				4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */,
 				4EC4F7431B4E479D00ACEE5F /* MainViewController.m in Sources */,
 				4EA4457B1B4FDA9300844282 /* NSString+RegularExpression.m in Sources */,
 				4EA4457D1B4FDA9300844282 /* UITextView+Extension.m in Sources */,
