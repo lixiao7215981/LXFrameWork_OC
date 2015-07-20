@@ -6,4 +6,5 @@ pod 'MJRefresh'
 pod 'SVProgressHUD'
 pod 'PureLayout'
 pod 'ZipArchive'
+pod 'IQKeyboardManager'
 

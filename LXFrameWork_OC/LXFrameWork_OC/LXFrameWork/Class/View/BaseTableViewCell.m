@@ -73,32 +73,60 @@
  */
 - (void) createIconItemCell
 {
+    self.selectionStyle = UITableViewCellSelectionStyleDefault;
+    // 设置头像
     UIImageView *imageView = [UIImageView newAutoLayoutView];
     [self addSubview:imageView];
     imageView.image = [UIImage imageNamed:self.items.icon];
-    imageView.layer.cornerRadius = iconSizeWH *0.5 ;
+    imageView.layer.cornerRadius = iconSizeWH * 0.5 ;
     imageView.clipsToBounds = YES;
+    imageView.userInteractionEnabled = YES;
     [imageView autoSetDimensionsToSize:CGSizeMake(iconSizeWH, iconSizeWH)];
     [imageView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [imageView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:15];
-    
-    UILabel *title = [UILabel newAutoLayoutView];
-    [self addSubview:title];
-    title.textColor = [UIColor blackColor];
-    title.font = [UIFont boldSystemFontOfSize:titleTextFont];
-    title.text = _items.title;
-    [title autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
-    [title autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:18];
-    
-    UILabel *detailTitle = [UILabel newAutoLayoutView];
-    [self addSubview:detailTitle];
-    detailTitle.textColor = [UIColor grayColor];
-    detailTitle.font = [UIFont boldSystemFontOfSize:detailTextFont];
-    detailTitle.text = _items.subTitle;
-    [detailTitle autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:18];
-    [detailTitle autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:title withOffset:5];
-    self.accessoryView = self.imgArrowView;
-    self.selectionStyle = UITableViewCellSelectionStyleDefault;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizer:)];
+    [imageView addGestureRecognizer:tap];
+    // 如果点击Cell有操作，添加accessoryView
+    if (_items.option) {
+        self.accessoryView = self.imgArrowView;
+    }
+    // 根据 subTitle 添加detailTitlt位置
+    if (_items.subTitle.length) {
+        UILabel *title = [UILabel newAutoLayoutView];
+        [self addSubview:title];
+        title.textColor = [UIColor blackColor];
+        title.font = [UIFont boldSystemFontOfSize:titleTextFont];
+        title.text = _items.title;
+        [title autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
+        [title autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:18];
+        
+        UILabel *detailTitle = [UILabel newAutoLayoutView];
+        [self addSubview:detailTitle];
+        detailTitle.textColor = [UIColor grayColor];
+        detailTitle.font = [UIFont boldSystemFontOfSize:detailTextFont];
+        detailTitle.text = _items.subTitle;
+        [detailTitle autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:18];
+        [detailTitle autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:title withOffset:5];
+    }else{
+        UILabel *title = [UILabel newAutoLayoutView];
+        [self addSubview:title];
+        title.textColor = [UIColor blackColor];
+        title.font = [UIFont boldSystemFontOfSize:titleTextFont];
+        title.text = _items.title;
+        [title autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+        [title autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:18];
+    }
+}
+
+/**
+ *  点击了个人Cell 的icon 调用
+ */
+- (void)tapGestureRecognizer:(UITapGestureRecognizer *) top
+{
+    BaseIconItem *iconItem = (BaseIconItem *) _items;
+    if (iconItem.iconOption) {
+        iconItem.iconOption();
+    }
 }
 
 /**

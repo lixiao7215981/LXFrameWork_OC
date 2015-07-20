@@ -8,6 +8,11 @@
 
 #import "BaseViewController.h"
 #import "BlockButton.h"
+#import <IQKeyboardReturnKeyHandler.h>
+
+@interface BaseViewController ()
+@property (nonatomic, strong) IQKeyboardReturnKeyHandler *returnKeyHandler;
+@end
 
 @implementation BaseViewController
 
@@ -24,6 +29,10 @@
     if (!self.view.backgroundColor) {
         self.view.backgroundColor = [UIColor whiteColor];
     }
+    // 设置键盘toolbar样式
+    self.returnKeyHandler = [[IQKeyboardReturnKeyHandler alloc] initWithViewController:self];
+    self.returnKeyHandler.lastTextFieldReturnKeyType = UIReturnKeyDone;
+    self.returnKeyHandler.toolbarManageBehaviour = IQAutoToolbarBySubviews;
     
     //        self.navView.backgroundColor = [UIColor redColor];
 }

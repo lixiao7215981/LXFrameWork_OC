@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import <IQKeyboardManager.h>
+#import <SVProgressHUD.h>
 @interface AppDelegate ()
 
 @end
@@ -16,7 +17,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    
+    // 设置弹出框后不可操作
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    
+    // 添加键盘自动管理
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES; // 开启功能
+    manager.shouldResignOnTouchOutside = YES; //点击背景是否收起键盘
+    manager.shouldToolbarUsesTextFieldTintColor = YES; // 控制键盘上的工具条文字颜色是否用户自定义
+    manager.enableAutoToolbar = YES; //控制是否显示键盘上的工具条
     return YES;
 }
 

@@ -10,10 +10,16 @@
 
 @interface BaseIconItem : BaseCellItem
 
+typedef void(^iconOption)();
+
 /**
- *  默认TableViewSectionView
+ *  默认TableViewSection 分割View H:10px,
  */
 @property (nonatomic,strong) UIView *sectionView;
 
+/* block 保存一段代码在用到的时候执行 */
+@property (nonatomic,copy) iconOption iconOption;
+
++(instancetype)createBaseCellItemWithIcon:(NSString *) icon AndTitle:(NSString *)title SubTitle:(NSString *) subTitle ClickCellOption:(cellOption) option ClickIconOption:(iconOption)iconOption;
 
 @end
