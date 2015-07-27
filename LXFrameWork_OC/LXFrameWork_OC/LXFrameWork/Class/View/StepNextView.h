@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+
 typedef void(^Option)();
+typedef void(^OtherOption)();
+
 @interface StepNextView : UIView
 
 @property (nonatomic,strong) NSDictionary *params;
 
 @property (nonatomic, copy) Option option;
+
+@property (nonatomic, copy) OtherOption otherOption;
 
 @end

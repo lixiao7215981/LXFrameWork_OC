@@ -26,6 +26,7 @@
 - (NSString *)encodeToPercentEscapeString
 {
     NSString *outputStr = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, /* allocator */(__bridge CFStringRef)self,NULL, /* charactersToLeaveUnescaped */(CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8);
+    CFRelease((__bridge CFTypeRef)(outputStr));
     return outputStr;
 }
 
@@ -51,6 +52,15 @@
     NSDate *date = [formatter dateFromString:self];
     formatter.dateFormat = @"yyyy-MM-dd";
     return [formatter stringFromDate:date];
+}
+
+-(NSString*) getTheCorrect
+{
+    NSString *str = self;
+    while ([str hasPrefix:@"0"]){
+        str = [str substringFromIndex:1];
+    }
+    return str;
 }
 
 @end

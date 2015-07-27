@@ -19,6 +19,7 @@
 #ifdef __OBJC__
 
 #import "BasePullTableViewController.h"
+#import "BaseStepViewController.h"
 #import "PlistTool.h"
 #import "BlockButton.h"
 #import "AppDelegate.h"

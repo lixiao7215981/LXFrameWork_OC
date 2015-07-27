@@ -47,7 +47,7 @@ typedef UIView* (^ViewBlock)();
 /**
  *  设置 NavigationController Title
  */
-- (UILabel *) setTitle:(NSString *) title;
+- (UILabel *) setNavTitle:(NSString *) title;
 
 /**
  *  设置leftBtn

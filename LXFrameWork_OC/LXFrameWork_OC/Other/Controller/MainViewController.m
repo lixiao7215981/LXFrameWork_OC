@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UILabel *label = [self setTitle:@"测试各种环境环境环境环境"];
+    UILabel *label = [self setNavTitle:@"测试各种环境环境环境环境"];
     label.textColor = [UIColor redColor];
     
     __weak typeof(self) nav = self;

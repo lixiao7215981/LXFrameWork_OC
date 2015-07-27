@@ -29,6 +29,18 @@ typedef enum {
 + (void) HttpToolGetWithUrl:(NSString *) url paramesers:(NSDictionary *) parameser Serializer:(serializer) serializer Success:(void(^)(id json)) success failure:(void (^)(NSError *error)) failure;
 
 /**
+ *  利用 AFNetWorking 发送PUT请求
+ *
+ */
++ (void) HttpToolPutWithUrl:(NSString *) url paramesers:(NSDictionary *) parameser Success:(void(^)(id json)) success failure:(void (^)(NSError *error)) failure;
+
+/**
+ *  利用 AFNetWorking 发送PUT请求,设置返回值类型
+ *
+ */
++ (void) HttpToolPutWithUrl:(NSString *) url paramesers:(NSDictionary *) parameser Serializer:(serializer) serializer Success:(void(^)(id json)) success failure:(void (^)(NSError *error)) failure;
+
+/**
  *  利用 AFNetWorking 发送POST请求
  *
  */

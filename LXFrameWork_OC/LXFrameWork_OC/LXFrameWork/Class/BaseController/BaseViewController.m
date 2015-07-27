@@ -78,7 +78,7 @@
     return button;
 }
 
-- (UILabel *)setTitle:(NSString *)title
+- (UILabel *)setNavTitle:(NSString *)title
 {
     UILabel *centerTitle = [UILabel newAutoLayoutView];
     centerTitle.textAlignment = NSTextAlignmentCenter;

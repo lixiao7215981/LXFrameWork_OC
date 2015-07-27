@@ -38,6 +38,14 @@
  */
 + (NSString *)applicationDocumentsDirectory;
 
+/**
+ *  将 年月日时分秒时间转换为 仅年月日的shiian
+ */
 - (NSString *)dateStringFromtYYYYMMDD;
+
+/**
+ *  删掉字符串前边多余的 "0"
+ */
+-(NSString*) getTheCorrect;
 
 @end

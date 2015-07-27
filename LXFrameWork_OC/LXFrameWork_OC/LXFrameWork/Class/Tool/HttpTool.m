@@ -100,4 +100,40 @@
     }];
 }
 
++ (void)HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager PUT:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (error) {
+            failure(error);
+        }
+    }];
+}
+
++(void)HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
+    AFHTTPResponseSerializer *ser = [AFHTTPResponseSerializer serializer];
+    if (serializer == JSONResponseSerializer) {
+        ser = [AFJSONResponseSerializer serializer];
+    }else if (serializer == XMLParserResponseSerializer){
+        ser = [AFXMLParserResponseSerializer serializer];
+    }
+    manager.responseSerializer = ser;
+    [manager PUT:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
 @end

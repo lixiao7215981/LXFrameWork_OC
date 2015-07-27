@@ -12,7 +12,9 @@
 #define ratio 0.7
 
 @interface BaseNavigationController ()
-
+{
+    UIPanGestureRecognizer *_PanRecognizer;
+}
 /** 存放每一个控制器的全屏截图 */
 @property (nonatomic, strong) NSMutableArray *images;
 /** 最后一个显示的ViewController */
@@ -27,8 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 拖拽手势
-    UIPanGestureRecognizer *recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragging:)];
-    [self.view addGestureRecognizer:recognizer];
+    _PanRecognizer= [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragging:)];
+    [self.view addGestureRecognizer:_PanRecognizer];
 }
 
 - (void)viewDidAppear:(BOOL)animated
