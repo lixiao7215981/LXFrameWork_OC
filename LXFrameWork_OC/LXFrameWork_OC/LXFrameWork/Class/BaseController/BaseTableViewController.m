@@ -61,7 +61,11 @@
     BaseCellItem *item = group.item[indexPath.row];
     
     BaseTableViewCell *cell = nil;
-    cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView andCellStyle:UITableViewCellStyleDefault];
+    if ([item isKindOfClass:[BaseArrowCellItem class]]) {
+        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView andCellStyle:UITableViewCellStyleValue1];
+    }else{
+        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView andCellStyle:UITableViewCellStyleDefault];
+    }
     cell.items = item;
     return cell;
 }

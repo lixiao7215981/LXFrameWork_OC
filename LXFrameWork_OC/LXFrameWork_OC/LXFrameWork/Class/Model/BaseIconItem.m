@@ -19,7 +19,7 @@
     return _sectionView;
 }
 
-+ (instancetype)createBaseCellItemWithIcon:(NSString *)icon AndTitle:(NSString *)title SubTitle:(NSString *)subTitle ClickCellOption:(cellOption)option ClickIconOption:(cellOption)iconOption
++ (instancetype)createBaseCellItemWithIconNameOrUrl:(NSString *)icon AndTitle:(NSString *)title SubTitle:(NSString *)subTitle ClickCellOption:(cellOption)option ClickIconOption:(cellOption)iconOption
 {
     BaseIconItem *iconCell = [super createBaseCellItemWithIcon:icon AndTitle:title SubTitle:subTitle ClickOption:option];
     iconCell.iconOption = iconOption;

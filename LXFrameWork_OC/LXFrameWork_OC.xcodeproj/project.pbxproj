@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E0663F61B58D9CC0038EA5A /* BaseIconItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0663F51B58D9CC0038EA5A /* BaseIconItem.m */; };
+		4E0A464A1B6F8735007C94C8 /* user_defaultavatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A46491B6F8735007C94C8 /* user_defaultavatar@2x.png */; };
 		4E56B7E11B51799600184403 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E01B51799600184403 /* HttpTool.m */; };
 		4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E61B54AD3400184403 /* NSMutableURLRequest+Upload.m */; };
 		4E56B7F61B54F5FF00184403 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F51B54F5FF00184403 /* StepView.m */; };
@@ -75,6 +76,7 @@
 		48E89BED168C7F6717F38ADC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0663F41B58D9CC0038EA5A /* BaseIconItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseIconItem.h; sourceTree = "<group>"; };
 		4E0663F51B58D9CC0038EA5A /* BaseIconItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseIconItem.m; sourceTree = "<group>"; };
+		4E0A46491B6F8735007C94C8 /* user_defaultavatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_defaultavatar@2x.png"; sourceTree = "<group>"; };
 		4E56B7DF1B51799600184403 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		4E56B7E01B51799600184403 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		4E56B7E51B54AD3400184403 /* NSMutableURLRequest+Upload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Upload.h"; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 		4EB8BAD91B2EB19600315CEF /* source */ = {
 			isa = PBXGroup;
 			children = (
+				4E0A46491B6F8735007C94C8 /* user_defaultavatar@2x.png */,
 				4EA374B21B4D2D4600680B92 /* navigationbar_back@2x.png */,
 				4ED1670E1B4A581200B3C618 /* Arrow_Left@2x.png */,
 				4ED1670F1B4A581200B3C618 /* Arrow_Left@3x.png */,
@@ -549,6 +552,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0A464A1B6F8735007C94C8 /* user_defaultavatar@2x.png in Resources */,
 				4EA374B31B4D2D4700680B92 /* navigationbar_back@2x.png in Resources */,
 				4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */,
 				4EC4F73E1B4E2A4500ACEE5F /* Info.plist in Resources */,

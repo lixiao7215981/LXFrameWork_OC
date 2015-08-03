@@ -8,6 +8,7 @@
 
 #import "BaseTableViewCell.h"
 #import "PureLayout.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #define centerCellTextFont 17.0f
 #define titleTextFont 16.0f
@@ -77,7 +78,12 @@
     // 设置头像
     UIImageView *imageView = [UIImageView newAutoLayoutView];
     [self addSubview:imageView];
-    imageView.image = [UIImage imageNamed:self.items.icon];
+    UIImage *image = [UIImage imageNamed:self.items.icon];
+    if (image) {
+        imageView.image = image;
+    }else{
+        [imageView sd_setImageWithURL:[NSURL URLWithString:self.items.icon] placeholderImage:[UIImage imageNamed:@"user_defaultavatar"]];
+    }
     imageView.layer.cornerRadius = iconSizeWH * 0.5 ;
     imageView.clipsToBounds = YES;
     imageView.userInteractionEnabled = YES;

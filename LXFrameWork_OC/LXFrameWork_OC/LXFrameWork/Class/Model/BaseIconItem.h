@@ -20,6 +20,6 @@ typedef void(^iconOption)();
 /* block 保存一段代码在用到的时候执行 */
 @property (nonatomic,copy) iconOption iconOption;
 
-+(instancetype)createBaseCellItemWithIcon:(NSString *) icon AndTitle:(NSString *)title SubTitle:(NSString *) subTitle ClickCellOption:(cellOption) option ClickIconOption:(iconOption)iconOption;
++(instancetype)createBaseCellItemWithIconNameOrUrl:(NSString *) icon AndTitle:(NSString *)title SubTitle:(NSString *) subTitle ClickCellOption:(cellOption) option ClickIconOption:(iconOption)iconOption;
 
 @end

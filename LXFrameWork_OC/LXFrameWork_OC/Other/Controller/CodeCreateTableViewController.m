@@ -19,13 +19,13 @@
     
     //    BaseIconItem *iconItem = [BaseIconItem createBaseCellItemWithIcon:@"bg_login" AndTitle:@"用户名" SubTitle:@"绑定手机:18612791505" ClickOption:nil];
     
-    BaseIconItem *iconItem = [BaseIconItem createBaseCellItemWithIcon:@"bg_login" AndTitle:@"用户名" SubTitle:@"绑定手机:18612791505" ClickCellOption:^{
+    BaseIconItem *iconItem = [BaseIconItem createBaseCellItemWithIconNameOrUrl:@"bg_login" AndTitle:@"用户名" SubTitle:@"绑定手机:18612791505" ClickCellOption:^{
         NSLog(@"点击了Cell");
     } ClickIconOption:^{
         NSLog(@"点击了Icon");
     }];
     
-    BaseIconItem *iconItem2 = [BaseIconItem createBaseCellItemWithIcon:@"bg_login" AndTitle:@"用户名" SubTitle:nil ClickCellOption:nil ClickIconOption:^{
+    BaseIconItem *iconItem2 = [BaseIconItem createBaseCellItemWithIconNameOrUrl:@"bg_login" AndTitle:@"用户名" SubTitle:nil ClickCellOption:nil ClickIconOption:^{
         NSLog(@"点击了Icon");
     }];
     
