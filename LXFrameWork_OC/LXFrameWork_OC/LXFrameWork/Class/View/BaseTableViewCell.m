@@ -77,6 +77,8 @@
     self.selectionStyle = UITableViewCellSelectionStyleDefault;
     // 设置头像
     UIImageView *imageView = [UIImageView newAutoLayoutView];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.clipsToBounds = YES;
     [self addSubview:imageView];
     UIImage *image = [UIImage imageNamed:self.items.icon];
     if (image) {
