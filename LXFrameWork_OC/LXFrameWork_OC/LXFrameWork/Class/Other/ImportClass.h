@@ -21,7 +21,6 @@
 #import "NSString+Hash.h"
 #import "UIView+Extension.h"
 #import "NSString+Extension.h"
-#import "UIWindow+Extension.h"
 #import "UIImage+Extension.h"
 #import "UITextView+Extension.h"
 #import "NSString+Extension.h"
@@ -34,7 +33,6 @@
 #import "BlockButton.h"
 #import "TimeButton.h"
 #import "AppDelegate.h"
-
 #import "LXSingleton.h"
 
 #import <PureLayout.h>

@@ -21,8 +21,9 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - IQKeyboardManager (3.2.4)
-  - MJRefresh (2.3.1)
+  - MJRefresh (2.3.2)
   - PureLayout (2.0.6)
+  - Reachability (3.2)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - MJRefresh
   - PureLayout
+  - Reachability
   - SDWebImage
   - SSZipArchive
   - SVProgressHUD
@@ -43,8 +45,9 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
-  MJRefresh: fa22d5d753aaceb4e76232ce264cb2dca90b323f
+  MJRefresh: 0f6f5e8387970607c26080b44058b229a23065d7
   PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SSZipArchive: 11801759495fa4efb7512ef652eb0042d68305d7
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1

@@ -58,13 +58,19 @@
 #define COCOAPODS_POD_AVAILABLE_MJRefresh
 #define COCOAPODS_VERSION_MAJOR_MJRefresh 2
 #define COCOAPODS_VERSION_MINOR_MJRefresh 3
-#define COCOAPODS_VERSION_PATCH_MJRefresh 1
+#define COCOAPODS_VERSION_PATCH_MJRefresh 2
 
 // PureLayout
 #define COCOAPODS_POD_AVAILABLE_PureLayout
 #define COCOAPODS_VERSION_MAJOR_PureLayout 2
 #define COCOAPODS_VERSION_MINOR_PureLayout 0
 #define COCOAPODS_VERSION_PATCH_PureLayout 6
+
+// Reachability
+#define COCOAPODS_POD_AVAILABLE_Reachability
+#define COCOAPODS_VERSION_MAJOR_Reachability 3
+#define COCOAPODS_VERSION_MINOR_Reachability 2
+#define COCOAPODS_VERSION_PATCH_Reachability 0
 
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage

@@ -7,4 +7,5 @@ pod 'SVProgressHUD'
 pod 'PureLayout'
 pod 'ZipArchive'
 pod 'IQKeyboardManager'
+pod 'Reachability'
 

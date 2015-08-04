@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BlockButton.h"
 @interface TimeButton : BlockButton
 
 /**
