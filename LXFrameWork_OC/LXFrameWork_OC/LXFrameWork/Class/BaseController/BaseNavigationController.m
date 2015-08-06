@@ -28,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 禁用系统自带的拖拽手势
+    self.interactivePopGestureRecognizer.enabled = NO;
     // 拖拽手势
     _PanRecognizer= [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragging:)];
     [self.view addGestureRecognizer:_PanRecognizer];
@@ -38,9 +40,10 @@
     [super viewDidAppear:animated];
     if (self.images.count > 0) return;
     // 产生截图
-    [self createScreenShot];
+    //    [self createScreenShot];
 }
 
+#pragma mark - 拦截 push pop 方法
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     if (self.viewControllers.count > 0 && [viewController isKindOfClass:[BaseViewController class]]) {
@@ -51,12 +54,77 @@
     
     //产生截图
     [self createScreenShot];
-    
     [super pushViewController:viewController animated:animated];
+}
+
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated
+{
+    [self.images removeLastObject];
+    return [super popViewControllerAnimated:animated];
 }
 
 #pragma mark - 手势拖拽切换控制器方法
 
+/**
+ *  拖拽的时候调用
+ */
+- (void)dragging:(UIPanGestureRecognizer *)recognizer
+{
+    // 如果只有1个子控制器,停止拖拽
+    if (self.viewControllers.count <= 1) return;
+    
+    // 在x方向上移动的距离
+    CGFloat tx = [recognizer translationInView:self.view].x;
+    if (tx < 0) return;
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled) {
+        // 决定pop还是还原
+        if (self.view.x >= self.view.width * 0.3) {
+            [UIView animateWithDuration:0.25 animations:^{
+                self.view.transform = CGAffineTransformMakeTranslation(self.view.width, 0);
+                self.lastVcView.x = 0;
+            } completion:^(BOOL finished) {
+                [self popViewControllerAnimated:NO];
+                [self.lastVcView removeFromSuperview];
+                [self.cover removeFromSuperview];
+                self.view.transform = CGAffineTransformIdentity;
+                self.lastVcView.transform = CGAffineTransformIdentity;
+                self.lastVcView.x = (- self.view.width) * ratio;
+            }];
+        } else {
+            [UIView animateWithDuration:0.25 animations:^{
+                self.view.transform = CGAffineTransformIdentity;
+            }completion:^(BOOL finished) {
+                self.lastVcView.transform = CGAffineTransformIdentity;
+            } ];
+        }
+        
+    } else {
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        // 添加截图到最后面
+        self.lastVcView.image = self.images[self.images.count - 1];
+        [window insertSubview:self.lastVcView atIndex:0];
+        [window insertSubview:self.cover aboveSubview:self.lastVcView];
+        // 移动view
+        self.view.transform = CGAffineTransformMakeTranslation(tx, 0);
+        if (self.lastVcView.x >=0) return;
+        self.lastVcView.transform = CGAffineTransformIdentity;
+        self.lastVcView.transform = CGAffineTransformMakeTranslation(tx *0.7  , 0);
+    }
+}
+
+/**
+ *  产生截图
+ */
+- (void)createScreenShot
+{
+    UIGraphicsBeginImageContextWithOptions(self.view.size, YES, 0.0);
+    [self.view.window.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    [self.images addObject:image];
+}
+
+#pragma mark - 懒加载等方法
 - (NSMutableArray *)images
 {
     if (!_images) {
@@ -89,66 +157,6 @@
         self.cover = cover;
     }
     return _cover;
-}
-
-/**
- *  拖拽的时候调用
- */
-- (void)dragging:(UIPanGestureRecognizer *)recognizer
-{
-    // 如果只有1个子控制器,停止拖拽
-    if (self.viewControllers.count <= 1) return;
-    
-    // 在x方向上移动的距离
-    CGFloat tx = [recognizer translationInView:self.view].x;
-    if (tx < 0) return;
-    
-    if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled) {
-        // 决定pop还是还原
-        if (self.view.x >= self.view.width * 0.3) {
-            [UIView animateWithDuration:0.25 animations:^{
-                self.view.transform = CGAffineTransformMakeTranslation(self.view.width, 0);
-                self.lastVcView.x = 0;
-            } completion:^(BOOL finished) {
-                [self popViewControllerAnimated:NO];
-                [self.lastVcView removeFromSuperview];
-                [self.cover removeFromSuperview];
-                self.view.transform = CGAffineTransformIdentity;
-                self.lastVcView.transform = CGAffineTransformIdentity;
-                self.lastVcView.x = (- self.view.width) * ratio;
-                [self.images removeLastObject];
-            }];
-        } else {
-            [UIView animateWithDuration:0.25 animations:^{
-                self.view.transform = CGAffineTransformIdentity;
-            }completion:^(BOOL finished) {
-                self.lastVcView.transform = CGAffineTransformIdentity;
-            } ];
-        }
-        
-    } else {
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        // 添加截图到最后面
-        self.lastVcView.image = self.images[self.images.count - 2];
-        [window insertSubview:self.lastVcView atIndex:0];
-        [window insertSubview:self.cover aboveSubview:self.lastVcView];
-        // 移动view
-        self.view.transform = CGAffineTransformMakeTranslation(tx, 0);
-        if (self.lastVcView.x >=0) return;
-        self.lastVcView.transform = CGAffineTransformIdentity;
-        self.lastVcView.transform = CGAffineTransformMakeTranslation(tx *0.7  , 0);
-    }
-}
-
-/**
- *  产生截图
- */
-- (void)createScreenShot
-{
-    UIGraphicsBeginImageContextWithOptions(self.view.size, YES, 0.0);
-    [self.view.window.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    [self.images addObject:image];
 }
 
 #pragma amrk - 设置状态栏颜色
