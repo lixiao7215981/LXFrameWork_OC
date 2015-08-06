@@ -13,6 +13,8 @@
 
 #ifdef __OBJC__
 
+#import <SVProgressHUD.h>
+
 //#import "ImportClass.h"
 
 

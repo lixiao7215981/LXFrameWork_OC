@@ -40,17 +40,10 @@
 		4EB8BAFD1B2EC18B00315CEF /* BaseArrowCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8BAFC1B2EC18B00315CEF /* BaseArrowCellItem.m */; };
 		4EB8BB001B2EC32D00315CEF /* BaseCenterTitleCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8BAFF1B2EC32D00315CEF /* BaseCenterTitleCellItem.m */; };
 		4EB8BB031B2EC59C00315CEF /* BaseSwitchCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8BB021B2EC59C00315CEF /* BaseSwitchCellItem.m */; };
-		4EC4F7361B4E2A4500ACEE5F /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F71E1B4E2A4500ACEE5F /* TestTableViewController.m */; };
 		4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */; };
 		4EC4F73E1B4E2A4500ACEE5F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F7331B4E2A4500ACEE5F /* Info.plist */; };
 		4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */; };
 		4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7351B4E2A4500ACEE5F /* main.m */; };
-		4EC4F7431B4E479D00ACEE5F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7421B4E479D00ACEE5F /* MainViewController.m */; };
-		4EC4F7461B4E4AD300ACEE5F /* XibCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7451B4E4AD300ACEE5F /* XibCreateViewController.m */; };
-		4EC4F7491B4E4AE900ACEE5F /* CodeCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7481B4E4AE900ACEE5F /* CodeCreateViewController.m */; };
-		4EC4F74C1B4E4B0A00ACEE5F /* XibCreateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F74B1B4E4B0A00ACEE5F /* XibCreateTableViewController.m */; };
-		4EC4F74F1B4E4B1D00ACEE5F /* CodeCreateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F74E1B4E4B1D00ACEE5F /* CodeCreateTableViewController.m */; };
-		4EC4F7921B4E553C00ACEE5F /* CodeCreatePullTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7911B4E553C00ACEE5F /* CodeCreatePullTableViewController.m */; };
 		4EC4F7951B4E699600ACEE5F /* SystemDebugTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7941B4E699600ACEE5F /* SystemDebugTableViewController.m */; };
 		4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECECF981B5C9BA50036B721 /* BaseDelegate.m */; };
 		4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECECFAA1B5D0A690036B721 /* BaseStepViewController.m */; };
@@ -64,6 +57,10 @@
 		4EE45C511B7355E700C30B7D /* QRCodeCleanBtn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE45C4F1B7355E700C30B7D /* QRCodeCleanBtn@3x.png */; };
 		4EE45C531B7355FB00C30B7D /* QRcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EE45C521B7355FB00C30B7D /* QRcode@2x.png */; };
 		4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C551B7356DC00C30B7D /* MainTableViewController.m */; };
+		4EE45C5C1B736C0800C30B7D /* NavBarScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C5B1B736C0800C30B7D /* NavBarScrollController.m */; };
+		4EE45C5F1B73716100C30B7D /* HavePullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C5E1B73716100C30B7D /* HavePullViewController.m */; };
+		4EE45C621B7389BA00C30B7D /* UserIconCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C611B7389BA00C30B7D /* UserIconCellController.m */; };
+		4EE45C681B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C671B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.m */; };
 		5807D29AB7082DF1937A2935 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E89BED168C7F6717F38ADC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -151,24 +148,10 @@
 		4EB8BAFF1B2EC32D00315CEF /* BaseCenterTitleCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCenterTitleCellItem.m; sourceTree = "<group>"; };
 		4EB8BB011B2EC59C00315CEF /* BaseSwitchCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSwitchCellItem.h; sourceTree = "<group>"; };
 		4EB8BB021B2EC59C00315CEF /* BaseSwitchCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSwitchCellItem.m; sourceTree = "<group>"; };
-		4EC4F71D1B4E2A4500ACEE5F /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
-		4EC4F71E1B4E2A4500ACEE5F /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
 		4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EC4F7331B4E2A4500ACEE5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4EC4F7351B4E2A4500ACEE5F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4EC4F7411B4E479D00ACEE5F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		4EC4F7421B4E479D00ACEE5F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		4EC4F7441B4E4AD300ACEE5F /* XibCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XibCreateViewController.h; sourceTree = "<group>"; };
-		4EC4F7451B4E4AD300ACEE5F /* XibCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XibCreateViewController.m; sourceTree = "<group>"; };
-		4EC4F7471B4E4AE900ACEE5F /* CodeCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeCreateViewController.h; sourceTree = "<group>"; };
-		4EC4F7481B4E4AE900ACEE5F /* CodeCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeCreateViewController.m; sourceTree = "<group>"; };
-		4EC4F74A1B4E4B0A00ACEE5F /* XibCreateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XibCreateTableViewController.h; sourceTree = "<group>"; };
-		4EC4F74B1B4E4B0A00ACEE5F /* XibCreateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XibCreateTableViewController.m; sourceTree = "<group>"; };
-		4EC4F74D1B4E4B1D00ACEE5F /* CodeCreateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeCreateTableViewController.h; sourceTree = "<group>"; };
-		4EC4F74E1B4E4B1D00ACEE5F /* CodeCreateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeCreateTableViewController.m; sourceTree = "<group>"; };
-		4EC4F7901B4E553C00ACEE5F /* CodeCreatePullTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeCreatePullTableViewController.h; sourceTree = "<group>"; };
-		4EC4F7911B4E553C00ACEE5F /* CodeCreatePullTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeCreatePullTableViewController.m; sourceTree = "<group>"; };
 		4EC4F7931B4E699600ACEE5F /* SystemDebugTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemDebugTableViewController.h; sourceTree = "<group>"; };
 		4EC4F7941B4E699600ACEE5F /* SystemDebugTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemDebugTableViewController.m; sourceTree = "<group>"; };
 		4ECECF971B5C9BA50036B721 /* BaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDelegate.h; sourceTree = "<group>"; };
@@ -191,6 +174,14 @@
 		4EE45C541B7356DC00C30B7D /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		4EE45C551B7356DC00C30B7D /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		4EE45C571B7358D500C30B7D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4EE45C5A1B736C0800C30B7D /* NavBarScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarScrollController.h; sourceTree = "<group>"; };
+		4EE45C5B1B736C0800C30B7D /* NavBarScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarScrollController.m; sourceTree = "<group>"; };
+		4EE45C5D1B73716100C30B7D /* HavePullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavePullViewController.h; sourceTree = "<group>"; };
+		4EE45C5E1B73716100C30B7D /* HavePullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavePullViewController.m; sourceTree = "<group>"; };
+		4EE45C601B7389BA00C30B7D /* UserIconCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIconCellController.h; sourceTree = "<group>"; };
+		4EE45C611B7389BA00C30B7D /* UserIconCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIconCellController.m; sourceTree = "<group>"; };
+		4EE45C661B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNavBarLeftOrRightAndCenterController.h; sourceTree = "<group>"; };
+		4EE45C671B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNavBarLeftOrRightAndCenterController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,20 +431,7 @@
 		4EC4F71C1B4E2A4500ACEE5F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4EC4F71D1B4E2A4500ACEE5F /* TestTableViewController.h */,
-				4EC4F71E1B4E2A4500ACEE5F /* TestTableViewController.m */,
-				4EC4F7411B4E479D00ACEE5F /* MainViewController.h */,
-				4EC4F7421B4E479D00ACEE5F /* MainViewController.m */,
-				4EC4F7441B4E4AD300ACEE5F /* XibCreateViewController.h */,
-				4EC4F7451B4E4AD300ACEE5F /* XibCreateViewController.m */,
-				4EC4F7471B4E4AE900ACEE5F /* CodeCreateViewController.h */,
-				4EC4F7481B4E4AE900ACEE5F /* CodeCreateViewController.m */,
-				4EC4F74A1B4E4B0A00ACEE5F /* XibCreateTableViewController.h */,
-				4EC4F74B1B4E4B0A00ACEE5F /* XibCreateTableViewController.m */,
-				4EC4F74D1B4E4B1D00ACEE5F /* CodeCreateTableViewController.h */,
-				4EC4F74E1B4E4B1D00ACEE5F /* CodeCreateTableViewController.m */,
-				4EC4F7901B4E553C00ACEE5F /* CodeCreatePullTableViewController.h */,
-				4EC4F7911B4E553C00ACEE5F /* CodeCreatePullTableViewController.m */,
+				4EE45C591B736BEA00C30B7D /* ExampleController */,
 				4EE45C541B7356DC00C30B7D /* MainTableViewController.h */,
 				4EE45C551B7356DC00C30B7D /* MainTableViewController.m */,
 			);
@@ -484,6 +462,21 @@
 				4EA445931B4FE22800844282 /* PCH.pch */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		4EE45C591B736BEA00C30B7D /* ExampleController */ = {
+			isa = PBXGroup;
+			children = (
+				4EE45C5A1B736C0800C30B7D /* NavBarScrollController.h */,
+				4EE45C5B1B736C0800C30B7D /* NavBarScrollController.m */,
+				4EE45C5D1B73716100C30B7D /* HavePullViewController.h */,
+				4EE45C5E1B73716100C30B7D /* HavePullViewController.m */,
+				4EE45C601B7389BA00C30B7D /* UserIconCellController.h */,
+				4EE45C611B7389BA00C30B7D /* UserIconCellController.m */,
+				4EE45C661B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.h */,
+				4EE45C671B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.m */,
+			);
+			path = ExampleController;
 			sourceTree = "<group>";
 		};
 		50F6267C0676A18D2970D232 /* Pods */ = {
@@ -650,12 +643,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EC4F7461B4E4AD300ACEE5F /* XibCreateViewController.m in Sources */,
 				4EA29A761B56005E0084E72D /* StepNextView.m in Sources */,
 				4ED167171B4A6C5500B3C618 /* UIView+Extension.m in Sources */,
 				4EB853451B4A1D2600C35F6D /* BaseCellItemGroup.m in Sources */,
 				4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */,
-				4EC4F74F1B4E4B1D00ACEE5F /* CodeCreateTableViewController.m in Sources */,
 				4EA374B61B4D39DD00680B92 /* BlockButton.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
 				4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */,
@@ -664,6 +655,7 @@
 				4EB8BB031B2EC59C00315CEF /* BaseSwitchCellItem.m in Sources */,
 				4E0663F61B58D9CC0038EA5A /* BaseIconItem.m in Sources */,
 				4EB8BB001B2EC32D00315CEF /* BaseCenterTitleCellItem.m in Sources */,
+				4EE45C5C1B736C0800C30B7D /* NavBarScrollController.m in Sources */,
 				4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */,
 				4E56B7F61B54F5FF00184403 /* StepView.m in Sources */,
 				4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */,
@@ -672,24 +664,22 @@
 				4EE45C4D1B73515600C30B7D /* QRCodeViewController.m in Sources */,
 				4E72C19C1B4FEE6400C16C1E /* PlistTool.m in Sources */,
 				4ED1671A1B4A6C8500B3C618 /* UIBarButtonItem+Extension.m in Sources */,
+				4EE45C621B7389BA00C30B7D /* UserIconCellController.m in Sources */,
 				4ED167141B4A6BA000B3C618 /* BaseNavigationController.m in Sources */,
-				4EC4F74C1B4E4B0A00ACEE5F /* XibCreateTableViewController.m in Sources */,
-				4EC4F7361B4E2A4500ACEE5F /* TestTableViewController.m in Sources */,
 				4EA445781B4FDA9300844282 /* NSDate+Extension.m in Sources */,
 				4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */,
+				4EE45C5F1B73716100C30B7D /* HavePullViewController.m in Sources */,
 				4EC4F7951B4E699600ACEE5F /* SystemDebugTableViewController.m in Sources */,
 				4EA4457A1B4FDA9300844282 /* NSString+Hash.m in Sources */,
 				4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */,
-				4EC4F7431B4E479D00ACEE5F /* MainViewController.m in Sources */,
 				4EA4457B1B4FDA9300844282 /* NSString+RegularExpression.m in Sources */,
+				4EE45C681B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.m in Sources */,
 				4EA4457D1B4FDA9300844282 /* UITextView+Extension.m in Sources */,
-				4EC4F7491B4E4AE900ACEE5F /* CodeCreateViewController.m in Sources */,
 				4EA445761B4FDA9300844282 /* CALayer+SetColor.m in Sources */,
 				4EB8BAFD1B2EC18B00315CEF /* BaseArrowCellItem.m in Sources */,
 				4E0A46601B70C894007C94C8 /* BaseNetworkTool.m in Sources */,
 				4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */,
 				4EA445771B4FDA9300844282 /* Foundation+Log.m in Sources */,
-				4EC4F7921B4E553C00ACEE5F /* CodeCreatePullTableViewController.m in Sources */,
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
 				4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */,
 				4E0A465D1B70C1BD007C94C8 /* TimeButton.m in Sources */,

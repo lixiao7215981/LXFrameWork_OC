@@ -8,6 +8,10 @@
 
 #import "MainTableViewController.h"
 #import "QRCodeViewController.h"
+#import "NavBarScrollController.h"
+#import "HavePullViewController.h"
+#import "UserIconCellController.h"
+#import "SetNavBarLeftOrRightAndCenterController.h"
 
 @interface MainTableViewController ()<QRCodeViewControllerDelegate>
 
@@ -23,14 +27,40 @@
 
 - (void) addDataList
 {
-    __weak typeof(self) Main = self;
     BaseArrowCellItem *item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"二维码" SubTitle:nil ClickOption:^{
+#if TARGET_IPHONE_SIMULATOR
+        [SVProgressHUD showErrorWithStatus:@"模拟器不支持摄像头"];
+#elif TARGET_OS_IPHONE
+        __weak typeof(self) Main = self;
         QRCodeViewController *readCode = [[QRCodeViewController alloc] init];
         readCode.delegate = Main;
         [self.navigationController presentViewController:readCode animated:YES completion:nil];
+#endif
+        
     } AndDetailClass:nil];
     
-    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithItem:@[item1]];
+    BaseArrowCellItem *item2 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"向上滚动NavigationBar显示" SubTitle:nil ClickOption:^{
+        NavBarScrollController *navBarScroll = [[NavBarScrollController alloc] init];
+        [self.navigationController pushViewController:navBarScroll animated:YES];
+    } AndDetailClass:nil];
+    
+    BaseArrowCellItem *item3 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"带下拉上拉刷新" SubTitle:nil ClickOption:^{
+        HavePullViewController *pull = [[HavePullViewController alloc] init];
+        [self.navigationController pushViewController:pull animated:YES];
+    } AndDetailClass:nil];
+    
+    BaseArrowCellItem *item4 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"带头像的Cell展示" SubTitle:nil ClickOption:^{
+        UserIconCellController *icon = [[UserIconCellController alloc] init];
+        [self.navigationController pushViewController:icon animated:YES];
+    } AndDetailClass:nil];
+    
+    BaseArrowCellItem *item5 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置NavBar的左中右按钮或标题" SubTitle:nil ClickOption:^{
+        SetNavBarLeftOrRightAndCenterController  *navVar = [[SetNavBarLeftOrRightAndCenterController alloc] init];
+        [self.navigationController pushViewController:navVar animated:YES];
+    } AndDetailClass:nil];
+    
+    
+    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5]];
     
     [self.dataList addObject:group1];
 }

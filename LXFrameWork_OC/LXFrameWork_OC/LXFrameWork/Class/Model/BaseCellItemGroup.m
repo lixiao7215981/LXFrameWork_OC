@@ -33,4 +33,12 @@
     return group;
 }
 
+- (instancetype)addObjectWith:(id)object
+{
+    NSMutableArray *array = [NSMutableArray arrayWithArray:self.item];
+    [array addObject:object];
+    self.item = array;
+    return self;
+}
+
 @end

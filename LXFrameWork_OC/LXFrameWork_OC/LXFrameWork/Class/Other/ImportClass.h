@@ -28,6 +28,7 @@
 
 #import "BasePullTableViewController.h"
 #import "BaseStepViewController.h"
+#import "QRCodeViewController.h"
 #import "PlistTool.h"
 #import "BaseNetworkTool.h"
 #import "BlockButton.h"

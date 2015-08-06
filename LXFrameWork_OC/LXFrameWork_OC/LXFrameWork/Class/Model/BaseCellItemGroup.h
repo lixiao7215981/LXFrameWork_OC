@@ -38,4 +38,9 @@
 
 + (instancetype)createGroupWithItem:(NSArray *) item;
 
+/**
+ *  向 item 当中添加数据
+ */
+- (instancetype)addObjectWith:(id)object;
+
 @end

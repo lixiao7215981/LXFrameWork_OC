@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-944" y="266"/>
         </scene>
-        <!--Main Table View Controller-->
+        <!--测试TableView-->
         <scene sceneID="gew-iu-5dO">
             <objects>
-                <viewController id="bGh-45-RVA" customClass="MainTableViewController" sceneMemberID="viewController">
+                <viewController title="测试TableView" id="bGh-45-RVA" customClass="MainTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="azb-b7-L60"/>
                         <viewControllerLayoutGuide type="bottom" id="CcA-YS-V0R"/>
