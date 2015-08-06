@@ -1,169 +1,180 @@
 //
-//  BaseNavigationController.m
-//  LXFrameWork_OC
+//  HttpTool.m
+//  LiXiao
 //
-//  Created by 李晓 on 15/7/6.
-//  Copyright (c) 2015年 LXFrameWork. All rights reserved.
+//  Created by 李晓 on 15/7/2.
+//  Copyright (c) 2015年 BookStore. All rights reserved.
 //
 
-#import "BaseNavigationController.h"
-#import "BaseViewController.h"
+#import "HttpTool.h"
 
-#define ratio 0.7
+@implementation HttpTool
 
-@interface BaseNavigationController ()
++(void)HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    UIPanGestureRecognizer *_PanRecognizer;
-}
-/** 存放每一个控制器的全屏截图 */
-@property (nonatomic, strong) NSMutableArray *images;
-/** 最后一个显示的ViewController */
-@property (nonatomic, strong) UIImageView *lastVcView;
-/** 遮罩 */
-@property (nonatomic, strong) UIView *cover;
-
-@end
-
-@implementation BaseNavigationController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // 禁用系统自带的拖拽手势
-    self.interactivePopGestureRecognizer.enabled = NO;
-    // 拖拽手势
-    _PanRecognizer= [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragging:)];
-    [self.view addGestureRecognizer:_PanRecognizer];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    if (self.images.count > 0) return;
-    // 产生截图
-    //    [self createScreenShot];
-}
-
-#pragma mark - 拦截 push pop 方法
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
-    if (self.viewControllers.count > 0 && [viewController isKindOfClass:[BaseViewController class]]) {
-        BaseViewController *baseView = (BaseViewController *) viewController;
-        [baseView setBackBtn];
-        viewController.hidesBottomBarWhenPushed = YES;
-    }
-    
-    //产生截图
-    [self createScreenShot];
-    [super pushViewController:viewController animated:animated];
-}
-
-- (UIViewController *)popViewControllerAnimated:(BOOL)animated
-{
-    [self.images removeLastObject];
-    return [super popViewControllerAnimated:animated];
-}
-
-#pragma mark - 手势拖拽切换控制器方法
-
-/**
- *  拖拽的时候调用
- */
-- (void)dragging:(UIPanGestureRecognizer *)recognizer
-{
-    // 如果只有1个子控制器,停止拖拽
-    if (self.viewControllers.count <= 1) return;
-    
-    // 在x方向上移动的距离
-    CGFloat tx = [recognizer translationInView:self.view].x;
-    if (tx < 0) return;
-    
-    if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled) {
-        // 决定pop还是还原
-        if (self.view.x >= self.view.width * 0.3) {
-            [UIView animateWithDuration:0.25 animations:^{
-                self.view.transform = CGAffineTransformMakeTranslation(self.view.width, 0);
-                self.lastVcView.x = 0;
-            } completion:^(BOOL finished) {
-                [self popViewControllerAnimated:NO];
-                [self.lastVcView removeFromSuperview];
-                [self.cover removeFromSuperview];
-                self.view.transform = CGAffineTransformIdentity;
-                self.lastVcView.transform = CGAffineTransformIdentity;
-                self.lastVcView.x = (- self.view.width) * ratio;
-            }];
-        } else {
-            [UIView animateWithDuration:0.25 animations:^{
-                self.view.transform = CGAffineTransformIdentity;
-            }completion:^(BOOL finished) {
-                self.lastVcView.transform = CGAffineTransformIdentity;
-            } ];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
+    [manager GET:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
         }
-        
-    } else {
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        // 添加截图到最后面
-        self.lastVcView.image = self.images[self.images.count - 1];
-        [window insertSubview:self.lastVcView atIndex:0];
-        [window insertSubview:self.cover aboveSubview:self.lastVcView];
-        // 移动view
-        self.view.transform = CGAffineTransformMakeTranslation(tx, 0);
-        if (self.lastVcView.x >=0) return;
-        self.lastVcView.transform = CGAffineTransformIdentity;
-        self.lastVcView.transform = CGAffineTransformMakeTranslation(tx *0.7  , 0);
-    }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
 }
 
-/**
- *  产生截图
- */
-- (void)createScreenShot
++ (void)HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    UIGraphicsBeginImageContextWithOptions(self.view.size, YES, 0.0);
-    [self.view.window.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    [self.images addObject:image];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
+    [manager POST:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
 }
 
-#pragma mark - 懒加载等方法
-- (NSMutableArray *)images
++ (void)HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Data:(NSData *)data Name:(NSString *)name FileName:(NSString *)fileName MainType:(NSString *)mainType Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    if (!_images) {
-        self.images = [[NSMutableArray alloc] init];
-    }
-    return _images;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
+    [manager POST:url parameters:parameser constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:data name:name fileName:fileName mimeType:mainType];
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
 }
 
-- (UIImageView *)lastVcView
++ (void)HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    if (!_lastVcView) {
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        UIImageView *lastVcView = [[UIImageView alloc] init];
-        lastVcView.frame = window.bounds;
-        lastVcView.x = (- self.view.width) * ratio;
-        self.lastVcView = lastVcView;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
+    AFHTTPResponseSerializer *ser = [AFHTTPResponseSerializer serializer];
+    if (serializer == JSONResponseSerializer) {
+        ser = [AFJSONResponseSerializer serializer];
+    }else if (serializer == XMLParserResponseSerializer){
+        ser = [AFXMLParserResponseSerializer serializer];
     }
     
-    return _lastVcView;
+    manager.responseSerializer = ser;
+    [manager GET:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
 }
 
-- (UIView *)cover
++ (void)HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    if (!_cover) {
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        UIView *cover = [[UIView alloc] init];
-        cover.backgroundColor = [UIColor blackColor];
-        cover.frame = window.bounds;
-        cover.alpha = 0.4;
-        self.cover = cover;
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
+    AFHTTPResponseSerializer *ser = [AFHTTPResponseSerializer serializer];
+    if (serializer == JSONResponseSerializer) {
+        ser = [AFJSONResponseSerializer serializer];
+    }else if (serializer == XMLParserResponseSerializer){
+        ser = [AFXMLParserResponseSerializer serializer];
     }
-    return _cover;
+    manager.responseSerializer = ser;
+    [manager POST:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
 }
 
-#pragma amrk - 设置状态栏颜色
-
-- (UIStatusBarStyle)preferredStatusBarStyle
++ (void)HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    return UIStatusBarStyleDefault;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
+    [manager PUT:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (error) {
+            failure(error);
+        }
+    }];
+}
+
++(void)HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
+    AFHTTPResponseSerializer *ser = [AFHTTPResponseSerializer serializer];
+    if (serializer == JSONResponseSerializer) {
+        ser = [AFJSONResponseSerializer serializer];
+    }else if (serializer == XMLParserResponseSerializer){
+        ser = [AFXMLParserResponseSerializer serializer];
+    }
+    manager.responseSerializer = ser;
+    [manager PUT:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
++ (void)HttpToolDeleteWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
+    [manager DELETE:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (error) {
+            failure(error);
+        }
+    }];
+}
+
++ (void)HttpToolDeleteWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer.timeoutInterval = 30;
+    AFHTTPResponseSerializer *ser = [AFHTTPResponseSerializer serializer];
+    if (serializer == JSONResponseSerializer) {
+        ser = [AFJSONResponseSerializer serializer];
+    }else if (serializer == XMLParserResponseSerializer){
+        ser = [AFXMLParserResponseSerializer serializer];
+    }
+    manager.responseSerializer = ser;
+    [manager DELETE:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (error) {
+            failure(error);
+        }
+    }];
 }
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import "BaseTableViewController.h"
-
+/**
+ *  调试选项的Controller
+ */
 @interface SystemDebugTableViewController : BaseTableViewController
 
 @end

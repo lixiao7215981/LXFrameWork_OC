@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nje-k2-oml">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nje-k2-oml">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Base Navigation Controller-->
@@ -14,173 +14,31 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="6I0-XV-gwO"/>
+                        <segue destination="bGh-45-RVA" kind="relationship" relationship="rootViewController" id="x6H-HR-22t"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wW0-EI-Jru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-944" y="266"/>
         </scene>
-        <!--Main View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Main Table View Controller-->
+        <scene sceneID="gew-iu-5dO">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="bGh-45-RVA" customClass="MainTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="azb-b7-L60"/>
+                        <viewControllerLayoutGuide type="bottom" id="CcA-YS-V0R"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72Q-JH-d4c">
-                                <rect key="frame" x="222" y="94" width="156" height="30"/>
-                                <state key="normal" title="Xib 创建ViewController">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="XibCreateView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QBW-ZN-ePf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDs-sX-ZXO">
-                                <rect key="frame" x="220" y="154" width="160" height="30"/>
-                                <state key="normal" title="代码创建ViewController">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="CodeCreateView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="OnD-GL-NM8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAQ-dT-fjh">
-                                <rect key="frame" x="206" y="234" width="188" height="30"/>
-                                <state key="normal" title="Xib创建TableViewController">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="XibCreateTableView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2xp-Lh-hXW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ute-Zy-ZZN">
-                                <rect key="frame" x="202" y="294" width="196" height="30"/>
-                                <state key="normal" title="代码创建TableViewController">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="CodeCreateTable:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oeN-KA-BT5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBE-dK-JnO">
-                                <rect key="frame" x="194" y="344" width="212" height="30"/>
-                                <state key="normal" title="连线跳转Xib创建ViewController">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="RDK-cz-3Ka" kind="show" id="yva-vj-HLF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5J-Ye-Hhe">
-                                <rect key="frame" x="176" y="394" width="248" height="30"/>
-                                <state key="normal" title="连线跳转Xib创建TableViewController">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dXB-dw-S8p" kind="show" id="EZA-gY-id1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eu2-P4-MNQ">
-                                <rect key="frame" x="212" y="444" width="177" height="30"/>
-                                <state key="normal" title="上拉/下拉刷新-&gt;tableView">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="CodePullTableView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NAW-WN-KUg"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="t5J-Ye-Hhe" firstAttribute="top" secondItem="PBE-dK-JnO" secondAttribute="bottom" constant="20" id="0MC-lG-dcc"/>
-                            <constraint firstAttribute="centerX" secondItem="t5J-Ye-Hhe" secondAttribute="centerX" id="4lU-sg-pRN"/>
-                            <constraint firstAttribute="centerX" secondItem="dDs-sX-ZXO" secondAttribute="centerX" id="AuV-Lv-wby"/>
-                            <constraint firstItem="eu2-P4-MNQ" firstAttribute="top" secondItem="t5J-Ye-Hhe" secondAttribute="bottom" constant="20" id="BhQ-Do-mQo"/>
-                            <constraint firstItem="PBE-dK-JnO" firstAttribute="top" secondItem="Ute-Zy-ZZN" secondAttribute="bottom" constant="20" id="DQR-rm-7dK"/>
-                            <constraint firstAttribute="centerX" secondItem="lAQ-dT-fjh" secondAttribute="centerX" id="Iwm-zQ-jIr"/>
-                            <constraint firstAttribute="centerX" secondItem="72Q-JH-d4c" secondAttribute="centerX" id="OHg-NH-g41"/>
-                            <constraint firstItem="lAQ-dT-fjh" firstAttribute="top" secondItem="dDs-sX-ZXO" secondAttribute="bottom" constant="50" id="Smh-uG-aK0"/>
-                            <constraint firstItem="dDs-sX-ZXO" firstAttribute="top" secondItem="72Q-JH-d4c" secondAttribute="bottom" constant="30" id="j8s-Ei-vDh"/>
-                            <constraint firstAttribute="centerX" secondItem="Ute-Zy-ZZN" secondAttribute="centerX" id="jgX-QX-6Hm"/>
-                            <constraint firstAttribute="centerX" secondItem="eu2-P4-MNQ" secondAttribute="centerX" id="r8c-bP-5Km"/>
-                            <constraint firstItem="Ute-Zy-ZZN" firstAttribute="top" secondItem="lAQ-dT-fjh" secondAttribute="bottom" constant="30" id="sa7-iT-vk1"/>
-                            <constraint firstItem="72Q-JH-d4c" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="txc-Pn-tWU"/>
-                            <constraint firstAttribute="centerX" secondItem="PBE-dK-JnO" secondAttribute="centerX" id="zm5-bn-GtV"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="9QE-tg-EkL"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-216" y="266"/>
-        </scene>
-        <!--Xib Create View Controller-->
-        <scene sceneID="V2O-VN-hBI">
-            <objects>
-                <viewController storyboardIdentifier="XibCreateViewController" id="RDK-cz-3Ka" customClass="XibCreateViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qWT-0n-9i9"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hab-X5-Inj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kOX-Sc-zys">
+                    <view key="view" contentMode="scaleToFill" id="VCl-lp-Afs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="31n-UE-6s6">
-                                <rect key="frame" x="267" y="167" width="51" height="31"/>
-                            </switch>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j62-Uh-h1x">
-                                <rect key="frame" x="243" y="256" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="28j-e7-Efa">
-                                <rect key="frame" x="232" y="357" width="118" height="31"/>
-                            </slider>
-                        </subviews>
-                        <color key="backgroundColor" red="0.2784313725" green="0.65490196079999996" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c3k-2u-wvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="482" y="-91"/>
-        </scene>
-        <!--Xib Create Table View Controller-->
-        <scene sceneID="GxY-6s-uEB">
-            <objects>
-                <viewController storyboardIdentifier="XibCreateTableViewController" id="dXB-dw-S8p" customClass="XibCreateTableViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yad-BW-rnS"/>
-                        <viewControllerLayoutGuide type="bottom" id="7YC-0H-uo6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bor-rb-Xgy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kyr-ry-vOW">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="7YC-0H-uo6" firstAttribute="top" secondItem="Kyr-ry-vOW" secondAttribute="bottom" id="EiU-rt-f5Z"/>
-                            <constraint firstItem="Kyr-ry-vOW" firstAttribute="top" secondItem="Bor-rb-Xgy" secondAttribute="top" id="hAg-3P-jIi"/>
-                            <constraint firstAttribute="trailing" secondItem="Kyr-ry-vOW" secondAttribute="trailing" id="hez-sx-3ni"/>
-                            <constraint firstItem="Kyr-ry-vOW" firstAttribute="leading" secondItem="Bor-rb-Xgy" secondAttribute="leading" id="nTt-EL-1Uv"/>
-                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="NYe-ZA-nGQ"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oko-eQ-tMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SpZ-mK-4oY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="482" y="589"/>
+            <point key="canvasLocation" x="-211" y="266"/>
         </scene>
     </scenes>
 </document>
