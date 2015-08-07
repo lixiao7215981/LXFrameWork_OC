@@ -11,7 +11,7 @@
 
 @interface QRCodeViewController ()<AVCaptureMetadataOutputObjectsDelegate>
 {
-    AVCaptureSession * session;//输入输出的中间那座大桥
+    AVCaptureSession * session;//输入输出中间那座大桥
 }
 @end
 
@@ -38,12 +38,11 @@
     session = [[AVCaptureSession alloc]init];
     //高质量采集率
     [session setSessionPreset:AVCaptureSessionPresetHigh];
-    
     [session addInput:input];
     [session addOutput:output];
     //设置扫码支持的编码格式(条形码和二维码兼容)
     output.metadataObjectTypes=@[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];
-    
+    // 显示摄像头取到的头像
     AVCaptureVideoPreviewLayer * layer = [AVCaptureVideoPreviewLayer layerWithSession:session];
     layer.videoGravity=AVLayerVideoGravityResizeAspectFill;
     layer.frame = self.view.layer.bounds;

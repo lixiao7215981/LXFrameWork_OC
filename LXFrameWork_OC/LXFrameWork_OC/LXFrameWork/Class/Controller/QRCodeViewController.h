@@ -6,17 +6,18 @@
 //  Copyright (c) 2015年 LXFrameWork. All rights reserved.
 //
 
-#import "BaseViewController.h"
-@class QRCodeViewController;
 /**
  *  扫描二维码
  */
+#import "BaseViewController.h"
+
+@class QRCodeViewController;
+
 @protocol QRCodeViewControllerDelegate <NSObject>
 
 @optional
 
 /**
- *
  *  扫描到二维码调用该代理方法
  */
 - (void) ReaderCode:(QRCodeViewController *) readerViewController didScanResult:(NSString *) result;
@@ -29,7 +30,9 @@
 @end
 
 @interface QRCodeViewController : BaseViewController
-
+/**
+ *  代理
+ */
 @property (nonatomic,weak) id<QRCodeViewControllerDelegate> delegate;
 
 @end

@@ -52,7 +52,6 @@ typedef enum {
  */
 + (void) HttpToolDeleteWithUrl:(NSString *) url paramesers:(NSDictionary *) parameser Serializer:(serializer) serializer Success:(void(^)(id json)) success failure:(void (^)(NSError *error)) failure;
 
-
 /**
  *  利用 AFNetWorking 发送POST请求
  *

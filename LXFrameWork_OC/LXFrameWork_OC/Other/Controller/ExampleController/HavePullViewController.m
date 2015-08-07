@@ -19,10 +19,6 @@
     [self setNavTitle:@"拉动刷新"];
     // 添加数据
     [self addDataList];
-    
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 150)];
-    headView.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.3];
-    self.tableView.tableHeaderView = headView;
 }
 
 - (void) addDataList

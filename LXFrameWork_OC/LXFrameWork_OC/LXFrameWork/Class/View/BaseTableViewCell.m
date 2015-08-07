@@ -56,7 +56,7 @@
 
 - (void) setUpAccessoryView:(BaseCellItem *)items
 {
-    if ([items isKindOfClass:[BaseArrowCellItem class]]) { // accessoryView 箭头
+    if ([items isKindOfClass:[BaseArrowCellItem class]] || [items isKindOfClass:[BaseSubtitleCellItem class]]) { // accessoryView 箭头
         self.accessoryView = self.imgArrowView;
         self.selectionStyle = UITableViewCellSelectionStyleDefault;
     }else if ([items isKindOfClass:[BaseSwitchCellItem class]]){
@@ -164,6 +164,8 @@
         cellStyleStr = @"TableViewCellValue1";
     }else if (cellStyle == UITableViewCellStyleSubtitle){
         cellStyleStr = @"TableViewCellSubtitle";
+    }else if (cellStyle == UITableViewCellStyleDefault){
+        cellStyleStr = @"UITableViewCellStyleDefault";
     }
     BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStyleStr];
     if (cell == nil) {

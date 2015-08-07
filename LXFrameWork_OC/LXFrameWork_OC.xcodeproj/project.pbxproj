@@ -44,7 +44,6 @@
 		4EC4F73E1B4E2A4500ACEE5F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F7331B4E2A4500ACEE5F /* Info.plist */; };
 		4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */; };
 		4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7351B4E2A4500ACEE5F /* main.m */; };
-		4EC4F7951B4E699600ACEE5F /* SystemDebugTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7941B4E699600ACEE5F /* SystemDebugTableViewController.m */; };
 		4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECECF981B5C9BA50036B721 /* BaseDelegate.m */; };
 		4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECECFAA1B5D0A690036B721 /* BaseStepViewController.m */; };
 		4ED167101B4A581200B3C618 /* Arrow_Left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED1670E1B4A581200B3C618 /* Arrow_Left@2x.png */; };
@@ -60,7 +59,9 @@
 		4EE45C5C1B736C0800C30B7D /* NavBarScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C5B1B736C0800C30B7D /* NavBarScrollController.m */; };
 		4EE45C5F1B73716100C30B7D /* HavePullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C5E1B73716100C30B7D /* HavePullViewController.m */; };
 		4EE45C621B7389BA00C30B7D /* UserIconCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C611B7389BA00C30B7D /* UserIconCellController.m */; };
-		4EE45C681B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C671B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.m */; };
+		4EE45C6B1B74478B00C30B7D /* SystemDebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C6A1B74478B00C30B7D /* SystemDebugController.m */; };
+		4EE45C6E1B74481700C30B7D /* SetNavBarLeftRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C6D1B74481700C30B7D /* SetNavBarLeftRightViewController.m */; };
+		4EE45C711B74661000C30B7D /* BaseSubtitleCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C701B74661000C30B7D /* BaseSubtitleCellItem.m */; };
 		5807D29AB7082DF1937A2935 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E89BED168C7F6717F38ADC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -152,8 +153,6 @@
 		4EC4F7331B4E2A4500ACEE5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		4EC4F7351B4E2A4500ACEE5F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4EC4F7931B4E699600ACEE5F /* SystemDebugTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemDebugTableViewController.h; sourceTree = "<group>"; };
-		4EC4F7941B4E699600ACEE5F /* SystemDebugTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemDebugTableViewController.m; sourceTree = "<group>"; };
 		4ECECF971B5C9BA50036B721 /* BaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDelegate.h; sourceTree = "<group>"; };
 		4ECECF981B5C9BA50036B721 /* BaseDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDelegate.m; sourceTree = "<group>"; };
 		4ECECFA91B5D0A690036B721 /* BaseStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStepViewController.h; sourceTree = "<group>"; };
@@ -180,8 +179,12 @@
 		4EE45C5E1B73716100C30B7D /* HavePullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavePullViewController.m; sourceTree = "<group>"; };
 		4EE45C601B7389BA00C30B7D /* UserIconCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIconCellController.h; sourceTree = "<group>"; };
 		4EE45C611B7389BA00C30B7D /* UserIconCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIconCellController.m; sourceTree = "<group>"; };
-		4EE45C661B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNavBarLeftOrRightAndCenterController.h; sourceTree = "<group>"; };
-		4EE45C671B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNavBarLeftOrRightAndCenterController.m; sourceTree = "<group>"; };
+		4EE45C691B74478B00C30B7D /* SystemDebugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemDebugController.h; sourceTree = "<group>"; };
+		4EE45C6A1B74478B00C30B7D /* SystemDebugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemDebugController.m; sourceTree = "<group>"; };
+		4EE45C6C1B74481700C30B7D /* SetNavBarLeftRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNavBarLeftRightViewController.h; sourceTree = "<group>"; };
+		4EE45C6D1B74481700C30B7D /* SetNavBarLeftRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNavBarLeftRightViewController.m; sourceTree = "<group>"; };
+		4EE45C6F1B74661000C30B7D /* BaseSubtitleCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSubtitleCellItem.h; sourceTree = "<group>"; };
+		4EE45C701B74661000C30B7D /* BaseSubtitleCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSubtitleCellItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,10 +383,10 @@
 		4EB8BAEA1B2EB49C00315CEF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4EC4F7931B4E699600ACEE5F /* SystemDebugTableViewController.h */,
-				4EC4F7941B4E699600ACEE5F /* SystemDebugTableViewController.m */,
 				4EE45C4B1B73515600C30B7D /* QRCodeViewController.h */,
 				4EE45C4C1B73515600C30B7D /* QRCodeViewController.m */,
+				4EE45C691B74478B00C30B7D /* SystemDebugController.h */,
+				4EE45C6A1B74478B00C30B7D /* SystemDebugController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -403,6 +406,8 @@
 				4EB853441B4A1D2600C35F6D /* BaseCellItemGroup.m */,
 				4E0663F41B58D9CC0038EA5A /* BaseIconItem.h */,
 				4E0663F51B58D9CC0038EA5A /* BaseIconItem.m */,
+				4EE45C6F1B74661000C30B7D /* BaseSubtitleCellItem.h */,
+				4EE45C701B74661000C30B7D /* BaseSubtitleCellItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -473,8 +478,8 @@
 				4EE45C5E1B73716100C30B7D /* HavePullViewController.m */,
 				4EE45C601B7389BA00C30B7D /* UserIconCellController.h */,
 				4EE45C611B7389BA00C30B7D /* UserIconCellController.m */,
-				4EE45C661B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.h */,
-				4EE45C671B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.m */,
+				4EE45C6C1B74481700C30B7D /* SetNavBarLeftRightViewController.h */,
+				4EE45C6D1B74481700C30B7D /* SetNavBarLeftRightViewController.m */,
 			);
 			path = ExampleController;
 			sourceTree = "<group>";
@@ -647,6 +652,7 @@
 				4ED167171B4A6C5500B3C618 /* UIView+Extension.m in Sources */,
 				4EB853451B4A1D2600C35F6D /* BaseCellItemGroup.m in Sources */,
 				4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */,
+				4EE45C6E1B74481700C30B7D /* SetNavBarLeftRightViewController.m in Sources */,
 				4EA374B61B4D39DD00680B92 /* BlockButton.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
 				4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */,
@@ -669,15 +675,15 @@
 				4EA445781B4FDA9300844282 /* NSDate+Extension.m in Sources */,
 				4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */,
 				4EE45C5F1B73716100C30B7D /* HavePullViewController.m in Sources */,
-				4EC4F7951B4E699600ACEE5F /* SystemDebugTableViewController.m in Sources */,
 				4EA4457A1B4FDA9300844282 /* NSString+Hash.m in Sources */,
 				4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */,
 				4EA4457B1B4FDA9300844282 /* NSString+RegularExpression.m in Sources */,
-				4EE45C681B738F7000C30B7D /* SetNavBarLeftOrRightAndCenterController.m in Sources */,
 				4EA4457D1B4FDA9300844282 /* UITextView+Extension.m in Sources */,
 				4EA445761B4FDA9300844282 /* CALayer+SetColor.m in Sources */,
 				4EB8BAFD1B2EC18B00315CEF /* BaseArrowCellItem.m in Sources */,
+				4EE45C711B74661000C30B7D /* BaseSubtitleCellItem.m in Sources */,
 				4E0A46601B70C894007C94C8 /* BaseNetworkTool.m in Sources */,
+				4EE45C6B1B74478B00C30B7D /* SystemDebugController.m in Sources */,
 				4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */,
 				4EA445771B4FDA9300844282 /* Foundation+Log.m in Sources */,
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,

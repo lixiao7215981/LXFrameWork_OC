@@ -12,6 +12,7 @@
 #import "BaseArrowCellItem.h"
 #import "BaseCenterTitleCellItem.h"
 #import "BaseSwitchCellItem.h"
+#import "BaseSubtitleCellItem.h"
 #import "UIView+Extension.h"
 
 @interface BaseTableViewCell : UITableViewCell

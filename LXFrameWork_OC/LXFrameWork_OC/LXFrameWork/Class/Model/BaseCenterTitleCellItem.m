@@ -10,9 +10,9 @@
 
 @implementation BaseCenterTitleCellItem
 
-+ (instancetype)createBaseCellItemWithIcon:(NSString *)icon AndTitle:(NSString *)title SubTitle:(NSString *)subTitle ClickOption:(cellOption)option AndCenterTitle:(NSString *)centerTitle WithColor:(id)color
++ (instancetype)createBaseCellItemWithCenterTitle:(NSString *)centerTitle ClickOption:(cellOption)option WithColor:(UIColor *)color
 {
-    BaseCenterTitleCellItem *centerTitleCell = [super createBaseCellItemWithIcon:title AndTitle:title SubTitle:subTitle ClickOption:option];
+    BaseCenterTitleCellItem *centerTitleCell = [super createBaseCellItemWithIcon:nil AndTitle:nil SubTitle:nil ClickOption:option];
     centerTitleCell.centerTitle = centerTitle;
     centerTitleCell.color  = color;
     return centerTitleCell;

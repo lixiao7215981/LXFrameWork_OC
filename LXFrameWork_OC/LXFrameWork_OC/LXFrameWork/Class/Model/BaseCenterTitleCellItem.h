@@ -15,6 +15,6 @@
 
 @property (nonatomic,strong) UIColor *color;
 
-+(instancetype)createBaseCellItemWithIcon:(NSString *) icon AndTitle:(NSString *)title SubTitle:(NSString *) subTitle ClickOption:(cellOption) option AndCenterTitle:(NSString *) centerTitle WithColor:(UIColor *) color;
++(instancetype)createBaseCellItemWithCenterTitle:(NSString *) centerTitle ClickOption:(cellOption) option WithColor:(UIColor *) color;
 
 @end

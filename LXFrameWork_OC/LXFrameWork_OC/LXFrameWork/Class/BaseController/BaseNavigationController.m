@@ -77,7 +77,7 @@
     CGFloat tx = [recognizer translationInView:self.view].x;
     if (tx < 0) return;
     
-    if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled) {
+    if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled || recognizer.state == UIGestureRecognizerStateFailed) {
         // 决定pop还是还原
         if (self.view.x >= self.view.width * 0.3) {
             [UIView animateWithDuration:0.25 animations:^{
@@ -91,14 +91,13 @@
                 self.lastVcView.transform = CGAffineTransformIdentity;
                 self.lastVcView.x = (- self.view.width) * ratio;
             }];
-        } else {
-            [UIView animateWithDuration:0.25 animations:^{
+        } else { // 还原
+            [UIView animateWithDuration:0.2 animations:^{
                 self.view.transform = CGAffineTransformIdentity;
             }completion:^(BOOL finished) {
                 self.lastVcView.transform = CGAffineTransformIdentity;
-            } ];
+            }];
         }
-        
     } else {
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
         // 添加截图到最后面

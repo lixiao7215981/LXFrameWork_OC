@@ -11,7 +11,9 @@
 #import "NavBarScrollController.h"
 #import "HavePullViewController.h"
 #import "UserIconCellController.h"
-#import "SetNavBarLeftOrRightAndCenterController.h"
+#import "BaseTableViewController.h"
+#import "SystemDebugController.h"
+#import "SetNavBarLeftRightViewController.h"
 
 @interface MainTableViewController ()<QRCodeViewControllerDelegate>
 
@@ -49,18 +51,23 @@
         [self.navigationController pushViewController:pull animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *item4 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"带头像的Cell展示" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item4 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"Cell样式展示" SubTitle:nil ClickOption:^{
         UserIconCellController *icon = [[UserIconCellController alloc] init];
         [self.navigationController pushViewController:icon animated:YES];
     } AndDetailClass:nil];
     
     BaseArrowCellItem *item5 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置NavBar的左中右按钮或标题" SubTitle:nil ClickOption:^{
-        SetNavBarLeftOrRightAndCenterController  *navVar = [[SetNavBarLeftOrRightAndCenterController alloc] init];
+        SetNavBarLeftRightViewController  *navVar = [[SetNavBarLeftRightViewController alloc] init];
         [self.navigationController pushViewController:navVar animated:YES];
     } AndDetailClass:nil];
     
+    BaseArrowCellItem *item6 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"查看调试选项" SubTitle:nil ClickOption:^{
+        SystemDebugController *debug = [[SystemDebugController alloc] init];
+        [self.navigationController pushViewController:debug animated:YES];
+    } AndDetailClass:nil];
     
-    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5]];
+    
+    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5,item6]];
     
     [self.dataList addObject:group1];
 }

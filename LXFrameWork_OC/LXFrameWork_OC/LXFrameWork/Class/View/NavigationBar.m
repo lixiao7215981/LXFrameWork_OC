@@ -33,6 +33,12 @@
         [self addSubview:_lineView];
         [_lineView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
         [_lineView autoSetDimension:ALDimensionHeight toSize:0.5];
+        
+        // 设置底部阴影
+        self.layer.shadowColor = [[UIColor grayColor]CGColor];
+        self.layer.shadowOpacity = 0.5;
+        self.layer.shadowOffset = CGSizeMake(0, 0.2);
+        
     }
     return self;
 }
@@ -44,10 +50,11 @@
     CGRect rect = leftView.frame;
     leftView.frame = CGRectZero;
     [_btnView addSubview:leftView];
+    //    leftView.backgroundColor = [UIColor redColor];
     leftView.translatesAutoresizingMaskIntoConstraints = NO;
     [leftView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    [leftView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ? 50 : rect.size.width, 44)];
-    [leftView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset: 0];
+    [leftView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ? 50 : rect.size.width, rect.size.height == 0 ? 44 : rect.size.height)];
+    [leftView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset: 5];
 }
 
 - (void)setRightView:(UIView *)rightView
@@ -57,10 +64,11 @@
     CGRect rect = rightView.frame;
     rightView.frame = CGRectZero;
     [_btnView addSubview:rightView];
+    //    rightView.backgroundColor = [UIColor blueColor];
     rightView.translatesAutoresizingMaskIntoConstraints = NO;
     [rightView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    [rightView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ? 50 : rect.size.width, 44)];
-    [rightView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0];
+    [rightView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ? 50 : rect.size.width, rect.size.height == 0 ? 44 : rect.size.height)];
+    [rightView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset: 5];
 }
 
 - (void) setCenterView:(UIView *)centerView
@@ -70,9 +78,10 @@
     CGRect rect = centerView.frame;
     centerView.frame = CGRectZero;
     [_btnView addSubview:centerView];
+    //    centerView.backgroundColor = [UIColor yellowColor];
     [centerView autoAlignAxisToSuperviewMarginAxis:ALAxisHorizontal];
     [centerView autoAlignAxisToSuperviewMarginAxis:ALAxisVertical];
-    [centerView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ?200 :rect.size.width, 44)];
+    [centerView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ? 200 :rect.size.width, rect.size.height == 0 ? 44 : rect.size.height)];
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor
