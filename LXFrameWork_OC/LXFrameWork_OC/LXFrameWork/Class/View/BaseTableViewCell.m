@@ -8,6 +8,7 @@
 
 #import "BaseTableViewCell.h"
 #import "PureLayout.h"
+#import "BundleTool.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 #define centerCellTextFont 17.0f
@@ -80,11 +81,11 @@
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     imageView.clipsToBounds = YES;
     [self addSubview:imageView];
-    UIImage *image = [UIImage imageNamed:self.items.icon];
+    UIImage *image = [BundleTool getImageWitchName:self.items.icon];
     if (image) {
         imageView.image = image;
     }else{
-        [imageView sd_setImageWithURL:[NSURL URLWithString:self.items.icon] placeholderImage:[UIImage imageNamed:@"user_defaultavatar"]];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:self.items.icon] placeholderImage:[BundleTool getImageWitchName:@"user_defaultavatar"]];
     }
     imageView.layer.cornerRadius = iconSizeWH * 0.5 ;
     imageView.clipsToBounds = YES;
@@ -179,7 +180,7 @@
 - (UIImageView *)imgArrowView
 {
     if (!_imgArrowView) {
-        _imgArrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Arrow_Left"]];
+        _imgArrowView = [[UIImageView alloc] initWithImage:[BundleTool getImageWitchName:@"Arrow_Left"]];
     }
     return _imgArrowView;
 }

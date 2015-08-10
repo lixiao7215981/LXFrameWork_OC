@@ -12,19 +12,21 @@
 
 /**
  *  判断是不是今年
- *
  */
 - (BOOL) isThisYear;
 /**
  *  判断是不是今天
- *
  */
 - (BOOL) isToday;
 
 /**
  *  判断是不是昨天
- *
  */
 -(BOOL) isYesterday;
+
+/**
+ *  将NSDate转换为 YYYY-MM-DD  HH:mm:ss
+ */
+- (NSString*)FormatterYMDHMS;
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "BaseViewController.h"
-#import "BlockButton.h"
 #import <IQKeyboardReturnKeyHandler.h>
 
 @interface BaseViewController ()
@@ -71,7 +70,7 @@
     UIButton *button = [UIButton newAutoLayoutView];
     __weak typeof(self) baseView  = self;
     [self setLeftView:^UIView *{
-        [button setImage:[UIImage imageNamed:@"navigationbar_back"] forState:UIControlStateNormal];
+        [button setImage:[BundleTool getImageWitchName:@"navigationbar_back"] forState:UIControlStateNormal];
         [button addTarget:baseView action:@selector(NavBackBtnClick) forControlEvents:UIControlEventTouchUpInside];
         return button;
     }];

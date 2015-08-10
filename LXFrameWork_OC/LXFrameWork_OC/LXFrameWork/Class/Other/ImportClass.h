@@ -36,6 +36,7 @@
 #import "AppDelegate.h"
 #import "LXSingleton.h"
 
+#import <FMDB.h>
 #import <PureLayout.h>
 #import <SVProgressHUD.h>
 #import <MJExtension.h>

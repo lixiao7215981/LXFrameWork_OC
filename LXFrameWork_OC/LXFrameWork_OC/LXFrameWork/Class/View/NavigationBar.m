@@ -35,10 +35,9 @@
         [_lineView autoSetDimension:ALDimensionHeight toSize:0.5];
         
         // 设置底部阴影
-        self.layer.shadowColor = [[UIColor grayColor]CGColor];
-        self.layer.shadowOpacity = 0.5;
-        self.layer.shadowOffset = CGSizeMake(0, 0.2);
-        
+        self.layer.shadowColor = [[UIColor blackColor]CGColor];
+        self.layer.shadowOpacity = 0.15;
+        self.layer.shadowOffset = CGSizeMake(0, 0.1);
     }
     return self;
 }

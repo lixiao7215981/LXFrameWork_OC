@@ -10,6 +10,7 @@
  *  扫描二维码
  */
 #import "BaseViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @class QRCodeViewController;
 
@@ -30,6 +31,7 @@
 @end
 
 @interface QRCodeViewController : BaseViewController
+
 /**
  *  代理
  */

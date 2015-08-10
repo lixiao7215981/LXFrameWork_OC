@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavTitle:@"向上滚动"];
+    [self setNavTitle:@"向上拖动"];
     
     // 添加数据
     [self addDataList];

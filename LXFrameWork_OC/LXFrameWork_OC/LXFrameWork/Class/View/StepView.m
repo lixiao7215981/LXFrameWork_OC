@@ -7,9 +7,7 @@
 //
 
 #import "StepView.h"
-#import "InterchangeButton.h"
-#import "UIView+Extension.h"
-#import <PureLayout.h>
+
 #define kWindowWidth [UIScreen mainScreen].bounds.size.width
 
 @interface StepView()
@@ -60,7 +58,7 @@
             btn.tag = i + 1;
             [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
             [btn setTitle:[NSString stringWithFormat:@"%d %@",i+1,titleArray[i]]forState:UIControlStateNormal];
-            [btn setImage:[UIImage imageNamed:@"Arrow_Left"] forState:UIControlStateNormal];
+            [btn setImage:[BundleTool getImageWitchName:@"Arrow_Left"] forState:UIControlStateNormal];
             if (i == titleArray.count - 1) {
                 [btn setImage:nil forState:UIControlStateNormal];
                 btn.x +=5;

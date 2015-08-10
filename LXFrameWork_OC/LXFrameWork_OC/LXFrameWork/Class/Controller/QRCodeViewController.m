@@ -7,12 +7,13 @@
 //
 
 #import "QRCodeViewController.h"
-#import <AVFoundation/AVFoundation.h>
 
-@interface QRCodeViewController ()<AVCaptureMetadataOutputObjectsDelegate>
-{
-    AVCaptureSession * session;//输入输出中间那座大桥
-}
+@interface QRCodeViewController() <AVCaptureMetadataOutputObjectsDelegate>
+/**
+ *  输入输出中间那座大桥
+ */
+@property (nonatomic,strong) AVCaptureSession * capSession;
+
 @end
 
 @implementation QRCodeViewController
@@ -20,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavTitle:@"二维码/条形码"];
-    //    self.navView.backgroundColor = [UIColor clearColor];
+    
     // 添加扫描框和关闭按钮
     [self addQRCodeImgAndClaenBtn];
     //获取摄像设备
@@ -33,22 +34,21 @@
     [output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
     // 设置反应区域
     output.rectOfInterest=CGRectMake(0.2,0,0.5, 1);
-    
     //初始化链接对象
-    session = [[AVCaptureSession alloc]init];
+    _capSession = [[AVCaptureSession alloc]init];
     //高质量采集率
-    [session setSessionPreset:AVCaptureSessionPresetHigh];
-    [session addInput:input];
-    [session addOutput:output];
+    [_capSession setSessionPreset:AVCaptureSessionPresetHigh];
+    [_capSession addInput:input];
+    [_capSession addOutput:output];
     //设置扫码支持的编码格式(条形码和二维码兼容)
     output.metadataObjectTypes=@[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];
-    // 显示摄像头取到的头像
-    AVCaptureVideoPreviewLayer * layer = [AVCaptureVideoPreviewLayer layerWithSession:session];
+    // 显示摄像头取到的图像
+    AVCaptureVideoPreviewLayer * layer = [AVCaptureVideoPreviewLayer layerWithSession:_capSession];
     layer.videoGravity=AVLayerVideoGravityResizeAspectFill;
     layer.frame = self.view.layer.bounds;
     [self.view.layer insertSublayer:layer atIndex:0];
     //走起！！
-    [session startRunning];
+    [_capSession startRunning];
 }
 
 - (void) addQRCodeImgAndClaenBtn
@@ -57,7 +57,7 @@
     [self.view addSubview:img];
     [img autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view withOffset:-20];
     [img autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    img.image = [UIImage imageNamed:@"QRcode"];
+    img.image = [BundleTool getImageWitchName:@"QRcode"];
     
     UIButton *button = [UIButton newAutoLayoutView];
     [self.view addSubview:button];
@@ -65,7 +65,7 @@
     [button autoAlignAxisToSuperviewAxis:ALAxisVertical];
     [button autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:20];
     [button addTarget:self action:@selector(cleanBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [button setBackgroundImage:[UIImage imageNamed:@"QRCodeCleanBtn"] forState:UIControlStateNormal];
+    [button setBackgroundImage:[BundleTool getImageWitchName:@"QRCodeCleanBtn"]forState:UIControlStateNormal];
 }
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
@@ -75,6 +75,7 @@
                 && [current.type isEqualToString:AVMetadataObjectTypeQRCode]) {
                 NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *) current stringValue];
                 if (_delegate && [_delegate respondsToSelector:@selector(ReaderCode:didScanResult:)]) {
+                    [_capSession stopRunning];
                     [_delegate ReaderCode:self didScanResult:scannedResult];
                 }
                 break;
@@ -86,6 +87,7 @@
 - (void)cleanBtnClick
 {
     if (_delegate && [_delegate respondsToSelector:@selector(ReaderCoderDidCancel:)]) {
+        [_capSession stopRunning];
         [_delegate ReaderCoderDidCancel:self];
     }
 }

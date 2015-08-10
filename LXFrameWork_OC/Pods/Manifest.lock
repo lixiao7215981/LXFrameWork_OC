@@ -20,8 +20,13 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
   - IQKeyboardManager (3.2.4)
-  - MJRefresh (2.3.2)
+  - MJRefresh (2.4.3)
   - PureLayout (2.0.6)
   - Reachability (3.2)
   - SDWebImage (3.7.3):
@@ -33,6 +38,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - FMDB
   - IQKeyboardManager
   - MJRefresh
   - PureLayout
@@ -44,8 +50,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
-  MJRefresh: 0f6f5e8387970607c26080b44058b229a23065d7
+  MJRefresh: d652e909f7182e306d445ec39868ff03a1ae36ce
   PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84

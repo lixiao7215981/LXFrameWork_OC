@@ -56,4 +56,11 @@
     return (component.year ==0 && component.month == 0 && component.day == 1);
 }
 
+- (NSString*)FormatterYMDHMS
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    return [formatter stringFromDate:self];
+}
+
 @end

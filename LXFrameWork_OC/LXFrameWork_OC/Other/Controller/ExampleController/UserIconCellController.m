@@ -22,7 +22,7 @@
 
 - (void) addDataList
 {
-    BaseIconItem *iconItem = [BaseIconItem createBaseCellItemWithIconNameOrUrl:@"user_defaultavatar" AndTitle:@"用户名" SubTitle:@"绑定手机:18612791505" ClickCellOption:^{
+    BaseIconItem *iconItem = [BaseIconItem createBaseCellItemWithIconNameOrUrl:@"user_defaultavatar" AndTitle:@"BaseIconItem" SubTitle:@"绑定手机:18612791505" ClickCellOption:^{
         NSLog(@"点击了Cell");
     } ClickIconOption:^{
         NSLog(@"点击了Icon");
@@ -32,7 +32,7 @@
      *  ClickCellOption == nil    将不显示Cell右侧剪头
      *  SubTitle == nil           Title 将水平居中显示
      */
-    BaseIconItem *iconItem2 = [BaseIconItem createBaseCellItemWithIconNameOrUrl:@"user_defaultavatar" AndTitle:@"用户名" SubTitle:nil ClickCellOption:nil ClickIconOption:^{
+    BaseIconItem *iconItem2 = [BaseIconItem createBaseCellItemWithIconNameOrUrl:@"user_defaultavatar" AndTitle:@"BaseIconItem" SubTitle:nil ClickCellOption:nil ClickIconOption:^{
         NSLog(@"点击了Icon");
     }];
     
@@ -68,7 +68,6 @@
     BaseCenterTitleCellItem *item8 = [BaseCenterTitleCellItem createBaseCellItemWithCenterTitle:@"BaseCenterTitleCellItem" ClickOption:^{
         NSLog(@"BaseCenterTitleCellItem");
     } WithColor:[UIColor redColor]];
-    
     
     BaseCellItemGroup *group = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5,item6,item7,item8]];
     [self.dataList addObject:group1];

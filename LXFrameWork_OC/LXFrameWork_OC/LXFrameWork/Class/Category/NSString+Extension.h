@@ -39,7 +39,7 @@
 + (NSString *)applicationDocumentsDirectory;
 
 /**
- *  将 年月日时分秒时间转换为 仅年月日的shiian
+ *  将 年月日时分秒时间转换为 仅年月日的时间
  */
 - (NSString *)dateStringFromtYYYYMMDD;
 
@@ -47,5 +47,10 @@
  *  删掉字符串前边多余的 "0"
  */
 -(NSString*) getTheCorrect;
+
+/**
+ *  将NSString转化为NSArray或者NSDictionary
+ */
+-(id)JSONValue;
 
 @end

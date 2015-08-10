@@ -7,8 +7,35 @@
 //
 
 #import "HttpTool.h"
+#import "HttpToolLogModel.h"
+#import "NSDate+Extension.h"
+#import "NSString+Extension.h"
+#import "NSObject+JSONCategories.h"
 
 @implementation HttpTool
+
++ (void) requestSuccessUrl:(NSString *) url WithRequestData:(NSDictionary *)requestData AndresponseData:(id)responseObject
+{
+    NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
+    HttpToolLogModel *httplog = [[HttpToolLogModel alloc] init];
+    httplog.request_time = [[NSDate new]FormatterYMDHMS];
+    httplog.request_dict  = requestData;
+    httplog.request_URL = url;
+    httplog.isSuccess = YES;
+    httplog.result_dict = responseDict;
+    [HttpToolLogModel addHttpToolLog:httplog];
+}
+
++ (void) requestFailureUrl:(NSString *) url WithRequestData:(NSDictionary *)requestData AndresponseData:(NSError *)failure
+{
+    HttpToolLogModel *httplog = [[HttpToolLogModel alloc] init];
+    httplog.request_time = [[NSDate new]FormatterYMDHMS];
+    httplog.request_dict = requestData;
+    httplog.request_URL = url;
+    httplog.isSuccess = NO;
+    httplog.result_dict = failure.userInfo;
+    [HttpToolLogModel addHttpToolLog:httplog];
+}
 
 +(void)HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
@@ -16,10 +43,12 @@
     manager.requestSerializer.timeoutInterval = 30;
     [manager GET:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
+            [HttpTool requestSuccessUrl:url WithRequestData:parameser AndresponseData:responseObject];
             success(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) {
+            [HttpTool requestFailureUrl:url WithRequestData:parameser AndresponseData:error];
             failure(error);
         }
     }];
@@ -31,10 +60,12 @@
     manager.requestSerializer.timeoutInterval = 30;
     [manager POST:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
+            [HttpTool requestSuccessUrl:url WithRequestData:parameser AndresponseData:responseObject];
             success(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) {
+            [HttpTool requestFailureUrl:url WithRequestData:parameser AndresponseData:error];
             failure(error);
         }
     }];
@@ -48,10 +79,12 @@
         [formData appendPartWithFileData:data name:name fileName:fileName mimeType:mainType];
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
+            [HttpTool requestSuccessUrl:url WithRequestData:parameser AndresponseData:responseObject];
             success(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) {
+            [HttpTool requestFailureUrl:url WithRequestData:parameser AndresponseData:error];
             failure(error);
         }
     }];
@@ -71,10 +104,12 @@
     manager.responseSerializer = ser;
     [manager GET:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
+            [HttpTool requestSuccessUrl:url WithRequestData:parameser AndresponseData:responseObject];
             success(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) {
+            [HttpTool requestFailureUrl:url WithRequestData:parameser AndresponseData:error];
             failure(error);
         }
     }];
@@ -94,10 +129,12 @@
     manager.responseSerializer = ser;
     [manager POST:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
+            [HttpTool requestSuccessUrl:url WithRequestData:parameser AndresponseData:responseObject];
             success(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) {
+            [HttpTool requestFailureUrl:url WithRequestData:parameser AndresponseData:error];
             failure(error);
         }
     }];
@@ -109,10 +146,12 @@
     manager.requestSerializer.timeoutInterval = 30;
     [manager PUT:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
+            [HttpTool requestSuccessUrl:url WithRequestData:parameser AndresponseData:responseObject];
             success(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (error) {
+            [HttpTool requestFailureUrl:url WithRequestData:parameser AndresponseData:error];
             failure(error);
         }
     }];
@@ -131,10 +170,12 @@
     manager.responseSerializer = ser;
     [manager PUT:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
+            [HttpTool requestSuccessUrl:url WithRequestData:parameser AndresponseData:responseObject];
             success(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) {
+            [HttpTool requestFailureUrl:url WithRequestData:parameser AndresponseData:error];
             failure(error);
         }
     }];
@@ -146,10 +187,12 @@
     manager.requestSerializer.timeoutInterval = 30;
     [manager DELETE:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
+            [HttpTool requestSuccessUrl:url WithRequestData:parameser AndresponseData:responseObject];
             success(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (error) {
+            [HttpTool requestFailureUrl:url WithRequestData:parameser AndresponseData:error];
             failure(error);
         }
     }];
@@ -168,10 +211,12 @@
     manager.responseSerializer = ser;
     [manager DELETE:url parameters:parameser success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (success) {
+            [HttpTool requestSuccessUrl:url WithRequestData:parameser AndresponseData:responseObject];
             success(responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (error) {
+            [HttpTool requestFailureUrl:url WithRequestData:parameser AndresponseData:error];
             failure(error);
         }
     }];
