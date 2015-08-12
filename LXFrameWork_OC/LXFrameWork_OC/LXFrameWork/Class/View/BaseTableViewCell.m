@@ -17,6 +17,11 @@
 #define iconSizeWH 55
 
 @interface BaseTableViewCell ()
+{
+    UIImageView *_iconImg;
+    UILabel *_title;
+    UILabel *_subTitle;
+}
 // 右侧的箭头图片
 @property (nonatomic,strong) UIImageView *imgArrowView;
 // 右侧的switch
@@ -77,53 +82,57 @@
 {
     self.selectionStyle = UITableViewCellSelectionStyleDefault;
     // 设置头像
-    UIImageView *imageView = [UIImageView newAutoLayoutView];
-    imageView.contentMode = UIViewContentModeScaleAspectFill;
-    imageView.clipsToBounds = YES;
-    [self addSubview:imageView];
+    [_iconImg removeFromSuperview];
+    _iconImg = [UIImageView newAutoLayoutView];
+    _iconImg.contentMode = UIViewContentModeScaleAspectFill;
+    _iconImg.clipsToBounds = YES;
+    [self addSubview:_iconImg];
     UIImage *image = [BundleTool getImageWitchName:self.items.icon];
     if (image) {
-        imageView.image = image;
+        _iconImg.image = image;
     }else{
-        [imageView sd_setImageWithURL:[NSURL URLWithString:self.items.icon] placeholderImage:[BundleTool getImageWitchName:@"user_defaultavatar"]];
+        [_iconImg sd_setImageWithURL:[NSURL URLWithString:self.items.icon] placeholderImage:[BundleTool getImageWitchName:@"user_defaultavatar"]];
     }
-    imageView.layer.cornerRadius = iconSizeWH * 0.5 ;
-    imageView.clipsToBounds = YES;
-    imageView.userInteractionEnabled = YES;
-    [imageView autoSetDimensionsToSize:CGSizeMake(iconSizeWH, iconSizeWH)];
-    [imageView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    [imageView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:15];
+    _iconImg.layer.cornerRadius = iconSizeWH * 0.5 ;
+    _iconImg.clipsToBounds = YES;
+    _iconImg.userInteractionEnabled = YES;
+    [_iconImg autoSetDimensionsToSize:CGSizeMake(iconSizeWH, iconSizeWH)];
+    [_iconImg autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    [_iconImg autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:15];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizer:)];
-    [imageView addGestureRecognizer:tap];
+    [_iconImg addGestureRecognizer:tap];
     // 如果点击Cell有操作，添加accessoryView
     if (_items.option) {
         self.accessoryView = self.imgArrowView;
     }
     // 根据 subTitle 添加detailTitlt位置
     if (_items.subTitle.length) {
-        UILabel *title = [UILabel newAutoLayoutView];
-        [self addSubview:title];
-        title.textColor = [UIColor blackColor];
-        title.font = [UIFont boldSystemFontOfSize:titleTextFont];
-        title.text = _items.title;
-        [title autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
-        [title autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:18];
+        [_title removeFromSuperview];
+        _title = [UILabel newAutoLayoutView];
+        [self addSubview:_title];
+        _title.textColor = [UIColor blackColor];
+        _title.font = [UIFont boldSystemFontOfSize:titleTextFont];
+        _title.text = _items.title;
+        [_title autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:15];
+        [_title autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:_iconImg withOffset:18];
         
-        UILabel *detailTitle = [UILabel newAutoLayoutView];
-        [self addSubview:detailTitle];
-        detailTitle.textColor = [UIColor grayColor];
-        detailTitle.font = [UIFont boldSystemFontOfSize:detailTextFont];
-        detailTitle.text = _items.subTitle;
-        [detailTitle autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:18];
-        [detailTitle autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:title withOffset:5];
+        [_subTitle removeFromSuperview];
+        _subTitle = [UILabel newAutoLayoutView];
+        [self addSubview:_subTitle];
+        _subTitle.textColor = [UIColor grayColor];
+        _subTitle.font = [UIFont boldSystemFontOfSize:detailTextFont];
+        _subTitle.text = _items.subTitle;
+        [_subTitle autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:_iconImg withOffset:18];
+        [_subTitle autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_title withOffset:5];
     }else{
-        UILabel *title = [UILabel newAutoLayoutView];
-        [self addSubview:title];
-        title.textColor = [UIColor blackColor];
-        title.font = [UIFont boldSystemFontOfSize:titleTextFont];
-        title.text = _items.title;
-        [title autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-        [title autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:imageView withOffset:18];
+        [_title removeFromSuperview];
+        _title = [UILabel newAutoLayoutView];
+        [self addSubview:_title];
+        _title.textColor = [UIColor blackColor];
+        _title.font = [UIFont boldSystemFontOfSize:titleTextFont];
+        _title.text = _items.title;
+        [_title autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+        [_title autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:_iconImg withOffset:18];
     }
 }
 

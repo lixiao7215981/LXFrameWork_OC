@@ -39,8 +39,6 @@
 {
     [super viewDidAppear:animated];
     if (self.images.count > 0) return;
-    // 产生截图
-    //    [self createScreenShot];
 }
 
 #pragma mark - 拦截 push pop 方法
@@ -59,7 +57,6 @@
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
-    [self.images removeLastObject];
     return [super popViewControllerAnimated:animated];
 }
 
@@ -75,9 +72,10 @@
     
     // 在x方向上移动的距离
     CGFloat tx = [recognizer translationInView:self.view].x;
-    if (tx < 0) return;
-    
-    if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled || recognizer.state == UIGestureRecognizerStateFailed) {
+    if (tx < 0){
+        self.view.transform = CGAffineTransformIdentity;
+        self.lastVcView.transform = CGAffineTransformIdentity;
+    } else if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled || recognizer.state == UIGestureRecognizerStateFailed) {
         // 决定pop还是还原
         if (self.view.x >= self.view.width * 0.3) {
             [UIView animateWithDuration:0.25 animations:^{
@@ -85,6 +83,7 @@
                 self.lastVcView.x = 0;
             } completion:^(BOOL finished) {
                 [self popViewControllerAnimated:NO];
+                [self.images removeLastObject];
                 [self.lastVcView removeFromSuperview];
                 [self.cover removeFromSuperview];
                 self.view.transform = CGAffineTransformIdentity;
@@ -101,6 +100,7 @@
     } else {
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
         // 添加截图到最后面
+        if (!self.images.count) return;
         self.lastVcView.image = self.images[self.images.count - 1];
         [window insertSubview:self.lastVcView atIndex:0];
         [window insertSubview:self.cover aboveSubview:self.lastVcView];
