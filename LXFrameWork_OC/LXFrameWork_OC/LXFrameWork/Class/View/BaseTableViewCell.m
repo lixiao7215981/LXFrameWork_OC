@@ -84,6 +84,8 @@
     // 设置头像
     [_iconImg removeFromSuperview];
     _iconImg = [UIImageView newAutoLayoutView];
+    _iconImg.layer.cornerRadius = iconSizeWH * 0.5 ;
+    _iconImg.userInteractionEnabled = YES;
     _iconImg.contentMode = UIViewContentModeScaleAspectFill;
     _iconImg.clipsToBounds = YES;
     [self addSubview:_iconImg];
@@ -93,9 +95,7 @@
     }else{
         [_iconImg sd_setImageWithURL:[NSURL URLWithString:self.items.icon] placeholderImage:[BundleTool getImageWitchName:@"user_defaultavatar"]];
     }
-    _iconImg.layer.cornerRadius = iconSizeWH * 0.5 ;
-    _iconImg.clipsToBounds = YES;
-    _iconImg.userInteractionEnabled = YES;
+    
     [_iconImg autoSetDimensionsToSize:CGSizeMake(iconSizeWH, iconSizeWH)];
     [_iconImg autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [_iconImg autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:15];

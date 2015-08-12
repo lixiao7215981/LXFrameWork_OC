@@ -28,8 +28,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 禁用系统自带的拖拽手势
-    self.interactivePopGestureRecognizer.enabled = NO;
     // 拖拽手势
     _PanRecognizer= [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragging:)];
     [self.view addGestureRecognizer:_PanRecognizer];
@@ -38,7 +36,15 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if (self.images.count > 0) return;
+    // 禁用系统自带的拖拽手势
+    self.interactivePopGestureRecognizer.enabled = NO;
+}
+
+- (void)dealloc
+{
+    [self.lastVcView removeFromSuperview];
+    [self.cover removeFromSuperview];
+    [self.images removeAllObjects];
 }
 
 #pragma mark - 拦截 push pop 方法
