@@ -15,6 +15,7 @@
 #import "SystemDebugController.h"
 #import "HttpViewController.h"
 #import "SysetmHttpDebugController.h"
+#import "HeadImageScorllController.h"
 #import "SetNavBarLeftRightViewController.h"
 
 @interface MainTableViewController ()<QRCodeViewControllerDelegate>
@@ -50,37 +51,42 @@
         [self.navigationController pushViewController:navBarScroll animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *item3 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"带下拉上拉刷新" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item3 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"下拉放大" SubTitle:nil ClickOption:^{
+        HeadImageScorllController *headViewScroll = [[HeadImageScorllController alloc] init];
+        [self.navigationController pushViewController:headViewScroll animated:YES];
+    } AndDetailClass:nil];
+    
+    BaseArrowCellItem *item4 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"带下拉上拉刷新" SubTitle:nil ClickOption:^{
         HavePullViewController *pull = [[HavePullViewController alloc] init];
         [self.navigationController pushViewController:pull animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *item4 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"Cell样式展示" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item5 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"Cell样式展示" SubTitle:nil ClickOption:^{
         UserIconCellController *icon = [[UserIconCellController alloc] init];
         [self.navigationController pushViewController:icon animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *item5 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置NavBar的左中右按钮或标题" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item6 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置NavBar的左中右按钮或标题" SubTitle:nil ClickOption:^{
         SetNavBarLeftRightViewController  *navVar = [[SetNavBarLeftRightViewController alloc] init];
         [self.navigationController pushViewController:navVar animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *item6 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"发送请求" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item7 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"发送请求" SubTitle:nil ClickOption:^{
         HttpViewController  *httpVC = [[HttpViewController alloc] init];
         [self.navigationController pushViewController:httpVC animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *item7 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"查看调试选项" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item8 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"查看调试选项" SubTitle:nil ClickOption:^{
         SystemDebugController *debug = [[SystemDebugController alloc] init];
         [self.navigationController pushViewController:debug animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *item8 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"请求日志" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item9 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"请求日志" SubTitle:nil ClickOption:^{
         SysetmHttpDebugController *httpDebug = [[SysetmHttpDebugController alloc] init];
         [self.navigationController pushViewController:httpDebug animated:YES];
     } AndDetailClass:nil];
     
-    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5,item6,item7,item8]];
+    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5,item6,item7,item8,item9]];
     
     [self.dataList addObject:group1];
 }

@@ -9,7 +9,9 @@
 #import "BaseTableViewController.h"
 
 @interface BaseTableViewController ()<UITableViewDataSource,UITableViewDelegate>
-
+{
+    NSLayoutConstraint *_scrollHeight;
+}
 @end
 
 @implementation BaseTableViewController
@@ -29,6 +31,7 @@
         [self.view addSubview:self.tableView];
         [self.tableView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     }
+    
     // 设置TableView
     self.tableView.tableFooterView = [[UIView alloc] init];
     self.tableView.delegate = self;
@@ -172,17 +175,36 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    // 如果有下拉图片就方法该图片
+    if (self.scaleImage) {
+        CGFloat down = -(_scaleHeight) - scrollView.contentOffset.y;
+        if (down > 0){
+            _scrollHeight.constant = _scaleHeight + down * 5;
+        }
+    }
+    
     if (!_displayNav) return;
     UIColor *NavBackColor = self.navView.backViewBackColor;
     UIColor *blockColor = [[UIColor lightGrayColor]colorWithAlphaComponent:0.5];
     CGFloat offsetY = scrollView.contentOffset.y;
-    if (offsetY > 0) {
-        CGFloat alpha = 1 - ((64 - offsetY) / 64);
-        [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:alpha]];
-        [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:alpha]];
-    } else {
-        [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:0]];
-        [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:0]];
+    if (self.scaleImage) { // 有下拉图片
+        if ((offsetY + _scaleHeight) > 0) {
+            CGFloat alpha = 1 - ((100 - (offsetY + _scaleHeight)) / 100);
+            [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:alpha]];
+            [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:alpha]];
+        } else {
+            [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:0]];
+            [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:0]];
+        }
+    }else{// 无下拉图片，滚动显示 NavBar
+        if (offsetY > 0) {
+            CGFloat alpha = 1 - ((64 - offsetY) / 64);
+            [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:alpha]];
+            [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:alpha]];
+        } else {
+            [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:0]];
+            [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:0]];
+        }
     }
 }
 
@@ -201,6 +223,24 @@
         [self.navView setScrollNavigationBarBackColor:[UIColor clearColor]];
         [self.navView setScrollNavigationBarLineBackColor:[UIColor clearColor]];
     }
+}
+
+/**
+ *  设置下拉放大图片
+ */
+- (void)setScaleImage:(UIImage *)scaleImage
+{
+    _scaleImage = scaleImage;
+    self.tableView.contentInset = UIEdgeInsetsMake(_scaleHeight, 0, 0, 0);
+    self.tableView.contentOffset = CGPointMake(0, -_scaleHeight);
+    UIImageView *scralImageView = [UIImageView newAutoLayoutView];
+    scralImageView.image = _scaleImage;
+    [self.tableView insertSubview:scralImageView atIndex:0];
+    [scralImageView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [scralImageView autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    [scralImageView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.view];
+    _scrollHeight = [scralImageView autoSetDimension:ALDimensionHeight toSize:_scaleHeight];
+    scralImageView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 #pragma mark - 懒加载

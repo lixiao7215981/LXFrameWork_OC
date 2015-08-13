@@ -27,5 +27,11 @@
 /** TableView 实时滚动展示NavigationBar */
 @property (nonatomic,assign) BOOL displayNav;
 
+/** TableView 拖拽 TableView 放大HeadImg */
+@property (nonatomic,strong) UIImage *scaleImage;
+
+/** TableView 拖拽 TableView 放大HeadImg Height */
+@property (nonatomic,assign) CGFloat scaleHeight;
+
 
 @end
