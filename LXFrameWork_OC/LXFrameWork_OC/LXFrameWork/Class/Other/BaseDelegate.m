@@ -7,8 +7,7 @@
 //
 
 #import "BaseDelegate.h"
-#import <IQKeyboardManager.h>
-#import <SVProgressHUD.h>
+
 @interface BaseDelegate ()
 
 @end

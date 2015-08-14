@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <IQKeyboardManager.h>
+#import <SVProgressHUD.h>
 
 @interface BaseDelegate : UIResponder <UIApplicationDelegate>
 

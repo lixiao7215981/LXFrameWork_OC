@@ -7,7 +7,6 @@
 //
 
 #import "BaseViewController.h"
-#import <IQKeyboardReturnKeyHandler.h>
 
 @interface BaseViewController ()
 @property (nonatomic, strong) IQKeyboardReturnKeyHandler *returnKeyHandler;
