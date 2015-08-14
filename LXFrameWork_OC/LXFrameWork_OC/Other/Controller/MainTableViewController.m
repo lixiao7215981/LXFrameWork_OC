@@ -14,6 +14,7 @@
 #import "BaseTableViewController.h"
 #import "SystemDebugController.h"
 #import "HttpViewController.h"
+#import "WebViewController.h"
 #import "SysetmHttpDebugController.h"
 #import "HeadImageScorllController.h"
 #import "SetNavBarLeftRightViewController.h"
@@ -86,7 +87,12 @@
         [self.navigationController pushViewController:httpDebug animated:YES];
     } AndDetailClass:nil];
     
-    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5,item6,item7,item8,item9]];
+    BaseArrowCellItem *item10 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseWebView" SubTitle:nil ClickOption:^{
+        WebViewController *webView = [[WebViewController alloc] init];
+        [self.navigationController pushViewController:webView animated:YES];
+    } AndDetailClass:nil];
+    
+    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5,item6,item7,item8,item9,item10]];
     
     [self.dataList addObject:group1];
 }

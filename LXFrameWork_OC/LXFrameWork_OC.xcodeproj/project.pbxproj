@@ -14,6 +14,8 @@
 		4E56B7F61B54F5FF00184403 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F51B54F5FF00184403 /* StepView.m */; };
 		4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F81B54FAD600184403 /* InterchangeButton.m */; };
 		4E59A1851B7C9A9300EA6D06 /* HeadImageScorllController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59A1841B7C9A9300EA6D06 /* HeadImageScorllController.m */; };
+		4E59A1881B7D7E5000EA6D06 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59A1871B7D7E5000EA6D06 /* BaseWebViewController.m */; };
+		4E59A18B1B7D8C0100EA6D06 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59A18A1B7D8C0100EA6D06 /* WebViewController.m */; };
 		4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */; };
 		4E72C19C1B4FEE6400C16C1E /* PlistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1991B4FEE6400C16C1E /* PlistTool.m */; };
 		4EA29A761B56005E0084E72D /* StepNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA29A751B56005E0084E72D /* StepNextView.m */; };
@@ -98,6 +100,10 @@
 		4E56B7F81B54FAD600184403 /* InterchangeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterchangeButton.m; sourceTree = "<group>"; };
 		4E59A1831B7C9A9300EA6D06 /* HeadImageScorllController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadImageScorllController.h; sourceTree = "<group>"; };
 		4E59A1841B7C9A9300EA6D06 /* HeadImageScorllController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadImageScorllController.m; sourceTree = "<group>"; };
+		4E59A1861B7D7E5000EA6D06 /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
+		4E59A1871B7D7E5000EA6D06 /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
+		4E59A1891B7D8C0100EA6D06 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		4E59A18A1B7D8C0100EA6D06 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		4E72C1921B4FEE6400C16C1E /* BaseTabBarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarService.h; sourceTree = "<group>"; };
 		4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarService.m; sourceTree = "<group>"; };
 		4E72C1941B4FEE6400C16C1E /* ImportClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportClass.h; sourceTree = "<group>"; };
@@ -258,6 +264,8 @@
 				4ED167131B4A6BA000B3C618 /* BaseNavigationController.m */,
 				4ECECFA91B5D0A690036B721 /* BaseStepViewController.h */,
 				4ECECFAA1B5D0A690036B721 /* BaseStepViewController.m */,
+				4E59A1861B7D7E5000EA6D06 /* BaseWebViewController.h */,
+				4E59A1871B7D7E5000EA6D06 /* BaseWebViewController.m */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -489,6 +497,8 @@
 				4EE45C921B78546C00C30B7D /* HttpViewController.m */,
 				4E59A1831B7C9A9300EA6D06 /* HeadImageScorllController.h */,
 				4E59A1841B7C9A9300EA6D06 /* HeadImageScorllController.m */,
+				4E59A1891B7D8C0100EA6D06 /* WebViewController.h */,
+				4E59A18A1B7D8C0100EA6D06 /* WebViewController.m */,
 			);
 			path = ExampleController;
 			sourceTree = "<group>";
@@ -702,11 +712,13 @@
 				4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */,
 				4EB8533E1B4A1A3A00C35F6D /* BaseTableViewController.m in Sources */,
 				4EE45C831B74A90C00C30B7D /* BaseCellItemGroup.m in Sources */,
+				4E59A1881B7D7E5000EA6D06 /* BaseWebViewController.m in Sources */,
 				4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */,
 				4EE45C841B74A90C00C30B7D /* BaseCenterTitleCellItem.m in Sources */,
 				4EE45C5C1B736C0800C30B7D /* NavBarScrollController.m in Sources */,
 				4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */,
 				4E56B7F61B54F5FF00184403 /* StepView.m in Sources */,
+				4E59A18B1B7D8C0100EA6D06 /* WebViewController.m in Sources */,
 				4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */,
 				4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */,
 				4EE45C931B78546C00C30B7D /* HttpViewController.m in Sources */,
