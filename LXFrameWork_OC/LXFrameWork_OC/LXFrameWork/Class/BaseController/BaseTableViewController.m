@@ -198,7 +198,7 @@
         }
     }else{// 无下拉图片，滚动显示 NavBar
         if (offsetY > 0) {
-            CGFloat alpha = 1 - ((64 - offsetY) / 64);
+            CGFloat alpha = 1 - ((100 - offsetY) / 100);
             [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:alpha]];
             [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:alpha]];
         } else {

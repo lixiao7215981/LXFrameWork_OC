@@ -34,7 +34,7 @@
 
 - (void) addDataList
 {
-    BaseArrowCellItem *item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"二维码" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"二维码扫描" SubTitle:nil ClickOption:^{
 #if TARGET_IPHONE_SIMULATOR
         [SVProgressHUD showErrorWithStatus:@"模拟器不支持"];
 #elif TARGET_OS_IPHONE
@@ -51,7 +51,7 @@
         [self.navigationController pushViewController:navBarScroll animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *item3 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"下拉放大" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item3 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"下拉放大头部IMG" SubTitle:nil ClickOption:^{
         HeadImageScorllController *headViewScroll = [[HeadImageScorllController alloc] init];
         [self.navigationController pushViewController:headViewScroll animated:YES];
     } AndDetailClass:nil];
