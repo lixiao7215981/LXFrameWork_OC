@@ -26,5 +26,10 @@
     return [[vc alloc] initWithNibName:name bundle:MYBUNDLE];
 }
 
++ (NSString *)getApp_Version
+{
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    return [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+}
 
 @end
