@@ -8,16 +8,20 @@
 
 #import "NavigationBar.h"
 
+// NavBar最下边 Line 的颜色
+#define lineView_BackageGroundColor [[UIColor lightGrayColor] colorWithAlphaComponent:0.5]
+
 @implementation NavigationBar
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+        LXFrameWorkInstance *instance = [LXFrameWorkInstance sharedLXFrameWorkInstance];
         self.backgroundColor = [UIColor clearColor];
         // 设置背景View
         _backView = [UIView newAutoLayoutView];
-        _backView.backgroundColor = _backViewBackColor = [UIColor whiteColor];
+        _backView.backgroundColor = _backViewBackColor = instance.NavigationBar_bgColor;
         [self addSubview:_backView];
         [_backView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
         
@@ -29,7 +33,7 @@
         
         // 设置底部线
         _lineView = [UIView newAutoLayoutView];
-        _lineView.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.5];
+        _lineView.backgroundColor = lineView_BackageGroundColor;
         [self addSubview:_lineView];
         [_lineView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
         [_lineView autoSetDimension:ALDimensionHeight toSize:0.5];
@@ -49,7 +53,7 @@
     CGRect rect = leftView.frame;
     leftView.frame = CGRectZero;
     [_btnView addSubview:leftView];
-    //    leftView.backgroundColor = [UIColor redColor];
+    //        leftView.backgroundColor = [UIColor redColor];
     leftView.translatesAutoresizingMaskIntoConstraints = NO;
     [leftView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [leftView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ? 50 : rect.size.width, rect.size.height == 0 ? 44 : rect.size.height)];
@@ -97,6 +101,18 @@
 - (void)setScrollNavigationBarLineBackColor:(UIColor *)color
 {
     _lineView.backgroundColor = color;
+}
+
+
+- (void)setNavigationBarHiddenShowBtn:(BOOL)isHidden
+{
+    if (isHidden) {
+        [self setScrollNavigationBarBackColor:[UIColor clearColor]];
+        [self setScrollNavigationBarLineBackColor: [UIColor clearColor]];
+    }else{
+        [self setScrollNavigationBarBackColor:_backViewBackColor];
+        [self setScrollNavigationBarLineBackColor: lineView_BackageGroundColor];
+    }
 }
 
 @end

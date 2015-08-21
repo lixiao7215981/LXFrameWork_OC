@@ -69,7 +69,12 @@
     UIButton *button = [UIButton newAutoLayoutView];
     __weak typeof(self) baseView  = self;
     [self setLeftView:^UIView *{
-        [button setImage:[BundleTool getImageWitchName:@"navigationbar_back"] forState:UIControlStateNormal];
+        LXFrameWorkInstance *instance = [LXFrameWorkInstance sharedLXFrameWorkInstance];
+        if (instance.backState == writeBase) {
+            [button setImage:[BundleTool getImageWitchName:@"Navigationbar_back_write"] forState:UIControlStateNormal];
+        }else if(instance.backState == blackBase){
+            [button setImage:[BundleTool getImageWitchName:@"navigationbar_back"] forState:UIControlStateNormal];
+        }
         [button addTarget:baseView action:@selector(NavBackBtnClick) forControlEvents:UIControlEventTouchUpInside];
         return button;
     }];
@@ -137,8 +142,6 @@
 {
     if (!_navView) {
         _navView = [NavigationBar newAutoLayoutView];
-        //        _navView = [[NavigationBar alloc] init];
-        //        _navView = [[NavigationBar alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 64)];
     }
     return _navView;
 }

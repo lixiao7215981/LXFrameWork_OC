@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LXFrameWorkInstance.h"
 #import "PureLayout.h"
 
 @interface NavigationBar : UIView
@@ -50,5 +51,9 @@
  *  动态设置 NavBar LineBackColor
  */
 - (void) setScrollNavigationBarLineBackColor:(UIColor *) color;
+/**
+ *  设置 NavBar clearColor 但是要显示左右两边的按钮
+ */
+- (void) setNavigationBarHiddenShowBtn:(BOOL) isHidden;
 
 @end

@@ -35,6 +35,8 @@
 		4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB853471B4A3DBB00C35F6D /* BaseTableViewCell.m */; };
 		4EB8BABF1B2E8CB800315CEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8BABE1B2E8CB800315CEF /* Images.xcassets */; };
 		4EB8BACE1B2E8CB800315CEF /* LXFrameWork_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8BACD1B2E8CB800315CEF /* LXFrameWork_OCTests.m */; };
+		4EBC50AE1B86ED6400A71618 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC50AD1B86ED6400A71618 /* UIWindow+Extension.m */; };
+		4EBC50B11B8706D100A71618 /* LXFrameWorkInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC50B01B8706D100A71618 /* LXFrameWorkInstance.m */; };
 		4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */; };
 		4EC4F73E1B4E2A4500ACEE5F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F7331B4E2A4500ACEE5F /* Info.plist */; };
 		4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */; };
@@ -145,6 +147,10 @@
 		4EB8BAC71B2E8CB800315CEF /* LXFrameWork_OCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LXFrameWork_OCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB8BACC1B2E8CB800315CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB8BACD1B2E8CB800315CEF /* LXFrameWork_OCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXFrameWork_OCTests.m; sourceTree = "<group>"; };
+		4EBC50AC1B86ED6400A71618 /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
+		4EBC50AD1B86ED6400A71618 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
+		4EBC50AF1B8706D100A71618 /* LXFrameWorkInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFrameWorkInstance.h; sourceTree = "<group>"; };
+		4EBC50B01B8706D100A71618 /* LXFrameWorkInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFrameWorkInstance.m; sourceTree = "<group>"; };
 		4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EC4F7331B4E2A4500ACEE5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -232,6 +238,8 @@
 				4E72C1921B4FEE6400C16C1E /* BaseTabBarService.h */,
 				4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */,
 				4E72C1941B4FEE6400C16C1E /* ImportClass.h */,
+				4EBC50AF1B8706D100A71618 /* LXFrameWorkInstance.h */,
+				4EBC50B01B8706D100A71618 /* LXFrameWorkInstance.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -371,6 +379,8 @@
 		4EB8BAE91B2EB49C00315CEF /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				4EBC50AC1B86ED6400A71618 /* UIWindow+Extension.h */,
+				4EBC50AD1B86ED6400A71618 /* UIWindow+Extension.m */,
 				4E56B7E51B54AD3400184403 /* NSMutableURLRequest+Upload.h */,
 				4E56B7E61B54AD3400184403 /* NSMutableURLRequest+Upload.m */,
 				4EA445641B4FDA9300844282 /* CALayer+SetColor.h */,
@@ -710,6 +720,7 @@
 				4EA374B61B4D39DD00680B92 /* BlockButton.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
 				4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */,
+				4EBC50AE1B86ED6400A71618 /* UIWindow+Extension.m in Sources */,
 				4EB8533E1B4A1A3A00C35F6D /* BaseTableViewController.m in Sources */,
 				4EE45C831B74A90C00C30B7D /* BaseCellItemGroup.m in Sources */,
 				4E59A1881B7D7E5000EA6D06 /* BaseWebViewController.m in Sources */,
@@ -717,6 +728,7 @@
 				4EE45C841B74A90C00C30B7D /* BaseCenterTitleCellItem.m in Sources */,
 				4EE45C5C1B736C0800C30B7D /* NavBarScrollController.m in Sources */,
 				4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */,
+				4EBC50B11B8706D100A71618 /* LXFrameWorkInstance.m in Sources */,
 				4E56B7F61B54F5FF00184403 /* StepView.m in Sources */,
 				4E59A18B1B7D8C0100EA6D06 /* WebViewController.m in Sources */,
 				4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */,
