@@ -71,9 +71,9 @@
     [self setLeftView:^UIView *{
         LXFrameWorkInstance *instance = [LXFrameWorkInstance sharedLXFrameWorkInstance];
         if (instance.backState == writeBase) {
-            [button setImage:[BundleTool getImageWitchName:@"Navigationbar_back_write"] forState:UIControlStateNormal];
+            [button setImage:[BundleTool getImage:@"Navigationbar_back_write" FromBundle:LXFrameWorkBundle] forState:UIControlStateNormal];
         }else if(instance.backState == blackBase){
-            [button setImage:[BundleTool getImageWitchName:@"navigationbar_back"] forState:UIControlStateNormal];
+            [button setImage:[BundleTool getImage:@"navigationbar_back" FromBundle:LXFrameWorkBundle] forState:UIControlStateNormal];
         }
         [button addTarget:baseView action:@selector(NavBackBtnClick) forControlEvents:UIControlEventTouchUpInside];
         return button;

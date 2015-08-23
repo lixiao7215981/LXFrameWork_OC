@@ -89,11 +89,11 @@
     _iconImg.contentMode = UIViewContentModeScaleAspectFill;
     _iconImg.clipsToBounds = YES;
     [self addSubview:_iconImg];
-    UIImage *image = [BundleTool getImageWitchName:self.items.icon];
+    UIImage *image = [BundleTool getImage:self.items.icon FromBundle:LXFrameWorkBundle];
     if (image) {
         _iconImg.image = image;
     }else{
-        [_iconImg sd_setImageWithURL:[NSURL URLWithString:self.items.icon] placeholderImage:[BundleTool getImageWitchName:@"user_defaultavatar"]];
+        [_iconImg sd_setImageWithURL:[NSURL URLWithString:self.items.icon] placeholderImage:[BundleTool getImage:@"user_defaultavatar" FromBundle:LXFrameWorkBundle]];
     }
     
     [_iconImg autoSetDimensionsToSize:CGSizeMake(iconSizeWH, iconSizeWH)];
@@ -189,7 +189,7 @@
 - (UIImageView *)imgArrowView
 {
     if (!_imgArrowView) {
-        _imgArrowView = [[UIImageView alloc] initWithImage:[BundleTool getImageWitchName:@"Arrow_Left"]];
+        _imgArrowView = [[UIImageView alloc] initWithImage:[BundleTool getImage:@"Arrow_Left" FromBundle:LXFrameWorkBundle]];
     }
     return _imgArrowView;
 }

@@ -66,7 +66,7 @@
             btn.tag = i + 1;
             [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
             [btn setTitle:[NSString stringWithFormat:@"%d %@",i+1,_titleArray[i]]forState:UIControlStateNormal];
-            [btn setImage:[BundleTool getImageWitchName:@"Arrow_Left"] forState:UIControlStateNormal];
+            [btn setImage:[BundleTool getImage:@"Arrow_Left" FromBundle:LXFrameWorkBundle] forState:UIControlStateNormal];
             if (i == _titleArray.count - 1) {
                 [btn setImage:nil forState:UIControlStateNormal];
                 btn.x +=5;

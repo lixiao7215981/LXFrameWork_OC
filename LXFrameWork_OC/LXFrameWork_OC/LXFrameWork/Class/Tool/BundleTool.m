@@ -8,22 +8,22 @@
 
 #import "BundleTool.h"
 
-#define MYBUNDLE_NAME @ "LXFrameWork.bundle"
-#define MYBUNDLE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
+#define BUNDLE_PATH(name) [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: (name)]
 #define MYBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]
 
 @implementation BundleTool
 
-+ (UIImage *)getImageWitchName:(NSString *)name
+
++ (UIImage *)getImage:(NSString *)img FromBundle:(NSString *)bundle
 {
-    UIImage *image=[UIImage imageWithContentsOfFile:[MYBUNDLE_PATH stringByAppendingPathComponent :name]];
+    UIImage *image=[UIImage imageWithContentsOfFile:[BUNDLE_PATH(bundle) stringByAppendingPathComponent : img]];
     return image;
 }
 
-+ (id)getViewControllerWithNibName:(NSString *)name
++ (id)getViewControllerNibName:(NSString *)name FromBundle:(NSString *)bundle
 {
     Class vc = NSClassFromString(name);
-    return [[vc alloc] initWithNibName:name bundle:MYBUNDLE];
+    return [[vc alloc] initWithNibName:name bundle:[NSBundle bundleWithPath: BUNDLE_PATH(bundle)]];
 }
 
 + (NSString *)getApp_Version

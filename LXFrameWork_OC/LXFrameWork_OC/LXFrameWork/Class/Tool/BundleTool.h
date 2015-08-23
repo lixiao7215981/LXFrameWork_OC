@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define LXFrameWorkBundle @ "LXFrameWork.bundle"
+
 @interface BundleTool : NSObject
 
 /**
@@ -17,7 +19,7 @@
  *
  *  @return UIImage
  */
-+ (UIImage *) getImageWitchName:(NSString *) name;
++ (UIImage *) getImage:(NSString *)img FromBundle:(NSString *) bundle;
 
 /**
  *  从 boundle 中获取资源文件 XIB
@@ -26,7 +28,7 @@
  *
  *  @return UIViewController
  */
-+ (id) getViewControllerWithNibName:(NSString *) name;
++ (id) getViewControllerNibName:(NSString *) name FromBundle:(NSString *) bundle;;
 
 /**
  *  获取当前APP的版本

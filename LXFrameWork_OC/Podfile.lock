@@ -26,6 +26,7 @@ PODS:
   - FMDB/standard (2.5):
     - FMDB/common
   - IQKeyboardManager (3.2.4)
+  - MJExtension (2.5.8)
   - MJRefresh (2.4.3)
   - PureLayout (2.0.6)
   - Reachability (3.2)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - AFNetworking
   - FMDB
   - IQKeyboardManager
+  - MJExtension
   - MJRefresh
   - PureLayout
   - Reachability
@@ -52,6 +54,7 @@ SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
+  MJExtension: e6f30c738b7618552ee5563fcf4eadf552f997e0
   MJRefresh: d652e909f7182e306d445ec39868ff03a1ae36ce
   PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96

@@ -57,7 +57,7 @@
     [self.view addSubview:img];
     [img autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view withOffset:-20];
     [img autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    img.image = [BundleTool getImageWitchName:@"QRcode"];
+    img.image = [BundleTool getImage:@"QRcode" FromBundle:LXFrameWorkBundle];
     
     UIButton *button = [UIButton newAutoLayoutView];
     [self.view addSubview:button];
@@ -65,7 +65,7 @@
     [button autoAlignAxisToSuperviewAxis:ALAxisVertical];
     [button autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:20];
     [button addTarget:self action:@selector(cleanBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [button setBackgroundImage:[BundleTool getImageWitchName:@"QRCodeCleanBtn"]forState:UIControlStateNormal];
+    [button setBackgroundImage:[BundleTool getImage:@"QRCodeCleanBtn" FromBundle:LXFrameWorkBundle]forState:UIControlStateNormal];
 }
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
