@@ -15,7 +15,7 @@
 
 #ifdef __OBJC__
 
-#define MainDelegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
+#define KBaseDelegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
 
 #endif
 
