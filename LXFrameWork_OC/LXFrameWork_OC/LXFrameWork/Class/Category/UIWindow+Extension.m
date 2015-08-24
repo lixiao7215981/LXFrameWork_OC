@@ -7,7 +7,8 @@
 //
 
 #import "UIWindow+Extension.h"
-
+#import "BaseDelegate.h"
+#define KBaseDelegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
 @implementation UIWindow (Extension)
 
 + (UIWindow *) changeWindowRootViewController:(UIViewController *) viewController

@@ -36,7 +36,7 @@
 #import "BaseNetworkTool.h"
 #import "BlockButton.h"
 #import "TimeButton.h"
-#import "BaseDelegate"
+#import "AppDelegate.h"
 #import "LXSingleton.h"
 #import "LXFrameWorkConst.h"
 
@@ -74,7 +74,7 @@
 #define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
 
 #define kLINE_1_PX (1.0f / [UIScreen mainScreen].scale)
-#define KBaseDelegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
+#define MainDelegate  ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 // 通知
 #define kNotificationCenter [NSNotificationCenter defaultCenter]

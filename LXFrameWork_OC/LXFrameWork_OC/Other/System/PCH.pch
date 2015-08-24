@@ -8,14 +8,13 @@
 //
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "BaseDelegate.h"
 
 #ifndef LXFrameWork_OC_PCH_pch
 #define LXFrameWork_OC_PCH_pch
 
 #ifdef __OBJC__
 
-#define KBaseDelegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
+
 
 #endif
 
