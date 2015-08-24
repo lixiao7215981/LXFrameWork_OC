@@ -32,6 +32,7 @@
 #import "BaseStepViewController.h"
 #import "QRCodeViewController.h"
 #import "PlistTool.h"
+#import "PathTool"
 #import "BundleTool.h"
 #import "BaseNetworkTool.h"
 #import "BlockButton.h"
@@ -81,8 +82,6 @@
 
 // 颜色
 #define kRandomColor [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1.0]
-
-#define kUserDataPath  [[NSString applicationDocumentsDirectory] stringByAppendingPathComponent:@"User.data"]
 
 #define kRGBColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 

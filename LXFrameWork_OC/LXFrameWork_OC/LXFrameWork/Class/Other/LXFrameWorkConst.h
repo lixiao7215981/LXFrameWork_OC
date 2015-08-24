@@ -10,7 +10,7 @@
 
 @interface LXFrameWorkConst : NSObject
 
-/**  */
+/** */
 extern NSString * const kpopToRootViewControllerAnimated;
 
 @end

@@ -10,6 +10,7 @@
 		4E0A465D1B70C1BD007C94C8 /* TimeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A465C1B70C1BD007C94C8 /* TimeButton.m */; };
 		4E0A46601B70C894007C94C8 /* BaseNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A465F1B70C894007C94C8 /* BaseNetworkTool.m */; };
 		4E10A2441B8AE53C00832576 /* LXFrameWorkConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A2431B8AE53C00832576 /* LXFrameWorkConst.m */; };
+		4E10A24E1B8AF23E00832576 /* PathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A24D1B8AF23E00832576 /* PathTool.m */; };
 		4E56B7E11B51799600184403 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E01B51799600184403 /* HttpTool.m */; };
 		4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E61B54AD3400184403 /* NSMutableURLRequest+Upload.m */; };
 		4E56B7F61B54F5FF00184403 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F51B54F5FF00184403 /* StepView.m */; };
@@ -95,6 +96,8 @@
 		4E0A46681B70CED1007C94C8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4E10A2421B8AE53C00832576 /* LXFrameWorkConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFrameWorkConst.h; sourceTree = "<group>"; };
 		4E10A2431B8AE53C00832576 /* LXFrameWorkConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFrameWorkConst.m; sourceTree = "<group>"; };
+		4E10A24C1B8AF23E00832576 /* PathTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathTool.h; sourceTree = "<group>"; };
+		4E10A24D1B8AF23E00832576 /* PathTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathTool.m; sourceTree = "<group>"; };
 		4E56B7DF1B51799600184403 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		4E56B7E01B51799600184403 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		4E56B7E51B54AD3400184403 /* NSMutableURLRequest+Upload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Upload.h"; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 				4E72C1991B4FEE6400C16C1E /* PlistTool.m */,
 				4EE45C9D1B78795A00C30B7D /* BundleTool.h */,
 				4EE45C9E1B78795A00C30B7D /* BundleTool.m */,
+				4E10A24C1B8AF23E00832576 /* PathTool.h */,
+				4E10A24D1B8AF23E00832576 /* PathTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -722,6 +727,7 @@
 				4EE45C8A1B74A9FE00C30B7D /* HttpToolLogModel.m in Sources */,
 				4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */,
 				4EE45C6E1B74481700C30B7D /* SetNavBarLeftRightViewController.m in Sources */,
+				4E10A24E1B8AF23E00832576 /* PathTool.m in Sources */,
 				4EA374B61B4D39DD00680B92 /* BlockButton.m in Sources */,
 				4E10A2441B8AE53C00832576 /* LXFrameWorkConst.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
