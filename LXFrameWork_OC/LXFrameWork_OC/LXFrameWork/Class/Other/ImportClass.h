@@ -32,7 +32,7 @@
 #import "BaseStepViewController.h"
 #import "QRCodeViewController.h"
 #import "PlistTool.h"
-#import "PathTool"
+#import "PathTool.h"
 #import "BundleTool.h"
 #import "BaseNetworkTool.h"
 #import "BlockButton.h"
