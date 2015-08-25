@@ -24,8 +24,8 @@ LXSingletonM(LXFrameWorkInstance);
 
 - (navBarBackColor)backState
 {
-    if (_backState) {
-        return _backState;
+    if (_backState == defaultBase || _backState == blackBase) {
+        return blackBase;
     }else{
         return writeBase;
     }
