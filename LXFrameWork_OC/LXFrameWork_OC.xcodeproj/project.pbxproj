@@ -11,6 +11,8 @@
 		4E0A46601B70C894007C94C8 /* BaseNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A465F1B70C894007C94C8 /* BaseNetworkTool.m */; };
 		4E10A2441B8AE53C00832576 /* LXFrameWorkConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A2431B8AE53C00832576 /* LXFrameWorkConst.m */; };
 		4E10A24E1B8AF23E00832576 /* PathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A24D1B8AF23E00832576 /* PathTool.m */; };
+		4E3BB8E41B8F131A007A077D /* CoreLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */; };
+		4E3BB8E71B8F1324007A077D /* UserAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E61B8F1324007A077D /* UserAddressModel.m */; };
 		4E56B7E11B51799600184403 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E01B51799600184403 /* HttpTool.m */; };
 		4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E61B54AD3400184403 /* NSMutableURLRequest+Upload.m */; };
 		4E56B7F61B54F5FF00184403 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F51B54F5FF00184403 /* StepView.m */; };
@@ -99,6 +101,10 @@
 		4E10A2431B8AE53C00832576 /* LXFrameWorkConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFrameWorkConst.m; sourceTree = "<group>"; };
 		4E10A24C1B8AF23E00832576 /* PathTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathTool.h; sourceTree = "<group>"; };
 		4E10A24D1B8AF23E00832576 /* PathTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathTool.m; sourceTree = "<group>"; };
+		4E3BB8E21B8F131A007A077D /* CoreLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationTool.h; sourceTree = "<group>"; };
+		4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationTool.m; sourceTree = "<group>"; };
+		4E3BB8E51B8F1324007A077D /* UserAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAddressModel.h; sourceTree = "<group>"; };
+		4E3BB8E61B8F1324007A077D /* UserAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAddressModel.m; sourceTree = "<group>"; };
 		4E56B7DF1B51799600184403 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		4E56B7E01B51799600184403 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		4E56B7E51B54AD3400184403 /* NSMutableURLRequest+Upload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Upload.h"; sourceTree = "<group>"; };
@@ -258,6 +264,8 @@
 		4E72C1951B4FEE6400C16C1E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				4E3BB8E21B8F131A007A077D /* CoreLocationTool.h */,
+				4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */,
 				4E0A465E1B70C894007C94C8 /* BaseNetworkTool.h */,
 				4E0A465F1B70C894007C94C8 /* BaseNetworkTool.m */,
 				4E56B7DF1B51799600184403 /* HttpTool.h */,
@@ -444,6 +452,8 @@
 			isa = PBXGroup;
 			children = (
 				4EE45C721B74A90C00C30B7D /* BaseTableViewCellItem */,
+				4E3BB8E51B8F1324007A077D /* UserAddressModel.h */,
+				4E3BB8E61B8F1324007A077D /* UserAddressModel.m */,
 				4EE45C881B74A9FE00C30B7D /* HttpToolLogModel.h */,
 				4EE45C891B74A9FE00C30B7D /* HttpToolLogModel.m */,
 			);
@@ -768,7 +778,9 @@
 				4EE45C871B74A90C00C30B7D /* BaseSwitchCellItem.m in Sources */,
 				4EA4457B1B4FDA9300844282 /* NSString+RegularExpression.m in Sources */,
 				4EA4457D1B4FDA9300844282 /* UITextView+Extension.m in Sources */,
+				4E3BB8E71B8F1324007A077D /* UserAddressModel.m in Sources */,
 				4EA445761B4FDA9300844282 /* CALayer+SetColor.m in Sources */,
+				4E3BB8E41B8F131A007A077D /* CoreLocationTool.m in Sources */,
 				4EE45CA81B78828B00C30B7D /* SystemHttpDetailController.m in Sources */,
 				4E0A46601B70C894007C94C8 /* BaseNetworkTool.m in Sources */,
 				4EE45C6B1B74478B00C30B7D /* SystemDebugController.m in Sources */,
