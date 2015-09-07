@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [NSThread sleepForTimeInterval:2];
     [self addDataList];
     [self setNavTitle:@"LXFrameWork_OC"];
 }
