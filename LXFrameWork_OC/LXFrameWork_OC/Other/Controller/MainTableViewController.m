@@ -19,6 +19,8 @@
 #import "HeadImageScorllController.h"
 #import "SetNavBarLeftRightViewController.h"
 
+#define SYSTEM_VERSION_LESS_THAN(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+
 @interface MainTableViewController ()<QRCodeViewControllerDelegate>
 {
     QRCodeViewController *_readCode;
@@ -29,9 +31,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNavTitle:@"LXFrameWork_OC"];
     [NSThread sleepForTimeInterval:2];
     [self addDataList];
-    [self setNavTitle:@"LXFrameWork_OC"];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
+        self.tableView.y = 64;
+    }
 }
 
 - (void) addDataList
