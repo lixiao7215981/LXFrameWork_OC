@@ -17,19 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavTitle:@"拉动刷新"];
-    // 添加数据
-    [self addDataList];
-}
-
-- (void) addDataList
-{
-    BaseCellItemGroup *group = [[BaseCellItemGroup alloc] init];
-    for (int i = 0; i < 30; i++) {
-        BaseCellItem *item = [BaseCellItem createBaseCellItemWithIcon:nil AndTitle:[NSString stringWithFormat:@"我叫%d  我是打酱油的",i+1] SubTitle:nil ClickOption:nil];
-        [group addObjectWith:item];
-    }
-    [self.dataList addObject:group];
-    [self.tableView reloadData];
 }
 
 - (void)loadNewData
@@ -44,9 +31,31 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         //        [self.tableView.footer resetNoMoreData];
         [self.tableView.footer noticeNoMoreData];
-        
     });
 }
 
+#pragma mark - UITableViewDataSource,UITableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+{
+    return 30;
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellID = @"BaseTableViewCellID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"我叫%ld 我是打酱油的",indexPath.row + 1];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 手动取消选中某一行
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end

@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 LXFrameWork. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "BaseCellTableViewController.h"
 
-@interface NavBarScrollController : BaseTableViewController
+@interface NavBarScrollController : BaseCellTableViewController
 
 @end

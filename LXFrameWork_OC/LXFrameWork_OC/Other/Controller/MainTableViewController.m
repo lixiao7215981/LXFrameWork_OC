@@ -11,7 +11,6 @@
 #import "NavBarScrollController.h"
 #import "HavePullViewController.h"
 #import "UserIconCellController.h"
-#import "BaseTableViewController.h"
 #import "SystemDebugController.h"
 #import "HttpViewController.h"
 #import "WebViewController.h"

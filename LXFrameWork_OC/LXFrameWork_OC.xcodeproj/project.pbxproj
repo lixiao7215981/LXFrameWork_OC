@@ -73,6 +73,10 @@
 		4EE45CA81B78828B00C30B7D /* SystemHttpDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45CA61B78828B00C30B7D /* SystemHttpDetailController.m */; };
 		4EE45CE31B78926600C30B7D /* SystemHttpDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE45CD81B78926600C30B7D /* SystemHttpDetailController.xib */; };
 		4EE45CF11B78952300C30B7D /* LXFrameWork.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4EE45CF01B78952300C30B7D /* LXFrameWork.bundle */; };
+		4EE788FD1BA902C400635387 /* BaseCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE788FC1BA902C400635387 /* BaseCellTableViewController.m */; };
+		4EE789021BA912D500635387 /* CHKeychainTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE788FF1BA912D500635387 /* CHKeychainTool.m */; };
+		4EE789031BA912D500635387 /* SystemDeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE789011BA912D500635387 /* SystemDeviceTool.m */; };
+		4EE789061BA9143500635387 /* UserDefaultsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE789051BA9143500635387 /* UserDefaultsTool.m */; };
 		5807D29AB7082DF1937A2935 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E89BED168C7F6717F38ADC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -224,6 +228,14 @@
 		4EE45CB51B78911400C30B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EE45CD81B78926600C30B7D /* SystemHttpDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SystemHttpDetailController.xib; path = ../../../Other/Lib/SystemHttpDetailController.xib; sourceTree = "<group>"; };
 		4EE45CF01B78952300C30B7D /* LXFrameWork.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LXFrameWork.bundle; sourceTree = "<group>"; };
+		4EE788FB1BA902C400635387 /* BaseCellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCellTableViewController.h; sourceTree = "<group>"; };
+		4EE788FC1BA902C400635387 /* BaseCellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCellTableViewController.m; sourceTree = "<group>"; };
+		4EE788FE1BA912D500635387 /* CHKeychainTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHKeychainTool.h; sourceTree = "<group>"; };
+		4EE788FF1BA912D500635387 /* CHKeychainTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHKeychainTool.m; sourceTree = "<group>"; };
+		4EE789001BA912D500635387 /* SystemDeviceTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemDeviceTool.h; sourceTree = "<group>"; };
+		4EE789011BA912D500635387 /* SystemDeviceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemDeviceTool.m; sourceTree = "<group>"; };
+		4EE789041BA9143500635387 /* UserDefaultsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsTool.h; sourceTree = "<group>"; };
+		4EE789051BA9143500635387 /* UserDefaultsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +276,12 @@
 		4E72C1951B4FEE6400C16C1E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				4EE789041BA9143500635387 /* UserDefaultsTool.h */,
+				4EE789051BA9143500635387 /* UserDefaultsTool.m */,
+				4EE788FE1BA912D500635387 /* CHKeychainTool.h */,
+				4EE788FF1BA912D500635387 /* CHKeychainTool.m */,
+				4EE789001BA912D500635387 /* SystemDeviceTool.h */,
+				4EE789011BA912D500635387 /* SystemDeviceTool.m */,
 				4E3BB8E21B8F131A007A077D /* CoreLocationTool.h */,
 				4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */,
 				4E0A465E1B70C894007C94C8 /* BaseNetworkTool.h */,
@@ -287,6 +305,8 @@
 				4EB853381B4A1A3A00C35F6D /* BasePullTableViewController.m */,
 				4EB853391B4A1A3A00C35F6D /* BaseTableViewController.h */,
 				4EB8533A1B4A1A3A00C35F6D /* BaseTableViewController.m */,
+				4EE788FB1BA902C400635387 /* BaseCellTableViewController.h */,
+				4EE788FC1BA902C400635387 /* BaseCellTableViewController.m */,
 				4EB8533B1B4A1A3A00C35F6D /* BaseViewController.h */,
 				4EB8533C1B4A1A3A00C35F6D /* BaseViewController.m */,
 				4ED167121B4A6BA000B3C618 /* BaseNavigationController.h */,
@@ -739,12 +759,15 @@
 				4ED167171B4A6C5500B3C618 /* UIView+Extension.m in Sources */,
 				4EE45CA41B7881E100C30B7D /* SysetmHttpDebugController.m in Sources */,
 				4E59A1851B7C9A9300EA6D06 /* HeadImageScorllController.m in Sources */,
+				4EE789061BA9143500635387 /* UserDefaultsTool.m in Sources */,
 				4EE45C8A1B74A9FE00C30B7D /* HttpToolLogModel.m in Sources */,
 				4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */,
 				4EE45C6E1B74481700C30B7D /* SetNavBarLeftRightViewController.m in Sources */,
 				4E10A24E1B8AF23E00832576 /* PathTool.m in Sources */,
 				4EA374B61B4D39DD00680B92 /* BlockButton.m in Sources */,
+				4EE788FD1BA902C400635387 /* BaseCellTableViewController.m in Sources */,
 				4E10A2441B8AE53C00832576 /* LXFrameWorkConst.m in Sources */,
+				4EE789021BA912D500635387 /* CHKeychainTool.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
 				4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */,
 				4EBC50AE1B86ED6400A71618 /* UIWindow+Extension.m in Sources */,
@@ -774,6 +797,7 @@
 				4EE45C5F1B73716100C30B7D /* HavePullViewController.m in Sources */,
 				4EA4457A1B4FDA9300844282 /* NSString+Hash.m in Sources */,
 				4EE45C9F1B78795A00C30B7D /* BundleTool.m in Sources */,
+				4EE789031BA912D500635387 /* SystemDeviceTool.m in Sources */,
 				4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */,
 				4EE45C871B74A90C00C30B7D /* BaseSwitchCellItem.m in Sources */,
 				4EA4457B1B4FDA9300844282 /* NSString+RegularExpression.m in Sources */,
