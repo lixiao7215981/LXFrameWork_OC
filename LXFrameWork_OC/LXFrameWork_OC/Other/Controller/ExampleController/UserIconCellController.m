@@ -53,23 +53,27 @@
         NSLog(@"Switch------>OFF  NO");
     }];
     
-    BaseCellItem *item3 = [BaseCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseCellItem" SubTitle:nil ClickOption:nil];
-    
-    BaseArrowCellItem *item4 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseArrowCellItem" SubTitle:nil ClickOption:nil];
-    BaseArrowCellItem *item5 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseArrowCellItem" SubTitle:@"SubTitle" ClickOption:nil];
-    
-    BaseSubtitleCellItem *item6 = [BaseSubtitleCellItem createBaseCellItemWithIcon:@"card_icon" AndTitle:@"BaseSubtitleCellItem" SubTitle:@"SubTitle" ClickOption:^{
-        NSLog(@"BaseSubtitleCellItem");
-    }];
-    BaseSubtitleCellItem *item7 = [BaseSubtitleCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseSubtitleCellItem" SubTitle:@"SubTitle" ClickOption:^{
-        NSLog(@"BaseSubtitleCellItem");
+    BaseSwitchCellItem *item3 = [BaseSwitchCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseSwitchCellItem" SubTitle:nil ClickOption:^{
+        NSLog(@"Switch------>OFF  NO");
     }];
     
-    BaseCenterTitleCellItem *item8 = [BaseCenterTitleCellItem createBaseCellItemWithCenterTitle:@"BaseCenterTitleCellItem" ClickOption:^{
+    BaseCellItem *item4 = [BaseCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseCellItem" SubTitle:nil ClickOption:nil];
+    
+    BaseArrowCellItem *item5 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseArrowCellItem" SubTitle:nil ClickOption:nil];
+    BaseArrowCellItem *item6 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseArrowCellItem" SubTitle:@"SubTitle" ClickOption:nil];
+    
+    BaseSubtitleCellItem *item7 = [BaseSubtitleCellItem createBaseCellItemWithIcon:@"card_icon" AndTitle:@"BaseSubtitleCellItem" SubTitle:@"SubTitle" ClickOption:^{
+        NSLog(@"BaseSubtitleCellItem");
+    }];
+    BaseSubtitleCellItem *item8 = [BaseSubtitleCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseSubtitleCellItem" SubTitle:@"SubTitle" ClickOption:^{
+        NSLog(@"BaseSubtitleCellItem");
+    }];
+    
+    BaseCenterTitleCellItem *item9 = [BaseCenterTitleCellItem createBaseCellItemWithCenterTitle:@"BaseCenterTitleCellItem" ClickOption:^{
         NSLog(@"BaseCenterTitleCellItem");
     } WithColor:[UIColor redColor]];
     
-    BaseCellItemGroup *group = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5,item6,item7,item8]];
+    BaseCellItemGroup *group = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5,item6,item7,item8,item9]];
     [self.dataList addObject:group1];
     [self.dataList addObject:group2];
     [self.dataList addObject:group];
