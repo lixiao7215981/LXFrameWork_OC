@@ -17,10 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // NavBar clearColor 显示按钮
-    self.displayNav = YES;
+    [self setNavTitle:@"BaseWebView"];
+    /**
+     *   YES : NavBar clearColor 但显示NavBar上的按钮
+     *    NO : NavVar 显示
+     */
+    self.displayNav = NO;
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://w.webbig.cn/democeshi/shuihu.html"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
 }
 
 

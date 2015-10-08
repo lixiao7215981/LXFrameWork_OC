@@ -31,16 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavTitle:@"LXFrameWork_OC"];
-    [NSThread sleepForTimeInterval:2];
     [self addDataList];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
-        self.tableView.y = 64;
-    }
+    [NSThread sleepForTimeInterval:1.5];
 }
 
 - (void) addDataList
