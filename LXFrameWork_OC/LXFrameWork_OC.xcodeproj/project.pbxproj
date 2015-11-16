@@ -11,6 +11,8 @@
 		4E0A46601B70C894007C94C8 /* BaseNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A465F1B70C894007C94C8 /* BaseNetworkTool.m */; };
 		4E10A2441B8AE53C00832576 /* LXFrameWorkConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A2431B8AE53C00832576 /* LXFrameWorkConst.m */; };
 		4E10A24E1B8AF23E00832576 /* PathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A24D1B8AF23E00832576 /* PathTool.m */; };
+		4E150FBF1BE88634008B3170 /* CustomQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E150FBE1BE88634008B3170 /* CustomQRCodeTool.m */; };
+		4E150FC21BE889E4008B3170 /* CustomQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E150FC11BE889E4008B3170 /* CustomQRCodeViewController.m */; };
 		4E3BB8E41B8F131A007A077D /* CoreLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */; };
 		4E3BB8E71B8F1324007A077D /* UserAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E61B8F1324007A077D /* UserAddressModel.m */; };
 		4E56B7E11B51799600184403 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E01B51799600184403 /* HttpTool.m */; };
@@ -105,6 +107,10 @@
 		4E10A2431B8AE53C00832576 /* LXFrameWorkConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFrameWorkConst.m; sourceTree = "<group>"; };
 		4E10A24C1B8AF23E00832576 /* PathTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathTool.h; sourceTree = "<group>"; };
 		4E10A24D1B8AF23E00832576 /* PathTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathTool.m; sourceTree = "<group>"; };
+		4E150FBD1BE88634008B3170 /* CustomQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomQRCodeTool.h; sourceTree = "<group>"; };
+		4E150FBE1BE88634008B3170 /* CustomQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomQRCodeTool.m; sourceTree = "<group>"; };
+		4E150FC01BE889E4008B3170 /* CustomQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomQRCodeViewController.h; sourceTree = "<group>"; };
+		4E150FC11BE889E4008B3170 /* CustomQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomQRCodeViewController.m; sourceTree = "<group>"; };
 		4E3BB8E21B8F131A007A077D /* CoreLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationTool.h; sourceTree = "<group>"; };
 		4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationTool.m; sourceTree = "<group>"; };
 		4E3BB8E51B8F1324007A077D /* UserAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAddressModel.h; sourceTree = "<group>"; };
@@ -294,6 +300,8 @@
 				4EE45C9E1B78795A00C30B7D /* BundleTool.m */,
 				4E10A24C1B8AF23E00832576 /* PathTool.h */,
 				4E10A24D1B8AF23E00832576 /* PathTool.m */,
+				4E150FBD1BE88634008B3170 /* CustomQRCodeTool.h */,
+				4E150FBE1BE88634008B3170 /* CustomQRCodeTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -554,6 +562,8 @@
 				4E59A1841B7C9A9300EA6D06 /* HeadImageScorllController.m */,
 				4E59A1891B7D8C0100EA6D06 /* WebViewController.h */,
 				4E59A18A1B7D8C0100EA6D06 /* WebViewController.m */,
+				4E150FC01BE889E4008B3170 /* CustomQRCodeViewController.h */,
+				4E150FC11BE889E4008B3170 /* CustomQRCodeViewController.m */,
 			);
 			path = ExampleController;
 			sourceTree = "<group>";
@@ -790,12 +800,14 @@
 				4EE45C621B7389BA00C30B7D /* UserIconCellController.m in Sources */,
 				4EE45C811B74A90C00C30B7D /* BaseArrowCellItem.m in Sources */,
 				4EA76C6C1B8C076E00DCE823 /* UIColor+Category.m in Sources */,
+				4E150FBF1BE88634008B3170 /* CustomQRCodeTool.m in Sources */,
 				4ED167141B4A6BA000B3C618 /* BaseNavigationController.m in Sources */,
 				4EA445781B4FDA9300844282 /* NSDate+Extension.m in Sources */,
 				4EE45C851B74A90C00C30B7D /* BaseIconItem.m in Sources */,
 				4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */,
 				4EE45C5F1B73716100C30B7D /* HavePullViewController.m in Sources */,
 				4EA4457A1B4FDA9300844282 /* NSString+Hash.m in Sources */,
+				4E150FC21BE889E4008B3170 /* CustomQRCodeViewController.m in Sources */,
 				4EE45C9F1B78795A00C30B7D /* BundleTool.m in Sources */,
 				4EE789031BA912D500635387 /* SystemDeviceTool.m in Sources */,
 				4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */,

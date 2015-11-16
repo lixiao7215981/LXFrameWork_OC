@@ -17,6 +17,7 @@
 #import "SysetmHttpDebugController.h"
 #import "HeadImageScorllController.h"
 #import "SetNavBarLeftRightViewController.h"
+#import "CustomQRCodeViewController.h"
 
 #define SYSTEM_VERSION_LESS_THAN(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
@@ -37,7 +38,12 @@
 
 - (void) addDataList
 {
-    BaseArrowCellItem *item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"二维码扫描" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"生成二维码" SubTitle:nil ClickOption:^{
+        CustomQRCodeViewController *qrcode = [[CustomQRCodeViewController alloc] init];
+        [self.navigationController pushViewController:qrcode animated:YES];
+    } AndDetailClass:nil];
+    
+    BaseArrowCellItem *item1_1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"二维码扫描" SubTitle:nil ClickOption:^{
 #if TARGET_IPHONE_SIMULATOR
         [SVProgressHUD showErrorWithStatus:@"模拟器不支持"];
 #elif TARGET_OS_IPHONE
@@ -94,7 +100,7 @@
         [self.navigationController pushViewController:webView animated:YES];
     } AndDetailClass:nil];
     
-    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5,item6,item7,item8,item9,item10]];
+    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithItem:@[item1,item1_1,item2,item3,item4,item5,item6,item7,item8,item9,item10]];
     
     [self.dataList addObject:group1];
 }
@@ -103,8 +109,11 @@
 
 - (void)ReaderCode:(QRCodeViewController *)readerViewController didScanResult:(NSString *)result
 {
-    if(![result hasPrefix:@"http"]) return;
-    [[[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:@"是否打开该连接:%@",result] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"打开", nil] show];
+    if([result hasPrefix:@"http"]){
+        [[[UIAlertView alloc] initWithTitle:@"消息" message:[NSString stringWithFormat:@"是否打开该连接:%@",result] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"打开", nil] show];
+    }else{
+        [[[UIAlertView alloc] initWithTitle:@"消息" message:result delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil,nil] show];
+    }
 }
 
 - (void)ReaderCoderDidCancel:(QRCodeViewController *)readerViewController

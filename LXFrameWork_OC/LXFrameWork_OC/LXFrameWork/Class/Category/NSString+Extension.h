@@ -46,11 +46,16 @@
 /**
  *  删掉字符串前边多余的 "0"
  */
--(NSString*) getTheCorrect;
+- (NSString *) getTheCorrect;
 
 /**
  *  将NSString转化为NSArray或者NSDictionary
  */
--(id)JSONValue;
+- (id)JSONValue;
+
+/**
+ *  将NSString 转化为NSData 二进制
+ */
+- (NSData *) hexToBytes;
 
 @end
