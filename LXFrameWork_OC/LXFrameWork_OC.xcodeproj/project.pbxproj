@@ -50,6 +50,8 @@
 		4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7351B4E2A4500ACEE5F /* main.m */; };
 		4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECECF981B5C9BA50036B721 /* BaseDelegate.m */; };
 		4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECECFAA1B5D0A690036B721 /* BaseStepViewController.m */; };
+		4ED0171E1BFAD203003A420F /* WriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0171C1BFAD203003A420F /* WriteViewController.m */; };
+		4ED0171F1BFAD203003A420F /* WriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED0171D1BFAD203003A420F /* WriteViewController.xib */; };
 		4ED167141B4A6BA000B3C618 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167131B4A6BA000B3C618 /* BaseNavigationController.m */; };
 		4ED167171B4A6C5500B3C618 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167161B4A6C5500B3C618 /* UIView+Extension.m */; };
 		4ED1671A1B4A6C8500B3C618 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167191B4A6C8500B3C618 /* UIBarButtonItem+Extension.m */; };
@@ -184,6 +186,9 @@
 		4ECECF981B5C9BA50036B721 /* BaseDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDelegate.m; sourceTree = "<group>"; };
 		4ECECFA91B5D0A690036B721 /* BaseStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStepViewController.h; sourceTree = "<group>"; };
 		4ECECFAA1B5D0A690036B721 /* BaseStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStepViewController.m; sourceTree = "<group>"; };
+		4ED0171B1BFAD203003A420F /* WriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteViewController.h; sourceTree = "<group>"; };
+		4ED0171C1BFAD203003A420F /* WriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteViewController.m; sourceTree = "<group>"; };
+		4ED0171D1BFAD203003A420F /* WriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteViewController.xib; sourceTree = "<group>"; };
 		4ED167121B4A6BA000B3C618 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		4ED167131B4A6BA000B3C618 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		4ED167151B4A6C5500B3C618 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
@@ -562,6 +567,9 @@
 				4E59A18A1B7D8C0100EA6D06 /* WebViewController.m */,
 				4E150FC01BE889E4008B3170 /* CustomQRCodeViewController.h */,
 				4E150FC11BE889E4008B3170 /* CustomQRCodeViewController.m */,
+				4ED0171B1BFAD203003A420F /* WriteViewController.h */,
+				4ED0171C1BFAD203003A420F /* WriteViewController.m */,
+				4ED0171D1BFAD203003A420F /* WriteViewController.xib */,
 			);
 			path = ExampleController;
 			sourceTree = "<group>";
@@ -695,6 +703,7 @@
 				4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */,
 				4EC4F73E1B4E2A4500ACEE5F /* Info.plist in Resources */,
 				4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */,
+				4ED0171F1BFAD203003A420F /* WriteViewController.xib in Resources */,
 				4EE45CF11B78952300C30B7D /* LXFrameWork.bundle in Resources */,
 				4EB8BABF1B2E8CB800315CEF /* Images.xcassets in Resources */,
 			);
@@ -790,6 +799,7 @@
 				4E56B7F61B54F5FF00184403 /* StepView.m in Sources */,
 				4E59A18B1B7D8C0100EA6D06 /* WebViewController.m in Sources */,
 				4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */,
+				4ED0171E1BFAD203003A420F /* WriteViewController.m in Sources */,
 				4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */,
 				4EE45C931B78546C00C30B7D /* HttpViewController.m in Sources */,
 				4EE45C4D1B73515600C30B7D /* QRCodeViewController.m in Sources */,

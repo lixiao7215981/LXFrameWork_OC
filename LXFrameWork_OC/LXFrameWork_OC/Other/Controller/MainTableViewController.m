@@ -18,6 +18,7 @@
 #import "HeadImageScorllController.h"
 #import "SetNavBarLeftRightViewController.h"
 #import "CustomQRCodeViewController.h"
+#import "WriteViewController.h"
 
 #define SYSTEM_VERSION_LESS_THAN(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
@@ -100,12 +101,20 @@
         [self.navigationController pushViewController:webView animated:YES];
     } AndDetailClass:nil];
     
+    
+    BaseArrowCellItem *group2_item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"WriteViewController" SubTitle:nil ClickOption:^{
+        WriteViewController *writeView = [[WriteViewController alloc] initWithNibName:@"WriteViewController" bundle:nil];
+        [self.navigationController pushViewController:writeView animated:YES];
+    } AndDetailClass:nil];
+    
     BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithItem:@[item1,item1_1,item2,item3,item4,item5,item6,item7,item8,item9,item10]];
+    BaseCellItemGroup *group2 = [BaseCellItemGroup createGroupWithItem:@[group2_item1]];
     
     [self.dataList addObject:group1];
+    [self.dataList addObject:group2];
 }
 
-#pragma mark - 扫描二维码代理及相关方法
+#pragma mark - 扫描二维码代理及相关方法i
 
 - (void)ReaderCode:(QRCodeViewController *)readerViewController didScanResult:(NSString *)result
 {

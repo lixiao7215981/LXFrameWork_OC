@@ -30,9 +30,7 @@
     // 设置键盘toolbar样式
     self.returnKeyHandler = [[IQKeyboardReturnKeyHandler alloc] initWithViewController:self];
     self.returnKeyHandler.lastTextFieldReturnKeyType = UIReturnKeyDone;
-//    self.returnKeyHandler.toolbarManageBehaviour = IQAutoToolbarBySubviews;
     
-    //        self.navView.backgroundColor = [UIColor redColor];
 }
 
 - (void)dealloc
