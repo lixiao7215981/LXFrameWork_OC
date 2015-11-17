@@ -7,6 +7,7 @@
 //
 
 #import "SSZipArchive.h"
+#include "unzip.h"
 #include "zip.h"
 #import "zlib.h"
 #import "zconf.h"
@@ -591,6 +592,7 @@
 
 	zipCloseFileInZip(_zip);
 	free(buffer);
+	fclose(input);
 	return YES;
 }
 

@@ -231,7 +231,6 @@
 		4EE45CA31B7881E100C30B7D /* SysetmHttpDebugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SysetmHttpDebugController.m; sourceTree = "<group>"; };
 		4EE45CA51B78828B00C30B7D /* SystemHttpDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemHttpDetailController.h; sourceTree = "<group>"; };
 		4EE45CA61B78828B00C30B7D /* SystemHttpDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemHttpDetailController.m; sourceTree = "<group>"; };
-		4EE45CB51B78911400C30B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EE45CD81B78926600C30B7D /* SystemHttpDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SystemHttpDetailController.xib; path = ../../../Other/Lib/SystemHttpDetailController.xib; sourceTree = "<group>"; };
 		4EE45CF01B78952300C30B7D /* LXFrameWork.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LXFrameWork.bundle; sourceTree = "<group>"; };
 		4EE788FB1BA902C400635387 /* BaseCellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCellTableViewController.h; sourceTree = "<group>"; };
@@ -332,7 +331,6 @@
 			children = (
 				4EB8BAB01B2E8CB800315CEF /* LXFrameWork_OC */,
 				4EB8BACA1B2E8CB800315CEF /* LXFrameWork_OCTests */,
-				4EE45CB31B78911400C30B7D /* LXFrameWork */,
 				4EB8BAAF1B2E8CB800315CEF /* Products */,
 				50F6267C0676A18D2970D232 /* Pods */,
 				B225A68E32BAB983CBF5D931 /* Frameworks */,
@@ -589,22 +587,6 @@
 			path = BaseTableViewCellItem;
 			sourceTree = "<group>";
 		};
-		4EE45CB31B78911400C30B7D /* LXFrameWork */ = {
-			isa = PBXGroup;
-			children = (
-				4EE45CB41B78911400C30B7D /* Supporting Files */,
-			);
-			path = LXFrameWork;
-			sourceTree = "<group>";
-		};
-		4EE45CB41B78911400C30B7D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4EE45CB51B78911400C30B7D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		50F6267C0676A18D2970D232 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -638,6 +620,7 @@
 				4EB8BAAB1B2E8CB800315CEF /* Frameworks */,
 				4EB8BAAC1B2E8CB800315CEF /* Resources */,
 				5442E9DAAB491EB14F586149 /* Copy Pods Resources */,
+				6BE6785BCB926FCFC6CDAC67 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -740,6 +723,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BE6785BCB926FCFC6CDAC67 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EA631CF276CCBEDA6A99A5B4 /* Check Pods Manifest.lock */ = {
