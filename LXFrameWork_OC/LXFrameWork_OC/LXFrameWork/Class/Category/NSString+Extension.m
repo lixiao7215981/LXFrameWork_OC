@@ -25,7 +25,7 @@
 
 - (NSString *)encodeToPercentEscapeString
 {
-    NSString *outputStr = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, /* allocator */(__bridge CFStringRef)self,NULL, /* charactersToLeaveUnescaped */(CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8);
+    NSString *outputStr = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,(__bridge CFStringRef)self,NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8);
     CFRelease((__bridge CFTypeRef)(outputStr));
     return outputStr;
 }
@@ -63,15 +63,6 @@
     return str;
 }
 
--(id)JSONValue
-{
-    NSData* data = [self dataUsingEncoding:NSUTF8StringEncoding];
-    NSError* error = nil;
-    id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    if (error != nil) return nil;
-    return result;
-}
-
 -(NSData*) hexToBytes {
     NSMutableData* data = [NSMutableData data];
     int idx;
@@ -84,6 +75,20 @@
         [data appendBytes:&intValue length:1];
     }
     return data;
+}
+
+- (NSDate *)FormatterDateFromYMDHMS
+{
+    NSDateFormatter *strToDateFor = [[NSDateFormatter alloc]init];
+    strToDateFor.dateFormat = @"yyyy/MM/dd HH:mm:ss";
+    return [strToDateFor dateFromString:self];
+}
+
+- (NSDate *)FormatterDateFromYMD
+{
+    NSDateFormatter *strToDateFor = [[NSDateFormatter alloc]init];
+    strToDateFor.dateFormat = @"yyyy/MM/dd";
+    return [strToDateFor dateFromString:self];
 }
 
 @end

@@ -22,15 +22,14 @@
 - (void)loadNewData
 {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.tableView.header endRefreshing];
+        [self.tableView.mj_header endRefreshing];
     });
 }
 
 - (void)loadMoreData
 {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //        [self.tableView.footer resetNoMoreData];
-        [self.tableView.footer noticeNoMoreData];
+        [self.tableView.mj_footer endRefreshingWithNoMoreData];
     });
 }
 

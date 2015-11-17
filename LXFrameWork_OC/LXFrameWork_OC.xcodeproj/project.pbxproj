@@ -15,6 +15,8 @@
 		4E150FC21BE889E4008B3170 /* CustomQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E150FC11BE889E4008B3170 /* CustomQRCodeViewController.m */; };
 		4E3BB8E41B8F131A007A077D /* CoreLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */; };
 		4E3BB8E71B8F1324007A077D /* UserAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E61B8F1324007A077D /* UserAddressModel.m */; };
+		4E4B491E1BFB05A700F0F958 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */; };
+		4E4B49211BFB0FB400F0F958 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B49201BFB0FB400F0F958 /* UIColor+Extension.m */; };
 		4E56B7E11B51799600184403 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E01B51799600184403 /* HttpTool.m */; };
 		4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E61B54AD3400184403 /* NSMutableURLRequest+Upload.m */; };
 		4E56B7F61B54F5FF00184403 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F51B54F5FF00184403 /* StepView.m */; };
@@ -35,17 +37,14 @@
 		4EA4457B1B4FDA9300844282 /* NSString+RegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4456F1B4FDA9300844282 /* NSString+RegularExpression.m */; };
 		4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445711B4FDA9300844282 /* UIImage+Extension.m */; };
 		4EA4457D1B4FDA9300844282 /* UITextView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA445731B4FDA9300844282 /* UITextView+Extension.m */; };
-		4EA76C6C1B8C076E00DCE823 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA76C6B1B8C076E00DCE823 /* UIColor+Category.m */; };
 		4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB853381B4A1A3A00C35F6D /* BasePullTableViewController.m */; };
 		4EB8533E1B4A1A3A00C35F6D /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8533A1B4A1A3A00C35F6D /* BaseTableViewController.m */; };
 		4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8533C1B4A1A3A00C35F6D /* BaseViewController.m */; };
 		4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB853471B4A3DBB00C35F6D /* BaseTableViewCell.m */; };
 		4EB8BABF1B2E8CB800315CEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8BABE1B2E8CB800315CEF /* Images.xcassets */; };
 		4EB8BACE1B2E8CB800315CEF /* LXFrameWork_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8BACD1B2E8CB800315CEF /* LXFrameWork_OCTests.m */; };
-		4EBC50AE1B86ED6400A71618 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC50AD1B86ED6400A71618 /* UIWindow+Extension.m */; };
 		4EBC50B11B8706D100A71618 /* LXFrameWorkInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC50B01B8706D100A71618 /* LXFrameWorkInstance.m */; };
 		4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */; };
-		4EC4F73E1B4E2A4500ACEE5F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F7331B4E2A4500ACEE5F /* Info.plist */; };
 		4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */; };
 		4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7351B4E2A4500ACEE5F /* main.m */; };
 		4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECECF981B5C9BA50036B721 /* BaseDelegate.m */; };
@@ -117,6 +116,10 @@
 		4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationTool.m; sourceTree = "<group>"; };
 		4E3BB8E51B8F1324007A077D /* UserAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAddressModel.h; sourceTree = "<group>"; };
 		4E3BB8E61B8F1324007A077D /* UserAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAddressModel.m; sourceTree = "<group>"; };
+		4E4B491C1BFB05A700F0F958 /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
+		4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
+		4E4B491F1BFB0FB400F0F958 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		4E4B49201BFB0FB400F0F958 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		4E56B7DF1B51799600184403 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		4E56B7E01B51799600184403 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		4E56B7E51B54AD3400184403 /* NSMutableURLRequest+Upload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Upload.h"; sourceTree = "<group>"; };
@@ -159,8 +162,6 @@
 		4EA445721B4FDA9300844282 /* UITextView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Extension.h"; sourceTree = "<group>"; };
 		4EA445731B4FDA9300844282 /* UITextView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Extension.m"; sourceTree = "<group>"; };
 		4EA445931B4FE22800844282 /* PCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCH.pch; sourceTree = "<group>"; };
-		4EA76C6A1B8C076E00DCE823 /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
-		4EA76C6B1B8C076E00DCE823 /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
 		4EB853371B4A1A3A00C35F6D /* BasePullTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePullTableViewController.h; sourceTree = "<group>"; };
 		4EB853381B4A1A3A00C35F6D /* BasePullTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePullTableViewController.m; sourceTree = "<group>"; };
 		4EB853391B4A1A3A00C35F6D /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
@@ -174,8 +175,6 @@
 		4EB8BAC71B2E8CB800315CEF /* LXFrameWork_OCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LXFrameWork_OCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB8BACC1B2E8CB800315CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB8BACD1B2E8CB800315CEF /* LXFrameWork_OCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXFrameWork_OCTests.m; sourceTree = "<group>"; };
-		4EBC50AC1B86ED6400A71618 /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
-		4EBC50AD1B86ED6400A71618 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
 		4EBC50AF1B8706D100A71618 /* LXFrameWorkInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFrameWorkInstance.h; sourceTree = "<group>"; };
 		4EBC50B01B8706D100A71618 /* LXFrameWorkInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFrameWorkInstance.m; sourceTree = "<group>"; };
 		4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -431,10 +430,8 @@
 		4EB8BAE91B2EB49C00315CEF /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				4EA76C6A1B8C076E00DCE823 /* UIColor+Category.h */,
-				4EA76C6B1B8C076E00DCE823 /* UIColor+Category.m */,
-				4EBC50AC1B86ED6400A71618 /* UIWindow+Extension.h */,
-				4EBC50AD1B86ED6400A71618 /* UIWindow+Extension.m */,
+				4E4B491C1BFB05A700F0F958 /* UIWindow+Extension.h */,
+				4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */,
 				4E56B7E51B54AD3400184403 /* NSMutableURLRequest+Upload.h */,
 				4E56B7E61B54AD3400184403 /* NSMutableURLRequest+Upload.m */,
 				4EA445641B4FDA9300844282 /* CALayer+SetColor.h */,
@@ -459,6 +456,8 @@
 				4ED167161B4A6C5500B3C618 /* UIView+Extension.m */,
 				4EE45C8E1B784DA300C30B7D /* NSObject+JSONCategories.h */,
 				4EE45C8F1B784DA300C30B7D /* NSObject+JSONCategories.m */,
+				4E4B491F1BFB0FB400F0F958 /* UIColor+Extension.h */,
+				4E4B49201BFB0FB400F0F958 /* UIColor+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -663,7 +662,7 @@
 		4EB8BAA61B2E8CB800315CEF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = LXFrameWork;
 				TargetAttributes = {
 					4EB8BAAD1B2E8CB800315CEF = {
@@ -701,7 +700,6 @@
 			files = (
 				4EE45CE31B78926600C30B7D /* SystemHttpDetailController.xib in Resources */,
 				4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */,
-				4EC4F73E1B4E2A4500ACEE5F /* Info.plist in Resources */,
 				4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */,
 				4ED0171F1BFAD203003A420F /* WriteViewController.xib in Resources */,
 				4EE45CF11B78952300C30B7D /* LXFrameWork.bundle in Resources */,
@@ -778,6 +776,7 @@
 				4E59A1851B7C9A9300EA6D06 /* HeadImageScorllController.m in Sources */,
 				4EE789061BA9143500635387 /* UserDefaultsTool.m in Sources */,
 				4EE45C8A1B74A9FE00C30B7D /* HttpToolLogModel.m in Sources */,
+				4E4B491E1BFB05A700F0F958 /* UIWindow+Extension.m in Sources */,
 				4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */,
 				4EE45C6E1B74481700C30B7D /* SetNavBarLeftRightViewController.m in Sources */,
 				4E10A24E1B8AF23E00832576 /* PathTool.m in Sources */,
@@ -787,7 +786,6 @@
 				4EE789021BA912D500635387 /* CHKeychainTool.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
 				4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */,
-				4EBC50AE1B86ED6400A71618 /* UIWindow+Extension.m in Sources */,
 				4EB8533E1B4A1A3A00C35F6D /* BaseTableViewController.m in Sources */,
 				4EE45C831B74A90C00C30B7D /* BaseCellItemGroup.m in Sources */,
 				4E59A1881B7D7E5000EA6D06 /* BaseWebViewController.m in Sources */,
@@ -807,7 +805,6 @@
 				4ED1671A1B4A6C8500B3C618 /* UIBarButtonItem+Extension.m in Sources */,
 				4EE45C621B7389BA00C30B7D /* UserIconCellController.m in Sources */,
 				4EE45C811B74A90C00C30B7D /* BaseArrowCellItem.m in Sources */,
-				4EA76C6C1B8C076E00DCE823 /* UIColor+Category.m in Sources */,
 				4E150FBF1BE88634008B3170 /* CustomQRCodeTool.m in Sources */,
 				4ED167141B4A6BA000B3C618 /* BaseNavigationController.m in Sources */,
 				4EA445781B4FDA9300844282 /* NSDate+Extension.m in Sources */,
@@ -833,6 +830,7 @@
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
 				4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */,
 				4EE45C861B74A90C00C30B7D /* BaseSubtitleCellItem.m in Sources */,
+				4E4B49211BFB0FB400F0F958 /* UIColor+Extension.m in Sources */,
 				4E0A465D1B70C1BD007C94C8 /* TimeButton.m in Sources */,
 				4EA445791B4FDA9300844282 /* NSString+Extension.m in Sources */,
 				4EE45C821B74A90C00C30B7D /* BaseCellItem.m in Sources */,
@@ -880,6 +878,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -949,6 +948,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/LXFrameWork_OC/Other/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -964,6 +964,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/LXFrameWork_OC/Other/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -983,6 +984,7 @@
 				);
 				INFOPLIST_FILE = LXFrameWork_OCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LXFrameWork_OC.app/LXFrameWork_OC";
 			};
@@ -998,6 +1000,7 @@
 				);
 				INFOPLIST_FILE = LXFrameWork_OCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LXFrameWork_OC.app/LXFrameWork_OC";
 			};

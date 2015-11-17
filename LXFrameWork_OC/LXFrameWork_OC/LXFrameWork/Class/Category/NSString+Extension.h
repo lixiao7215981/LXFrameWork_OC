@@ -39,23 +39,28 @@
 + (NSString *)applicationDocumentsDirectory;
 
 /**
- *  将 年月日时分秒时间转换为 仅年月日的时间
- */
-- (NSString *)dateStringFromtYYYYMMDD;
-
-/**
  *  删掉字符串前边多余的 "0"
  */
 - (NSString *) getTheCorrect;
 
 /**
- *  将NSString转化为NSArray或者NSDictionary
- */
-- (id)JSONValue;
-
-/**
  *  将NSString 转化为NSData 二进制
  */
 - (NSData *) hexToBytes;
+
+/**
+ *  将 年月日时分秒时间转换为 仅年月日的时间
+ */
+- (NSString *)dateStringFromtYYYYMMDD;
+
+/**
+ *  将 String 类型转化位 Date 类型 YYYY-MM-DD  HH:mm:ss
+ */
+- (NSDate *) FormatterDateFromYMDHMS;
+
+/**
+ *  将 String 类型转化位 Date 类型 YYYY-MM-DD
+ */
+- (NSDate *) FormatterDateFromYMD;
 
 @end

@@ -63,4 +63,19 @@
     return [formatter stringFromDate:self];
 }
 
+- (NSString *)FormatterYMD
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    formatter.dateFormat = @"yyyy-MM-dd";
+    return [formatter stringFromDate:self];
+}
+
+
+- (NSString *)getMillisecond
+{
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a=[dat timeIntervalSince1970]*1000;  //  *1000 是精确到毫秒，不乘就是精确到秒
+    return [NSString stringWithFormat:@"%f", a]; //转为字符型
+}
+
 @end

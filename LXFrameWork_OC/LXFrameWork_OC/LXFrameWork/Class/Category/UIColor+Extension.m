@@ -1,16 +1,15 @@
 //
-//  UIColor+Category.m
-//  rili365
+//  UIColor+Extension.m
+//  LXFrameWork_OC
 //
-//  Created by Li Xiang on 7/13/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by 李晓 on 15/11/17.
+//  Copyright © 2015年 LXFrameWork. All rights reserved.
 //
 
-#import "UIColor+Category.h"
-
-
-@implementation UIColor (UIColor_Category)
+#import "UIColor+Extension.h"
 static NSArray *colorHexs ;
+
+@implementation UIColor (Extension)
 
 + (void)initialize
 {
@@ -50,6 +49,7 @@ static NSArray *colorHexs ;
 }
 
 + (NSArray *)someHexColors {
+    
     return colorHexs;
 }
 

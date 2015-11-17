@@ -35,7 +35,7 @@
         [group addObjectWith:subTitle];
     }];
     [self.dataList addObject:group];
-    [self.tableView.header endRefreshing];
+    [self.tableView.mj_header endRefreshing];
 }
 
 - (void) loadNewData

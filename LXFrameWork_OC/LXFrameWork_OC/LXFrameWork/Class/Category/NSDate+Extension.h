@@ -27,6 +27,18 @@
 /**
  *  将NSDate转换为 YYYY-MM-DD  HH:mm:ss
  */
-- (NSString*)FormatterYMDHMS;
+- (NSString*) FormatterYMDHMS;
+
+/**
+ *  将NSDate转换为 YYYY-MM-DD
+ */
+- (NSString*) FormatterYMD;
+
+/**
+ *  获取时间毫秒数
+ */
+- (NSString *) getMillisecond;
+
+
 
 @end
