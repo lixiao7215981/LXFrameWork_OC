@@ -7,6 +7,7 @@
 //
 
 #import "BaseDelegate.h"
+//#import "CustomQRCodeViewController.h"
 
 @interface BaseDelegate ()
 
@@ -31,6 +32,20 @@
     return YES;
 }
 
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler{
+    //判断先前我们设置的唯一标识
+    NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
+    NSString *searchItemType1 = [NSString stringWithFormat:@"%@.Search",bundleIdentifier];
+    NSString *searchItemType2 = [NSString stringWithFormat:@"%@.QRCode",bundleIdentifier];
+    
+    if([shortcutItem.type isEqualToString:searchItemType1]){
+        
+    }else if ([shortcutItem.type isEqualToString:searchItemType2]){
+//        CustomQRCodeViewController *qrcode = [[CustomQRCodeViewController alloc] init];
+//        [self.window.rootViewController presentViewController:qrcode animated:YES completion:^{
+//        }];
+    }
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

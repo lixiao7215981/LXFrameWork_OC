@@ -80,7 +80,7 @@
     }
     
     if (!_displayNav) return;
-    UIColor *NavBackColor = self.navView.backViewBackColor;
+    UIColor *NavBackColor = self.navView.BackColor;
     UIColor *blockColor = [[UIColor lightGrayColor]colorWithAlphaComponent:0.5];
     CGFloat offsetY = scrollView.contentOffset.y;
     if (self.scaleImage) { // 有下拉图片

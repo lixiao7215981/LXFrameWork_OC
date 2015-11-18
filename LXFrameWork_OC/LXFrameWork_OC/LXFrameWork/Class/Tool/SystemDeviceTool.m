@@ -17,7 +17,8 @@
     NSString *guid = (__bridge NSString *)newUniqueIDString;
     CFRelease(newUniqueIDString);
     CFRelease(newUniqueID);
-    return([guid lowercaseString]);
+    NSString *UUID = [guid lowercaseString];
+    return UUID;
 }
 
 @end

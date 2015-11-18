@@ -22,10 +22,17 @@
  */
 - (BOOL) validationPwd;
 
+/**
+ *  是否 QQ 格式
+ */
 - (BOOL)isQQ;
-
+/**
+ *  是否为手机号格式
+ */
 - (BOOL)isPhoneNumber;
-
+/**
+ *  是否 IP 地址格式
+ */
 - (BOOL)isIPAddress;
 
 @end

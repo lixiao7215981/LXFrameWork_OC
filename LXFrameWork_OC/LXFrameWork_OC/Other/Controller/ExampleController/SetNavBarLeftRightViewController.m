@@ -90,15 +90,11 @@
     [setView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:setTitle withOffset:25];
     setView.ClickOption = ^{
         [self setNavTitle:@"设置自定义View"];
-        [self setLeftView:^UIView *{
-            UIImageView *leftImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"xiao"]];
-            return leftImg;
-        }];
+        UIImageView *leftImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"xiao"]];
+        [self setLeftView:leftImg];
         
-        [self setRightView:^UIView *{
-            UIImageView *rightImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"touxiao"]];
-            return rightImg;
-        }];
+        UIImageView *rightImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"touxiao"]];
+        [self setRightView:rightImg];
     };
     
     /**
@@ -117,13 +113,56 @@
     [setCenterView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:setView withOffset:25];
     setCenterView.ClickOption = ^{
         // 设置返回按钮
-        [self setBackBtn];
+        [self setNavBackBtn];
+        UIImageView *imageView = [UIImageView newAutoLayoutView];
+        imageView.image = [UIImage imageNamed:@"meishi"];
+        [self setCenterView:imageView];
+    };
+    
+    /**
+     *  设置左右两边多按钮 Array
+     */
+    BlockButton *setBtnArrayView = [BlockButton newAutoLayoutView];
+    setBtnArrayView.layer.cornerRadius = 5;
+    setBtnArrayView.clipsToBounds = YES;
+    setBtnArrayView.backgroundColor = [UIColor lightGrayColor];
+    [setBtnArrayView setTitle:@"设置左右两边多按钮 Array" forState:UIControlStateNormal];
+    [setBtnArrayView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    setBtnArrayView.titleLabel.font = [UIFont systemFontOfSize:15];
+    [self.view addSubview:setBtnArrayView];
+    [setBtnArrayView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [setBtnArrayView autoSetDimensionsToSize:CGSizeMake(200, 30)];
+    [setBtnArrayView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:setCenterView withOffset:25];
+    setBtnArrayView.ClickOption = ^{
+        [self setNavTitle:@"设置多按钮"];
         
-        [self setCenterView:^UIView *{
-            UIImageView *imageView = [UIImageView newAutoLayoutView];
-            imageView.image = [UIImage imageNamed:@"meishi"];
-            return imageView;
-        }];
+        UIImage *search = [UIImage imageNamed:@"left_sarch"];
+        UIImage *clean = [UIImage imageNamed:@"right_clean"];
+        
+        UIButton *searchBtn = [[UIButton alloc] init];
+        [searchBtn setImage:search forState:UIControlStateNormal];
+        
+        UIButton *cleanBtn = [[UIButton alloc] init];
+        [cleanBtn setImage:clean forState:UIControlStateNormal];
+        
+        [self setLeftBtnArray:@[searchBtn,cleanBtn]];
+        
+        UIImage *search2 = [UIImage imageNamed:@"left_sarch"];
+        UIImage *clean2 = [UIImage imageNamed:@"right_clean"];
+        
+        UIButton *searchBtn2 = [[UIButton alloc] init];
+        [searchBtn2 setImage:search2 forState:UIControlStateNormal];
+        
+        UIButton *cleanBtn2 = [[UIButton alloc] init];
+        [cleanBtn2 setImage:clean2 forState:UIControlStateNormal];
+        
+        UIButton *btn3 = [[UIButton alloc] init];
+        [btn3 setImage:[UIImage imageNamed:@"card_icon"] forState:UIControlStateNormal];
+        
+        UIButton *btn4 = [[UIButton alloc] init];
+        [btn4 setImage:[UIImage imageNamed:@"touxiao"] forState:UIControlStateNormal];
+        
+        [self setRightBtnArray:@[cleanBtn2,searchBtn2,btn3,btn4]];
     };
     
 }

@@ -21,6 +21,14 @@ LXSingletonM(LXFrameWorkInstance);
     }
 }
 
+- (UIColor *)ViewController_bgColor
+{
+    if (_ViewController_bgColor == nil) {
+        return [UIColor whiteColor];
+    }else{
+        return _ViewController_bgColor;
+    }
+}
 
 - (navBarBackColor)backState
 {

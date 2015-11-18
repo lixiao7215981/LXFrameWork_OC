@@ -27,6 +27,7 @@
     
     // NavigationBar 根据滚动变色
     self.displayNav = YES;
+    
 }
 
 - (void) addDataList

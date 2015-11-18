@@ -23,6 +23,10 @@ LXSingletonH(LXFrameWorkInstance);
  */
 @property (nonatomic,strong) UIColor *NavigationBar_bgColor;
 /**
+ *  设置View 默认背景颜色（默认白色）
+ */
+@property (nonatomic,strong) UIColor *ViewController_bgColor;
+/**
  *  返回按钮的颜色
  */
 @property (nonatomic,assign) navBarBackColor backState;

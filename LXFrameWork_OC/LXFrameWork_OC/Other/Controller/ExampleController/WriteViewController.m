@@ -10,8 +10,10 @@
 #import <IQUIView+IQKeyboardToolbar.h>
 
 @interface WriteViewController ()
+{
+    UIButton *_searchBtn;
+}
 @property (weak, nonatomic) IBOutlet UITextField *text1;
-
 
 @end
 
@@ -19,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
 }
 
 @end

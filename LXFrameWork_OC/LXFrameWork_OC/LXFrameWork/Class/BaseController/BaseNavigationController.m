@@ -53,7 +53,7 @@
 {
     if (self.viewControllers.count > 0 && [viewController isKindOfClass:[BaseViewController class]]) {
         BaseViewController *baseView = (BaseViewController *) viewController;
-        [baseView setBackBtn];
+        [baseView setNavBackBtn];
         viewController.hidesBottomBarWhenPushed = YES;
     }
     
