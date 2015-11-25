@@ -17,6 +17,7 @@
 		4E3BB8E71B8F1324007A077D /* UserAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E61B8F1324007A077D /* UserAddressModel.m */; };
 		4E4B491E1BFB05A700F0F958 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */; };
 		4E4B49211BFB0FB400F0F958 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B49201BFB0FB400F0F958 /* UIColor+Extension.m */; };
+		4E4B49811C0055F600F0F958 /* PeekAndPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B49801C0055F600F0F958 /* PeekAndPopViewController.m */; };
 		4E56B7E11B51799600184403 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E01B51799600184403 /* HttpTool.m */; };
 		4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E61B54AD3400184403 /* NSMutableURLRequest+Upload.m */; };
 		4E56B7F61B54F5FF00184403 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F51B54F5FF00184403 /* StepView.m */; };
@@ -120,6 +121,8 @@
 		4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
 		4E4B491F1BFB0FB400F0F958 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		4E4B49201BFB0FB400F0F958 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		4E4B497F1C0055F600F0F958 /* PeekAndPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeekAndPopViewController.h; sourceTree = "<group>"; };
+		4E4B49801C0055F600F0F958 /* PeekAndPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeekAndPopViewController.m; sourceTree = "<group>"; };
 		4E56B7DF1B51799600184403 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		4E56B7E01B51799600184403 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		4E56B7E51B54AD3400184403 /* NSMutableURLRequest+Upload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Upload.h"; sourceTree = "<group>"; };
@@ -266,6 +269,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E4B497E1C0055D100F0F958 /* iOS9_NewFuncation */ = {
+			isa = PBXGroup;
+			children = (
+				4E4B497F1C0055F600F0F958 /* PeekAndPopViewController.h */,
+				4E4B49801C0055F600F0F958 /* PeekAndPopViewController.m */,
+			);
+			path = iOS9_NewFuncation;
+			sourceTree = "<group>";
+		};
 		4E72C1911B4FEE6400C16C1E /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +562,7 @@
 		4EE45C591B736BEA00C30B7D /* ExampleController */ = {
 			isa = PBXGroup;
 			children = (
+				4E4B497E1C0055D100F0F958 /* iOS9_NewFuncation */,
 				4EE45C5A1B736C0800C30B7D /* NavBarScrollController.h */,
 				4EE45C5B1B736C0800C30B7D /* NavBarScrollController.m */,
 				4EE45C5D1B73716100C30B7D /* HavePullViewController.h */,
@@ -826,6 +839,7 @@
 				4E0A46601B70C894007C94C8 /* BaseNetworkTool.m in Sources */,
 				4EE45C6B1B74478B00C30B7D /* SystemDebugController.m in Sources */,
 				4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */,
+				4E4B49811C0055F600F0F958 /* PeekAndPopViewController.m in Sources */,
 				4EA445771B4FDA9300844282 /* Foundation+Log.m in Sources */,
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
 				4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */,

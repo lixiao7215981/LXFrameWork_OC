@@ -27,7 +27,12 @@
     //获取摄像设备
     AVCaptureDevice * device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     //创建输入流
-    AVCaptureDeviceInput * input = [AVCaptureDeviceInput deviceInputWithDevice:device error:nil];
+    NSError *error = nil;
+    AVCaptureDeviceInput * input = [AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
+    if (error) {
+        [[[UIAlertView alloc] initWithTitle:@"提示" message:@"未获得使用相机的权限,请到设置中更改权限" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil] show];
+        return;
+    }
     //创建输出流
     AVCaptureMetadataOutput * output = [[AVCaptureMetadataOutput alloc]init];
     //设置代理 在主线程里刷新
@@ -89,6 +94,15 @@
     if (_delegate && [_delegate respondsToSelector:@selector(ReaderCoderDidCancel:)]) {
         [_capSession stopRunning];
         [_delegate ReaderCoderDidCancel:self];
+    }
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [self cleanBtnClick];
     }
 }
 

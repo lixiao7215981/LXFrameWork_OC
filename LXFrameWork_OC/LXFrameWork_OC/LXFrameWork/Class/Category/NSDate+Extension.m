@@ -78,4 +78,33 @@
     return [NSString stringWithFormat:@"%f", a]; //转为字符型
 }
 
++ (NSInteger)compareData:(NSDate *)date1 WithDate:(NSDate *)date2
+{
+    NSComparisonResult result = [date1 compare:date2];
+    if (result == NSOrderedAscending) { //升序，右边 > 左边
+        return 1 ;
+    }else if (result == NSOrderedSame){
+        return 0;
+    }else if (result == NSOrderedDescending){ //降序，右边 < 左边
+        return -1;
+    }
+    return 0;
+}
+
++ (NSInteger)compareStrData:(NSString *)date1 WithDate:(NSString *)date2
+{
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *dt1 = [df dateFromString:date1];
+    NSDate *dt2 = [df dateFromString:date2];
+    return  [self compareData:dt1 WithDate:dt2];
+}
+
++ (NSTimeInterval)getDiscrepancyData:(NSDate *)date1 WithDate:(NSDate *)date2
+{
+    NSTimeInterval dt1 = [date1 timeIntervalSince1970];
+    NSTimeInterval dt2 = [date2 timeIntervalSince1970];
+    return dt2 - dt1;
+}
+
 @end

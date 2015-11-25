@@ -33,4 +33,20 @@
 }
 
 
+#pragma mark - iOS9 新功能 3D-Touch peek and pop
+
+- (NSArray<id<UIPreviewActionItem>> *)previewActionItems
+{
+    UIPreviewAction *action1 = [UIPreviewAction actionWithTitle:@"默认" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        
+    }];
+    UIPreviewAction *action2 = [UIPreviewAction actionWithTitle:@"选中" style:UIPreviewActionStyleSelected handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        
+    }];
+    UIPreviewAction *action3 = [UIPreviewAction actionWithTitle:@"删除" style:UIPreviewActionStyleDestructive handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        
+    }];
+    return @[action1,action2,action3];
+}
+
 @end

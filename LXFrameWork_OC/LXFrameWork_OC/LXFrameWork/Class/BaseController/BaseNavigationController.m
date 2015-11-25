@@ -10,6 +10,7 @@
 #import "BaseViewController.h"
 
 #define ratio 0.7
+#define spaceFromLeftBorder 38
 
 @interface BaseNavigationController ()<UIGestureRecognizerDelegate>
 {
@@ -69,20 +70,17 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-    if ([NSStringFromClass([touch.view class]) isEqualToString:@"UITableViewCellContentView"]) {
-        return NO;
+    CGPoint point = [touch locationInView:touch.view];
+    if (point.x < spaceFromLeftBorder) {
+        return YES;
     }
-    return  YES;
+    return  NO;
 }
 
 #pragma mark - 手势拖拽切换控制器方法
 
-/**
- *  拖拽的时候调用
- */
 - (void)dragging:(UIPanGestureRecognizer *)recognizer
 {
-    // 如果只有1个子控制器,停止拖拽
     if (self.viewControllers.count <= 1) return;
     // 在x方向上移动的距离
     CGFloat tx = [recognizer translationInView:self.view].x;
@@ -126,9 +124,7 @@
     }
 }
 
-/**
- *  产生截图
- */
+// 产生截图
 - (void)createScreenShot
 {
     UIGraphicsBeginImageContextWithOptions(self.view.size, YES, 0.0);
