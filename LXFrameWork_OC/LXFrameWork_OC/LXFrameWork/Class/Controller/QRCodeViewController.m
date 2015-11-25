@@ -10,7 +10,7 @@
 
 @interface QRCodeViewController() <AVCaptureMetadataOutputObjectsDelegate>
 /**
- *  输入输出中间那座大桥
+ *  输入输出中间那座大大的桥
  */
 @property (nonatomic,strong) AVCaptureSession * capSession;
 

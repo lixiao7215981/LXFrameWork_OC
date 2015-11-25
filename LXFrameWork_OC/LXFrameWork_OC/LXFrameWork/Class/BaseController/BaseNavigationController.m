@@ -7,15 +7,16 @@
 //
 
 #import "BaseNavigationController.h"
-#import "BaseViewController.h"
 
 #define ratio 0.7
 #define spaceFromLeftBorder 38
 
 @interface BaseNavigationController ()<UIGestureRecognizerDelegate>
+
 {
     UIPanGestureRecognizer *_PanRecognizer;
 }
+
 /** 存放每一个控制器的全屏截图 */
 @property (nonatomic, strong) NSMutableArray *images;
 /** 最后一个显示的ViewController */

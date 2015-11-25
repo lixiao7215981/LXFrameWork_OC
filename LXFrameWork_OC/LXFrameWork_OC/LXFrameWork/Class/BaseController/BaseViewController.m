@@ -9,7 +9,9 @@
 #import "BaseViewController.h"
 
 @interface BaseViewController ()
+
 @property (nonatomic, strong) IQKeyboardReturnKeyHandler *returnKeyHandler;
+
 @end
 
 @implementation BaseViewController

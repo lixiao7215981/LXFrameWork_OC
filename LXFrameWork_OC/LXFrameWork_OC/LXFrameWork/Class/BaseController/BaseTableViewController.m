@@ -16,6 +16,8 @@
 
 @implementation BaseTableViewController
 
+static NSString *LX_BaseTableViewControllerCellID = @"BaseTableViewControllerCellID";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 设置tableview -> 从Xib中加载
@@ -54,12 +56,11 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellID = @"BaseTableViewCellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    UITableViewCell *tableViewCell = [tableView dequeueReusableCellWithIdentifier:LX_BaseTableViewControllerCellID];
+    if (tableViewCell == nil) {
+        tableViewCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:LX_BaseTableViewControllerCellID];
     }
-    return cell;
+    return tableViewCell;
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -103,7 +104,6 @@
         }
     }
 }
-
 
 #pragma mark - Method
 
