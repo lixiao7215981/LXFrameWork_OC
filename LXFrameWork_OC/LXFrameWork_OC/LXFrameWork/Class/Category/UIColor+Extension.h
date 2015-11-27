@@ -12,7 +12,7 @@
 
 @interface UIColor (Extension)
 /**
- *  根据 16 进制字符串生成颜色
+ *  根据 16 进制字符串生成颜色 例子：#2c5aa5
  *
  *  @param stringToConvert 16进制String
  *

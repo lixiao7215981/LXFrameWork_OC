@@ -12,11 +12,10 @@
 
 - (CGSize) sizeWithFont:(UIFont *) font
 {
-    
-    return [self sizeWithFont:font :MAXFLOAT];
+    return [self sizeWithFont:font Width:MAXFLOAT];
 }
 
-- (CGSize) sizeWithFont:(UIFont *)font :(CGFloat) width
+- (CGSize) sizeWithFont:(UIFont *)font Width:(CGFloat) width
 {
     NSDictionary *dict = @{NSFontAttributeName:font};
     CGSize size = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
@@ -30,7 +29,6 @@
     return outputStr;
 }
 
-
 - (NSString *)decodeFromPercentEscapeString
 {
     NSMutableString *outputStr = [NSMutableString stringWithString:self];
@@ -38,14 +36,14 @@
     return [outputStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
-+ (NSString *)applicationDocumentsDirectory {
++ (NSString *)getApplicationDocumentsDirectory {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
     return basePath;
 }
 
-- (NSString *)dateStringFromtYYYYMMDD
+- (NSString *)FormatterYYYYMMDD
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";

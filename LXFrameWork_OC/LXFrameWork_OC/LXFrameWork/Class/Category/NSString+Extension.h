@@ -19,39 +19,35 @@
  *  根据传入的字体计算所占大小
  *  width : 传入最大宽度计算出高度
  */
-- (CGSize) sizeWithFont:(UIFont *)font :(CGFloat) width;
-
+- (CGSize) sizeWithFont:(UIFont *)font Width:(CGFloat) width;
 /**
  *  对 url 进行编码
  *
  */
 - (NSString *)encodeToPercentEscapeString;
-
 /**
  *  对 url 进行解码
  *
  */
 - (NSString *)decodeFromPercentEscapeString;
-
 /**
  *  获取设备沙盒路径
  */
-+ (NSString *)applicationDocumentsDirectory;
-
++ (NSString *)getApplicationDocumentsDirectory;
 /**
  *  删掉字符串前边多余的 "0"
  */
-- (NSString *) getTheCorrect;
+- (NSString *) removeStringFrontZero;
 
 /**
  *  将NSString 转化为NSData 二进制
  */
-- (NSData *) hexToBytes;
+- (NSData *) stringHexToBytes;
 
 /**
  *  将 年月日时分秒时间转换为 仅年月日的时间
  */
-- (NSString *)dateStringFromtYYYYMMDD;
+- (NSString *)FormatterYYYYMMDD;
 
 /**
  *  将 String 类型转化位 Date 类型 YYYY-MM-DD  HH:mm:ss

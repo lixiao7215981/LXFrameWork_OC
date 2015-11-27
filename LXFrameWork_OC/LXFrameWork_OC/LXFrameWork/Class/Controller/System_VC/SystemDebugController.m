@@ -7,7 +7,7 @@
 //
 
 #import "SystemDebugController.h"
-
+#import "SystemSelectServiceViewController.h"
 @interface SystemDebugController ()
 
 @end
@@ -27,12 +27,15 @@
     }];
     BaseArrowCellItem *arrowCell = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"接口请求日志" SubTitle:nil ClickOption:nil AndDetailClass:nil];
     BaseCellItem *baseCell = [BaseCellItem createBaseCellItemWithIcon:nil AndTitle:@"重设引导信息" SubTitle:nil ClickOption:nil];
-    BaseArrowCellItem *ChooseServiewCell = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"选择服务器" SubTitle:nil ClickOption:nil AndDetailClass:nil];
+    BaseArrowCellItem *ChooseServiewCell = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"选择服务器" SubTitle:nil ClickOption:^{
+        SystemSelectServiceViewController *systemSelectService = [[SystemSelectServiceViewController alloc] init];
+        [self.navigationController pushViewController:systemSelectService animated:YES];
+    }];
     BaseArrowCellItem *ServiewMonitoring = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"服务器监控" SubTitle:nil ClickOption:nil AndDetailClass:nil];
     BaseArrowCellItem *TestPage = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"进入测试Page" SubTitle:nil ClickOption:nil AndDetailClass:nil];
     BaseArrowCellItem *CompelCrash = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"强制Crash" SubTitle:nil ClickOption:nil AndDetailClass:nil];
     BaseArrowCellItem *abnormalLog = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"异常日志" SubTitle:nil ClickOption:nil AndDetailClass:nil];
-  
+    
     BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadTitle:@"系统功能" AndFooterTitle:nil OrItem:@[arrowCell,baseCell,ChooseServiewCell,ServiewMonitoring,TestPage,CompelCrash,abnormalLog,openAbnormalLog]];
     
     BaseCellItemGroup *group2 = [BaseCellItemGroup createGroupWithHeadTitle:@"项目功能" AndFooterTitle:nil OrItem:@[arrowCell,baseCell,ChooseServiewCell,ServiewMonitoring,TestPage,CompelCrash,abnormalLog,openAbnormalLog]];

@@ -81,6 +81,7 @@
 		4EE981491C07FE4400CA44FA /* SystemDebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981431C07FE4400CA44FA /* SystemDebugController.m */; };
 		4EE9814A1C07FE4400CA44FA /* SystemHttpDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981451C07FE4400CA44FA /* SystemHttpDetailController.m */; };
 		4EE9814B1C07FE4400CA44FA /* SystemHttpDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */; };
+		4EE9814E1C07FFF200CA44FA /* SystemSelectServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9814D1C07FFF200CA44FA /* SystemSelectServiceViewController.m */; };
 		5807D29AB7082DF1937A2935 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E89BED168C7F6717F38ADC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -248,6 +249,8 @@
 		4EE981441C07FE4400CA44FA /* SystemHttpDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemHttpDetailController.h; sourceTree = "<group>"; };
 		4EE981451C07FE4400CA44FA /* SystemHttpDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemHttpDetailController.m; sourceTree = "<group>"; };
 		4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemHttpDetailController.xib; sourceTree = "<group>"; };
+		4EE9814C1C07FFF200CA44FA /* SystemSelectServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemSelectServiceViewController.h; sourceTree = "<group>"; };
+		4EE9814D1C07FFF200CA44FA /* SystemSelectServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSelectServiceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -643,6 +646,8 @@
 				4EE981441C07FE4400CA44FA /* SystemHttpDetailController.h */,
 				4EE981451C07FE4400CA44FA /* SystemHttpDetailController.m */,
 				4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */,
+				4EE9814C1C07FFF200CA44FA /* SystemSelectServiceViewController.h */,
+				4EE9814D1C07FFF200CA44FA /* SystemSelectServiceViewController.m */,
 			);
 			path = System_VC;
 			sourceTree = "<group>";
@@ -877,6 +882,7 @@
 				4EE981301C07FAC500CA44FA /* NavBarScrollController.m in Sources */,
 				4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */,
 				4EA445771B4FDA9300844282 /* Foundation+Log.m in Sources */,
+				4EE9814E1C07FFF200CA44FA /* SystemSelectServiceViewController.m in Sources */,
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
 				4EE9813B1C07FCF000CA44FA /* PeekAndPopViewController.m in Sources */,
 				4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */,
