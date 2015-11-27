@@ -12,19 +12,15 @@
 		4E10A2441B8AE53C00832576 /* LXFrameWorkConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A2431B8AE53C00832576 /* LXFrameWorkConst.m */; };
 		4E10A24E1B8AF23E00832576 /* PathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A24D1B8AF23E00832576 /* PathTool.m */; };
 		4E150FBF1BE88634008B3170 /* CustomQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E150FBE1BE88634008B3170 /* CustomQRCodeTool.m */; };
-		4E150FC21BE889E4008B3170 /* CustomQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E150FC11BE889E4008B3170 /* CustomQRCodeViewController.m */; };
 		4E3BB8E41B8F131A007A077D /* CoreLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */; };
 		4E3BB8E71B8F1324007A077D /* UserAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E61B8F1324007A077D /* UserAddressModel.m */; };
 		4E4B491E1BFB05A700F0F958 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */; };
 		4E4B49211BFB0FB400F0F958 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B49201BFB0FB400F0F958 /* UIColor+Extension.m */; };
-		4E4B49811C0055F600F0F958 /* PeekAndPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B49801C0055F600F0F958 /* PeekAndPopViewController.m */; };
 		4E56B7E11B51799600184403 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E01B51799600184403 /* HttpTool.m */; };
 		4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E61B54AD3400184403 /* NSMutableURLRequest+Upload.m */; };
 		4E56B7F61B54F5FF00184403 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F51B54F5FF00184403 /* StepView.m */; };
 		4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F81B54FAD600184403 /* InterchangeButton.m */; };
-		4E59A1851B7C9A9300EA6D06 /* HeadImageScorllController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59A1841B7C9A9300EA6D06 /* HeadImageScorllController.m */; };
 		4E59A1881B7D7E5000EA6D06 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59A1871B7D7E5000EA6D06 /* BaseWebViewController.m */; };
-		4E59A18B1B7D8C0100EA6D06 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59A18A1B7D8C0100EA6D06 /* WebViewController.m */; };
 		4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */; };
 		4E72C19C1B4FEE6400C16C1E /* PlistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1991B4FEE6400C16C1E /* PlistTool.m */; };
 		4EA29A761B56005E0084E72D /* StepNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA29A751B56005E0084E72D /* StepNextView.m */; };
@@ -50,18 +46,10 @@
 		4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7351B4E2A4500ACEE5F /* main.m */; };
 		4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECECF981B5C9BA50036B721 /* BaseDelegate.m */; };
 		4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECECFAA1B5D0A690036B721 /* BaseStepViewController.m */; };
-		4ED0171E1BFAD203003A420F /* WriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0171C1BFAD203003A420F /* WriteViewController.m */; };
-		4ED0171F1BFAD203003A420F /* WriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED0171D1BFAD203003A420F /* WriteViewController.xib */; };
 		4ED167141B4A6BA000B3C618 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167131B4A6BA000B3C618 /* BaseNavigationController.m */; };
 		4ED167171B4A6C5500B3C618 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167161B4A6C5500B3C618 /* UIView+Extension.m */; };
 		4ED1671A1B4A6C8500B3C618 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167191B4A6C8500B3C618 /* UIBarButtonItem+Extension.m */; };
-		4EE45C4D1B73515600C30B7D /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C4C1B73515600C30B7D /* QRCodeViewController.m */; };
 		4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C551B7356DC00C30B7D /* MainTableViewController.m */; };
-		4EE45C5C1B736C0800C30B7D /* NavBarScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C5B1B736C0800C30B7D /* NavBarScrollController.m */; };
-		4EE45C5F1B73716100C30B7D /* HavePullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C5E1B73716100C30B7D /* HavePullViewController.m */; };
-		4EE45C621B7389BA00C30B7D /* UserIconCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C611B7389BA00C30B7D /* UserIconCellController.m */; };
-		4EE45C6B1B74478B00C30B7D /* SystemDebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C6A1B74478B00C30B7D /* SystemDebugController.m */; };
-		4EE45C6E1B74481700C30B7D /* SetNavBarLeftRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C6D1B74481700C30B7D /* SetNavBarLeftRightViewController.m */; };
 		4EE45C811B74A90C00C30B7D /* BaseArrowCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C741B74A90C00C30B7D /* BaseArrowCellItem.m */; };
 		4EE45C821B74A90C00C30B7D /* BaseCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C761B74A90C00C30B7D /* BaseCellItem.m */; };
 		4EE45C831B74A90C00C30B7D /* BaseCellItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C781B74A90C00C30B7D /* BaseCellItemGroup.m */; };
@@ -71,16 +59,28 @@
 		4EE45C871B74A90C00C30B7D /* BaseSwitchCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C801B74A90C00C30B7D /* BaseSwitchCellItem.m */; };
 		4EE45C8A1B74A9FE00C30B7D /* HttpToolLogModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C891B74A9FE00C30B7D /* HttpToolLogModel.m */; };
 		4EE45C901B784DA300C30B7D /* NSObject+JSONCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C8F1B784DA300C30B7D /* NSObject+JSONCategories.m */; };
-		4EE45C931B78546C00C30B7D /* HttpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C921B78546C00C30B7D /* HttpViewController.m */; };
 		4EE45C9F1B78795A00C30B7D /* BundleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C9E1B78795A00C30B7D /* BundleTool.m */; };
-		4EE45CA41B7881E100C30B7D /* SysetmHttpDebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45CA31B7881E100C30B7D /* SysetmHttpDebugController.m */; };
-		4EE45CA81B78828B00C30B7D /* SystemHttpDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45CA61B78828B00C30B7D /* SystemHttpDetailController.m */; };
-		4EE45CE31B78926600C30B7D /* SystemHttpDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE45CD81B78926600C30B7D /* SystemHttpDetailController.xib */; };
 		4EE45CF11B78952300C30B7D /* LXFrameWork.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4EE45CF01B78952300C30B7D /* LXFrameWork.bundle */; };
 		4EE788FD1BA902C400635387 /* BaseCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE788FC1BA902C400635387 /* BaseCellTableViewController.m */; };
 		4EE789021BA912D500635387 /* CHKeychainTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE788FF1BA912D500635387 /* CHKeychainTool.m */; };
 		4EE789031BA912D500635387 /* SystemDeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE789011BA912D500635387 /* SystemDeviceTool.m */; };
 		4EE789061BA9143500635387 /* UserDefaultsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE789051BA9143500635387 /* UserDefaultsTool.m */; };
+		4EE9812D1C07FAC500CA44FA /* CustomQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981161C07FAC500CA44FA /* CustomQRCodeViewController.m */; };
+		4EE9812E1C07FAC500CA44FA /* HavePullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981181C07FAC500CA44FA /* HavePullViewController.m */; };
+		4EE9812F1C07FAC500CA44FA /* HeadImageScorllController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9811A1C07FAC500CA44FA /* HeadImageScorllController.m */; };
+		4EE981301C07FAC500CA44FA /* NavBarScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9811C1C07FAC500CA44FA /* NavBarScrollController.m */; };
+		4EE981311C07FAC500CA44FA /* SetNavBarLeftRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9811E1C07FAC500CA44FA /* SetNavBarLeftRightViewController.m */; };
+		4EE981321C07FAC500CA44FA /* UserIconCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981201C07FAC500CA44FA /* UserIconCellController.m */; };
+		4EE981331C07FAC500CA44FA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981221C07FAC500CA44FA /* WebViewController.m */; };
+		4EE981351C07FAC500CA44FA /* HttpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981281C07FAC500CA44FA /* HttpViewController.m */; };
+		4EE981361C07FAC500CA44FA /* WriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9812B1C07FAC500CA44FA /* WriteViewController.m */; };
+		4EE981371C07FAC500CA44FA /* WriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE9812C1C07FAC500CA44FA /* WriteViewController.xib */; };
+		4EE9813B1C07FCF000CA44FA /* PeekAndPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9813A1C07FCF000CA44FA /* PeekAndPopViewController.m */; };
+		4EE981471C07FE4400CA44FA /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9813E1C07FE4400CA44FA /* QRCodeViewController.m */; };
+		4EE981481C07FE4400CA44FA /* SysetmHttpDebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981411C07FE4400CA44FA /* SysetmHttpDebugController.m */; };
+		4EE981491C07FE4400CA44FA /* SystemDebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981431C07FE4400CA44FA /* SystemDebugController.m */; };
+		4EE9814A1C07FE4400CA44FA /* SystemHttpDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981451C07FE4400CA44FA /* SystemHttpDetailController.m */; };
+		4EE9814B1C07FE4400CA44FA /* SystemHttpDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */; };
 		5807D29AB7082DF1937A2935 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E89BED168C7F6717F38ADC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -111,8 +111,6 @@
 		4E10A24D1B8AF23E00832576 /* PathTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathTool.m; sourceTree = "<group>"; };
 		4E150FBD1BE88634008B3170 /* CustomQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomQRCodeTool.h; sourceTree = "<group>"; };
 		4E150FBE1BE88634008B3170 /* CustomQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomQRCodeTool.m; sourceTree = "<group>"; };
-		4E150FC01BE889E4008B3170 /* CustomQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomQRCodeViewController.h; sourceTree = "<group>"; };
-		4E150FC11BE889E4008B3170 /* CustomQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomQRCodeViewController.m; sourceTree = "<group>"; };
 		4E3BB8E21B8F131A007A077D /* CoreLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationTool.h; sourceTree = "<group>"; };
 		4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationTool.m; sourceTree = "<group>"; };
 		4E3BB8E51B8F1324007A077D /* UserAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAddressModel.h; sourceTree = "<group>"; };
@@ -121,8 +119,6 @@
 		4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
 		4E4B491F1BFB0FB400F0F958 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		4E4B49201BFB0FB400F0F958 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
-		4E4B497F1C0055F600F0F958 /* PeekAndPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeekAndPopViewController.h; sourceTree = "<group>"; };
-		4E4B49801C0055F600F0F958 /* PeekAndPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeekAndPopViewController.m; sourceTree = "<group>"; };
 		4E56B7DF1B51799600184403 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		4E56B7E01B51799600184403 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		4E56B7E51B54AD3400184403 /* NSMutableURLRequest+Upload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Upload.h"; sourceTree = "<group>"; };
@@ -131,12 +127,8 @@
 		4E56B7F51B54F5FF00184403 /* StepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepView.m; sourceTree = "<group>"; };
 		4E56B7F71B54FAD600184403 /* InterchangeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterchangeButton.h; sourceTree = "<group>"; };
 		4E56B7F81B54FAD600184403 /* InterchangeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterchangeButton.m; sourceTree = "<group>"; };
-		4E59A1831B7C9A9300EA6D06 /* HeadImageScorllController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadImageScorllController.h; sourceTree = "<group>"; };
-		4E59A1841B7C9A9300EA6D06 /* HeadImageScorllController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadImageScorllController.m; sourceTree = "<group>"; };
 		4E59A1861B7D7E5000EA6D06 /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
 		4E59A1871B7D7E5000EA6D06 /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
-		4E59A1891B7D8C0100EA6D06 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		4E59A18A1B7D8C0100EA6D06 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		4E72C1921B4FEE6400C16C1E /* BaseTabBarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarService.h; sourceTree = "<group>"; };
 		4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarService.m; sourceTree = "<group>"; };
 		4E72C1941B4FEE6400C16C1E /* ImportClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportClass.h; sourceTree = "<group>"; };
@@ -188,30 +180,15 @@
 		4ECECF981B5C9BA50036B721 /* BaseDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDelegate.m; sourceTree = "<group>"; };
 		4ECECFA91B5D0A690036B721 /* BaseStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseStepViewController.h; sourceTree = "<group>"; };
 		4ECECFAA1B5D0A690036B721 /* BaseStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseStepViewController.m; sourceTree = "<group>"; };
-		4ED0171B1BFAD203003A420F /* WriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteViewController.h; sourceTree = "<group>"; };
-		4ED0171C1BFAD203003A420F /* WriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteViewController.m; sourceTree = "<group>"; };
-		4ED0171D1BFAD203003A420F /* WriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteViewController.xib; sourceTree = "<group>"; };
 		4ED167121B4A6BA000B3C618 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		4ED167131B4A6BA000B3C618 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		4ED167151B4A6C5500B3C618 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		4ED167161B4A6C5500B3C618 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		4ED167181B4A6C8500B3C618 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		4ED167191B4A6C8500B3C618 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
-		4EE45C4B1B73515600C30B7D /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
-		4EE45C4C1B73515600C30B7D /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		4EE45C541B7356DC00C30B7D /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		4EE45C551B7356DC00C30B7D /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		4EE45C571B7358D500C30B7D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		4EE45C5A1B736C0800C30B7D /* NavBarScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarScrollController.h; sourceTree = "<group>"; };
-		4EE45C5B1B736C0800C30B7D /* NavBarScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarScrollController.m; sourceTree = "<group>"; };
-		4EE45C5D1B73716100C30B7D /* HavePullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavePullViewController.h; sourceTree = "<group>"; };
-		4EE45C5E1B73716100C30B7D /* HavePullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavePullViewController.m; sourceTree = "<group>"; };
-		4EE45C601B7389BA00C30B7D /* UserIconCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIconCellController.h; sourceTree = "<group>"; };
-		4EE45C611B7389BA00C30B7D /* UserIconCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIconCellController.m; sourceTree = "<group>"; };
-		4EE45C691B74478B00C30B7D /* SystemDebugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemDebugController.h; sourceTree = "<group>"; };
-		4EE45C6A1B74478B00C30B7D /* SystemDebugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemDebugController.m; sourceTree = "<group>"; };
-		4EE45C6C1B74481700C30B7D /* SetNavBarLeftRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNavBarLeftRightViewController.h; sourceTree = "<group>"; };
-		4EE45C6D1B74481700C30B7D /* SetNavBarLeftRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNavBarLeftRightViewController.m; sourceTree = "<group>"; };
 		4EE45C731B74A90C00C30B7D /* BaseArrowCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseArrowCellItem.h; sourceTree = "<group>"; };
 		4EE45C741B74A90C00C30B7D /* BaseArrowCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseArrowCellItem.m; sourceTree = "<group>"; };
 		4EE45C751B74A90C00C30B7D /* BaseCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCellItem.h; sourceTree = "<group>"; };
@@ -230,15 +207,8 @@
 		4EE45C891B74A9FE00C30B7D /* HttpToolLogModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpToolLogModel.m; sourceTree = "<group>"; };
 		4EE45C8E1B784DA300C30B7D /* NSObject+JSONCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSONCategories.h"; sourceTree = "<group>"; };
 		4EE45C8F1B784DA300C30B7D /* NSObject+JSONCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSONCategories.m"; sourceTree = "<group>"; };
-		4EE45C911B78546C00C30B7D /* HttpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpViewController.h; sourceTree = "<group>"; };
-		4EE45C921B78546C00C30B7D /* HttpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpViewController.m; sourceTree = "<group>"; };
 		4EE45C9D1B78795A00C30B7D /* BundleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleTool.h; sourceTree = "<group>"; };
 		4EE45C9E1B78795A00C30B7D /* BundleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleTool.m; sourceTree = "<group>"; };
-		4EE45CA21B7881E100C30B7D /* SysetmHttpDebugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SysetmHttpDebugController.h; sourceTree = "<group>"; };
-		4EE45CA31B7881E100C30B7D /* SysetmHttpDebugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SysetmHttpDebugController.m; sourceTree = "<group>"; };
-		4EE45CA51B78828B00C30B7D /* SystemHttpDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemHttpDetailController.h; sourceTree = "<group>"; };
-		4EE45CA61B78828B00C30B7D /* SystemHttpDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemHttpDetailController.m; sourceTree = "<group>"; };
-		4EE45CD81B78926600C30B7D /* SystemHttpDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SystemHttpDetailController.xib; path = ../../../Other/Lib/SystemHttpDetailController.xib; sourceTree = "<group>"; };
 		4EE45CF01B78952300C30B7D /* LXFrameWork.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LXFrameWork.bundle; sourceTree = "<group>"; };
 		4EE788FB1BA902C400635387 /* BaseCellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCellTableViewController.h; sourceTree = "<group>"; };
 		4EE788FC1BA902C400635387 /* BaseCellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCellTableViewController.m; sourceTree = "<group>"; };
@@ -248,6 +218,36 @@
 		4EE789011BA912D500635387 /* SystemDeviceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemDeviceTool.m; sourceTree = "<group>"; };
 		4EE789041BA9143500635387 /* UserDefaultsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsTool.h; sourceTree = "<group>"; };
 		4EE789051BA9143500635387 /* UserDefaultsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsTool.m; sourceTree = "<group>"; };
+		4EE981151C07FAC500CA44FA /* CustomQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomQRCodeViewController.h; sourceTree = "<group>"; };
+		4EE981161C07FAC500CA44FA /* CustomQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomQRCodeViewController.m; sourceTree = "<group>"; };
+		4EE981171C07FAC500CA44FA /* HavePullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HavePullViewController.h; sourceTree = "<group>"; };
+		4EE981181C07FAC500CA44FA /* HavePullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HavePullViewController.m; sourceTree = "<group>"; };
+		4EE981191C07FAC500CA44FA /* HeadImageScorllController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadImageScorllController.h; sourceTree = "<group>"; };
+		4EE9811A1C07FAC500CA44FA /* HeadImageScorllController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadImageScorllController.m; sourceTree = "<group>"; };
+		4EE9811B1C07FAC500CA44FA /* NavBarScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarScrollController.h; sourceTree = "<group>"; };
+		4EE9811C1C07FAC500CA44FA /* NavBarScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarScrollController.m; sourceTree = "<group>"; };
+		4EE9811D1C07FAC500CA44FA /* SetNavBarLeftRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNavBarLeftRightViewController.h; sourceTree = "<group>"; };
+		4EE9811E1C07FAC500CA44FA /* SetNavBarLeftRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNavBarLeftRightViewController.m; sourceTree = "<group>"; };
+		4EE9811F1C07FAC500CA44FA /* UserIconCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIconCellController.h; sourceTree = "<group>"; };
+		4EE981201C07FAC500CA44FA /* UserIconCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIconCellController.m; sourceTree = "<group>"; };
+		4EE981211C07FAC500CA44FA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		4EE981221C07FAC500CA44FA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4EE981271C07FAC500CA44FA /* HttpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpViewController.h; sourceTree = "<group>"; };
+		4EE981281C07FAC500CA44FA /* HttpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpViewController.m; sourceTree = "<group>"; };
+		4EE9812A1C07FAC500CA44FA /* WriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteViewController.h; sourceTree = "<group>"; };
+		4EE9812B1C07FAC500CA44FA /* WriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteViewController.m; sourceTree = "<group>"; };
+		4EE9812C1C07FAC500CA44FA /* WriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WriteViewController.xib; sourceTree = "<group>"; };
+		4EE981391C07FCF000CA44FA /* PeekAndPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeekAndPopViewController.h; sourceTree = "<group>"; };
+		4EE9813A1C07FCF000CA44FA /* PeekAndPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeekAndPopViewController.m; sourceTree = "<group>"; };
+		4EE9813D1C07FE4400CA44FA /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		4EE9813E1C07FE4400CA44FA /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		4EE981401C07FE4400CA44FA /* SysetmHttpDebugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SysetmHttpDebugController.h; sourceTree = "<group>"; };
+		4EE981411C07FE4400CA44FA /* SysetmHttpDebugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SysetmHttpDebugController.m; sourceTree = "<group>"; };
+		4EE981421C07FE4400CA44FA /* SystemDebugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemDebugController.h; sourceTree = "<group>"; };
+		4EE981431C07FE4400CA44FA /* SystemDebugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemDebugController.m; sourceTree = "<group>"; };
+		4EE981441C07FE4400CA44FA /* SystemHttpDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemHttpDetailController.h; sourceTree = "<group>"; };
+		4EE981451C07FE4400CA44FA /* SystemHttpDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemHttpDetailController.m; sourceTree = "<group>"; };
+		4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemHttpDetailController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,15 +269,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E4B497E1C0055D100F0F958 /* iOS9_NewFuncation */ = {
-			isa = PBXGroup;
-			children = (
-				4E4B497F1C0055F600F0F958 /* PeekAndPopViewController.h */,
-				4E4B49801C0055F600F0F958 /* PeekAndPopViewController.m */,
-			);
-			path = iOS9_NewFuncation;
-			sourceTree = "<group>";
-		};
 		4E72C1911B4FEE6400C16C1E /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,15 +468,8 @@
 		4EB8BAEA1B2EB49C00315CEF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4EE45C4B1B73515600C30B7D /* QRCodeViewController.h */,
-				4EE45C4C1B73515600C30B7D /* QRCodeViewController.m */,
-				4EE45C691B74478B00C30B7D /* SystemDebugController.h */,
-				4EE45C6A1B74478B00C30B7D /* SystemDebugController.m */,
-				4EE45CA21B7881E100C30B7D /* SysetmHttpDebugController.h */,
-				4EE45CA31B7881E100C30B7D /* SysetmHttpDebugController.m */,
-				4EE45CA51B78828B00C30B7D /* SystemHttpDetailController.h */,
-				4EE45CA61B78828B00C30B7D /* SystemHttpDetailController.m */,
-				4EE45CD81B78926600C30B7D /* SystemHttpDetailController.xib */,
+				4EE9813C1C07FE4400CA44FA /* Function_VC */,
+				4EE9813F1C07FE4400CA44FA /* System_VC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -562,26 +546,10 @@
 		4EE45C591B736BEA00C30B7D /* ExampleController */ = {
 			isa = PBXGroup;
 			children = (
-				4E4B497E1C0055D100F0F958 /* iOS9_NewFuncation */,
-				4EE45C5A1B736C0800C30B7D /* NavBarScrollController.h */,
-				4EE45C5B1B736C0800C30B7D /* NavBarScrollController.m */,
-				4EE45C5D1B73716100C30B7D /* HavePullViewController.h */,
-				4EE45C5E1B73716100C30B7D /* HavePullViewController.m */,
-				4EE45C601B7389BA00C30B7D /* UserIconCellController.h */,
-				4EE45C611B7389BA00C30B7D /* UserIconCellController.m */,
-				4EE45C6C1B74481700C30B7D /* SetNavBarLeftRightViewController.h */,
-				4EE45C6D1B74481700C30B7D /* SetNavBarLeftRightViewController.m */,
-				4EE45C911B78546C00C30B7D /* HttpViewController.h */,
-				4EE45C921B78546C00C30B7D /* HttpViewController.m */,
-				4E59A1831B7C9A9300EA6D06 /* HeadImageScorllController.h */,
-				4E59A1841B7C9A9300EA6D06 /* HeadImageScorllController.m */,
-				4E59A1891B7D8C0100EA6D06 /* WebViewController.h */,
-				4E59A18A1B7D8C0100EA6D06 /* WebViewController.m */,
-				4E150FC01BE889E4008B3170 /* CustomQRCodeViewController.h */,
-				4E150FC11BE889E4008B3170 /* CustomQRCodeViewController.m */,
-				4ED0171B1BFAD203003A420F /* WriteViewController.h */,
-				4ED0171C1BFAD203003A420F /* WriteViewController.m */,
-				4ED0171D1BFAD203003A420F /* WriteViewController.xib */,
+				4EE981381C07FCF000CA44FA /* iOS9_newFuncation */,
+				4EE981141C07FAC500CA44FA /* Base_function */,
+				4EE981261C07FAC500CA44FA /* System_function */,
+				4EE981291C07FAC500CA44FA /* Test_function */,
 			);
 			path = ExampleController;
 			sourceTree = "<group>";
@@ -605,6 +573,78 @@
 				4EE45C801B74A90C00C30B7D /* BaseSwitchCellItem.m */,
 			);
 			path = BaseTableViewCellItem;
+			sourceTree = "<group>";
+		};
+		4EE981141C07FAC500CA44FA /* Base_function */ = {
+			isa = PBXGroup;
+			children = (
+				4EE981151C07FAC500CA44FA /* CustomQRCodeViewController.h */,
+				4EE981161C07FAC500CA44FA /* CustomQRCodeViewController.m */,
+				4EE981171C07FAC500CA44FA /* HavePullViewController.h */,
+				4EE981181C07FAC500CA44FA /* HavePullViewController.m */,
+				4EE981191C07FAC500CA44FA /* HeadImageScorllController.h */,
+				4EE9811A1C07FAC500CA44FA /* HeadImageScorllController.m */,
+				4EE9811B1C07FAC500CA44FA /* NavBarScrollController.h */,
+				4EE9811C1C07FAC500CA44FA /* NavBarScrollController.m */,
+				4EE9811D1C07FAC500CA44FA /* SetNavBarLeftRightViewController.h */,
+				4EE9811E1C07FAC500CA44FA /* SetNavBarLeftRightViewController.m */,
+				4EE9811F1C07FAC500CA44FA /* UserIconCellController.h */,
+				4EE981201C07FAC500CA44FA /* UserIconCellController.m */,
+				4EE981211C07FAC500CA44FA /* WebViewController.h */,
+				4EE981221C07FAC500CA44FA /* WebViewController.m */,
+			);
+			path = Base_function;
+			sourceTree = "<group>";
+		};
+		4EE981261C07FAC500CA44FA /* System_function */ = {
+			isa = PBXGroup;
+			children = (
+				4EE981271C07FAC500CA44FA /* HttpViewController.h */,
+				4EE981281C07FAC500CA44FA /* HttpViewController.m */,
+			);
+			path = System_function;
+			sourceTree = "<group>";
+		};
+		4EE981291C07FAC500CA44FA /* Test_function */ = {
+			isa = PBXGroup;
+			children = (
+				4EE9812A1C07FAC500CA44FA /* WriteViewController.h */,
+				4EE9812B1C07FAC500CA44FA /* WriteViewController.m */,
+				4EE9812C1C07FAC500CA44FA /* WriteViewController.xib */,
+			);
+			path = Test_function;
+			sourceTree = "<group>";
+		};
+		4EE981381C07FCF000CA44FA /* iOS9_newFuncation */ = {
+			isa = PBXGroup;
+			children = (
+				4EE981391C07FCF000CA44FA /* PeekAndPopViewController.h */,
+				4EE9813A1C07FCF000CA44FA /* PeekAndPopViewController.m */,
+			);
+			path = iOS9_newFuncation;
+			sourceTree = "<group>";
+		};
+		4EE9813C1C07FE4400CA44FA /* Function_VC */ = {
+			isa = PBXGroup;
+			children = (
+				4EE9813D1C07FE4400CA44FA /* QRCodeViewController.h */,
+				4EE9813E1C07FE4400CA44FA /* QRCodeViewController.m */,
+			);
+			path = Function_VC;
+			sourceTree = "<group>";
+		};
+		4EE9813F1C07FE4400CA44FA /* System_VC */ = {
+			isa = PBXGroup;
+			children = (
+				4EE981401C07FE4400CA44FA /* SysetmHttpDebugController.h */,
+				4EE981411C07FE4400CA44FA /* SysetmHttpDebugController.m */,
+				4EE981421C07FE4400CA44FA /* SystemDebugController.h */,
+				4EE981431C07FE4400CA44FA /* SystemDebugController.m */,
+				4EE981441C07FE4400CA44FA /* SystemHttpDetailController.h */,
+				4EE981451C07FE4400CA44FA /* SystemHttpDetailController.m */,
+				4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */,
+			);
+			path = System_VC;
 			sourceTree = "<group>";
 		};
 		50F6267C0676A18D2970D232 /* Pods */ = {
@@ -711,10 +751,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EE45CE31B78926600C30B7D /* SystemHttpDetailController.xib in Resources */,
 				4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */,
+				4EE9814B1C07FE4400CA44FA /* SystemHttpDetailController.xib in Resources */,
+				4EE981371C07FAC500CA44FA /* WriteViewController.xib in Resources */,
 				4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */,
-				4ED0171F1BFAD203003A420F /* WriteViewController.xib in Resources */,
 				4EE45CF11B78952300C30B7D /* LXFrameWork.bundle in Resources */,
 				4EB8BABF1B2E8CB800315CEF /* Images.xcassets in Resources */,
 			);
@@ -782,52 +822,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE9814A1C07FE4400CA44FA /* SystemHttpDetailController.m in Sources */,
 				4EE45C901B784DA300C30B7D /* NSObject+JSONCategories.m in Sources */,
+				4EE9812E1C07FAC500CA44FA /* HavePullViewController.m in Sources */,
 				4EA29A761B56005E0084E72D /* StepNextView.m in Sources */,
 				4ED167171B4A6C5500B3C618 /* UIView+Extension.m in Sources */,
-				4EE45CA41B7881E100C30B7D /* SysetmHttpDebugController.m in Sources */,
-				4E59A1851B7C9A9300EA6D06 /* HeadImageScorllController.m in Sources */,
 				4EE789061BA9143500635387 /* UserDefaultsTool.m in Sources */,
 				4EE45C8A1B74A9FE00C30B7D /* HttpToolLogModel.m in Sources */,
 				4E4B491E1BFB05A700F0F958 /* UIWindow+Extension.m in Sources */,
 				4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */,
-				4EE45C6E1B74481700C30B7D /* SetNavBarLeftRightViewController.m in Sources */,
 				4E10A24E1B8AF23E00832576 /* PathTool.m in Sources */,
 				4EA374B61B4D39DD00680B92 /* BlockButton.m in Sources */,
+				4EE981331C07FAC500CA44FA /* WebViewController.m in Sources */,
 				4EE788FD1BA902C400635387 /* BaseCellTableViewController.m in Sources */,
 				4E10A2441B8AE53C00832576 /* LXFrameWorkConst.m in Sources */,
+				4EE981351C07FAC500CA44FA /* HttpViewController.m in Sources */,
+				4EE981471C07FE4400CA44FA /* QRCodeViewController.m in Sources */,
 				4EE789021BA912D500635387 /* CHKeychainTool.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
 				4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */,
+				4EE981491C07FE4400CA44FA /* SystemDebugController.m in Sources */,
 				4EB8533E1B4A1A3A00C35F6D /* BaseTableViewController.m in Sources */,
 				4EE45C831B74A90C00C30B7D /* BaseCellItemGroup.m in Sources */,
 				4E59A1881B7D7E5000EA6D06 /* BaseWebViewController.m in Sources */,
 				4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */,
 				4EE45C841B74A90C00C30B7D /* BaseCenterTitleCellItem.m in Sources */,
-				4EE45C5C1B736C0800C30B7D /* NavBarScrollController.m in Sources */,
 				4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */,
 				4EBC50B11B8706D100A71618 /* LXFrameWorkInstance.m in Sources */,
 				4E56B7F61B54F5FF00184403 /* StepView.m in Sources */,
-				4E59A18B1B7D8C0100EA6D06 /* WebViewController.m in Sources */,
 				4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */,
-				4ED0171E1BFAD203003A420F /* WriteViewController.m in Sources */,
 				4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */,
-				4EE45C931B78546C00C30B7D /* HttpViewController.m in Sources */,
-				4EE45C4D1B73515600C30B7D /* QRCodeViewController.m in Sources */,
 				4E72C19C1B4FEE6400C16C1E /* PlistTool.m in Sources */,
 				4ED1671A1B4A6C8500B3C618 /* UIBarButtonItem+Extension.m in Sources */,
-				4EE45C621B7389BA00C30B7D /* UserIconCellController.m in Sources */,
+				4EE981311C07FAC500CA44FA /* SetNavBarLeftRightViewController.m in Sources */,
 				4EE45C811B74A90C00C30B7D /* BaseArrowCellItem.m in Sources */,
 				4E150FBF1BE88634008B3170 /* CustomQRCodeTool.m in Sources */,
 				4ED167141B4A6BA000B3C618 /* BaseNavigationController.m in Sources */,
 				4EA445781B4FDA9300844282 /* NSDate+Extension.m in Sources */,
 				4EE45C851B74A90C00C30B7D /* BaseIconItem.m in Sources */,
 				4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */,
-				4EE45C5F1B73716100C30B7D /* HavePullViewController.m in Sources */,
 				4EA4457A1B4FDA9300844282 /* NSString+Hash.m in Sources */,
-				4E150FC21BE889E4008B3170 /* CustomQRCodeViewController.m in Sources */,
 				4EE45C9F1B78795A00C30B7D /* BundleTool.m in Sources */,
 				4EE789031BA912D500635387 /* SystemDeviceTool.m in Sources */,
+				4EE981321C07FAC500CA44FA /* UserIconCellController.m in Sources */,
 				4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */,
 				4EE45C871B74A90C00C30B7D /* BaseSwitchCellItem.m in Sources */,
 				4EA4457B1B4FDA9300844282 /* NSString+RegularExpression.m in Sources */,
@@ -835,16 +872,19 @@
 				4E3BB8E71B8F1324007A077D /* UserAddressModel.m in Sources */,
 				4EA445761B4FDA9300844282 /* CALayer+SetColor.m in Sources */,
 				4E3BB8E41B8F131A007A077D /* CoreLocationTool.m in Sources */,
-				4EE45CA81B78828B00C30B7D /* SystemHttpDetailController.m in Sources */,
+				4EE981361C07FAC500CA44FA /* WriteViewController.m in Sources */,
 				4E0A46601B70C894007C94C8 /* BaseNetworkTool.m in Sources */,
-				4EE45C6B1B74478B00C30B7D /* SystemDebugController.m in Sources */,
+				4EE981301C07FAC500CA44FA /* NavBarScrollController.m in Sources */,
 				4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */,
-				4E4B49811C0055F600F0F958 /* PeekAndPopViewController.m in Sources */,
 				4EA445771B4FDA9300844282 /* Foundation+Log.m in Sources */,
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
+				4EE9813B1C07FCF000CA44FA /* PeekAndPopViewController.m in Sources */,
 				4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */,
 				4EE45C861B74A90C00C30B7D /* BaseSubtitleCellItem.m in Sources */,
 				4E4B49211BFB0FB400F0F958 /* UIColor+Extension.m in Sources */,
+				4EE9812F1C07FAC500CA44FA /* HeadImageScorllController.m in Sources */,
+				4EE981481C07FE4400CA44FA /* SysetmHttpDebugController.m in Sources */,
+				4EE9812D1C07FAC500CA44FA /* CustomQRCodeViewController.m in Sources */,
 				4E0A465D1B70C1BD007C94C8 /* TimeButton.m in Sources */,
 				4EA445791B4FDA9300844282 /* NSString+Extension.m in Sources */,
 				4EE45C821B74A90C00C30B7D /* BaseCellItem.m in Sources */,
