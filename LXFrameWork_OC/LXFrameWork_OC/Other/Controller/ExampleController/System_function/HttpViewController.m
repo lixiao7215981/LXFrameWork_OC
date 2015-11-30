@@ -25,7 +25,7 @@
 - (void) addDataList
 {
     BaseArrowCellItem *item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"发送请求" SubTitle:nil ClickOption:^{
-        NSLog(@"%@",[NSString applicationDocumentsDirectory]);
+        NSLog(@"%@",[NSString getApplicationDocumentsDirectory]);
         [HttpTool HttpToolGetWithUrl:@"http://www.baidu.com" paramesers:@{@"1":@"好痛好痛"} Success:^(id json) {
             NSLog(@"成功");
         } failure:^(NSError *error) {

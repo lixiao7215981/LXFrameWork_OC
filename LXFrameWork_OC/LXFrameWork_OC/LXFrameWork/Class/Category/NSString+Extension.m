@@ -52,7 +52,7 @@
     return [formatter stringFromDate:date];
 }
 
--(NSString*) getTheCorrect
+-(NSString*) removeStringFrontZero
 {
     NSString *str = self;
     while ([str hasPrefix:@"0"]){
@@ -61,7 +61,7 @@
     return str;
 }
 
--(NSData*) hexToBytes {
+-(NSData*) stringHexToBytes {
     NSMutableData* data = [NSMutableData data];
     int idx;
     for (idx = 0; idx+2 <= self.length; idx+=2) {

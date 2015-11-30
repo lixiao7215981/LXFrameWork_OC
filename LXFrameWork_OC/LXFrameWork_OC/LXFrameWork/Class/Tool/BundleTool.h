@@ -30,11 +30,5 @@
  */
 + (id) getViewControllerNibName:(NSString *) name FromBundle:(NSString *) bundle;;
 
-/**
- *  获取当前APP的版本
- *
- *  @return 版本号
- */
-+ (NSString *) getApp_Version;
 
 @end

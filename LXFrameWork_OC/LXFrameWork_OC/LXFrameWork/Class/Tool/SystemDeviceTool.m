@@ -21,4 +21,12 @@
     return UUID;
 }
 
+
++ (NSString *)getApp_Version
+{
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    return [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+}
+
+
 @end
