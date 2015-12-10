@@ -12,6 +12,7 @@
 		4E10A2441B8AE53C00832576 /* LXFrameWorkConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A2431B8AE53C00832576 /* LXFrameWorkConst.m */; };
 		4E10A24E1B8AF23E00832576 /* PathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A24D1B8AF23E00832576 /* PathTool.m */; };
 		4E150FBF1BE88634008B3170 /* CustomQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E150FBE1BE88634008B3170 /* CustomQRCodeTool.m */; };
+		4E1BA0E81C152C0F00E232D3 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BA0E61C152C0F00E232D3 /* GTMBase64.m */; };
 		4E3BB8E41B8F131A007A077D /* CoreLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */; };
 		4E3BB8E71B8F1324007A077D /* UserAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E61B8F1324007A077D /* UserAddressModel.m */; };
 		4E4B491E1BFB05A700F0F958 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */; };
@@ -112,6 +113,9 @@
 		4E10A24D1B8AF23E00832576 /* PathTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathTool.m; sourceTree = "<group>"; };
 		4E150FBD1BE88634008B3170 /* CustomQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomQRCodeTool.h; sourceTree = "<group>"; };
 		4E150FBE1BE88634008B3170 /* CustomQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomQRCodeTool.m; sourceTree = "<group>"; };
+		4E1BA0E51C152C0F00E232D3 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		4E1BA0E61C152C0F00E232D3 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		4E1BA0E71C152C0F00E232D3 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		4E3BB8E21B8F131A007A077D /* CoreLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationTool.h; sourceTree = "<group>"; };
 		4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationTool.m; sourceTree = "<group>"; };
 		4E3BB8E51B8F1324007A077D /* UserAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAddressModel.h; sourceTree = "<group>"; };
@@ -272,9 +276,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E1BA0E41C152C0F00E232D3 /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				4E1BA0E51C152C0F00E232D3 /* GTMBase64.h */,
+				4E1BA0E61C152C0F00E232D3 /* GTMBase64.m */,
+				4E1BA0E71C152C0F00E232D3 /* GTMDefines.h */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
 		4E72C1911B4FEE6400C16C1E /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				4E1BA0E41C152C0F00E232D3 /* GTMBase64 */,
 				4ECECF971B5C9BA50036B721 /* BaseDelegate.h */,
 				4ECECF981B5C9BA50036B721 /* BaseDelegate.m */,
 				4E72C1921B4FEE6400C16C1E /* BaseTabBarService.h */,
@@ -882,6 +897,7 @@
 				4EE981301C07FAC500CA44FA /* NavBarScrollController.m in Sources */,
 				4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */,
 				4EA445771B4FDA9300844282 /* Foundation+Log.m in Sources */,
+				4E1BA0E81C152C0F00E232D3 /* GTMBase64.m in Sources */,
 				4EE9814E1C07FFF200CA44FA /* SystemSelectServiceViewController.m in Sources */,
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
 				4EE9813B1C07FCF000CA44FA /* PeekAndPopViewController.m in Sources */,
