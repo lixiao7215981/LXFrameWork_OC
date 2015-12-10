@@ -41,7 +41,6 @@
 		4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB853471B4A3DBB00C35F6D /* BaseTableViewCell.m */; };
 		4EB8BABF1B2E8CB800315CEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8BABE1B2E8CB800315CEF /* Images.xcassets */; };
 		4EB8BACE1B2E8CB800315CEF /* LXFrameWork_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8BACD1B2E8CB800315CEF /* LXFrameWork_OCTests.m */; };
-		4EBC50B11B8706D100A71618 /* LXFrameWorkInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC50B01B8706D100A71618 /* LXFrameWorkInstance.m */; };
 		4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */; };
 		4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */; };
 		4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7351B4E2A4500ACEE5F /* main.m */; };
@@ -50,6 +49,7 @@
 		4ED167141B4A6BA000B3C618 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167131B4A6BA000B3C618 /* BaseNavigationController.m */; };
 		4ED167171B4A6C5500B3C618 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167161B4A6C5500B3C618 /* UIView+Extension.m */; };
 		4ED1671A1B4A6C8500B3C618 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167191B4A6C8500B3C618 /* UIBarButtonItem+Extension.m */; };
+		4ED532131C19636300A2BDA2 /* LXFrameWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED532121C19636300A2BDA2 /* LXFrameWorkManager.m */; };
 		4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C551B7356DC00C30B7D /* MainTableViewController.m */; };
 		4EE45C811B74A90C00C30B7D /* BaseArrowCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C741B74A90C00C30B7D /* BaseArrowCellItem.m */; };
 		4EE45C821B74A90C00C30B7D /* BaseCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C761B74A90C00C30B7D /* BaseCellItem.m */; };
@@ -175,8 +175,6 @@
 		4EB8BAC71B2E8CB800315CEF /* LXFrameWork_OCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LXFrameWork_OCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB8BACC1B2E8CB800315CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB8BACD1B2E8CB800315CEF /* LXFrameWork_OCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXFrameWork_OCTests.m; sourceTree = "<group>"; };
-		4EBC50AF1B8706D100A71618 /* LXFrameWorkInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFrameWorkInstance.h; sourceTree = "<group>"; };
-		4EBC50B01B8706D100A71618 /* LXFrameWorkInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFrameWorkInstance.m; sourceTree = "<group>"; };
 		4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EC4F7331B4E2A4500ACEE5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -191,6 +189,8 @@
 		4ED167161B4A6C5500B3C618 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		4ED167181B4A6C8500B3C618 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		4ED167191B4A6C8500B3C618 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		4ED532111C19636300A2BDA2 /* LXFrameWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFrameWorkManager.h; sourceTree = "<group>"; };
+		4ED532121C19636300A2BDA2 /* LXFrameWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFrameWorkManager.m; sourceTree = "<group>"; };
 		4EE45C541B7356DC00C30B7D /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		4EE45C551B7356DC00C30B7D /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		4EE45C571B7358D500C30B7D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -295,10 +295,10 @@
 				4E72C1921B4FEE6400C16C1E /* BaseTabBarService.h */,
 				4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */,
 				4E72C1941B4FEE6400C16C1E /* ImportClass.h */,
-				4EBC50AF1B8706D100A71618 /* LXFrameWorkInstance.h */,
-				4EBC50B01B8706D100A71618 /* LXFrameWorkInstance.m */,
 				4E10A2421B8AE53C00832576 /* LXFrameWorkConst.h */,
 				4E10A2431B8AE53C00832576 /* LXFrameWorkConst.m */,
+				4ED532111C19636300A2BDA2 /* LXFrameWorkManager.h */,
+				4ED532121C19636300A2BDA2 /* LXFrameWorkManager.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -868,7 +868,6 @@
 				4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */,
 				4EE45C841B74A90C00C30B7D /* BaseCenterTitleCellItem.m in Sources */,
 				4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */,
-				4EBC50B11B8706D100A71618 /* LXFrameWorkInstance.m in Sources */,
 				4E56B7F61B54F5FF00184403 /* StepView.m in Sources */,
 				4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */,
 				4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */,
@@ -902,6 +901,7 @@
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
 				4EE9813B1C07FCF000CA44FA /* PeekAndPopViewController.m in Sources */,
 				4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */,
+				4ED532131C19636300A2BDA2 /* LXFrameWorkManager.m in Sources */,
 				4EE45C861B74A90C00C30B7D /* BaseSubtitleCellItem.m in Sources */,
 				4E4B49211BFB0FB400F0F958 /* UIColor+Extension.m in Sources */,
 				4EE9812F1C07FAC500CA44FA /* HeadImageScorllController.m in Sources */,

@@ -45,16 +45,22 @@
      */
     BaseCellItemGroup *group2 = [BaseCellItemGroup createGroupWithHeadTitle:@"头部标题" AndFooterTitle:@"尾部标题" OrItem:@[iconItem2]];
     
-    
-    BaseSwitchCellItem *item1 = [BaseSwitchCellItem createBaseCellItemWithIcon:@"card_icon" AndTitle:@"BaseSwitchCellItem" SubTitle:@"SubTitle" ClickOption:^{
-        NSLog(@"Switch------>OFF  NO");
-    }];
-    BaseSwitchCellItem *item2 = [BaseSwitchCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseSwitchCellItem" SubTitle:@"SubTitle" ClickOption:^{
-        NSLog(@"Switch------>OFF  NO");
+    BaseSwitchCellItem *item1 = [BaseSwitchCellItem createBaseCellItemWithIcon:@"card_icon" AndTitle:@"BaseSwitchCellItem" SubTitle:@"SubTitle" defaultOpen:YES ClickOption:^{
+        NSLog(@"点击了Cell，如果实现了 tableViewDidSelectRowAtIndexPatch 将不调用该block");
+    } SwitchOption:^(UISwitch *cellSwitch) {
+        NSLog(@"Switch------>%d",cellSwitch.on);
     }];
     
-    BaseSwitchCellItem *item3 = [BaseSwitchCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseSwitchCellItem" SubTitle:nil ClickOption:^{
-        NSLog(@"Switch------>OFF  NO");
+    BaseSwitchCellItem *item2 = [BaseSwitchCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseSwitchCellItem" SubTitle:@"SubTitle" defaultOpen:NO ClickOption:^{
+        NSLog(@"点击了Cell，如果实现了 tableViewDidSelectRowAtIndexPatch 将不调用该block");
+    } SwitchOption:^(UISwitch *cellSwitch) {
+        NSLog(@"Switch------>%d",cellSwitch.on);
+    }];
+    
+    BaseSwitchCellItem *item3 = [BaseSwitchCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseSwitchCellItem" SubTitle:nil defaultOpen:NO ClickOption:^{
+        NSLog(@"点击了Cell，如果实现了 tableViewDidSelectRowAtIndexPatch 将不调用该block");
+    } SwitchOption:^(UISwitch *cellSwitch) {
+        NSLog(@"Switch------>%d",cellSwitch.on);
     }];
     
     BaseCellItem *item4 = [BaseCellItem createBaseCellItemWithIcon:nil AndTitle:@"BaseCellItem" SubTitle:nil ClickOption:nil];
