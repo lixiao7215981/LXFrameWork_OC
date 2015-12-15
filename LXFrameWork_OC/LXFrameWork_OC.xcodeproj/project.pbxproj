@@ -83,6 +83,9 @@
 		4EE9814A1C07FE4400CA44FA /* SystemHttpDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981451C07FE4400CA44FA /* SystemHttpDetailController.m */; };
 		4EE9814B1C07FE4400CA44FA /* SystemHttpDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */; };
 		4EE9814E1C07FFF200CA44FA /* SystemSelectServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9814D1C07FFF200CA44FA /* SystemSelectServiceViewController.m */; };
+		4EF8DCCB1C1FB484000036E7 /* SelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8DCCA1C1FB484000036E7 /* SelectCityViewController.m */; };
+		4EF8DCD01C1FB49B000036E7 /* SelectCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8DCCD1C1FB49B000036E7 /* SelectCity.m */; };
+		4EF8DCD11C1FB49B000036E7 /* SelectCityGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8DCCF1C1FB49B000036E7 /* SelectCityGroups.m */; };
 		5807D29AB7082DF1937A2935 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E89BED168C7F6717F38ADC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -255,6 +258,12 @@
 		4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemHttpDetailController.xib; sourceTree = "<group>"; };
 		4EE9814C1C07FFF200CA44FA /* SystemSelectServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemSelectServiceViewController.h; sourceTree = "<group>"; };
 		4EE9814D1C07FFF200CA44FA /* SystemSelectServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSelectServiceViewController.m; sourceTree = "<group>"; };
+		4EF8DCC91C1FB484000036E7 /* SelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityViewController.h; sourceTree = "<group>"; };
+		4EF8DCCA1C1FB484000036E7 /* SelectCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCityViewController.m; sourceTree = "<group>"; };
+		4EF8DCCC1C1FB49B000036E7 /* SelectCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCity.h; sourceTree = "<group>"; };
+		4EF8DCCD1C1FB49B000036E7 /* SelectCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCity.m; sourceTree = "<group>"; };
+		4EF8DCCE1C1FB49B000036E7 /* SelectCityGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityGroups.h; sourceTree = "<group>"; };
+		4EF8DCCF1C1FB49B000036E7 /* SelectCityGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCityGroups.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -500,6 +509,10 @@
 				4E3BB8E61B8F1324007A077D /* UserAddressModel.m */,
 				4EE45C881B74A9FE00C30B7D /* HttpToolLogModel.h */,
 				4EE45C891B74A9FE00C30B7D /* HttpToolLogModel.m */,
+				4EF8DCCC1C1FB49B000036E7 /* SelectCity.h */,
+				4EF8DCCD1C1FB49B000036E7 /* SelectCity.m */,
+				4EF8DCCE1C1FB49B000036E7 /* SelectCityGroups.h */,
+				4EF8DCCF1C1FB49B000036E7 /* SelectCityGroups.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -645,6 +658,8 @@
 		4EE9813C1C07FE4400CA44FA /* Function_VC */ = {
 			isa = PBXGroup;
 			children = (
+				4EF8DCC91C1FB484000036E7 /* SelectCityViewController.h */,
+				4EF8DCCA1C1FB484000036E7 /* SelectCityViewController.m */,
 				4EE9813D1C07FE4400CA44FA /* QRCodeViewController.h */,
 				4EE9813E1C07FE4400CA44FA /* QRCodeViewController.m */,
 			);
@@ -848,6 +863,7 @@
 				4EA29A761B56005E0084E72D /* StepNextView.m in Sources */,
 				4ED167171B4A6C5500B3C618 /* UIView+Extension.m in Sources */,
 				4EE789061BA9143500635387 /* UserDefaultsTool.m in Sources */,
+				4EF8DCD11C1FB49B000036E7 /* SelectCityGroups.m in Sources */,
 				4EE45C8A1B74A9FE00C30B7D /* HttpToolLogModel.m in Sources */,
 				4E4B491E1BFB05A700F0F958 /* UIWindow+Extension.m in Sources */,
 				4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */,
@@ -861,6 +877,7 @@
 				4EE789021BA912D500635387 /* CHKeychainTool.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
 				4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */,
+				4EF8DCCB1C1FB484000036E7 /* SelectCityViewController.m in Sources */,
 				4EE981491C07FE4400CA44FA /* SystemDebugController.m in Sources */,
 				4EB8533E1B4A1A3A00C35F6D /* BaseTableViewController.m in Sources */,
 				4EE45C831B74A90C00C30B7D /* BaseCellItemGroup.m in Sources */,
@@ -873,6 +890,7 @@
 				4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */,
 				4E72C19C1B4FEE6400C16C1E /* PlistTool.m in Sources */,
 				4ED1671A1B4A6C8500B3C618 /* UIBarButtonItem+Extension.m in Sources */,
+				4EF8DCD01C1FB49B000036E7 /* SelectCity.m in Sources */,
 				4EE981311C07FAC500CA44FA /* SetNavBarLeftRightViewController.m in Sources */,
 				4EE45C811B74A90C00C30B7D /* BaseArrowCellItem.m in Sources */,
 				4E150FBF1BE88634008B3170 /* CustomQRCodeTool.m in Sources */,

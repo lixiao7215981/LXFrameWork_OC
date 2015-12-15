@@ -20,6 +20,7 @@
 #import "CustomQRCodeViewController.h"
 #import "PeekAndPopViewController.h"
 #import "WriteViewController.h"
+#import "SelectCityViewController.h"
 
 #define SYSTEM_VERSION_LESS_THAN(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 
@@ -59,9 +60,12 @@
         
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *Group1_item3 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"向上拖动NavigationBar显示" SubTitle:nil ClickOption:^{
-        NavBarScrollController *navBarScroll = [[NavBarScrollController alloc] init];
-        [self.navigationController pushViewController:navBarScroll animated:YES];
+    BaseArrowCellItem *Group1_item3 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"城市列表的选择" SubTitle:nil ClickOption:^{
+        SelectCityViewController  *selectCity = [[SelectCityViewController alloc] init];
+        selectCity.cellClick = ^(NSString *city){
+            [SVProgressHUD showInfoWithStatus:[NSString stringWithFormat:@"您选择的城市是%@",city]];
+        };
+        [self.navigationController pushViewController:selectCity animated:YES];
     } AndDetailClass:nil];
     
     BaseArrowCellItem *Group1_item4 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"下拉放大头部IMG" SubTitle:nil ClickOption:^{
@@ -84,7 +88,12 @@
         [self.navigationController pushViewController:webView animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *Group1_item8 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置NavBar的左中右按钮或标题" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *Group1_item8 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"向上拖动NavigationBar显示" SubTitle:nil ClickOption:^{
+        NavBarScrollController *navBarScroll = [[NavBarScrollController alloc] init];
+        [self.navigationController pushViewController:navBarScroll animated:YES];
+    } AndDetailClass:nil];
+    
+    BaseArrowCellItem *Group1_item9 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置NavBar的左中右按钮或标题" SubTitle:nil ClickOption:^{
         SetNavBarLeftRightViewController  *navVar = [[SetNavBarLeftRightViewController alloc] init];
         [self.navigationController pushViewController:navVar animated:YES];
     } AndDetailClass:nil];
@@ -120,7 +129,7 @@
         [self.navigationController pushViewController:writeView animated:YES];
     } AndDetailClass:nil];
     
-    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadTitle:@"基础功能介绍" AndFooterTitle:nil OrItem:@[Group1_item1,Group1_item2,Group1_item3,Group1_item4,Group1_item5,Group1_item6,Group1_item7,Group1_item8]];
+    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadTitle:@"基础功能介绍" AndFooterTitle:nil OrItem:@[Group1_item1,Group1_item2,Group1_item3,Group1_item4,Group1_item5,Group1_item6,Group1_item7,Group1_item8,Group1_item9]];
     BaseCellItemGroup *group2 = [BaseCellItemGroup createGroupWithHeadTitle:@"系统工具" AndFooterTitle:nil OrItem:@[Group2_item1,Group2_item2,Group2_item3]];
     BaseCellItemGroup *group3 = [BaseCellItemGroup createGroupWithHeadTitle:@"iOS 9 新功能" AndFooterTitle:nil OrItem:@[group3_item1]];
     BaseCellItemGroup *group4 = [BaseCellItemGroup createGroupWithHeadTitle:@"测试条目" AndFooterTitle:nil OrItem:@[group4_item1]];
