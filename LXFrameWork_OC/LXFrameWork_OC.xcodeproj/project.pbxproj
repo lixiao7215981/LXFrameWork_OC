@@ -83,6 +83,7 @@
 		4EE9814A1C07FE4400CA44FA /* SystemHttpDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981451C07FE4400CA44FA /* SystemHttpDetailController.m */; };
 		4EE9814B1C07FE4400CA44FA /* SystemHttpDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */; };
 		4EE9814E1C07FFF200CA44FA /* SystemSelectServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9814D1C07FFF200CA44FA /* SystemSelectServiceViewController.m */; };
+		4EEA74341C23DFDA0048BA8F /* LocalAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA74331C23DFDA0048BA8F /* LocalAuthenticationViewController.m */; };
 		4EF8DCCB1C1FB484000036E7 /* SelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8DCCA1C1FB484000036E7 /* SelectCityViewController.m */; };
 		4EF8DCD01C1FB49B000036E7 /* SelectCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8DCCD1C1FB49B000036E7 /* SelectCity.m */; };
 		4EF8DCD11C1FB49B000036E7 /* SelectCityGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8DCCF1C1FB49B000036E7 /* SelectCityGroups.m */; };
@@ -258,6 +259,8 @@
 		4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemHttpDetailController.xib; sourceTree = "<group>"; };
 		4EE9814C1C07FFF200CA44FA /* SystemSelectServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemSelectServiceViewController.h; sourceTree = "<group>"; };
 		4EE9814D1C07FFF200CA44FA /* SystemSelectServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSelectServiceViewController.m; sourceTree = "<group>"; };
+		4EEA74321C23DFDA0048BA8F /* LocalAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalAuthenticationViewController.h; sourceTree = "<group>"; };
+		4EEA74331C23DFDA0048BA8F /* LocalAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalAuthenticationViewController.m; sourceTree = "<group>"; };
 		4EF8DCC91C1FB484000036E7 /* SelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityViewController.h; sourceTree = "<group>"; };
 		4EF8DCCA1C1FB484000036E7 /* SelectCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCityViewController.m; sourceTree = "<group>"; };
 		4EF8DCCC1C1FB49B000036E7 /* SelectCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCity.h; sourceTree = "<group>"; };
@@ -577,6 +580,7 @@
 		4EE45C591B736BEA00C30B7D /* ExampleController */ = {
 			isa = PBXGroup;
 			children = (
+				4EEA74311C23DF800048BA8F /* iOS8_newFuncation */,
 				4EE981381C07FCF000CA44FA /* iOS9_newFuncation */,
 				4EE981141C07FAC500CA44FA /* Base_function */,
 				4EE981261C07FAC500CA44FA /* System_function */,
@@ -680,6 +684,15 @@
 				4EE9814D1C07FFF200CA44FA /* SystemSelectServiceViewController.m */,
 			);
 			path = System_VC;
+			sourceTree = "<group>";
+		};
+		4EEA74311C23DF800048BA8F /* iOS8_newFuncation */ = {
+			isa = PBXGroup;
+			children = (
+				4EEA74321C23DFDA0048BA8F /* LocalAuthenticationViewController.h */,
+				4EEA74331C23DFDA0048BA8F /* LocalAuthenticationViewController.m */,
+			);
+			path = iOS8_newFuncation;
 			sourceTree = "<group>";
 		};
 		50F6267C0676A18D2970D232 /* Pods */ = {
@@ -876,6 +889,7 @@
 				4EE981471C07FE4400CA44FA /* QRCodeViewController.m in Sources */,
 				4EE789021BA912D500635387 /* CHKeychainTool.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
+				4EEA74341C23DFDA0048BA8F /* LocalAuthenticationViewController.m in Sources */,
 				4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */,
 				4EF8DCCB1C1FB484000036E7 /* SelectCityViewController.m in Sources */,
 				4EE981491C07FE4400CA44FA /* SystemDebugController.m in Sources */,
