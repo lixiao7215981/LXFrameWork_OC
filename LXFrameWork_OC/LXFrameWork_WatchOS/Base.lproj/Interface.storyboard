@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--首页-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="首页" id="AgC-eL-Hgc" customClass="HomeTableViewController">
+                    <items>
+                        <table alignment="left" id="dIY-aN-DH9">
+                            <items>
+                                <tableRow identifier="HomeCell" id="S6u-Ol-ada" customClass="HomeTableViewCell">
+                                    <group key="rootItem" width="1" alignment="left" id="cWf-pf-2dl">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="vFE-lp-NU3"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="cellLabel" destination="vFE-lp-NU3" id="fZv-bv-fVt"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="dIY-aN-DH9" id="BZ4-tx-hVV"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="166" y="461"/>
+        </scene>
+        <!--Push-->
+        <scene sceneID="ods-Pb-1wX">
+            <objects>
+                <controller identifier="tablePush" title="Push" id="BUU-Hw-Tqb" customClass="TablePushViewController">
+                    <items>
+                        <table alignment="left" id="EdC-tN-mh1">
+                            <items>
+                                <tableRow identifier="pushTableCell" id="IZ9-9h-0tX" customClass="PushTableViewCell">
+                                    <group key="rootItem" width="1" alignment="left" id="Jja-be-2e0">
+                                        <items>
+                                            <imageView width="35" height="35" alignment="left" verticalAlignment="center" id="2Jn-gC-omE"/>
+                                            <label width="78.5" height="45.5" alignment="left" verticalAlignment="center" text="Label" textAlignment="center" id="QM7-lq-3f7"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="cellImage" destination="2Jn-gC-omE" id="yWA-Xc-IYf"/>
+                                        <outlet property="cellLabel" destination="QM7-lq-3f7" id="cbk-O0-gS1"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="pushTableView" destination="EdC-tN-mh1" id="maI-1E-xT1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="519" y="347"/>
+        </scene>
+        <!--Modal-->
+        <scene sceneID="kVu-D4-DmM">
+            <objects>
+                <controller identifier="modalController" title="Modal" id="gaM-Z6-6JA" customClass="ModalViewController">
+                    <items>
+                        <imageView width="100" height="100" alignment="center" id="FQg-gc-vPi"/>
+                        <label width="1" alignment="center" text="Label" textAlignment="center" numberOfLines="0" id="KnR-nL-BPp"/>
+                    </items>
+                    <connections>
+                        <outlet property="imageView" destination="FQg-gc-vPi" id="cJK-WR-XfY"/>
+                        <outlet property="labelText" destination="KnR-nL-BPp" id="PJp-zJ-fH0"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="757" y="347"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="uDr-Ct-Uhl">
+            <objects>
+                <controller identifier="menuController" title="Menu" id="dRs-0q-kwu" customClass="MenuViewController">
+                    <items>
+                        <label alignment="center" text="请按压屏幕显示Menu菜单" textAlignment="center" numberOfLines="0" id="BFa-ra-CmX"/>
+                    </items>
+                    <menu key="menu" id="fEi-ag-W3O">
+                        <items>
+                            <menuItem title="添加" icon="add" id="JnO-ZO-1t1" userLabel="add">
+                                <connections>
+                                    <action selector="clickAddBtn" destination="dRs-0q-kwu" id="lwT-7r-GiD"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="删除" icon="decline" id="sV8-mr-UnN" userLabel="remove">
+                                <connections>
+                                    <action selector="clickRemoveBtn" destination="dRs-0q-kwu" id="Yh3-sy-pRU"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="521" y="589"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" bottomTemplateType="body6Footer" id="0uZ-2p-rRc" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" layout="vertical" id="Zk7-9D-6Aj">
+                            <items>
+                                <imageView alignment="right" verticalAlignment="bottom" id="afS-Gs-fkg"/>
+                            </items>
+                        </group>
+                        <label alignment="left" id="8Yh-3J-h15">
+                            <string key="text">Label∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙</string>
+                        </label>
+                        <label alignment="left" text="Footer" id="srl-dc-XiW"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="footLabel" destination="srl-dc-XiW" id="4MV-gH-rt5"/>
+                        <outlet property="imageView" destination="afS-Gs-fkg" id="rnO-ma-JYP"/>
+                        <outlet property="labelView" destination="8Yh-3J-h15" id="Cfd-Bm-nib"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1168"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <imageView alignment="left" image="img_01" id="PK3-Cr-cfH"/>
+                        <label alignment="left" text="LXFremeWork演示" textAlignment="center" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <color key="backgroundColor" red="0.41176470590000003" green="0.81960784310000001" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1459"/>
+        </scene>
+        <!--Message-->
+        <scene sceneID="siO-9Z-y6F">
+            <objects>
+                <controller identifier="iOSToWatchOS" title="Message" id="bUT-NX-51G" customClass="Session_iOSToWatchOSController">
+                    <items>
+                        <label width="1" height="1" alignment="center" verticalAlignment="center" textAlignment="center" numberOfLines="0" id="g9C-wm-DwH"/>
+                    </items>
+                    <connections>
+                        <outlet property="messageLabel" destination="g9C-wm-DwH" id="2k4-vF-OIL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="757" y="589"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController">
+                    <items>
+                        <label alignment="center" text="Label" numberOfLines="0" id="96O-1F-FLX"/>
+                        <label alignment="center" text="Label" numberOfLines="0" id="ais-xf-dEd"/>
+                        <label alignment="center" text="Label" numberOfLines="0" id="KJp-tf-wGB"/>
+                    </items>
+                    <connections>
+                        <outlet property="Nalert" destination="KJp-tf-wGB" id="Lsj-Sd-mcG"/>
+                        <outlet property="Ntheme" destination="ais-xf-dEd" id="gHd-hC-Rov"/>
+                        <outlet property="Ntitle" destination="96O-1F-FLX" id="vkA-vZ-2d7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="519" y="1459"/>
+        </scene>
+    </scenes>
+</document>

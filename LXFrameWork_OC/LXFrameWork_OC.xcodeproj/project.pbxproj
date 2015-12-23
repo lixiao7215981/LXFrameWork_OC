@@ -13,6 +13,22 @@
 		4E10A24E1B8AF23E00832576 /* PathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E10A24D1B8AF23E00832576 /* PathTool.m */; };
 		4E150FBF1BE88634008B3170 /* CustomQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E150FBE1BE88634008B3170 /* CustomQRCodeTool.m */; };
 		4E1BA0E81C152C0F00E232D3 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1BA0E61C152C0F00E232D3 /* GTMBase64.m */; };
+		4E2C0E4B1C27FC590063DBB9 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C0E491C27FC590063DBB9 /* Interface.storyboard */; };
+		4E2C0E4D1C27FC590063DBB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C0E4C1C27FC590063DBB9 /* Assets.xcassets */; };
+		4E2C0E541C27FC590063DBB9 /* LXFrameWork_WatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4E2C0E531C27FC590063DBB9 /* LXFrameWork_WatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4E2C0E5F1C27FC5A0063DBB9 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C0E5E1C27FC5A0063DBB9 /* ExtensionDelegate.m */; };
+		4E2C0E621C27FC5A0063DBB9 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C0E611C27FC5A0063DBB9 /* NotificationController.m */; };
+		4E2C0E651C27FC5A0063DBB9 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C0E641C27FC5A0063DBB9 /* GlanceController.m */; };
+		4E2C0E681C27FC5A0063DBB9 /* ComplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C0E671C27FC5A0063DBB9 /* ComplicationController.m */; };
+		4E2C0E6A1C27FC5A0063DBB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2C0E691C27FC5A0063DBB9 /* Assets.xcassets */; };
+		4E2C0E6E1C27FC5A0063DBB9 /* LXFrameWork_WatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4E2C0E471C27FC590063DBB9 /* LXFrameWork_WatchOS.app */; };
+		4E2C0E871C28E6400063DBB9 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C0E861C28E6400063DBB9 /* HomeTableViewCell.m */; };
+		4E2C0E8A1C28E66B0063DBB9 /* PushTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C0E891C28E66B0063DBB9 /* PushTableViewCell.m */; };
+		4E2C0E8D1C28E6F20063DBB9 /* pushModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C0E8C1C28E6F20063DBB9 /* pushModel.m */; };
+		4E2C0E931C28EA9D0063DBB9 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C0E901C28EA9D0063DBB9 /* HomeTableViewController.m */; };
+		4E2C0E941C28EA9D0063DBB9 /* TablePushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C0E921C28EA9D0063DBB9 /* TablePushViewController.m */; };
+		4E2C0E971C28EADA0063DBB9 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C0E961C28EADA0063DBB9 /* ModalViewController.m */; };
+		4E2C0E9A1C28F3880063DBB9 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C0E991C28F3880063DBB9 /* MenuViewController.m */; };
 		4E3BB8E41B8F131A007A077D /* CoreLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */; };
 		4E3BB8E71B8F1324007A077D /* UserAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E61B8F1324007A077D /* UserAddressModel.m */; };
 		4E4B491E1BFB05A700F0F958 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */; };
@@ -39,8 +55,6 @@
 		4EB8533E1B4A1A3A00C35F6D /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8533A1B4A1A3A00C35F6D /* BaseTableViewController.m */; };
 		4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8533C1B4A1A3A00C35F6D /* BaseViewController.m */; };
 		4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB853471B4A3DBB00C35F6D /* BaseTableViewCell.m */; };
-		4EB8BABF1B2E8CB800315CEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EB8BABE1B2E8CB800315CEF /* Images.xcassets */; };
-		4EB8BACE1B2E8CB800315CEF /* LXFrameWork_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8BACD1B2E8CB800315CEF /* LXFrameWork_OCTests.m */; };
 		4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */; };
 		4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */; };
 		4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7351B4E2A4500ACEE5F /* main.m */; };
@@ -50,6 +64,10 @@
 		4ED167171B4A6C5500B3C618 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167161B4A6C5500B3C618 /* UIView+Extension.m */; };
 		4ED1671A1B4A6C8500B3C618 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED167191B4A6C8500B3C618 /* UIBarButtonItem+Extension.m */; };
 		4ED532131C19636300A2BDA2 /* LXFrameWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED532121C19636300A2BDA2 /* LXFrameWorkManager.m */; };
+		4ED633BC1C293DB900AF6FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED633BB1C293DB900AF6FFA /* Assets.xcassets */; };
+		4ED633BF1C29515500AF6FFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED633BE1C29515500AF6FFA /* AppDelegate.m */; };
+		4ED633CE1C2A41C700AF6FFA /* SessionMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED633CD1C2A41C700AF6FFA /* SessionMessageController.m */; };
+		4ED633D41C2A4F1000AF6FFA /* Session_iOSToWatchOSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED633D31C2A4F1000AF6FFA /* Session_iOSToWatchOSController.m */; };
 		4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C551B7356DC00C30B7D /* MainTableViewController.m */; };
 		4EE45C811B74A90C00C30B7D /* BaseArrowCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C741B74A90C00C30B7D /* BaseArrowCellItem.m */; };
 		4EE45C821B74A90C00C30B7D /* BaseCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE45C761B74A90C00C30B7D /* BaseCellItem.m */; };
@@ -91,14 +109,56 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4EB8BAC81B2E8CB800315CEF /* PBXContainerItemProxy */ = {
+		4E2C0E551C27FC590063DBB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4EB8BAA61B2E8CB800315CEF /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4EB8BAAD1B2E8CB800315CEF;
-			remoteInfo = LXFrameWork_OC;
+			remoteGlobalIDString = 4E2C0E521C27FC590063DBB9;
+			remoteInfo = "LXFrameWork_WatchOS Extension";
+		};
+		4E2C0E6C1C27FC5A0063DBB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EB8BAA61B2E8CB800315CEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E2C0E461C27FC590063DBB9;
+			remoteInfo = LXFrameWork_WatchOS;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4E2C0E741C27FC5A0063DBB9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4E2C0E541C27FC590063DBB9 /* LXFrameWork_WatchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2C0E761C27FC5A0063DBB9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				4E2C0E6E1C27FC5A0063DBB9 /* LXFrameWork_WatchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EEA744A1C23F9FB0048BA8F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3711CAE618F8FD882AFBE865 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +180,36 @@
 		4E1BA0E51C152C0F00E232D3 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		4E1BA0E61C152C0F00E232D3 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		4E1BA0E71C152C0F00E232D3 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		4E2C0E471C27FC590063DBB9 /* LXFrameWork_WatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXFrameWork_WatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2C0E4A1C27FC590063DBB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		4E2C0E4C1C27FC590063DBB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E2C0E4E1C27FC590063DBB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2C0E531C27FC590063DBB9 /* LXFrameWork_WatchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LXFrameWork_WatchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2C0E591C27FC590063DBB9 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4E2C0E5D1C27FC590063DBB9 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		4E2C0E5E1C27FC5A0063DBB9 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		4E2C0E601C27FC5A0063DBB9 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		4E2C0E611C27FC5A0063DBB9 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		4E2C0E631C27FC5A0063DBB9 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		4E2C0E641C27FC5A0063DBB9 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		4E2C0E661C27FC5A0063DBB9 /* ComplicationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComplicationController.h; sourceTree = "<group>"; };
+		4E2C0E671C27FC5A0063DBB9 /* ComplicationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComplicationController.m; sourceTree = "<group>"; };
+		4E2C0E691C27FC5A0063DBB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E2C0E6B1C27FC5A0063DBB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2C0E851C28E6400063DBB9 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		4E2C0E861C28E6400063DBB9 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		4E2C0E881C28E66B0063DBB9 /* PushTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushTableViewCell.h; sourceTree = "<group>"; };
+		4E2C0E891C28E66B0063DBB9 /* PushTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushTableViewCell.m; sourceTree = "<group>"; };
+		4E2C0E8B1C28E6F20063DBB9 /* pushModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pushModel.h; sourceTree = "<group>"; };
+		4E2C0E8C1C28E6F20063DBB9 /* pushModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pushModel.m; sourceTree = "<group>"; };
+		4E2C0E8F1C28EA9D0063DBB9 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		4E2C0E901C28EA9D0063DBB9 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		4E2C0E911C28EA9D0063DBB9 /* TablePushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TablePushViewController.h; sourceTree = "<group>"; };
+		4E2C0E921C28EA9D0063DBB9 /* TablePushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TablePushViewController.m; sourceTree = "<group>"; };
+		4E2C0E951C28EADA0063DBB9 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		4E2C0E961C28EADA0063DBB9 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		4E2C0E981C28F3880063DBB9 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		4E2C0E991C28F3880063DBB9 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		4E3BB8E21B8F131A007A077D /* CoreLocationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationTool.h; sourceTree = "<group>"; };
 		4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationTool.m; sourceTree = "<group>"; };
 		4E3BB8E51B8F1324007A077D /* UserAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAddressModel.h; sourceTree = "<group>"; };
@@ -175,10 +265,6 @@
 		4EB853461B4A3DBB00C35F6D /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		4EB853471B4A3DBB00C35F6D /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		4EB8BAAE1B2E8CB800315CEF /* LXFrameWork_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXFrameWork_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EB8BABE1B2E8CB800315CEF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4EB8BAC71B2E8CB800315CEF /* LXFrameWork_OCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LXFrameWork_OCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EB8BACC1B2E8CB800315CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EB8BACD1B2E8CB800315CEF /* LXFrameWork_OCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXFrameWork_OCTests.m; sourceTree = "<group>"; };
 		4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EC4F7331B4E2A4500ACEE5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -195,6 +281,13 @@
 		4ED167191B4A6C8500B3C618 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		4ED532111C19636300A2BDA2 /* LXFrameWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFrameWorkManager.h; sourceTree = "<group>"; };
 		4ED532121C19636300A2BDA2 /* LXFrameWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFrameWorkManager.m; sourceTree = "<group>"; };
+		4ED633BB1C293DB900AF6FFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4ED633BD1C29515500AF6FFA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4ED633BE1C29515500AF6FFA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4ED633CC1C2A41C700AF6FFA /* SessionMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionMessageController.h; sourceTree = "<group>"; };
+		4ED633CD1C2A41C700AF6FFA /* SessionMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionMessageController.m; sourceTree = "<group>"; };
+		4ED633D21C2A4F1000AF6FFA /* Session_iOSToWatchOSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session_iOSToWatchOSController.h; sourceTree = "<group>"; };
+		4ED633D31C2A4F1000AF6FFA /* Session_iOSToWatchOSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session_iOSToWatchOSController.m; sourceTree = "<group>"; };
 		4EE45C541B7356DC00C30B7D /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		4EE45C551B7356DC00C30B7D /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		4EE45C571B7358D500C30B7D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -261,6 +354,7 @@
 		4EE9814D1C07FFF200CA44FA /* SystemSelectServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemSelectServiceViewController.m; sourceTree = "<group>"; };
 		4EEA74321C23DFDA0048BA8F /* LocalAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalAuthenticationViewController.h; sourceTree = "<group>"; };
 		4EEA74331C23DFDA0048BA8F /* LocalAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalAuthenticationViewController.m; sourceTree = "<group>"; };
+		4EEA743A1C23F9FB0048BA8F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		4EF8DCC91C1FB484000036E7 /* SelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityViewController.h; sourceTree = "<group>"; };
 		4EF8DCCA1C1FB484000036E7 /* SelectCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCityViewController.m; sourceTree = "<group>"; };
 		4EF8DCCC1C1FB49B000036E7 /* SelectCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCity.h; sourceTree = "<group>"; };
@@ -270,18 +364,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4E2C0E501C27FC590063DBB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EB8BAAB1B2E8CB800315CEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5807D29AB7082DF1937A2935 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB8BAC41B2E8CB800315CEF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +390,82 @@
 				4E1BA0E71C152C0F00E232D3 /* GTMDefines.h */,
 			);
 			path = GTMBase64;
+			sourceTree = "<group>";
+		};
+		4E2C0E481C27FC590063DBB9 /* LXFrameWork_WatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				4E2C0E491C27FC590063DBB9 /* Interface.storyboard */,
+				4E2C0E4C1C27FC590063DBB9 /* Assets.xcassets */,
+				4E2C0E4E1C27FC590063DBB9 /* Info.plist */,
+			);
+			path = LXFrameWork_WatchOS;
+			sourceTree = "<group>";
+		};
+		4E2C0E571C27FC590063DBB9 /* LXFrameWork_WatchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4E2C0E8E1C28EA0B0063DBB9 /* Controller */,
+				4E2C0E841C28E6100063DBB9 /* TableViewCell */,
+				4E2C0E7A1C2806730063DBB9 /* Model */,
+				4E2C0E5D1C27FC590063DBB9 /* ExtensionDelegate.h */,
+				4E2C0E5E1C27FC5A0063DBB9 /* ExtensionDelegate.m */,
+				4E2C0E601C27FC5A0063DBB9 /* NotificationController.h */,
+				4E2C0E611C27FC5A0063DBB9 /* NotificationController.m */,
+				4E2C0E631C27FC5A0063DBB9 /* GlanceController.h */,
+				4E2C0E641C27FC5A0063DBB9 /* GlanceController.m */,
+				4E2C0E661C27FC5A0063DBB9 /* ComplicationController.h */,
+				4E2C0E671C27FC5A0063DBB9 /* ComplicationController.m */,
+				4E2C0E691C27FC5A0063DBB9 /* Assets.xcassets */,
+				4E2C0E6B1C27FC5A0063DBB9 /* Info.plist */,
+				4E2C0E581C27FC590063DBB9 /* Supporting Files */,
+			);
+			path = "LXFrameWork_WatchOS Extension";
+			sourceTree = "<group>";
+		};
+		4E2C0E581C27FC590063DBB9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E2C0E591C27FC590063DBB9 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E2C0E7A1C2806730063DBB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E2C0E8B1C28E6F20063DBB9 /* pushModel.h */,
+				4E2C0E8C1C28E6F20063DBB9 /* pushModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E2C0E841C28E6100063DBB9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4E2C0E851C28E6400063DBB9 /* HomeTableViewCell.h */,
+				4E2C0E861C28E6400063DBB9 /* HomeTableViewCell.m */,
+				4E2C0E881C28E66B0063DBB9 /* PushTableViewCell.h */,
+				4E2C0E891C28E66B0063DBB9 /* PushTableViewCell.m */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		4E2C0E8E1C28EA0B0063DBB9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E2C0E8F1C28EA9D0063DBB9 /* HomeTableViewController.h */,
+				4E2C0E901C28EA9D0063DBB9 /* HomeTableViewController.m */,
+				4E2C0E911C28EA9D0063DBB9 /* TablePushViewController.h */,
+				4E2C0E921C28EA9D0063DBB9 /* TablePushViewController.m */,
+				4E2C0E951C28EADA0063DBB9 /* ModalViewController.h */,
+				4E2C0E961C28EADA0063DBB9 /* ModalViewController.m */,
+				4E2C0E981C28F3880063DBB9 /* MenuViewController.h */,
+				4E2C0E991C28F3880063DBB9 /* MenuViewController.m */,
+				4ED633D21C2A4F1000AF6FFA /* Session_iOSToWatchOSController.h */,
+				4ED633D31C2A4F1000AF6FFA /* Session_iOSToWatchOSController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		4E72C1911B4FEE6400C16C1E /* Other */ = {
@@ -367,7 +537,8 @@
 			isa = PBXGroup;
 			children = (
 				4EB8BAB01B2E8CB800315CEF /* LXFrameWork_OC */,
-				4EB8BACA1B2E8CB800315CEF /* LXFrameWork_OCTests */,
+				4E2C0E481C27FC590063DBB9 /* LXFrameWork_WatchOS */,
+				4E2C0E571C27FC590063DBB9 /* LXFrameWork_WatchOS Extension */,
 				4EB8BAAF1B2E8CB800315CEF /* Products */,
 				50F6267C0676A18D2970D232 /* Pods */,
 				B225A68E32BAB983CBF5D931 /* Frameworks */,
@@ -378,7 +549,8 @@
 			isa = PBXGroup;
 			children = (
 				4EB8BAAE1B2E8CB800315CEF /* LXFrameWork_OC.app */,
-				4EB8BAC71B2E8CB800315CEF /* LXFrameWork_OCTests.xctest */,
+				4E2C0E471C27FC590063DBB9 /* LXFrameWork_WatchOS.app */,
+				4E2C0E531C27FC590063DBB9 /* LXFrameWork_WatchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -388,34 +560,9 @@
 			children = (
 				4EB8BAD71B2EB19600315CEF /* LXFrameWork */,
 				4EB8BADA1B2EB19600315CEF /* Other */,
-				4EB8BABE1B2E8CB800315CEF /* Images.xcassets */,
-				4EB8BAB11B2E8CB800315CEF /* Supporting Files */,
+				4ED633BB1C293DB900AF6FFA /* Assets.xcassets */,
 			);
 			path = LXFrameWork_OC;
-			sourceTree = "<group>";
-		};
-		4EB8BAB11B2E8CB800315CEF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4EB8BACA1B2E8CB800315CEF /* LXFrameWork_OCTests */ = {
-			isa = PBXGroup;
-			children = (
-				4EB8BACD1B2E8CB800315CEF /* LXFrameWork_OCTests.m */,
-				4EB8BACB1B2E8CB800315CEF /* Supporting Files */,
-			);
-			path = LXFrameWork_OCTests;
-			sourceTree = "<group>";
-		};
-		4EB8BACB1B2E8CB800315CEF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4EB8BACC1B2E8CB800315CEF /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		4EB8BAD71B2EB19600315CEF /* LXFrameWork */ = {
@@ -573,6 +720,8 @@
 				4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */,
 				4EC4F7351B4E2A4500ACEE5F /* main.m */,
 				4EA445931B4FE22800844282 /* PCH.pch */,
+				4ED633BD1C29515500AF6FFA /* AppDelegate.h */,
+				4ED633BE1C29515500AF6FFA /* AppDelegate.m */,
 			);
 			path = System;
 			sourceTree = "<group>";
@@ -655,6 +804,8 @@
 			children = (
 				4EE981391C07FCF000CA44FA /* PeekAndPopViewController.h */,
 				4EE9813A1C07FCF000CA44FA /* PeekAndPopViewController.m */,
+				4ED633CC1C2A41C700AF6FFA /* SessionMessageController.h */,
+				4ED633CD1C2A41C700AF6FFA /* SessionMessageController.m */,
 			);
 			path = iOS9_newFuncation;
 			sourceTree = "<group>";
@@ -712,6 +863,7 @@
 				4E0A46661B70CE6E007C94C8 /* libicucore.dylib */,
 				4E0A46641B70CE4C007C94C8 /* libz.dylib */,
 				48E89BED168C7F6717F38ADC /* libPods.a */,
+				4EEA743A1C23F9FB0048BA8F /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -719,6 +871,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4E2C0E461C27FC590063DBB9 /* LXFrameWork_WatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E2C0E751C27FC5A0063DBB9 /* Build configuration list for PBXNativeTarget "LXFrameWork_WatchOS" */;
+			buildPhases = (
+				4E2C0E451C27FC590063DBB9 /* Resources */,
+				4E2C0E741C27FC5A0063DBB9 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E2C0E561C27FC590063DBB9 /* PBXTargetDependency */,
+			);
+			name = LXFrameWork_WatchOS;
+			productName = LXFrameWork_WatchOS;
+			productReference = 4E2C0E471C27FC590063DBB9 /* LXFrameWork_WatchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		4E2C0E521C27FC590063DBB9 /* LXFrameWork_WatchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E2C0E731C27FC5A0063DBB9 /* Build configuration list for PBXNativeTarget "LXFrameWork_WatchOS Extension" */;
+			buildPhases = (
+				4E2C0E4F1C27FC590063DBB9 /* Sources */,
+				4E2C0E501C27FC590063DBB9 /* Frameworks */,
+				4E2C0E511C27FC590063DBB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LXFrameWork_WatchOS Extension";
+			productName = "LXFrameWork_WatchOS Extension";
+			productReference = 4E2C0E531C27FC590063DBB9 /* LXFrameWork_WatchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		4EB8BAAD1B2E8CB800315CEF /* LXFrameWork_OC */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4EB8BAD11B2E8CB800315CEF /* Build configuration list for PBXNativeTarget "LXFrameWork_OC" */;
@@ -729,33 +915,18 @@
 				4EB8BAAC1B2E8CB800315CEF /* Resources */,
 				5442E9DAAB491EB14F586149 /* Copy Pods Resources */,
 				6BE6785BCB926FCFC6CDAC67 /* Embed Pods Frameworks */,
+				4EEA744A1C23F9FB0048BA8F /* Embed App Extensions */,
+				4E2C0E761C27FC5A0063DBB9 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4E2C0E6D1C27FC5A0063DBB9 /* PBXTargetDependency */,
 			);
 			name = LXFrameWork_OC;
 			productName = LXFrameWork_OC;
 			productReference = 4EB8BAAE1B2E8CB800315CEF /* LXFrameWork_OC.app */;
 			productType = "com.apple.product-type.application";
-		};
-		4EB8BAC61B2E8CB800315CEF /* LXFrameWork_OCTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4EB8BAD41B2E8CB800315CEF /* Build configuration list for PBXNativeTarget "LXFrameWork_OCTests" */;
-			buildPhases = (
-				4EB8BAC31B2E8CB800315CEF /* Sources */,
-				4EB8BAC41B2E8CB800315CEF /* Frameworks */,
-				4EB8BAC51B2E8CB800315CEF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4EB8BAC91B2E8CB800315CEF /* PBXTargetDependency */,
-			);
-			name = LXFrameWork_OCTests;
-			productName = LXFrameWork_OCTests;
-			productReference = 4EB8BAC71B2E8CB800315CEF /* LXFrameWork_OCTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -766,12 +937,15 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = LXFrameWork;
 				TargetAttributes = {
+					4E2C0E461C27FC590063DBB9 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					4E2C0E521C27FC590063DBB9 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9RHGQHNHRA;
+					};
 					4EB8BAAD1B2E8CB800315CEF = {
 						CreatedOnToolsVersion = 6.3;
-					};
-					4EB8BAC61B2E8CB800315CEF = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = 4EB8BAAD1B2E8CB800315CEF;
 					};
 				};
 			};
@@ -789,12 +963,30 @@
 			projectRoot = "";
 			targets = (
 				4EB8BAAD1B2E8CB800315CEF /* LXFrameWork_OC */,
-				4EB8BAC61B2E8CB800315CEF /* LXFrameWork_OCTests */,
+				4E2C0E461C27FC590063DBB9 /* LXFrameWork_WatchOS */,
+				4E2C0E521C27FC590063DBB9 /* LXFrameWork_WatchOS Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4E2C0E451C27FC590063DBB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2C0E4D1C27FC590063DBB9 /* Assets.xcassets in Resources */,
+				4E2C0E4B1C27FC590063DBB9 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2C0E511C27FC590063DBB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2C0E6A1C27FC5A0063DBB9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EB8BAAC1B2E8CB800315CEF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -803,15 +995,8 @@
 				4EE9814B1C07FE4400CA44FA /* SystemHttpDetailController.xib in Resources */,
 				4EE981371C07FAC500CA44FA /* WriteViewController.xib in Resources */,
 				4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */,
+				4ED633BC1C293DB900AF6FFA /* Assets.xcassets in Resources */,
 				4EE45CF11B78952300C30B7D /* LXFrameWork.bundle in Resources */,
-				4EB8BABF1B2E8CB800315CEF /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4EB8BAC51B2E8CB800315CEF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,6 +1051,25 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4E2C0E4F1C27FC590063DBB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E2C0E5F1C27FC5A0063DBB9 /* ExtensionDelegate.m in Sources */,
+				4E2C0E8A1C28E66B0063DBB9 /* PushTableViewCell.m in Sources */,
+				4E2C0E941C28EA9D0063DBB9 /* TablePushViewController.m in Sources */,
+				4E2C0E871C28E6400063DBB9 /* HomeTableViewCell.m in Sources */,
+				4E2C0E971C28EADA0063DBB9 /* ModalViewController.m in Sources */,
+				4E2C0E931C28EA9D0063DBB9 /* HomeTableViewController.m in Sources */,
+				4E2C0E9A1C28F3880063DBB9 /* MenuViewController.m in Sources */,
+				4E2C0E621C27FC5A0063DBB9 /* NotificationController.m in Sources */,
+				4E2C0E651C27FC5A0063DBB9 /* GlanceController.m in Sources */,
+				4E2C0E681C27FC5A0063DBB9 /* ComplicationController.m in Sources */,
+				4ED633D41C2A4F1000AF6FFA /* Session_iOSToWatchOSController.m in Sources */,
+				4E2C0E8D1C28E6F20063DBB9 /* pushModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4EB8BAAA1B2E8CB800315CEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -887,6 +1091,7 @@
 				4E10A2441B8AE53C00832576 /* LXFrameWorkConst.m in Sources */,
 				4EE981351C07FAC500CA44FA /* HttpViewController.m in Sources */,
 				4EE981471C07FE4400CA44FA /* QRCodeViewController.m in Sources */,
+				4ED633CE1C2A41C700AF6FFA /* SessionMessageController.m in Sources */,
 				4EE789021BA912D500635387 /* CHKeychainTool.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
 				4EEA74341C23DFDA0048BA8F /* LocalAuthenticationViewController.m in Sources */,
@@ -932,6 +1137,7 @@
 				4EE9814E1C07FFF200CA44FA /* SystemSelectServiceViewController.m in Sources */,
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
 				4EE9813B1C07FCF000CA44FA /* PeekAndPopViewController.m in Sources */,
+				4ED633BF1C29515500AF6FFA /* AppDelegate.m in Sources */,
 				4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */,
 				4ED532131C19636300A2BDA2 /* LXFrameWorkManager.m in Sources */,
 				4EE45C861B74A90C00C30B7D /* BaseSubtitleCellItem.m in Sources */,
@@ -946,25 +1152,102 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4EB8BAC31B2E8CB800315CEF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4EB8BACE1B2E8CB800315CEF /* LXFrameWork_OCTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4EB8BAC91B2E8CB800315CEF /* PBXTargetDependency */ = {
+		4E2C0E561C27FC590063DBB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4EB8BAAD1B2E8CB800315CEF /* LXFrameWork_OC */;
-			targetProxy = 4EB8BAC81B2E8CB800315CEF /* PBXContainerItemProxy */;
+			target = 4E2C0E521C27FC590063DBB9 /* LXFrameWork_WatchOS Extension */;
+			targetProxy = 4E2C0E551C27FC590063DBB9 /* PBXContainerItemProxy */;
+		};
+		4E2C0E6D1C27FC5A0063DBB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E2C0E461C27FC590063DBB9 /* LXFrameWork_WatchOS */;
+			targetProxy = 4E2C0E6C1C27FC5A0063DBB9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		4E2C0E491C27FC590063DBB9 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E2C0E4A1C27FC590063DBB9 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		4E2C0E6F1C27FC5A0063DBB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				IBSC_MODULE = LXFrameWork_WatchOS_Extension;
+				INFOPLIST_FILE = LXFrameWork_WatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		4E2C0E701C27FC5A0063DBB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = LXFrameWork_WatchOS_Extension;
+				INFOPLIST_FILE = LXFrameWork_WatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		4E2C0E711C27FC5A0063DBB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "LXFrameWork_WatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		4E2C0E721C27FC5A0063DBB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "LXFrameWork_WatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
 		4EB8BACF1B2E8CB800315CEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1051,7 +1334,7 @@
 			baseConfigurationReference = 48C3068DB3CF22787447B733 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LXFrameWork_OC/Other/System/PCH.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/LXFrameWork_OC/Other/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1067,7 +1350,7 @@
 			baseConfigurationReference = 3711CAE618F8FD882AFBE865 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LXFrameWork_OC/Other/System/PCH.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/LXFrameWork_OC/Other/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1078,45 +1361,27 @@
 			};
 			name = Release;
 		};
-		4EB8BAD51B2E8CB800315CEF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LXFrameWork_OCTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LXFrameWork_OC.app/LXFrameWork_OC";
-			};
-			name = Debug;
-		};
-		4EB8BAD61B2E8CB800315CEF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LXFrameWork_OCTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LXFrameWork_OC.app/LXFrameWork_OC";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4E2C0E731C27FC5A0063DBB9 /* Build configuration list for PBXNativeTarget "LXFrameWork_WatchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E2C0E711C27FC5A0063DBB9 /* Debug */,
+				4E2C0E721C27FC5A0063DBB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E2C0E751C27FC5A0063DBB9 /* Build configuration list for PBXNativeTarget "LXFrameWork_WatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E2C0E6F1C27FC5A0063DBB9 /* Debug */,
+				4E2C0E701C27FC5A0063DBB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4EB8BAA91B2E8CB800315CEF /* Build configuration list for PBXProject "LXFrameWork_OC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1131,15 +1396,6 @@
 			buildConfigurations = (
 				4EB8BAD21B2E8CB800315CEF /* Debug */,
 				4EB8BAD31B2E8CB800315CEF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4EB8BAD41B2E8CB800315CEF /* Build configuration list for PBXNativeTarget "LXFrameWork_OCTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4EB8BAD51B2E8CB800315CEF /* Debug */,
-				4EB8BAD61B2E8CB800315CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
