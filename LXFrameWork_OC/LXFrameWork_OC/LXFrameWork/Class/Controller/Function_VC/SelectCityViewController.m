@@ -13,7 +13,10 @@
 #import <MJExtension/MJExtension.h>
 
 @interface SelectCityViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchDisplayDelegate>
-
+{
+    CoreLocationTool *locationTool;
+    NSString *_city;
+}
 @property (nonatomic,strong) NSMutableArray *cityList;
 
 @property (nonatomic,strong) NSMutableArray *searchList;
@@ -33,6 +36,21 @@
     [array enumerateObjectsUsingBlock:^(NSArray *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.dataList addObjectsFromArray:obj];
     }];
+    [self addUserLocationCity];
+}
+
+- (void) addUserLocationCity
+{
+    locationTool = [[CoreLocationTool alloc] init];
+    [locationTool getLocation:^(CLLocation *location) {
+        [locationTool reverseGeocodeLocation:location userAddress:^(UserAddressModel *userAddress){
+            NSLog(@"%@",userAddress.City);
+            _city = userAddress.City;
+            NSIndexSet *indexSet=[[NSIndexSet alloc]initWithIndex:0];
+            [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationNone];
+        }];
+    }];
+    
 }
 
 - (void) addSearchDisplayController
@@ -47,16 +65,32 @@
 }
 
 #pragma mark - TableView实现的协议方法
+// 一共有几组
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if (tableView == self.tableView) {
+        return self.cityList.count + 1;
+    }else{
+        return 1;
+    }
+}
+
 // 每组有多少条数据
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.tableView) {
-        SelectCityGroups *group = self.cityList[section];
-        return group.citys.count;
+        if (section == 0) {
+            return 1;
+        }else if(section >=1){
+            SelectCityGroups *group = self.cityList[section - 1];
+            return group.citys.count;
+        }
     }else{
         return self.searchList.count;
     }
+    return 0;
 }
+
 // 每一行的信息以及状态
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -66,33 +100,30 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
     }
     if (tableView == self.tableView) {
-        SelectCityGroups *group = self.cityList[indexPath.section];
-        SelectCity *cars = group.citys[indexPath.row];
-        cell.textLabel.text = cars.name;
+        if (indexPath.section == 0) {
+            cell.textLabel.text = _city;
+        }else if(indexPath.section >=1){
+            SelectCityGroups *group = self.cityList[indexPath.section - 1];
+            SelectCity *cars = group.citys[indexPath.row];
+            cell.textLabel.text = cars.name;
+        }
     }else{
         cell.textLabel.text = self.searchList[indexPath.row];
     }
     return cell;
 }
 
-// 一共有几组
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    if (tableView == self.tableView) {
-        return self.cityList.count;
-    }else{
-        return 1;
-    }
-}
-
 // 组标题
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if (tableView == self.tableView) {
-        return [self.cityList[section] title];
-    }else{
-        return @"";
+        if (section == 0) {
+            return @"当前定位";
+        }else if(section >=1){
+            return [self.cityList[section - 1] title];
+        }
     }
+    return @"";
 }
 
 // 右侧快速选择
