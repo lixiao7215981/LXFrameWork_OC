@@ -16,6 +16,8 @@
     UILabel *_label;
     NSInteger _timerValue;
 }
+
+@property (nonatomic,assign) BOOL isAuthent;
 @end
 
 @implementation LocalAuthenticationViewController
@@ -25,13 +27,22 @@
     [self setNavTitle:@"指纹识别验证"];
     __weak typeof(self) weekSelf = self;
     [self setRightBtnWithImage:nil orTitle:@"Again" ClickOption:^{
+        if (weekSelf.isAuthent)return ;
         [weekSelf addAuthentView];
     }];
     [self addAuthentView];
 }
 
+-  (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [_timer invalidate];
+    [_titleView removeFromSuperview];
+}
+
 - (void) addAuthentView
 {
+    _isAuthent = YES;
     UIView *titleView = [UIView newAutoLayoutView];
     [self.view addSubview:titleView];
     titleView.backgroundColor = [UIColor lightGrayColor];
@@ -83,16 +94,19 @@
             if (success) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [_titleView removeFromSuperview];
+                    self.isAuthent = NO;
                     [[[UIAlertView alloc] initWithTitle:@"提示" message:@"主人！主人！就是你！" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil]show];
                 });
             }else{
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [_titleView removeFromSuperview];
+                    self.isAuthent = NO;
                     [[[UIAlertView alloc] initWithTitle:@"提示" message:@"呀！失败了，擦擦！" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil] show];
                 });
             }
         }];
     }else{
+        self.isAuthent = NO;
         [[[UIAlertView alloc] initWithTitle:@"提示" message:@"您的指纹识别不可用" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil]show];
     }
 }
