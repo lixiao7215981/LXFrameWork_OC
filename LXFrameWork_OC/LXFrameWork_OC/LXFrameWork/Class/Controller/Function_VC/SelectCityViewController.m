@@ -153,6 +153,7 @@
     if (self.cellClick) {
         self.cellClick(cell.textLabel.text);
     }
+    [self.searchDisplayController setActive:NO animated:NO];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
