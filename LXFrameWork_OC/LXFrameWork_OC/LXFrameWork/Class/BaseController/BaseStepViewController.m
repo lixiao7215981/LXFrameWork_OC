@@ -65,11 +65,7 @@
         for (int i = 0; i < _titleArray.count; i++) {
             InterchangeButton *btn = [[InterchangeButton alloc] initWithFrame:CGRectMake(i * btnWidth,0, btnWidth, 44)];
             btn.tag = i + 1;
-            if ([UIColor isTheSameColor2:manager.NavigationBar_bgColor anotherColor:[UIColor whiteColor]]) {
-                [btn setTitleColor:[UIColor colorWithHexString:@"75B257"] forState:UIControlStateSelected];
-            }else{
-                [btn setTitleColor:manager.NavigationBar_bgColor forState:UIControlStateSelected];
-            }
+            [btn setTitleColor:manager.stepViewTitle_bgColor forState:UIControlStateSelected];
             [btn setTitle:[NSString stringWithFormat:@"%d %@",i+1,_titleArray[i]]forState:UIControlStateNormal];
             [btn setImage:[BundleTool getImage:@"Arrow_Left" FromBundle:LXFrameWorkBundle] forState:UIControlStateNormal];
             if (i == _titleArray.count - 1) {

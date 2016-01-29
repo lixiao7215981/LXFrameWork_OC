@@ -19,7 +19,7 @@
     if (self) {
         // 设置 NavBar 背景颜色
         LXFrameWorkManager *manager = [LXFrameWorkManager sharedLXFrameWorkManager];
-        self.backgroundColor = _BackColor = manager.NavigationBar_bgColor;
+        self.backgroundColor = _BackColor = manager.navigationBar_bgColor;
         
         // 设置Button View
         _btnView = [UIView newAutoLayoutView];

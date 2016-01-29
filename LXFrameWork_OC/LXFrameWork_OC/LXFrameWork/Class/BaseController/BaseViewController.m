@@ -24,7 +24,7 @@
     // 设置默认的View背景颜色
     LXFrameWorkManager *manager = [LXFrameWorkManager sharedLXFrameWorkManager];
     if (!self.view.backgroundColor) {
-        self.view.backgroundColor = manager.ViewController_bgColor;
+        self.view.backgroundColor = manager.viewController_bgColor;
     }
     // 添加自定义的NavigationBar
     [self setNavigationBarView];
@@ -101,7 +101,7 @@
     UILabel *centerTitle = [UILabel newAutoLayoutView];
     centerTitle.textAlignment = NSTextAlignmentCenter;
     centerTitle.font = BaseNavBarTextFont;
-    centerTitle.textColor = manager.NavigationBar_textColor;
+    centerTitle.textColor = manager.navigationBar_textColor;
     centerTitle.text = title;
     [self setCenterView:centerTitle];
     return centerTitle;
@@ -170,7 +170,7 @@
     }
     if (title.length) {
         [button setTitle:title forState:UIControlStateNormal];
-        [button setTitleColor:manager.NavigationBar_textColor forState:UIControlStateNormal];
+        [button setTitleColor:manager.navigationBar_textColor forState:UIControlStateNormal];
     }
     button.ClickOption = clickOption;
     return button;
