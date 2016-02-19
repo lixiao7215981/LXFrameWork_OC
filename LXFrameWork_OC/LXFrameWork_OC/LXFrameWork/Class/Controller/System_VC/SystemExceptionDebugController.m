@@ -1,35 +1,40 @@
 //
-//  SysetmHttpDebugController.m
+//  SystemExceptionDebugController.m
 //  LXFrameWork_OC
 //
-//  Created by 李晓 on 15/8/10.
-//  Copyright (c) 2015年 LXFrameWork. All rights reserved.
+//  Created by 李晓 on 16/2/19.
+//  Copyright © 2016年 LXFrameWork. All rights reserved.
 //
 
-#import "SysetmHttpDebugController.h"
-#import "HttpToolLogModel.h"
-#import "SystemHttpDetailController.h"
-#import "SystemHttpDetailCell.h"
-#import "BundleTool.h"
+#import "SystemExceptionDebugController.h"
+#import "SystemExceptionDetailController.h"
+#import "SystemExceptionDebugModel.h"
+#import "SystemExceptionDebugCell.h"
 
 #define MYBUNDLE_NAME @ "LXFrameWork.bundle"
 #define MYBUNDLE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
 #define MYBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]
 
-@interface SysetmHttpDebugController ()<UITableViewDelegate>
+@interface SystemExceptionDebugController ()<UITableViewDelegate>
 {
     NSInteger _pageIndex;
 }
 @end
 
-@implementation SysetmHttpDebugController
+@implementation SystemExceptionDebugController
 
 static NSInteger   const pageSize = 20;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavTitle:@"请求日志"];
+    [self setNavTitle:@"异常日志"];
     self.tableView.rowHeight = 65;
+    [self.tableView.mj_header beginRefreshing];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self.tableView.mj_header beginRefreshing];
 }
 
@@ -48,7 +53,7 @@ static NSInteger   const pageSize = 20;
 
 - (void) loadData
 {
-    NSArray *array = [HttpToolLogModel getHttpToolLogWithPageIndex:_pageIndex pageSize:pageSize];
+    NSArray *array = [SystemExceptionDebugModel getSystemExceptionDebugModelWithPageIndex:_pageIndex pageSize:pageSize];
     if (array.count) {
         [self.dataList addObjectsFromArray:array];
         [self.tableView.mj_header endRefreshing];
@@ -62,8 +67,8 @@ static NSInteger   const pageSize = 20;
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SystemHttpDetailCell *cell = [SystemHttpDetailCell cellWithTableView:tableView];
-    HttpToolLogModel *model = self.dataList[indexPath.row];
+    SystemExceptionDebugCell *cell = [SystemExceptionDebugCell cellWithTableView:tableView];
+    SystemExceptionDebugModel *model = self.dataList[indexPath.row];
     cell.model = model;
     return cell;
 }
@@ -71,10 +76,11 @@ static NSInteger   const pageSize = 20;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    HttpToolLogModel *model = self.dataList[indexPath.row];
-    SystemHttpDetailController *detail = [[SystemHttpDetailController alloc] initWithNibName:@"SystemHttpDetailController" bundle:MYBUNDLE];
-    //    SystemHttpDetailController *detail = [[SystemHttpDetailController alloc] initWithNibName:@"SystemHttpDetailController" bundle:nil];
+    SystemExceptionDebugModel *model = self.dataList[indexPath.row];
+    SystemExceptionDetailController *detail = [[SystemExceptionDetailController alloc] initWithNibName:@"SystemExceptionDetailController" bundle:MYBUNDLE];
+    //    SystemExceptionDetailController *detail = [[SystemExceptionDetailController alloc] initWithNibName:@"SystemExceptionDetailController" bundle:nil];
     detail.model = model;
     [self.navigationController pushViewController:detail animated:YES];
 }
+
 @end

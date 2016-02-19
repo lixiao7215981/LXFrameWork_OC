@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-  s.name         = "LXFrameWork_OC
+  s.name         = "LXFrameWork_OC"
   s.version      = "2.5.8"
-  s.summary      = "This is my(lixiao) LXFrameWork_OC "
+  s.summary      = "This is my(lixiao) LXFrameWork_OC"
   s.homepage     = "https://github.com/lixiao7215981"
   s.license      = "MIT"
   s.author       = { "SuperlX" => "1019661666@qq.com" }

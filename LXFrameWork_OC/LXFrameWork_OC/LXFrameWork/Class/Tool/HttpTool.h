@@ -72,11 +72,13 @@ typedef enum {
 + (void) HttpToolPostWithUrl:(NSString *) url paramesers:(NSDictionary *) parameser requestHeaderField:(NSDictionary *) header Serializer:(serializer) serializer Success:(void(^)(id json)) success failure:(void (^)(NSError *error)) failure;
 
 /**
- *  利用 AFNetWorking 发送POST请求，可以上传数据
+ *  可以上传数据
+ *  利用 AFNetWorking 发送POST请求，
  */
 + (void) HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Data:(NSData *) data Name:(NSString *)name FileName:(NSString *) fileName MainType:(NSString *)mainType  Success:(void (^)(id json))success failure:(void (^)(NSError *error))failure;
 /**
- *  利用 AFNetWorking 发送POST请求，可以上传数据,添加请求头
+ *  可以上传数据
+ *  利用 AFNetWorking 发送POST请求,添加请求头
  */
 + (void) HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser requestHeaderField:(NSDictionary *) header Data:(NSData *) data Name:(NSString *)name FileName:(NSString *) fileName MainType:(NSString *)mainType  Success:(void (^)(id json))success failure:(void (^)(NSError *error))failure;
 

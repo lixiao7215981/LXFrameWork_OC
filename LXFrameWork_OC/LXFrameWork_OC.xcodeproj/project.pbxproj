@@ -38,6 +38,14 @@
 		4E56B7F61B54F5FF00184403 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F51B54F5FF00184403 /* StepView.m */; };
 		4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F81B54FAD600184403 /* InterchangeButton.m */; };
 		4E59A1881B7D7E5000EA6D06 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59A1871B7D7E5000EA6D06 /* BaseWebViewController.m */; };
+		4E63088D1C75CF4600AAF3D4 /* SystemHttpDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E63088B1C75CF4600AAF3D4 /* SystemHttpDetailCell.m */; };
+		4E63088E1C75CF4600AAF3D4 /* SystemHttpDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E63088C1C75CF4600AAF3D4 /* SystemHttpDetailCell.xib */; };
+		4E6308911C76C4B800AAF3D4 /* SystemExceptionDebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6308901C76C4B800AAF3D4 /* SystemExceptionDebugController.m */; };
+		4E6308941C76C4F300AAF3D4 /* SystemExceptionDebugModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6308931C76C4F300AAF3D4 /* SystemExceptionDebugModel.m */; };
+		4E6308981C76DFFA00AAF3D4 /* SystemExceptionDebugCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6308961C76DFFA00AAF3D4 /* SystemExceptionDebugCell.m */; };
+		4E6308991C76DFFA00AAF3D4 /* SystemExceptionDebugCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E6308971C76DFFA00AAF3D4 /* SystemExceptionDebugCell.xib */; };
+		4E63089D1C76E8B800AAF3D4 /* SystemExceptionDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E63089B1C76E8B800AAF3D4 /* SystemExceptionDetailController.m */; };
+		4E63089E1C76E8B800AAF3D4 /* SystemExceptionDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E63089C1C76E8B800AAF3D4 /* SystemExceptionDetailController.xib */; };
 		4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */; };
 		4E72C19C1B4FEE6400C16C1E /* PlistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1991B4FEE6400C16C1E /* PlistTool.m */; };
 		4EA29A761B56005E0084E72D /* StepNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA29A751B56005E0084E72D /* StepNextView.m */; };
@@ -228,6 +236,19 @@
 		4E56B7F81B54FAD600184403 /* InterchangeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterchangeButton.m; sourceTree = "<group>"; };
 		4E59A1861B7D7E5000EA6D06 /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
 		4E59A1871B7D7E5000EA6D06 /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
+		4E63088A1C75CF4600AAF3D4 /* SystemHttpDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemHttpDetailCell.h; sourceTree = "<group>"; };
+		4E63088B1C75CF4600AAF3D4 /* SystemHttpDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemHttpDetailCell.m; sourceTree = "<group>"; };
+		4E63088C1C75CF4600AAF3D4 /* SystemHttpDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemHttpDetailCell.xib; sourceTree = "<group>"; };
+		4E63088F1C76C4B800AAF3D4 /* SystemExceptionDebugController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemExceptionDebugController.h; sourceTree = "<group>"; };
+		4E6308901C76C4B800AAF3D4 /* SystemExceptionDebugController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemExceptionDebugController.m; sourceTree = "<group>"; };
+		4E6308921C76C4F300AAF3D4 /* SystemExceptionDebugModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemExceptionDebugModel.h; sourceTree = "<group>"; };
+		4E6308931C76C4F300AAF3D4 /* SystemExceptionDebugModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemExceptionDebugModel.m; sourceTree = "<group>"; };
+		4E6308951C76DFFA00AAF3D4 /* SystemExceptionDebugCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemExceptionDebugCell.h; sourceTree = "<group>"; };
+		4E6308961C76DFFA00AAF3D4 /* SystemExceptionDebugCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemExceptionDebugCell.m; sourceTree = "<group>"; };
+		4E6308971C76DFFA00AAF3D4 /* SystemExceptionDebugCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemExceptionDebugCell.xib; sourceTree = "<group>"; };
+		4E63089A1C76E8B800AAF3D4 /* SystemExceptionDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemExceptionDetailController.h; sourceTree = "<group>"; };
+		4E63089B1C76E8B800AAF3D4 /* SystemExceptionDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemExceptionDetailController.m; sourceTree = "<group>"; };
+		4E63089C1C76E8B800AAF3D4 /* SystemExceptionDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemExceptionDetailController.xib; sourceTree = "<group>"; };
 		4E72C1921B4FEE6400C16C1E /* BaseTabBarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarService.h; sourceTree = "<group>"; };
 		4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarService.m; sourceTree = "<group>"; };
 		4E72C1941B4FEE6400C16C1E /* ImportClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportClass.h; sourceTree = "<group>"; };
@@ -659,6 +680,8 @@
 				4E3BB8E61B8F1324007A077D /* UserAddressModel.m */,
 				4EE45C881B74A9FE00C30B7D /* HttpToolLogModel.h */,
 				4EE45C891B74A9FE00C30B7D /* HttpToolLogModel.m */,
+				4E6308921C76C4F300AAF3D4 /* SystemExceptionDebugModel.h */,
+				4E6308931C76C4F300AAF3D4 /* SystemExceptionDebugModel.m */,
 				4EF8DCCC1C1FB49B000036E7 /* SelectCity.h */,
 				4EF8DCCD1C1FB49B000036E7 /* SelectCity.m */,
 				4EF8DCCE1C1FB49B000036E7 /* SelectCityGroups.h */,
@@ -684,6 +707,12 @@
 				4E56B7F81B54FAD600184403 /* InterchangeButton.m */,
 				4EA29A741B56005E0084E72D /* StepNextView.h */,
 				4EA29A751B56005E0084E72D /* StepNextView.m */,
+				4E63088A1C75CF4600AAF3D4 /* SystemHttpDetailCell.h */,
+				4E63088B1C75CF4600AAF3D4 /* SystemHttpDetailCell.m */,
+				4E63088C1C75CF4600AAF3D4 /* SystemHttpDetailCell.xib */,
+				4E6308951C76DFFA00AAF3D4 /* SystemExceptionDebugCell.h */,
+				4E6308961C76DFFA00AAF3D4 /* SystemExceptionDebugCell.m */,
+				4E6308971C76DFFA00AAF3D4 /* SystemExceptionDebugCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -824,13 +853,18 @@
 		4EE9813F1C07FE4400CA44FA /* System_VC */ = {
 			isa = PBXGroup;
 			children = (
-				4EE981401C07FE4400CA44FA /* SysetmHttpDebugController.h */,
-				4EE981411C07FE4400CA44FA /* SysetmHttpDebugController.m */,
 				4EE981421C07FE4400CA44FA /* SystemDebugController.h */,
 				4EE981431C07FE4400CA44FA /* SystemDebugController.m */,
+				4EE981401C07FE4400CA44FA /* SysetmHttpDebugController.h */,
+				4EE981411C07FE4400CA44FA /* SysetmHttpDebugController.m */,
 				4EE981441C07FE4400CA44FA /* SystemHttpDetailController.h */,
 				4EE981451C07FE4400CA44FA /* SystemHttpDetailController.m */,
 				4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */,
+				4E63088F1C76C4B800AAF3D4 /* SystemExceptionDebugController.h */,
+				4E6308901C76C4B800AAF3D4 /* SystemExceptionDebugController.m */,
+				4E63089A1C76E8B800AAF3D4 /* SystemExceptionDetailController.h */,
+				4E63089B1C76E8B800AAF3D4 /* SystemExceptionDetailController.m */,
+				4E63089C1C76E8B800AAF3D4 /* SystemExceptionDetailController.xib */,
 				4EE9814C1C07FFF200CA44FA /* SystemSelectServiceViewController.h */,
 				4EE9814D1C07FFF200CA44FA /* SystemSelectServiceViewController.m */,
 			);
@@ -991,7 +1025,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E63089E1C76E8B800AAF3D4 /* SystemExceptionDetailController.xib in Resources */,
+				4E6308991C76DFFA00AAF3D4 /* SystemExceptionDebugCell.xib in Resources */,
 				4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */,
+				4E63088E1C75CF4600AAF3D4 /* SystemHttpDetailCell.xib in Resources */,
 				4EE9814B1C07FE4400CA44FA /* SystemHttpDetailController.xib in Resources */,
 				4EE981371C07FAC500CA44FA /* WriteViewController.xib in Resources */,
 				4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */,
@@ -1095,6 +1132,7 @@
 				4EE789021BA912D500635387 /* CHKeychainTool.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
 				4EEA74341C23DFDA0048BA8F /* LocalAuthenticationViewController.m in Sources */,
+				4E63089D1C76E8B800AAF3D4 /* SystemExceptionDetailController.m in Sources */,
 				4EE45C561B7356DC00C30B7D /* MainTableViewController.m in Sources */,
 				4EF8DCCB1C1FB484000036E7 /* SelectCityViewController.m in Sources */,
 				4EE981491C07FE4400CA44FA /* SystemDebugController.m in Sources */,
@@ -1120,6 +1158,7 @@
 				4EA4457A1B4FDA9300844282 /* NSString+Hash.m in Sources */,
 				4EE45C9F1B78795A00C30B7D /* BundleTool.m in Sources */,
 				4EE789031BA912D500635387 /* SystemDeviceTool.m in Sources */,
+				4E6308981C76DFFA00AAF3D4 /* SystemExceptionDebugCell.m in Sources */,
 				4EE981321C07FAC500CA44FA /* UserIconCellController.m in Sources */,
 				4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */,
 				4EE45C871B74A90C00C30B7D /* BaseSwitchCellItem.m in Sources */,
@@ -1133,8 +1172,10 @@
 				4EE981301C07FAC500CA44FA /* NavBarScrollController.m in Sources */,
 				4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */,
 				4EA445771B4FDA9300844282 /* Foundation+Log.m in Sources */,
+				4E6308911C76C4B800AAF3D4 /* SystemExceptionDebugController.m in Sources */,
 				4E1BA0E81C152C0F00E232D3 /* GTMBase64.m in Sources */,
 				4EE9814E1C07FFF200CA44FA /* SystemSelectServiceViewController.m in Sources */,
+				4E6308941C76C4F300AAF3D4 /* SystemExceptionDebugModel.m in Sources */,
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
 				4EE9813B1C07FCF000CA44FA /* PeekAndPopViewController.m in Sources */,
 				4ED633BF1C29515500AF6FFA /* AppDelegate.m in Sources */,
@@ -1147,6 +1188,7 @@
 				4EE9812D1C07FAC500CA44FA /* CustomQRCodeViewController.m in Sources */,
 				4E0A465D1B70C1BD007C94C8 /* TimeButton.m in Sources */,
 				4EA445791B4FDA9300844282 /* NSString+Extension.m in Sources */,
+				4E63088D1C75CF4600AAF3D4 /* SystemHttpDetailCell.m in Sources */,
 				4EE45C821B74A90C00C30B7D /* BaseCellItem.m in Sources */,
 				4E56B7E11B51799600184403 /* HttpTool.m in Sources */,
 			);
@@ -1341,7 +1383,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1357,7 +1399,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

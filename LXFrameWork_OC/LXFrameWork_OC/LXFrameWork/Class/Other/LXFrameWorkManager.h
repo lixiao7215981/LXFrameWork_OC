@@ -43,9 +43,9 @@ LXSingletonH(LXFrameWorkManager);
  */
 @property (nonatomic,assign) navBarBackColor backState;
 /**
- *  是否开启请求日志记录
+ *  异常信息邮件接收者（添加多个收件人以逗号隔开）
+ *  例： lxiao723@163.com,1019661666@qq.com
  */
-@property (nonatomic,assign) BOOL openHttpDebug;
-
+@property (nonatomic,copy) NSString *exceptionEmailAddress;
 
 @end

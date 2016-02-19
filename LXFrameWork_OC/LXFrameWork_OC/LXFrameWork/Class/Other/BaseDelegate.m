@@ -7,6 +7,7 @@
 //
 
 #import "BaseDelegate.h"
+#import "SystemExceptionDebugModel.h"
 
 @interface BaseDelegate ()
 
@@ -18,8 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // 3D-touch 点击应用图标 当应用程序并非在后台，而是直接重新打开的时候， 根据不同的Action响应不同的事件
-//    UIApplicationShortcutItem *item = [launchOptions valueForKey:UIApplicationLaunchOptionsShortcutItemKey];
-    
+    //    UIApplicationShortcutItem *item = [launchOptions valueForKey:UIApplicationLaunchOptionsShortcutItemKey];
     
     // 设置弹出框后不可操作
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
@@ -31,6 +31,8 @@
     manager.shouldToolbarUsesTextFieldTintColor = YES; // 控制键盘上的工具条文字颜色是否用户自定义
     manager.enableAutoToolbar = YES; //控制是否显示键盘上的工具条
     
+    // 全局的异常处理
+    NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
     return YES;
 }
 
@@ -54,6 +56,18 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+/**
+ *  全局的异常处理方法
+ */
+void UncaughtExceptionHandler(NSException *exception) {
+    SystemExceptionDebugModel *exceptionModel = [[SystemExceptionDebugModel alloc] init];
+    NSArray *callStack = [exception callStackSymbols];
+    exceptionModel.exception_time = [NSDate date];
+    exceptionModel.exception = exception;
+    exceptionModel.exception_callStack = callStack;
+    [SystemExceptionDebugModel addSystemExceptionDebugModel:exceptionModel];
 }
 
 @end

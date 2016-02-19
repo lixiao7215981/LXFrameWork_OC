@@ -14,7 +14,6 @@
 #import "SystemDebugController.h"
 #import "HttpViewController.h"
 #import "WebViewController.h"
-#import "SysetmHttpDebugController.h"
 #import "HeadImageScorllController.h"
 #import "SetNavBarLeftRightViewController.h"
 #import "CustomQRCodeViewController.h"
@@ -37,8 +36,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavTitle:@"LXFrameWork_OC"];
+    [self setUpInitialize];
     [self addDataList];
     [NSThread sleepForTimeInterval:1.5];
+}
+
+- (void) setUpInitialize
+{
+    LXFrameWorkManager *manager = [LXFrameWorkManager sharedLXFrameWorkManager];
+    manager.exceptionEmailAddress = @"lixiao@djlink.cn,1019661666@qq.com";
 }
 
 - (void) addDataList
@@ -102,7 +108,7 @@
     
 #pragma mark - Group2
     
-    BaseArrowCellItem *Group2_item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"发送请求" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *Group2_item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"模拟发送请求" SubTitle:nil ClickOption:^{
         HttpViewController  *httpVC = [[HttpViewController alloc] init];
         [self.navigationController pushViewController:httpVC animated:YES];
     } AndDetailClass:nil];
@@ -110,11 +116,6 @@
     BaseArrowCellItem *Group2_item2 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"查看调试选项" SubTitle:nil ClickOption:^{
         SystemDebugController *debug = [[SystemDebugController alloc] init];
         [self.navigationController pushViewController:debug animated:YES];
-    } AndDetailClass:nil];
-    
-    BaseArrowCellItem *Group2_item3 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"请求日志" SubTitle:nil ClickOption:^{
-        SysetmHttpDebugController *httpDebug = [[SysetmHttpDebugController alloc] init];
-        [self.navigationController pushViewController:httpDebug animated:YES];
     } AndDetailClass:nil];
     
 #pragma mark - Group3
@@ -144,15 +145,15 @@
     } AndDetailClass:nil];
     
     BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadTitle:@"基础功能介绍" AndFooterTitle:nil OrItem:@[Group1_item1,Group1_item2,Group1_item3,Group1_item4,Group1_item5,Group1_item6,Group1_item7,Group1_item8,Group1_item9]];
-    BaseCellItemGroup *group2 = [BaseCellItemGroup createGroupWithHeadTitle:@"系统工具" AndFooterTitle:nil OrItem:@[Group2_item1,Group2_item2,Group2_item3]];
-    BaseCellItemGroup *group3 = [BaseCellItemGroup createGroupWithHeadTitle:@"iOS 9 新功能" AndFooterTitle:nil OrItem:@[group3_item1,group3_item2]];
+    BaseCellItemGroup *group2 = [BaseCellItemGroup createGroupWithHeadTitle:@"系统工具" AndFooterTitle:nil OrItem:@[Group2_item1,Group2_item2]];
     BaseCellItemGroup *group5 = [BaseCellItemGroup createGroupWithHeadTitle:@"iOS 8 新功能" AndFooterTitle:nil OrItem:@[group5_item1]];
+    BaseCellItemGroup *group3 = [BaseCellItemGroup createGroupWithHeadTitle:@"iOS 9 新功能" AndFooterTitle:nil OrItem:@[group3_item1,group3_item2]];
     BaseCellItemGroup *group4 = [BaseCellItemGroup createGroupWithHeadTitle:@"测试条目" AndFooterTitle:nil OrItem:@[group4_item1]];
     
     [self.dataList addObject:group1];
     [self.dataList addObject:group2];
-    [self.dataList addObject:group3];
     [self.dataList addObject:group5];
+    [self.dataList addObject:group3];
     [self.dataList addObject:group4];
 }
 
