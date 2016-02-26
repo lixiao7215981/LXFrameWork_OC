@@ -18,4 +18,6 @@ NSString * const kUseMobileNetworkConnectInternet = @"kUseMobileNetworkConnectIn
 
 NSString * const kOpenHttpRequestLog = @"kOpenHttpRequestLog";
 
+NSString * const kShowGuidancePage = @"kShowGuidancePage";
+
 @end

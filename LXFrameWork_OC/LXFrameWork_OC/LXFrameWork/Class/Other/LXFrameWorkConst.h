@@ -27,4 +27,7 @@ extern NSString * const kUseMobileNetworkConnectInternet;
 /** 是否开启了接口请求日志 */
 extern NSString * const kOpenHttpRequestLog;
 
+/** 是否已经显示过指导页 */
+extern NSString * const kShowGuidancePage;
+
 @end
