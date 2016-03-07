@@ -64,6 +64,13 @@
     self.searchDisplayController.delegate = self;
 }
 
+- (void)NavBackBtnClick
+{
+    if (!self.needCity){
+        [super NavBackBtnClick];
+    }
+}
+
 #pragma mark - TableView实现的协议方法
 // 一共有几组
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

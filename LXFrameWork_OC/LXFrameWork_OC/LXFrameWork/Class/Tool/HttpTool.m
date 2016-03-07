@@ -51,7 +51,7 @@ static NSTimeInterval const defaultUploadTimeout = 60;
 }
 
 /** ---------------------------AFNetWorking GET 方法------------------------------- **/
-+ (void)HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser timeoutInterval:(NSTimeInterval)timeout requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser timeoutInterval:(NSTimeInterval)timeout requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     if (timeout) {
@@ -72,7 +72,7 @@ static NSTimeInterval const defaultUploadTimeout = 60;
         }];
     }
     
-    [manager GET:url parameters:parameser progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSURLSessionDataTask * task = [manager GET:url parameters:parameser progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(responseObject);
             [self requestHttpLogWithUrl:url RequestHeaderField:header RequestData:parameser ResponseData:responseObject ErrorData:nil];
@@ -83,11 +83,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             [self requestHttpLogWithUrl:url RequestHeaderField:header RequestData:parameser ResponseData:nil ErrorData:error];
         }
     }];
+    return task;
 }
 
-+ (void)HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolGetWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:HTTPResponseSerializer Success:^(id json) {
+    NSURLSessionDataTask * task = [HttpTool HttpToolGetWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:HTTPResponseSerializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -96,11 +97,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
-+ (void)HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolGetWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:serializer Success:^(id json) {
+    NSURLSessionDataTask * task =  [HttpTool HttpToolGetWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:serializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -109,11 +111,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
-+ (void)HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolGetWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolGetWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:header Serializer:serializer Success:^(id json) {
+    NSURLSessionDataTask * task = [HttpTool HttpToolGetWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:header Serializer:serializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -122,11 +125,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
 /** ---------------------------AFNetWorking POST 方法------------------------------- **/
 
-+ (void)HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser timeoutInterval:(NSTimeInterval)timeout requestHeaderField:(NSDictionary *)header Data:(NSData *)data Name:(NSString *)name FileName:(NSString *)fileName MainType:(NSString *)mainType Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser timeoutInterval:(NSTimeInterval)timeout requestHeaderField:(NSDictionary *)header Data:(NSData *)data Name:(NSString *)name FileName:(NSString *)fileName MainType:(NSString *)mainType Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     if (timeout) {
@@ -148,8 +152,7 @@ static NSTimeInterval const defaultUploadTimeout = 60;
     }
     
     if (data) {
-        
-        [manager POST:url parameters:parameser constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        NSURLSessionDataTask *task = [manager POST:url parameters:parameser constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
             [formData appendPartWithFileData:data name:name fileName:fileName mimeType:mainType];
         } progress:^(NSProgress * _Nonnull uploadProgress) {
             
@@ -162,8 +165,9 @@ static NSTimeInterval const defaultUploadTimeout = 60;
                 failure(error);
             }
         }];
+        return task;
     }else{
-        [manager POST:url parameters:parameser progress:^(NSProgress * _Nonnull uploadProgress) {
+        NSURLSessionDataTask *task = [manager POST:url parameters:parameser progress:^(NSProgress * _Nonnull uploadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             if (success) {
@@ -176,12 +180,13 @@ static NSTimeInterval const defaultUploadTimeout = 60;
                 [self requestHttpLogWithUrl:url RequestHeaderField:header RequestData:parameser ResponseData:nil ErrorData:error];
             }
         }];
+        return task;
     }
 }
 
-+ (void)HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolPostWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Data:nil Name:nil FileName:nil MainType:nil Serializer:HTTPResponseSerializer Success:^(id json) {
+    NSURLSessionDataTask *task = [HttpTool HttpToolPostWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Data:nil Name:nil FileName:nil MainType:nil Serializer:HTTPResponseSerializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -190,13 +195,14 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
 
 
-+ (void)HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolPostWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Data:nil Name:nil FileName:nil MainType:nil Serializer:serializer Success:^(id json) {
+    NSURLSessionDataTask *task = [HttpTool HttpToolPostWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Data:nil Name:nil FileName:nil MainType:nil Serializer:serializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -205,11 +211,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
-+(void)HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++(NSURLSessionDataTask *) HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolPostWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:header Data:nil Name:nil FileName:nil MainType:nil Serializer:serializer Success:^(id json) {
+    NSURLSessionDataTask *task = [HttpTool HttpToolPostWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:header Data:nil Name:nil FileName:nil MainType:nil Serializer:serializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -218,11 +225,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
-+ (void)HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Data:(NSData *)data Name:(NSString *)name FileName:(NSString *)fileName MainType:(NSString *)mainType Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Data:(NSData *)data Name:(NSString *)name FileName:(NSString *)fileName MainType:(NSString *)mainType Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolPostWithUrl:url paramesers:parameser timeoutInterval:defaultUploadTimeout requestHeaderField:nil Data:data Name:name FileName:fileName MainType:mainType Serializer:JSONResponseSerializer Success:^(id json) {
+    NSURLSessionDataTask *task = [HttpTool HttpToolPostWithUrl:url paramesers:parameser timeoutInterval:defaultUploadTimeout requestHeaderField:nil Data:data Name:name FileName:fileName MainType:mainType Serializer:JSONResponseSerializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -231,11 +239,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
-+ (void)HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser requestHeaderField:(NSDictionary *)header Data:(NSData *)data Name:(NSString *)name FileName:(NSString *)fileName MainType:(NSString *)mainType Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolPostWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser requestHeaderField:(NSDictionary *)header Data:(NSData *)data Name:(NSString *)name FileName:(NSString *)fileName MainType:(NSString *)mainType Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolPostWithUrl:url paramesers:parameser timeoutInterval:defaultUploadTimeout requestHeaderField:header Data:data Name:name FileName:fileName MainType:mainType Serializer:JSONResponseSerializer Success:^(id json) {
+    NSURLSessionDataTask *task = [HttpTool HttpToolPostWithUrl:url paramesers:parameser timeoutInterval:defaultUploadTimeout requestHeaderField:header Data:data Name:name FileName:fileName MainType:mainType Serializer:JSONResponseSerializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -244,11 +253,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
 /** ---------------------------AFNetWorking PUT 方法------------------------------- **/
 
-+ (void)HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser timeoutInterval:(NSTimeInterval)timeout requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser timeoutInterval:(NSTimeInterval)timeout requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     if (timeout) {
@@ -269,7 +279,7 @@ static NSTimeInterval const defaultUploadTimeout = 60;
         }];
     }
     
-    [manager PUT:url parameters:parameser success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSURLSessionDataTask *task = [manager PUT:url parameters:parameser success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(responseObject);
             [self requestHttpLogWithUrl:url RequestHeaderField:header RequestData:parameser ResponseData:responseObject ErrorData:nil];
@@ -280,11 +290,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             [self requestHttpLogWithUrl:url RequestHeaderField:header RequestData:parameser ResponseData:nil ErrorData:error];
         }
     }];
+    return task;
 }
 
-+ (void)HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolPutWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:HTTPResponseSerializer Success:^(id json) {
+    NSURLSessionDataTask *task = [HttpTool HttpToolPutWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:HTTPResponseSerializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -293,11 +304,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
-+ (void)HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolPutWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:serializer Success:^(id json) {
+    NSURLSessionDataTask *task = [HttpTool HttpToolPutWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:serializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -306,11 +318,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
-+ (void)HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolPutWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolPutWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:header Serializer:serializer Success:^(id json) {
+    NSURLSessionDataTask *task = [HttpTool HttpToolPutWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:header Serializer:serializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -319,11 +332,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
 /** ---------------------------AFNetWorking DELETE 方法------------------------------- **/
 
-+ (void)HttpToolDeleteWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser timeoutInterval:(NSTimeInterval)timeout requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolDeleteWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser timeoutInterval:(NSTimeInterval)timeout requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     if (timeout) {
@@ -344,7 +358,7 @@ static NSTimeInterval const defaultUploadTimeout = 60;
         }];
     }
     
-    [manager DELETE:url parameters:parameser success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    NSURLSessionDataTask *task = [manager DELETE:url parameters:parameser success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(responseObject);
             [self requestHttpLogWithUrl:url RequestHeaderField:header RequestData:parameser ResponseData:responseObject ErrorData:nil];
@@ -355,11 +369,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             [self requestHttpLogWithUrl:url RequestHeaderField:header RequestData:parameser ResponseData:nil ErrorData:error];
         }
     }];
+    return task;
 }
 
-+ (void)HttpToolDeleteWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolDeleteWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolDeleteWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:HTTPResponseSerializer Success:^(id json) {
+    NSURLSessionDataTask *task = [HttpTool HttpToolDeleteWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:HTTPResponseSerializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -368,11 +383,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
-+ (void)HttpToolDeleteWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolDeleteWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolDeleteWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:serializer Success:^(id json) {
+    NSURLSessionDataTask *task = [HttpTool HttpToolDeleteWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:nil Serializer:serializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -381,11 +397,12 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
-+ (void)HttpToolDeleteWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
++ (NSURLSessionDataTask *) HttpToolDeleteWithUrl:(NSString *)url paramesers:(NSDictionary *)parameser requestHeaderField:(NSDictionary *)header Serializer:(serializer)serializer Success:(void (^)(id))success failure:(void (^)(NSError *))failure
 {
-    [HttpTool HttpToolDeleteWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:header Serializer:serializer Success:^(id json) {
+    NSURLSessionDataTask *task = [HttpTool HttpToolDeleteWithUrl:url paramesers:parameser timeoutInterval:defaultRequestTimeout requestHeaderField:header Serializer:serializer Success:^(id json) {
         if (success) {
             success(json);
         }
@@ -394,6 +411,7 @@ static NSTimeInterval const defaultUploadTimeout = 60;
             failure(error);
         }
     }];
+    return task;
 }
 
 @end
