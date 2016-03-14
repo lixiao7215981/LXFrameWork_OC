@@ -8,7 +8,6 @@
 
 #import "UserDefaultsTool.h"
 #import "LXFrameWorkConst.h"
-#import "HttpViewController.h"
 #import "SystemDebugController.h"
 #import "SysetmHttpDebugController.h"
 #import "SystemExceptionDebugController.h"
@@ -56,10 +55,10 @@
         [SVProgressHUD showInfoWithStatus:@"敬请期待..."];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *TestPage = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"进入测试Page" SubTitle:nil ClickOption:^{
-        HttpViewController  *httpVC = [[HttpViewController alloc] init];
-        [self.navigationController pushViewController:httpVC animated:YES];
-    } AndDetailClass:nil];
+//    BaseArrowCellItem *TestPage = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"进入测试Page" SubTitle:nil ClickOption:^{
+//        HttpViewController  *httpVC = [[HttpViewController alloc] init];
+//        [self.navigationController pushViewController:httpVC animated:YES];
+//    } AndDetailClass:nil];
     
     BaseArrowCellItem *CompelCrash = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"强制Crash" SubTitle:nil ClickOption:^{
         NSDictionary *dict = [NSDictionary dictionary];
@@ -68,7 +67,7 @@
     
     
     
-    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadTitle:@"系统功能" AndFooterTitle:nil OrItem:@[openAbnormalLog,httpRequestLog,systemExceptionLog,setUpGuide,ChooseServiewCell,ServiewMonitoring,TestPage,CompelCrash]];
+    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadTitle:@"系统功能" AndFooterTitle:nil OrItem:@[openAbnormalLog,httpRequestLog,systemExceptionLog,setUpGuide,ChooseServiewCell,ServiewMonitoring,CompelCrash]];
     
     //    BaseCellItemGroup *group2 = [BaseCellItemGroup createGroupWithHeadTitle:@"项目功能" AndFooterTitle:nil OrItem:@[openAbnormalLog,arrowCell,abnormalLog,baseCell,ChooseServiewCell,ServiewMonitoring,TestPage,CompelCrash]];
     
