@@ -25,8 +25,13 @@
     // 添加数据
     [self addDataList];
     
-    // 注册支持 3D-touch 的View
-    [self registerForPreviewingWithDelegate:self sourceView:self.view];
+    //注册3D Touch,先判断是否可用
+    if (([[[UIDevice currentDevice] systemVersion]boolValue] >= 8.0) && self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable){
+        // 注册支持 3D-touch 的View
+        [self registerForPreviewingWithDelegate:self sourceView:self.view];
+    }else{
+        [SVProgressHUD showErrorWithStatus:@"请使用支持3D-touch的设备"];
+    }
 }
 
 - (void) addDataList
