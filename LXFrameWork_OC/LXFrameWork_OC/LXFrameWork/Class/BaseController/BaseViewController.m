@@ -9,7 +9,9 @@
 #import "BaseViewController.h"
 
 @interface BaseViewController ()
-
+{
+    NSLayoutConstraint *_navBarHeight;
+}
 @property (nonatomic, strong) IQKeyboardReturnKeyHandler *returnKeyHandler;
 
 @end
@@ -45,6 +47,15 @@
 {
     [super viewWillAppear:animated];
     [self.view bringSubviewToFront:self.navView];
+    
+    // 检测当前屏幕是横屏还是竖屏
+    if (self.interfaceOrientation == 4 || self.interfaceOrientation == 3) {
+        _navBarHeight.constant = 32;
+        [self.navView setNavBarInterfaceOrientation:LeftRight];
+    }else if (self.interfaceOrientation == 1 || self.interfaceOrientation == 2 ){
+        _navBarHeight.constant = 64;
+        [self.navView setNavBarInterfaceOrientation:PortraitUpsideDown];
+    }
 }
 
 #pragma mark - 设置左右中View
@@ -54,7 +65,7 @@
     [self.navigationController.navigationBar removeFromSuperview];
     [self.view addSubview:self.navView];
     [self.navView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
-    [self.navView autoSetDimension:ALDimensionHeight toSize:64];
+    _navBarHeight = [self.navView autoSetDimension:ALDimensionHeight toSize:64];
 }
 
 - (void)setLeftView:(UIView *)leftView
@@ -181,6 +192,39 @@
 - (void)NavBackBtnClick
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - 屏幕旋转方向
+/**
+ *  屏幕将要进行旋转
+ *  可以操作隐藏一些View 等操作
+ */
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    
+}
+
+/**
+ *  屏幕开始旋转，执行旋转动画
+ */
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
+{
+    if (interfaceOrientation == 4 || interfaceOrientation == 3) {
+        _navBarHeight.constant = 32;
+        [self.navView setNavBarInterfaceOrientation:LeftRight];
+    }else if (interfaceOrientation == 1 || interfaceOrientation == 2 ){
+        _navBarHeight.constant = 64;
+        [self.navView setNavBarInterfaceOrientation:PortraitUpsideDown];
+    }
+}
+
+/**
+ *  旋转动画执行完毕
+ *  可以操作显示前期隐藏的View
+ */
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    
 }
 
 #pragma mark - 懒加载

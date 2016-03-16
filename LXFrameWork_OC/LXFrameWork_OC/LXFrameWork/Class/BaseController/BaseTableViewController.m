@@ -84,7 +84,7 @@ static NSString *LX_BaseTableViewControllerCellID = @"BaseTableViewControllerCel
     UIColor *NavBackColor = self.navView.BackColor;
     UIColor *blockColor = [[UIColor lightGrayColor]colorWithAlphaComponent:0.5];
     CGFloat offsetY = scrollView.contentOffset.y;
-    if (self.scaleImage) { // 有下拉图片
+    if (self.scaleImage) { // 有下拉图片，滚动显示 NavBar
         if ((offsetY + _scaleHeight) > 0) {
             CGFloat alpha = 1 - ((100 - (offsetY + _scaleHeight)) / 100);
             [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:alpha]];

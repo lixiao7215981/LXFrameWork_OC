@@ -9,6 +9,7 @@
 #import "PeekAndPopViewController.h"
 #import "CustomQRCodeViewController.h"
 #import "UIWindow+Extension.h"
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 @interface PeekAndPopViewController ()<UIViewControllerPreviewingDelegate>
 {
@@ -26,7 +27,7 @@
     [self addDataList];
     
     //注册3D Touch,先判断是否可用
-    if (([[[UIDevice currentDevice] systemVersion]boolValue] >= 8.0) && self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable){
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0") && (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable)){
         // 注册支持 3D-touch 的View
         [self registerForPreviewingWithDelegate:self sourceView:self.view];
     }else{
