@@ -25,8 +25,12 @@
     headView.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.3];
     self.tableView.tableHeaderView = headView;
     
-    // NavigationBar 根据滚动变色
-    self.displayNav = YES;
+    /** NavigationBar 根据滚动变色 */
+    //    self.displayNavBarWhenScroll = YES;
+    
+    
+    /**  TableView 实时滚动展示NavigationBar alpha > 0.5 的时候显示 Title 和左右按钮 */
+    self.displayNavBarElementWhenScroll = YES;
     
 }
 

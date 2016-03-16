@@ -117,6 +117,7 @@ typedef void (^ClickButton)();
  *  @param btnArray @[Button,Button,Button] ;
  */
 - (void) setRightBtnArray:(NSArray *) btnArray;
+
 /**
  *  设置 NavBar 左上角点击事件
  *

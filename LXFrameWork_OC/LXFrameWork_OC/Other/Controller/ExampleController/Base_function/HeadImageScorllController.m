@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.displayNav = YES;
+    self.displayNavBarWhenScroll = YES;
     
     // 设置需要显示放大图片高度和图片
     self.scaleHeight = 200;
