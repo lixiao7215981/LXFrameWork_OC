@@ -46,7 +46,7 @@
         self.layer.shadowOpacity = 0.15;
         self.layer.shadowOffset = CGSizeMake(0, 0.1);
         
-        self.clipsToBounds = YES;
+//        self.clipsToBounds = YES;
     }
     return self;
 }

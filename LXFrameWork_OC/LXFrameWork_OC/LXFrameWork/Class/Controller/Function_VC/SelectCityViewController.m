@@ -16,6 +16,7 @@
 {
     CoreLocationTool *locationTool;
     NSString *_city;
+    UISearchBar *_searchBar;
 }
 @property (nonatomic,strong) NSMutableArray *cityList;
 
@@ -56,6 +57,7 @@
 - (void) addSearchDisplayController
 {
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+    _searchBar = searchBar;
     searchBar.placeholder = @"搜索地址";
     self.tableView.tableHeaderView = searchBar;
     self.searchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
@@ -157,6 +159,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (!cell.textLabel.text.length) return;
     if (self.cellClick) {
         self.cellClick(cell.textLabel.text);
     }
@@ -171,6 +174,21 @@
     UINavigationBar *bar = [UINavigationBar appearance];
     [bar setBackgroundColor:[UIColor clearColor]];
     [bar setTintColor:[UIColor clearColor]];
+    
+    // 修改搜索Nav按钮改为中文取消
+    [_searchBar setShowsCancelButton:YES animated:NO];
+    UIView *topView = controller.searchBar.subviews[0];
+    for (UIView *subView in topView.subviews) {
+        if ([subView isKindOfClass:NSClassFromString(@"UINavigationButton")]) {
+            UIButton *cancelButton = (UIButton*)subView;
+            [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
+        }
+    }
+}
+
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
+{
+    
 }
 
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
