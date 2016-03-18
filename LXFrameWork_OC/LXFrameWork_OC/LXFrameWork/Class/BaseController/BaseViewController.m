@@ -11,8 +11,12 @@
 @interface BaseViewController ()
 {
     NSLayoutConstraint *_navBarHeight;
+    BlockButton *_btn;
 }
+
 @property (nonatomic, strong) IQKeyboardReturnKeyHandler *returnKeyHandler;
+/***  无网状态提示 View */
+@property (nonatomic,strong) UIView *NetworkView;
 
 @end
 
@@ -187,6 +191,21 @@
     return button;
 }
 
+- (void)showNetWorkView:(BOOL)show
+{
+    if (show) {
+        [self.view bringSubviewToFront:self.NetworkView];
+    }else{
+        [self.view sendSubviewToBack:self.NetworkView];
+    }
+}
+
+- (void)setNetworkRefreshOption:(ClickButton)networkRefreshOption
+{
+    networkRefreshOption = networkRefreshOption;
+    _btn.ClickOption = networkRefreshOption;
+}
+
 #pragma  mark - 按钮点击
 
 - (void)NavBackBtnClick
@@ -235,6 +254,43 @@
         _navView = [NavigationBar newAutoLayoutView];
     }
     return _navView;
+}
+
+- (UIView *)NetworkView
+{
+    if (!_NetworkView) {
+        _NetworkView = [UIView newAutoLayoutView];
+        [self.view insertSubview:_NetworkView atIndex:self.view.subviews.count];
+        _NetworkView.backgroundColor = [UIColor whiteColor];
+        [_NetworkView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(64, 0, 0, 0)];
+        
+        _btn = [BlockButton newAutoLayoutView];
+        [_NetworkView addSubview:_btn];
+        _btn.titleLabel.font = [UIFont systemFontOfSize:14];
+        [_btn setTitle:@"刷新" forState:UIControlStateNormal];
+        [_btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_btn setBackgroundImage:[BundleTool getImage:@"notwork_btn_normal" FromBundle:LXFrameWorkBundle] forState:UIControlStateNormal];
+        [_btn setBackgroundImage:[BundleTool getImage:@"notwork_btn_selected" FromBundle:LXFrameWorkBundle] forState:UIControlStateHighlighted];
+        [_btn autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [_btn autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+        _btn.ClickOption = self.networkRefreshOption;
+        
+        UILabel *label = [UILabel newAutoLayoutView];
+        [_NetworkView addSubview:label];
+        label.text = @"数据加载失败，请检查您的网络";
+        label.textColor = [UIColor grayColor];
+        label.font = [UIFont systemFontOfSize:15];
+        [label autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [label autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:_btn withOffset: -20];
+        
+        UIImageView *imageView = [UIImageView newAutoLayoutView];
+        [_NetworkView addSubview:imageView];
+        imageView.image = [BundleTool getImage:@"network_failed_gray" FromBundle:LXFrameWorkBundle];
+        [imageView autoSetDimensionsToSize:CGSizeMake(100, 100)];
+        [imageView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [imageView autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:label withOffset: -18];
+    }
+    return _NetworkView;
 }
 
 @end

@@ -64,15 +64,14 @@
 #pragma mark - Block
 typedef void (^ClickButton)();
 
-//typedef UIView* (^ViewBlock)();
-
 @interface BaseViewController : UIViewController
 
 /***  NavBar 的 View */
 @property (nonatomic,strong) NavigationBar *navView;
+/***  无网状态刷新按钮点击 */
+@property (nonatomic,copy) ClickButton networkRefreshOption;
 
-
-#pragma mark - Method
+#pragma mark - Base Method
 
 /**
  *  设置自定义NavigationBar
@@ -135,6 +134,13 @@ typedef void (^ClickButton)();
  */
 - (UIButton *) setRightBtnWithImage:(UIImage *)image orTitle:(NSString *) title ClickOption:(ClickButton) clickOption ;
 
+#pragma mark - NetWork Method
 
+/**
+ *  设置无网状态下的提示页面
+ *
+ *  @param show YES：显示 NO：隐藏显示
+ */
+- (void) showNetWorkView:(BOOL) show;
 
 @end
