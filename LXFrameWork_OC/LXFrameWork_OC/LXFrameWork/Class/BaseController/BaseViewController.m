@@ -52,6 +52,7 @@
     [super viewWillAppear:animated];
     [self.view bringSubviewToFront:self.navView];
     
+    if (IS_IPAD) return;
     // 检测当前屏幕是横屏还是竖屏
     if (self.interfaceOrientation == 4 || self.interfaceOrientation == 3) {
         _navBarHeight.constant = 32;
@@ -228,6 +229,7 @@
  */
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
 {
+    if (IS_IPAD) return;
     if (interfaceOrientation == 4 || interfaceOrientation == 3) {
         _navBarHeight.constant = 32;
         [self.navView setNavBarInterfaceOrientation:LeftRight];
