@@ -12,7 +12,7 @@
 #import "BundleTool.h"
 
 #define kRGBColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
-#define animateDuration 0.4
+#define animateDuration 0.3
 #define textFont 13
 #define tableViewHeight 130
 
