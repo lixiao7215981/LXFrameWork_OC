@@ -9,3 +9,5 @@ pod 'SVProgressHUD'
 pod 'PureLayout'
 pod 'IQKeyboardManager'
 pod 'Reachability'
+
+#pod 'SDCycleScrollView'  #图片轮播器

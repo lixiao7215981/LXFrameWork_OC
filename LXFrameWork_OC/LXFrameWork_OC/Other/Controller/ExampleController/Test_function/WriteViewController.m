@@ -24,7 +24,7 @@
     [super viewDidLoad];
     
     
-    SelectListView *select = [[SelectListView alloc] initWithFrame:CGRectMake(100, 100, 150, 30)];
+    SelectListView *select = [[SelectListView alloc] initWithFrame:CGRectMake(100, 400, 150, 30)];
     select.font = [UIFont systemFontOfSize:14];
     select.tableHeight = 140;
     select.delegate = self;
