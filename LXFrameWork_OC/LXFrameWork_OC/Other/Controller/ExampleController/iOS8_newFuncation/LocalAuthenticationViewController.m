@@ -26,10 +26,12 @@
     [super viewDidLoad];
     [self setNavTitle:@"指纹识别验证"];
     __weak typeof(self) weekSelf = self;
-    [self setRightBtnWithImage:nil orTitle:@"Again" ClickOption:^{
+    
+    [self setRightBtnWithImage:nil orTitle:@"Again" Font:[UIFont systemFontOfSize:15] ClickOption:^{
         if (weekSelf.isAuthent)return ;
         [weekSelf addAuthentView];
     }];
+    
     [self addAuthentView];
 }
 

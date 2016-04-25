@@ -58,7 +58,7 @@ static NSString * const DownMenuTableViewID = @"DownMenuTableViewID";
         [cell.contentView addSubview:lineView];
         [lineView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
         [lineView autoSetDimension:ALDimensionHeight toSize:kLINE_1_PX];
-        lineView.backgroundColor = kLineBackColor;
+        lineView.backgroundColor = kRGBColor(221, 221, 221, 1);
     }
     if (self.selectedIndexPath.section == indexPath.section  && self.selectedIndexPath.row == indexPath.row) {
         cell.selected = YES;
@@ -67,7 +67,7 @@ static NSString * const DownMenuTableViewID = @"DownMenuTableViewID";
     }
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.textColor = kView_Title_Color;
+    cell.textLabel.textColor = [UIColor blackColor];
     cell.textLabel.text = [self.dataList objectAtIndex : indexPath.row];
     return cell;
 }

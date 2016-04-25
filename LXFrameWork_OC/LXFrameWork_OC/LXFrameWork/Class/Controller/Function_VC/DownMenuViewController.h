@@ -5,8 +5,8 @@
 //  Created by 李晓 on 16/4/24.
 //  Copyright © 2016年 haier. All rights reserved.
 //
+#import "BaseViewController.h"
 
-#import <UIKit/UIKit.h>
 @class DownMenuViewController;
 
 @protocol DownMenuViewDelegate <NSObject>
@@ -16,7 +16,7 @@
 
 @end
 
-@interface DownMenuViewController : UIViewController
+@interface DownMenuViewController : BaseViewController
 
 /**
  *  显示TableVIew 参照View

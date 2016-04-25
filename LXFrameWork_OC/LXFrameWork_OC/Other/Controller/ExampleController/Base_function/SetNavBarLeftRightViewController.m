@@ -40,11 +40,11 @@
     [setImage autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:90];
     setImage.ClickOption = ^{
         [self setNavTitle:@"设置为图片"];
-        [self setLeftBtnWithImage:[UIImage imageNamed:@"left_sarch"] orTitle:nil ClickOption:^{
+        [self setLeftBtnWithImage:[UIImage imageNamed:@"left_sarch"] orTitle:nil Font:[UIFont systemFontOfSize:15] ClickOption:^{
             NSLog(@"点击了左边按钮");
         }];
         
-        [self setRightBtnWithImage:[UIImage imageNamed:@"right_clean"] orTitle:nil ClickOption:^{
+        [self setRightBtnWithImage:[UIImage imageNamed:@"right_clean"] orTitle:nil Font:[UIFont systemFontOfSize:15] ClickOption:^{
             NSLog(@"点击了右边按钮");
         }];
     };
@@ -65,11 +65,11 @@
     [setTitle autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:setImage withOffset:25];
     setTitle.ClickOption = ^{
         [self setNavTitle:@"设置为文字"];
-        [self setLeftBtnWithImage:nil orTitle:@"搜索" ClickOption:^{
+        [self setLeftBtnWithImage:nil orTitle:@"搜索" Font:[UIFont systemFontOfSize:15] ClickOption:^{
             NSLog(@"点击了左边按钮");
         }];
         
-        [self setRightBtnWithImage:nil orTitle:@"关闭" ClickOption:^{
+        [self setRightBtnWithImage:nil orTitle:@"关闭" Font:[UIFont systemFontOfSize:15] ClickOption:^{
             NSLog(@"点击了右边按钮");
         }];
     };
