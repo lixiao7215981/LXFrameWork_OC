@@ -18,14 +18,24 @@
         [UIView transitionFromView:window.rootViewController.view toView:viewController.view duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
             window.rootViewController = viewController;
             [window makeKeyAndVisible];
-            KBaseDelegate.navigationController = (UINavigationController *)viewController;
+            [self setBaseDelegateNavigationController:viewController];
         }];
     }else{
         window.rootViewController = viewController;
         [window makeKeyAndVisible];
-        KBaseDelegate.navigationController = (UINavigationController *)viewController;
+        [self setBaseDelegateNavigationController:viewController];
     }
     return window;
+}
+
++ (void)setBaseDelegateNavigationController:(UIViewController *) controller
+{
+    if ([controller isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *tbController = (UITabBarController *)controller;
+        KBaseDelegate.navigationController = (UINavigationController *)[tbController.viewControllers firstObject];
+    }else if([controller isKindOfClass:[UINavigationController class]]){
+        KBaseDelegate.navigationController = (UINavigationController *)controller;
+    }
 }
 
 + (UIWindow *)getCurrentWindow

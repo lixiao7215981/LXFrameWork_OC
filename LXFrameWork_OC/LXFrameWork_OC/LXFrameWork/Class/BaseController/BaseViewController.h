@@ -127,12 +127,12 @@ typedef void (^ClickButton)();
 /**
  *  设置leftBtn
  */
-- (UIButton *) setLeftBtnWithImage:(UIImage *)image orTitle:(NSString *) title ClickOption:(ClickButton) clickOption ;
+- (UIButton *) setLeftBtnWithImage:(UIImage *)image orTitle:(NSString *)title Font:(UIFont *) font ClickOption:(ClickButton) clickOption;
 
 /**
  *  设置rightBtn
  */
-- (UIButton *) setRightBtnWithImage:(UIImage *)image orTitle:(NSString *) title ClickOption:(ClickButton) clickOption ;
+- (UIButton *) setRightBtnWithImage:(UIImage *)image orTitle:(NSString *)title Font:(UIFont *) font ClickOption:(ClickButton) clickOption;
 
 #pragma mark - NetWork Method
 

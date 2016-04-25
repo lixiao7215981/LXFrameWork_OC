@@ -20,12 +20,12 @@
     return results.count > 0;
 }
 
-- (BOOL)validationUserName
+- (BOOL)isRightfulUserName
 {
     return [self match:@"^[a-zA-z][a-zA-Z0-9_]{2,9}$"];
 }
 
-- (BOOL)validationPwd
+- (BOOL)isRightfulPassword
 {
     return [self match:@"^[a-zA-Z]\\w{5,11}$"];
 }
@@ -44,5 +44,13 @@
 - (BOOL)isIPAddress
 {
     return [self match:@"^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"];
+}
+
+- (BOOL)isNULL
+{
+    if (!self.length || [self isEqualToString:@""]) {
+        return YES;
+    }
+    return NO;
 }
 @end

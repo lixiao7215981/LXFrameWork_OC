@@ -11,6 +11,7 @@
 @interface BaseTableViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSLayoutConstraint *_scrollHeight;
+    NSArray *_tableViewInsets;
 }
 @end
 
@@ -20,6 +21,19 @@ static NSString *LX_BaseTableViewControllerCellID = @"BaseTableViewControllerCel
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self createTableViewWith:UITableViewStylePlain];
+}
+
+- (void)dealloc
+{
+    self.tableView.delegate = nil;
+    self.tableView.dataSource = nil;
+}
+
+#pragma mark - Method
+
+- (void) createTableViewWith:(UITableViewStyle) style
+{
     // 设置tableview -> 从Xib中加载
     for (UIView *view in self.view.subviews) {
         if ([view isKindOfClass:[UITableView class]] && view.tag == 0) {
@@ -29,9 +43,10 @@ static NSString *LX_BaseTableViewControllerCellID = @"BaseTableViewControllerCel
     }
     // xib 中未找到TableView 手动创建
     if (!self.tableView) {
-        self.tableView = [UITableView newAutoLayoutView];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:style];
+        self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.view addSubview:self.tableView];
-        [self.tableView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+        _tableViewInsets = [self.tableView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     }
     
     // 设置TableView
@@ -41,10 +56,20 @@ static NSString *LX_BaseTableViewControllerCellID = @"BaseTableViewControllerCel
     [self.view bringSubviewToFront:self.navView];
 }
 
-- (void)dealloc
+- (void)setTableViewStyle:(UITableViewStyle)tableViewStyle
 {
-    self.tableView.delegate = nil;
-    self.tableView.dataSource = nil;
+    _tableViewStyle = tableViewStyle;
+    if (self.tableView.style == tableViewStyle) return;
+    [self.tableView removeFromSuperview];
+    self.tableView = nil;
+    [self createTableViewWith:tableViewStyle];
+}
+
+- (NSArray *)setTableViewToSuperviewEdgesWithInsets:(UIEdgeInsets)insets
+{
+    [_tableViewInsets autoRemoveConstraints];
+    _tableViewInsets = [self.tableView autoPinEdgesToSuperviewEdgesWithInsets:insets];
+    return _tableViewInsets;
 }
 
 #pragma mark - UITableViewDataSource,UITableViewDelegate
@@ -87,9 +112,11 @@ static NSString *LX_BaseTableViewControllerCellID = @"BaseTableViewControllerCel
     if (self.scaleImage) { // 有下拉图片，滚动显示 NavBar
         if ((offsetY + _scaleHeight) > 0) {
             CGFloat alpha = 1 - ((100 - (offsetY + _scaleHeight)) / 100);
+            [self.navView setScrollNavigationBarBackImageAlpha:alpha];
             [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:alpha]];
             [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:alpha]];
         } else {
+            [self.navView setScrollNavigationBarBackImageAlpha:0];
             [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:0]];
             [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:0]];
         }
@@ -97,6 +124,7 @@ static NSString *LX_BaseTableViewControllerCellID = @"BaseTableViewControllerCel
         if (offsetY > 0) {
             CGFloat alpha = 1 - ((100 - offsetY) / 100);
             
+            [self.navView setScrollNavigationBarBackImageAlpha:alpha];
             [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:alpha]];
             [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:alpha]];
             
@@ -109,13 +137,12 @@ static NSString *LX_BaseTableViewControllerCellID = @"BaseTableViewControllerCel
             }
             
         } else {
+            [self.navView setScrollNavigationBarBackImageAlpha:0];
             [self.navView setScrollNavigationBarBackColor:[NavBackColor colorWithAlphaComponent:0]];
             [self.navView setScrollNavigationBarLineBackColor:[blockColor colorWithAlphaComponent:0]];
         }
     }
 }
-
-#pragma mark - Method
 
 /**
  *  实时滚动展示NavigationBar
@@ -127,6 +154,7 @@ static NSString *LX_BaseTableViewControllerCellID = @"BaseTableViewControllerCel
         self.automaticallyAdjustsScrollViewInsets = NO;
         self.tableView.showsVerticalScrollIndicator = NO;
         [self.navView setScrollNavigationBarBackColor:[UIColor clearColor]];
+        [self.navView setScrollNavigationBarBackImageAlpha:0];
         [self.navView setScrollNavigationBarLineBackColor:[UIColor clearColor]];
     }
 }

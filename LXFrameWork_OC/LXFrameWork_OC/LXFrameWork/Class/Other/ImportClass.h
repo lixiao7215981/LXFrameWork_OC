@@ -82,6 +82,7 @@
 #define IS_IPHONE_6P_OR_6PS (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
 
 #define kLINE_1_PX (1.0f / [UIScreen mainScreen].scale)
+#define kLINE_Back_Color kRGBColor(221, 221, 221, 1)
 #define MainDelegate  ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 // 通知

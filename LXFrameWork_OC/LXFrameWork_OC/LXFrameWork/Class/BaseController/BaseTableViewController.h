@@ -33,6 +33,9 @@
 
 @interface BaseTableViewController : BaseViewController
 
+/** 设置 TableView 的样式 */
+@property (nonatomic, assign) UITableViewStyle tableViewStyle;
+
 /** 自定义的TableView */
 @property (nonatomic,strong) UITableView *tableView;
 
@@ -50,6 +53,10 @@
 
 /** TableView 拖拽 TableView 放大HeadImg Height */
 @property (nonatomic,assign) CGFloat scaleHeight;
+
+#pragma mark - Method
+
+- (NSLayoutConstraint *) setTableViewToSuperviewEdgesWithInsets:(ALEdgeInsets)insets;
 
 
 @end

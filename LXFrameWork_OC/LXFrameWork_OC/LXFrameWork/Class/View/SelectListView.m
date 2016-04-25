@@ -43,6 +43,13 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
     return self;
 }
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    [self addSubview:self.textField];
+    [self addSubview:self.arrowImg];
+}
+
 - (void)textFieldDropDown
 {
     if (!self.dataList.count) return;

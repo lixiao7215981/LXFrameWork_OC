@@ -153,21 +153,21 @@
     return btnView;
 }
 
-- (UIButton *)setLeftBtnWithImage:(UIImage *)image orTitle:(NSString *)title ClickOption:(ClickButton)clickOption
+- (UIButton *)setLeftBtnWithImage:(UIImage *)image orTitle:(NSString *)title Font:(UIFont *) font ClickOption:(ClickButton)clickOption
 {
-    UIButton *leftBtn = [self setBtnWithNormalImage:image HighlightedImage:nil SelectedImage:nil DisabledImage:nil OrTitle:title ClickOption:clickOption];
+    UIButton *leftBtn = [self setBtnWithNormalImage:image HighlightedImage:nil SelectedImage:nil DisabledImage:nil OrTitle:title Font:font ClickOption:clickOption];
     [self setLeftView:leftBtn];
     return leftBtn;
 }
 
-- (UIButton *)setRightBtnWithImage:(UIImage *)image orTitle:(NSString *)title ClickOption:(ClickButton) clickOption
+- (UIButton *)setRightBtnWithImage:(UIImage *)image orTitle:(NSString *)title Font:(UIFont *) font ClickOption:(ClickButton) clickOption
 {
-    UIButton *rightBtn = [self setBtnWithNormalImage:image HighlightedImage:nil SelectedImage:nil DisabledImage:nil OrTitle:title ClickOption:clickOption];
+    UIButton *rightBtn = [self setBtnWithNormalImage:image HighlightedImage:nil SelectedImage:nil DisabledImage:nil OrTitle:title Font:font ClickOption:clickOption];
     [self setRightView:rightBtn];
     return rightBtn;
 }
 
-- (UIButton *) setBtnWithNormalImage:(UIImage *)normalImg HighlightedImage:(UIImage *)highlightedImg SelectedImage:(UIImage *)selectedImg DisabledImage:(UIImage *)disableImg OrTitle:(NSString *) title ClickOption:(ClickButton) clickOption
+- (UIButton *) setBtnWithNormalImage:(UIImage *)normalImg HighlightedImage:(UIImage *)highlightedImg SelectedImage:(UIImage *)selectedImg DisabledImage:(UIImage *)disableImg OrTitle:(NSString *) title Font:(UIFont *) font ClickOption:(ClickButton) clickOption
 {
     LXFrameWorkManager *manager = [LXFrameWorkManager sharedLXFrameWorkManager];
     BlockButton *button = [[BlockButton alloc] init];
@@ -188,6 +188,7 @@
         [button setTitle:title forState:UIControlStateNormal];
         [button setTitleColor:manager.navigationBar_textColor forState:UIControlStateNormal];
     }
+    button.titleLabel.font = font;
     button.ClickOption = clickOption;
     return button;
 }

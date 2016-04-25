@@ -23,6 +23,10 @@ LXSingletonH(LXFrameWorkManager);
  */
 @property (nonatomic,strong) UIColor *navigationBar_bgColor;
 /**
+ *  设置NavigationBar 背景图片
+ */
+@property (nonatomic,strong) UIImage *navigationBar_bgImage;
+/**
  * 设置NavigationBar 字体颜色
  */
 @property (nonatomic,assign) UIColor *navigationBar_textColor;

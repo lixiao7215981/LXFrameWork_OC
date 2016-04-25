@@ -63,7 +63,7 @@
 - (void) setUpNavRightView
 {
     __weak typeof(self) weakSelf = self;
-    [self setRightBtnWithImage:[BundleTool getImage:@"share_send" FromBundle:LXFrameWorkBundle] orTitle:nil ClickOption:^{
+    [self setRightBtnWithImage:[BundleTool getImage:@"share_send" FromBundle:LXFrameWorkBundle] orTitle:nil Font:[UIFont systemFontOfSize:14] ClickOption:^{
         LXFrameWorkManager *manager = [LXFrameWorkManager sharedLXFrameWorkManager];
         if (!manager.exceptionEmailAddress.length) {
             [SVProgressHUD showInfoWithStatus:@"请先添加异常信息收件人(LXFrameWorkManager)"];

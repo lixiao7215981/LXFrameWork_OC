@@ -9,6 +9,10 @@
 #import "QRCodeViewController.h"
 
 @interface QRCodeViewController() <AVCaptureMetadataOutputObjectsDelegate>
+{
+    NSLayoutConstraint *_topCos;
+    NSTimer *_timer;
+}
 /**
  *  输入输出中间那座大大的桥
  */
@@ -61,13 +65,37 @@
     [_capSession startRunning];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (!_timer.isValid) {
+        [self updateTimer];
+        _timer = [NSTimer timerWithTimeInterval:3.0f target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    }
+}
+
+- (void) updateTimer
+{
+    _topCos.constant = _scanBgImg.height - 20;
+    [UIView animateWithDuration:1.5f animations:^{
+        [self.view layoutIfNeeded];
+    }completion:^(BOOL finished) {
+        _topCos.constant = 20;
+        [UIView animateWithDuration:1.5f animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    }];
+}
+
 - (void) addQRCodeImgAndClaenBtn
 {
-    UIImageView *img = [UIImageView newAutoLayoutView];
-    [self.view addSubview:img];
-    [img autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view withOffset:-20];
-    [img autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    img.image = [BundleTool getImage:@"QRcode" FromBundle:LXFrameWorkBundle];
+    UIImageView *scanBgImg = [UIImageView newAutoLayoutView];
+    _scanBgImg = scanBgImg;
+    [self.view addSubview:scanBgImg];
+    [scanBgImg autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view withOffset:-20];
+    [scanBgImg autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    scanBgImg.image = [BundleTool getImage:@"QRcode" FromBundle:LXFrameWorkBundle];
     
     UIButton *button = [UIButton newAutoLayoutView];
     [self.view addSubview:button];
@@ -76,16 +104,23 @@
     [button autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:20];
     [button addTarget:self action:@selector(cleanBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [button setBackgroundImage:[BundleTool getImage:@"QRCodeCleanBtn" FromBundle:LXFrameWorkBundle]forState:UIControlStateNormal];
+    
+    UIImageView *scanLineImg = [UIImageView newAutoLayoutView];
+    scanLineImg.image = [BundleTool getImage:@"QRCode_scanLine" FromBundle:LXFrameWorkBundle];
+    [self.view addSubview:scanLineImg];
+    [scanLineImg autoAlignAxis:ALAxisVertical toSameAxisOfView:scanBgImg];
+    _topCos = [scanLineImg autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:scanBgImg withOffset:20];
 }
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
     if (metadataObjects.count>0) {
         for(AVMetadataObject *current in metadataObjects) {
-            if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]
-                && [current.type isEqualToString:AVMetadataObjectTypeQRCode]) {
+            // 可以根据 current.type 判断扫描类型
+            if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]){
                 NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *) current stringValue];
                 if (_delegate && [_delegate respondsToSelector:@selector(ReaderCode:didScanResult:)]) {
                     [_capSession stopRunning];
+                    [_timer invalidate];
                     [_delegate ReaderCode:self didScanResult:scannedResult];
                 }
                 break;
@@ -100,6 +135,12 @@
         [_capSession stopRunning];
         [_delegate ReaderCoderDidCancel:self];
     }
+}
+
+- (void)setScanCaseImg:(UIImage *)scanCaseImg
+{
+    _scanCaseImg = _scanCaseImg;
+    _scanBgImg.image = scanCaseImg;
 }
 
 #pragma mark - UIAlertViewDelegate

@@ -24,6 +24,10 @@ typedef enum
  */
 @property (nonatomic,strong) UIColor *BackColor;
 /**
+ *  NavBar 背景图片
+ */
+@property (nonatomic,strong) UIImageView *backImageView;
+/**
  *  left,right,center 所在 View
  */
 @property (nonatomic,strong) UIView *btnView;
@@ -54,6 +58,10 @@ typedef enum
  *  动态设置 NavBar LineBackColor
  */
 - (void) setScrollNavigationBarLineBackColor:(UIColor *) color;
+/**
+ *  动态设置 NavBar BackImage alpha
+ */
+- (void) setScrollNavigationBarBackImageAlpha:(CGFloat) alpha;
 /**
  *  设置 NavBar clearColor 但是要显示左右两边的按钮
  */

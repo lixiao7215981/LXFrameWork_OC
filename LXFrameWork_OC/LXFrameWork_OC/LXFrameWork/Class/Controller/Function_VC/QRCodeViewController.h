@@ -18,6 +18,7 @@
 
 @optional
 
+#pragma mark - QRCodeViewControllerDelegate Method
 /**
  *  扫描到二维码调用该代理方法
  */
@@ -36,5 +37,11 @@
  *  代理
  */
 @property (nonatomic,weak) id<QRCodeViewControllerDelegate> delegate;
+
+@property (nonatomic,strong) UIImageView *scanBgImg;
+
+// 设置扫描框背景图片
+@property (nonatomic,strong) UIImage *scanCaseImg;
+
 
 @end
