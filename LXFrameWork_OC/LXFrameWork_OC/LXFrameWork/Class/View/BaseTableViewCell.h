@@ -25,7 +25,7 @@
  *  快速创建Cell
  *
  */
-+ (instancetype) createProfileBaseCellWithTableView:(UITableView *)tableView andCellStyle:(UITableViewCellStyle) cellStyle;
++ (instancetype)createProfileBaseCellWithTableView:(UITableView *)tableView CellStyle:(UITableViewCellStyle)cellStyle WithIdentifier:(NSString *)identifier;
 
 
 

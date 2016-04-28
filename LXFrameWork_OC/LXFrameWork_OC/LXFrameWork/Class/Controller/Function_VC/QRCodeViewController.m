@@ -27,7 +27,10 @@
     [self setNavTitle:@"二维码/条形码"];
     
     // 添加扫描框和关闭按钮
-    [self addQRCodeImgAndClaenBtn];
+    [self addQRCodeImgCase];
+    // 添加开关闪光灯按钮
+    [self addFlashLightBcakBtn];
+    
     //获取摄像设备
     AVCaptureDevice * device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     //创建输入流
@@ -88,7 +91,7 @@
     }];
 }
 
-- (void) addQRCodeImgAndClaenBtn
+- (void) addQRCodeImgCase
 {
     UIImageView *scanBgImg = [UIImageView newAutoLayoutView];
     _scanBgImg = scanBgImg;
@@ -97,19 +100,29 @@
     [scanBgImg autoAlignAxisToSuperviewAxis:ALAxisVertical];
     scanBgImg.image = [BundleTool getImage:@"QRcode" FromBundle:LXFrameWorkBundle];
     
-    UIButton *button = [UIButton newAutoLayoutView];
-    [self.view addSubview:button];
-    [button autoSetDimensionsToSize:CGSizeMake(50, 50)];
-    [button autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [button autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:20];
-    [button addTarget:self action:@selector(cleanBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [button setBackgroundImage:[BundleTool getImage:@"QRCodeCleanBtn" FromBundle:LXFrameWorkBundle]forState:UIControlStateNormal];
-    
     UIImageView *scanLineImg = [UIImageView newAutoLayoutView];
     scanLineImg.image = [BundleTool getImage:@"QRCode_scanLine" FromBundle:LXFrameWorkBundle];
     [self.view addSubview:scanLineImg];
     [scanLineImg autoAlignAxis:ALAxisVertical toSameAxisOfView:scanBgImg];
     _topCos = [scanLineImg autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:scanBgImg withOffset:20];
+}
+
+- (void) addFlashLightBcakBtn
+{
+    UIButton *backButton = [UIButton newAutoLayoutView];
+    [self.view addSubview:backButton];
+    [backButton autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:_scanBgImg];
+    [backButton autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:30];
+    [backButton addTarget:self action:@selector(cleanBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [backButton setBackgroundImage:[BundleTool getImage:@"QRCodeBackBtn" FromBundle:LXFrameWorkBundle]forState:UIControlStateNormal];
+    
+    UIButton *lightButton = [UIButton newAutoLayoutView];
+    [self.view addSubview:lightButton];
+    [lightButton autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:_scanBgImg];
+    [lightButton autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:30];
+    [lightButton setImage:[BundleTool getImage:@"QRCodeFlashlight" FromBundle:LXFrameWorkBundle] forState:UIControlStateNormal];
+    [lightButton setImage:[BundleTool getImage:@"QRCodeFlashlight_open" FromBundle:LXFrameWorkBundle] forState:UIControlStateSelected];
+    [lightButton addTarget:self action:@selector(lightButtonClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
@@ -119,6 +132,7 @@
             if ([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]){
                 NSString *scannedResult = [(AVMetadataMachineReadableCodeObject *) current stringValue];
                 if (_delegate && [_delegate respondsToSelector:@selector(ReaderCode:didScanResult:)]) {
+                    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
                     [_capSession stopRunning];
                     [_timer invalidate];
                     [_delegate ReaderCode:self didScanResult:scannedResult];
@@ -129,7 +143,23 @@
     }
 }
 
-- (void)cleanBtnClick
+- (void) lightButtonClick:(UIButton *) button
+{
+    button.selected = !button.selected;
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if (![device hasTorch]) return;
+    if (button.selected) {
+        [device lockForConfiguration:nil];
+        [device setTorchMode: AVCaptureTorchModeOn];
+        [device unlockForConfiguration];
+    }else{
+        [device lockForConfiguration:nil];
+        [device setTorchMode: AVCaptureTorchModeOff];
+        [device unlockForConfiguration];
+    }
+}
+
+- (void) cleanBtnClick
 {
     if (_delegate && [_delegate respondsToSelector:@selector(ReaderCoderDidCancel:)]) {
         [_capSession stopRunning];
@@ -137,9 +167,9 @@
     }
 }
 
-- (void)setScanCaseImg:(UIImage *)scanCaseImg
+- (void) setScanCaseImg:(UIImage *)scanCaseImg
 {
-    _scanCaseImg = _scanCaseImg;
+    _scanCaseImg = scanCaseImg;
     _scanBgImg.image = scanCaseImg;
 }
 

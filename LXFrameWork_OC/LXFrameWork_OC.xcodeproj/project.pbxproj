@@ -65,6 +65,8 @@
 		4EB8533E1B4A1A3A00C35F6D /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8533A1B4A1A3A00C35F6D /* BaseTableViewController.m */; };
 		4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB8533C1B4A1A3A00C35F6D /* BaseViewController.m */; };
 		4EB853481B4A3DBB00C35F6D /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB853471B4A3DBB00C35F6D /* BaseTableViewCell.m */; };
+		4EB9EE4C1CD0E24E000B84A6 /* CustomWidgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB9EE4B1CD0E24E000B84A6 /* CustomWidgetViewController.m */; };
+		4EB9EE4E1CD1B31F000B84A6 /* CustomWidgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB9EE4D1CD1B31F000B84A6 /* CustomWidgetViewController.xib */; };
 		4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */; };
 		4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */; };
 		4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4F7351B4E2A4500ACEE5F /* main.m */; };
@@ -292,6 +294,9 @@
 		4EB853461B4A3DBB00C35F6D /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		4EB853471B4A3DBB00C35F6D /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		4EB8BAAE1B2E8CB800315CEF /* LXFrameWork_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXFrameWork_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB9EE4A1CD0E24E000B84A6 /* CustomWidgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWidgetViewController.h; sourceTree = "<group>"; };
+		4EB9EE4B1CD0E24E000B84A6 /* CustomWidgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWidgetViewController.m; sourceTree = "<group>"; };
+		4EB9EE4D1CD1B31F000B84A6 /* CustomWidgetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomWidgetViewController.xib; sourceTree = "<group>"; };
 		4EC4F72F1B4E2A4500ACEE5F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EC4F7331B4E2A4500ACEE5F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC4F7341B4E2A4500ACEE5F /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -815,6 +820,9 @@
 				4EE981201C07FAC500CA44FA /* UserIconCellController.m */,
 				4EE981211C07FAC500CA44FA /* WebViewController.h */,
 				4EE981221C07FAC500CA44FA /* WebViewController.m */,
+				4EB9EE4A1CD0E24E000B84A6 /* CustomWidgetViewController.h */,
+				4EB9EE4B1CD0E24E000B84A6 /* CustomWidgetViewController.m */,
+				4EB9EE4D1CD1B31F000B84A6 /* CustomWidgetViewController.xib */,
 			);
 			path = Base_function;
 			sourceTree = "<group>";
@@ -1038,6 +1046,7 @@
 				4E63089E1C76E8B800AAF3D4 /* SystemExceptionDetailController.xib in Resources */,
 				4E6308991C76DFFA00AAF3D4 /* SystemExceptionDebugCell.xib in Resources */,
 				4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */,
+				4EB9EE4E1CD1B31F000B84A6 /* CustomWidgetViewController.xib in Resources */,
 				4E63088E1C75CF4600AAF3D4 /* SystemHttpDetailCell.xib in Resources */,
 				4EE9814B1C07FE4400CA44FA /* SystemHttpDetailController.xib in Resources */,
 				4EE981371C07FAC500CA44FA /* WriteViewController.xib in Resources */,
@@ -1153,6 +1162,7 @@
 				4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */,
 				4EE45C841B74A90C00C30B7D /* BaseCenterTitleCellItem.m in Sources */,
 				4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */,
+				4EB9EE4C1CD0E24E000B84A6 /* CustomWidgetViewController.m in Sources */,
 				4E56B7F61B54F5FF00184403 /* StepView.m in Sources */,
 				4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */,
 				4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */,

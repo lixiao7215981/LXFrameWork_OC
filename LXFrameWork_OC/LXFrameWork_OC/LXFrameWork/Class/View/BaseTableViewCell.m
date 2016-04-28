@@ -55,10 +55,9 @@
 {
     // 如果是个人信息字段直接跳过设置
     if ([_items isKindOfClass:[BaseIconItem class]] || [_items isKindOfClass:[BaseCenterTitleCellItem class]]) return;
-    self.textLabel.text = self.items.title;
-    self.detailTextLabel.text = self.items.subTitle;
-    if (!self.items.icon) return;
-    self.imageView.image = [UIImage imageNamed:self.items.icon];
+    self.textLabel.text = self.items.title.length == 0 ? @"" :self.items.title;;
+    self.detailTextLabel.text = self.items.subTitle.length == 0 ? @"" : self.items.subTitle;
+    self.imageView.image = (!self.items.icon) ? nil :[UIImage imageNamed:self.items.icon];
 }
 
 - (void) setUpAccessoryView:(BaseCellItem *)items
@@ -129,6 +128,7 @@
         [_subTitle autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_title withOffset:5];
     }else{
         [_title removeFromSuperview];
+        [_subTitle removeFromSuperview];
         _title = [UILabel newAutoLayoutView];
         [self addSubview:_title];
         _title.textColor = [UIColor blackColor];
@@ -170,19 +170,11 @@
 /**
  *  快速创建一个TableViewCell
  */
-+ (instancetype)createProfileBaseCellWithTableView:(UITableView *)tableView andCellStyle:(UITableViewCellStyle)cellStyle
++ (instancetype)createProfileBaseCellWithTableView:(UITableView *)tableView CellStyle:(UITableViewCellStyle)cellStyle WithIdentifier:(NSString *)identifier
 {
-    NSString *cellStyleStr = nil;
-    if (cellStyle == UITableViewCellStyleValue1) {
-        cellStyleStr = @"TableViewCellValue1";
-    }else if (cellStyle == UITableViewCellStyleSubtitle){
-        cellStyleStr = @"TableViewCellSubtitle";
-    }else if (cellStyle == UITableViewCellStyleDefault){
-        cellStyleStr = @"UITableViewCellStyleDefault";
-    }
-    BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellStyleStr];
+    BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
-        cell = [[BaseTableViewCell alloc]initWithStyle:cellStyle reuseIdentifier:cellStyleStr];
+        cell = [[BaseTableViewCell alloc]initWithStyle:cellStyle reuseIdentifier:identifier];
     }
     return cell;
 }

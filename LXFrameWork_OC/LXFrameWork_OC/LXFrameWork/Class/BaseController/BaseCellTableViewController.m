@@ -38,13 +38,17 @@
     
     BaseTableViewCell *cell = nil;
     if ([item isKindOfClass:[BaseArrowCellItem class]]) {
-        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView andCellStyle:UITableViewCellStyleValue1];
+        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView CellStyle:UITableViewCellStyleValue1 WithIdentifier:@"BaseArrowCellItem"];
     }else if([item isKindOfClass:[BaseSubtitleCellItem class]]){
-        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView andCellStyle:UITableViewCellStyleSubtitle];
+        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView CellStyle:UITableViewCellStyleSubtitle WithIdentifier:@"BaseSubtitleCellItem"];
     }else if ([item isKindOfClass:[BaseSwitchCellItem class]]){
-        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView andCellStyle:UITableViewCellStyleSubtitle];
+        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView CellStyle:UITableViewCellStyleSubtitle WithIdentifier:@"BaseSwitchCellItem"];
+    }else if ([item isKindOfClass:[BaseIconItem class]]){
+        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView CellStyle:UITableViewCellStyleSubtitle WithIdentifier:@"BaseIconItem"];
+    }else if([item isKindOfClass:[BaseCenterTitleCellItem class]]){
+        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView CellStyle:UITableViewCellStyleDefault WithIdentifier:@"BaseCenterTitleCellItem"];
     }else{
-        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView andCellStyle:UITableViewCellStyleDefault];
+        cell = [BaseTableViewCell createProfileBaseCellWithTableView:tableView CellStyle:UITableViewCellStyleDefault WithIdentifier:@"BaseCellItem"];
     }
     cell.items = item;
     return cell;

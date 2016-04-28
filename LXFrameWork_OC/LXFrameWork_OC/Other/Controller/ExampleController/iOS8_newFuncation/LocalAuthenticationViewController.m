@@ -52,8 +52,8 @@
     titleView.layer.cornerRadius = 5;
     titleView.layer.masksToBounds = YES;
     [titleView autoSetDimensionsToSize:CGSizeMake(300, 150)];
-    [titleView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [titleView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [titleView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view withOffset:-100];
     
     UILabel *label = [UILabel newAutoLayoutView];
     label.font = [UIFont systemFontOfSize:25];

@@ -11,6 +11,7 @@
 #import "UIWindow+Extension.h"
 #import "PureLayout.h"
 
+#define kRowHeight 35
 #define kLINE_1_PX (1.0f / [UIScreen mainScreen].scale)
 #define kRGBColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 
@@ -85,7 +86,7 @@ static NSString * const DownTableViewID = @"DownMenuTableViewID";
     UITableView *tableView = [[UITableView alloc] init];
     tableView.delegate = self;
     tableView.dataSource = self;
-    tableView.rowHeight = 35;
+    tableView.rowHeight = kRowHeight;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.backgroundColor = kRGBColor(241, 241, 241, 1);
     [self addSubview:tableView];
@@ -95,23 +96,18 @@ static NSString * const DownTableViewID = @"DownMenuTableViewID";
 - (void) showPullDownTableView
 {
     UIWindow *window = [UIWindow getCurrentWindow];
-    
     if (_isShowMenu && self.referenceView.tag == _tag) {
         [self dismissPullDownTableView];
     }else{
-        CGRect rect = [self.referenceView convertRect:self.referenceView.bounds toView:window];
-        CGFloat y = rect.origin.y + rect.size.height;
-        self.frame = CGRectMake(0, y , window.width, window.height - y);
         self.coverBtn.frame = self.bounds;
         [self bringSubviewToFront:_downTableView];
         [window addSubview:self];
         _downTableView.x = self.referenceView.x;
         _downTableView.size = CGSizeMake(self.referenceView.width, 0);
-        _tag = self.referenceView.tag;
-        
+        self.tag =  _tag = self.referenceView.tag;
         [UIView animateWithDuration:0.2 animations:^{
             _coverBtn.alpha = 0.2;
-            _downTableView.height = (!self.downMenuHeight) ? window.height * 0.5 : self.downMenuHeight;
+            _downTableView.height = self.downMenuHeight;
         }completion:^(BOOL finished) {
             _isShowMenu = YES;
         }];
@@ -129,10 +125,35 @@ static NSString * const DownTableViewID = @"DownMenuTableViewID";
     }];
 }
 
+- (void)setReferenceView:(UIView *)referenceView
+{
+    _referenceView = referenceView;
+    UIWindow *window = [UIWindow getCurrentWindow];
+    CGRect rect = [_referenceView convertRect:_referenceView.bounds toView:window];
+    CGFloat y = rect.origin.y + rect.size.height;
+    self.frame = CGRectMake(0, y , window.width, window.height - y);
+    [self countDownMenuHeight];
+}
+
 - (void)setDataList:(NSArray *)dataList
 {
     _dataList = dataList;
+    [self countDownMenuHeight];
     [_downTableView reloadData];
+}
+
+- (void) countDownMenuHeight
+{
+    if(!self.height) return;
+    if(!self.dataList.count) return;
+    if (!self.downMenuHeight) {
+        CGFloat h = kRowHeight * self.dataList.count;
+        if (h > self.height * 0.5) {
+            self.downMenuHeight = self.height * 0.5;
+        }else{
+            self.downMenuHeight = h;
+        }
+    }
 }
 
 #pragma mark - 懒加载

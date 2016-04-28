@@ -21,6 +21,7 @@
 #import "WriteViewController.h"
 #import "SelectCityViewController.h"
 #import "SessionMessageController.h"
+#import "CustomWidgetViewController.h"
 #import "LocalAuthenticationViewController.h"
 
 #define SYSTEM_VERSION_LESS_THAN(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
@@ -96,12 +97,17 @@
         [self.navigationController pushViewController:webView animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *Group1_item8 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"向上拖动NavigationBar显示" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *Group1_item8 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"自定义小控件展示" SubTitle:nil ClickOption:^{
+        CustomWidgetViewController *widget = [[CustomWidgetViewController alloc] initWithNibName:@"CustomWidgetViewController" bundle:nil];
+        [self.navigationController pushViewController:widget animated:YES];
+    } AndDetailClass:nil];
+    
+    BaseArrowCellItem *Group1_item9 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"向上拖动NavigationBar显示" SubTitle:nil ClickOption:^{
         NavBarScrollController *navBarScroll = [[NavBarScrollController alloc] init];
         [self.navigationController pushViewController:navBarScroll animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *Group1_item9 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置NavBar的左中右按钮或标题" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *Group1_item10 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置NavBar的左中右按钮或标题" SubTitle:nil ClickOption:^{
         SetNavBarLeftRightViewController  *navVar = [[SetNavBarLeftRightViewController alloc] init];
         [self.navigationController pushViewController:navVar animated:YES];
     } AndDetailClass:nil];
@@ -144,7 +150,7 @@
         [self.navigationController pushViewController:local animated:YES];
     } AndDetailClass:nil];
     
-    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadTitle:@"基础功能介绍" AndFooterTitle:nil OrItem:@[Group1_item1,Group1_item2,Group1_item3,Group1_item4,Group1_item5,Group1_item6,Group1_item7,Group1_item8,Group1_item9]];
+    BaseCellItemGroup *group1 = [BaseCellItemGroup createGroupWithHeadTitle:@"基础功能介绍" AndFooterTitle:nil OrItem:@[Group1_item1,Group1_item2,Group1_item3,Group1_item4,Group1_item5,Group1_item6,Group1_item7,Group1_item8,Group1_item9,Group1_item10]];
     BaseCellItemGroup *group2 = [BaseCellItemGroup createGroupWithHeadTitle:@"系统工具" AndFooterTitle:nil OrItem:@[Group2_item2]];
     BaseCellItemGroup *group5 = [BaseCellItemGroup createGroupWithHeadTitle:@"iOS 8 新功能" AndFooterTitle:nil OrItem:@[group5_item1]];
     BaseCellItemGroup *group3 = [BaseCellItemGroup createGroupWithHeadTitle:@"iOS 9 新功能" AndFooterTitle:nil OrItem:@[group3_item1,group3_item2]];
@@ -175,11 +181,11 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSRange range = [alertView.message rangeOfString:@":"];
-    NSString *http = [alertView.message substringFromIndex:range.location + 1];
     if (buttonIndex == 0) {
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     }else if (buttonIndex == 1){
+        NSRange range = [alertView.message rangeOfString:@":"];
+        NSString *http = [alertView.message substringFromIndex:range.location + 1];
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:http]];
     }

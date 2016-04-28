@@ -18,27 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavTitle:@"设置NavBar"];
-    // 添加掩饰按钮
-    [self addDemonstrateBtn];
+    [self addDataList];
 }
 
-- (void) addDemonstrateBtn
+- (void) addDataList
 {
-    /**
-     *  设置 NavBar 左右两边图片按钮（最好不要一块设置图片和文字）
-     */
-    BlockButton *setImage = [BlockButton newAutoLayoutView];
-    setImage.layer.cornerRadius = 5;
-    setImage.clipsToBounds = YES;
-    setImage.backgroundColor = [UIColor lightGrayColor];
-    [setImage setTitle:@"设置为图片" forState:UIControlStateNormal];
-    [setImage setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    setImage.titleLabel.font = [UIFont systemFontOfSize:15];
-    [self.view addSubview:setImage];
-    [setImage autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [setImage autoSetDimensionsToSize:CGSizeMake(100, 30)];
-    [setImage autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:90];
-    setImage.ClickOption = ^{
+    BaseArrowCellItem *item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置为图片" SubTitle:nil ClickOption:^{
         [self setNavTitle:@"设置为图片"];
         [self setLeftBtnWithImage:[UIImage imageNamed:@"left_sarch"] orTitle:nil Font:[UIFont systemFontOfSize:15] ClickOption:^{
             NSLog(@"点击了左边按钮");
@@ -47,23 +32,9 @@
         [self setRightBtnWithImage:[UIImage imageNamed:@"right_clean"] orTitle:nil Font:[UIFont systemFontOfSize:15] ClickOption:^{
             NSLog(@"点击了右边按钮");
         }];
-    };
+    } AndDetailClass:nil];
     
-    /**
-     *  设置 NavBar 左右两边的文字按钮
-     */
-    BlockButton *setTitle = [BlockButton newAutoLayoutView];
-    setTitle.layer.cornerRadius = 5;
-    setTitle.clipsToBounds = YES;
-    setTitle.backgroundColor = [UIColor lightGrayColor];
-    [setTitle setTitle:@"设置为文字" forState:UIControlStateNormal];
-    [setTitle setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    setTitle.titleLabel.font = [UIFont systemFontOfSize:15];
-    [self.view addSubview:setTitle];
-    [setTitle autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [setTitle autoSetDimensionsToSize:CGSizeMake(100, 30)];
-    [setTitle autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:setImage withOffset:25];
-    setTitle.ClickOption = ^{
+    BaseArrowCellItem *item2 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置为文字" SubTitle:nil ClickOption:^{
         [self setNavTitle:@"设置为文字"];
         [self setLeftBtnWithImage:nil orTitle:@"搜索" Font:[UIFont systemFontOfSize:15] ClickOption:^{
             NSLog(@"点击了左边按钮");
@@ -72,68 +43,26 @@
         [self setRightBtnWithImage:nil orTitle:@"关闭" Font:[UIFont systemFontOfSize:15] ClickOption:^{
             NSLog(@"点击了右边按钮");
         }];
-    };
+    } AndDetailClass:nil];
     
-    /**
-     *  直接设置 NavBar 左右两边的View
-     */
-    BlockButton *setView = [BlockButton newAutoLayoutView];
-    setView.layer.cornerRadius = 5;
-    setView.clipsToBounds = YES;
-    setView.backgroundColor = [UIColor lightGrayColor];
-    [setView setTitle:@"设置自定义View" forState:UIControlStateNormal];
-    [setView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    setView.titleLabel.font = [UIFont systemFontOfSize:15];
-    [self.view addSubview:setView];
-    [setView autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [setView autoSetDimensionsToSize:CGSizeMake(120, 30)];
-    [setView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:setTitle withOffset:25];
-    setView.ClickOption = ^{
+    BaseArrowCellItem *item3 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置自定义View" SubTitle:nil ClickOption:^{
         [self setNavTitle:@"设置自定义View"];
         UIImageView *leftImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"xiao"]];
         [self setLeftView:leftImg];
         
         UIImageView *rightImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"touxiao"]];
         [self setRightView:rightImg];
-    };
+    } AndDetailClass:nil];
     
-    /**
-     *  直接设置 NavBar 中间View
-     */
-    BlockButton *setCenterView = [BlockButton newAutoLayoutView];
-    setCenterView.layer.cornerRadius = 5;
-    setCenterView.clipsToBounds = YES;
-    setCenterView.backgroundColor = [UIColor lightGrayColor];
-    [setCenterView setTitle:@"设置CenterView" forState:UIControlStateNormal];
-    [setCenterView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    setCenterView.titleLabel.font = [UIFont systemFontOfSize:15];
-    [self.view addSubview:setCenterView];
-    [setCenterView autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [setCenterView autoSetDimensionsToSize:CGSizeMake(120, 30)];
-    [setCenterView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:setView withOffset:25];
-    setCenterView.ClickOption = ^{
+    BaseArrowCellItem *item4 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置CenterView" SubTitle:nil ClickOption:^{
         // 设置返回按钮
         [self setNavBackBtn];
         UIImageView *imageView = [UIImageView newAutoLayoutView];
         imageView.image = [UIImage imageNamed:@"meishi"];
         [self setCenterView:imageView];
-    };
+    } AndDetailClass:nil];
     
-    /**
-     *  设置左右两边多按钮 Array
-     */
-    BlockButton *setBtnArrayView = [BlockButton newAutoLayoutView];
-    setBtnArrayView.layer.cornerRadius = 5;
-    setBtnArrayView.clipsToBounds = YES;
-    setBtnArrayView.backgroundColor = [UIColor lightGrayColor];
-    [setBtnArrayView setTitle:@"设置左右两边多按钮 Array" forState:UIControlStateNormal];
-    [setBtnArrayView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    setBtnArrayView.titleLabel.font = [UIFont systemFontOfSize:15];
-    [self.view addSubview:setBtnArrayView];
-    [setBtnArrayView autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [setBtnArrayView autoSetDimensionsToSize:CGSizeMake(200, 30)];
-    [setBtnArrayView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:setCenterView withOffset:25];
-    setBtnArrayView.ClickOption = ^{
+    BaseArrowCellItem *item5 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"设置多按钮" SubTitle:nil ClickOption:^{
         [self setNavTitle:@"设置多按钮"];
         
         UIImage *search = [UIImage imageNamed:@"left_sarch"];
@@ -163,8 +92,17 @@
         [btn4 setImage:[UIImage imageNamed:@"touxiao"] forState:UIControlStateNormal];
         
         [self setRightBtnArray:@[cleanBtn2,searchBtn2,btn3,btn4]];
-    };
+    } AndDetailClass:nil];
     
+    BaseCenterTitleCellItem *item6 = [BaseCenterTitleCellItem createBaseCellItemWithCenterTitle:@"复原" ClickOption:^{
+        // 设置返回按钮
+        [self setNavBackBtn];
+        [self setNavTitle:@"设置NavBar"];
+        [self setRightView:nil];
+    } WithColor:kRGBColor(113, 223, 91, 1)];
+    
+    BaseCellItemGroup *group = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3,item4,item5,item6]];
+    [self.dataList addObject:group];
 }
 
 @end
