@@ -21,7 +21,7 @@
  *
  *  @return 包装好的NavigationController
  */
-+ (UINavigationController *) addChildViewWithStoryBoardName:(NSString *) storyBoardName tabBarTitle: (NSString *) title NormalImage:(NSString *)noramlImage SelectedImage:(NSString *) selectedImage;
++ (UINavigationController *) addChildViewWithStoryBoardName:(NSString *) storyBoardName tabBarTitle: (NSString *) title NormalFont:(UIFont *) normalFont NoramlColor:(UIColor*) normalColor NormalImage:(NSString *)noramlImage SelectedFont:(UIFont *) selectedFont SelectColor:(UIColor *) selectColor SelectedImage:(NSString *) selectedImage;
 
 /**
  *  Xib --往TabBarController 中添加子控制器，并设置对应的TabbarItem 图片和文字
@@ -34,6 +34,6 @@
  *
  *  @return 包装好的NavigationController
  */
-+ (UINavigationController *) addChildViewWithXibName:(NSString *) xibName ControllerName:(NSString *)controllerName tabBarTitle: (NSString *) title NormalImage:(NSString *)noramlImage SelectedImage:(NSString *) selectedImage;
++ (UINavigationController *) addChildViewWithXibName:(NSString *) xibName ControllerName:(NSString *)controllerName tabBarTitle: (NSString *) title NormalFont:(UIFont *) normalFont NoramlColor:(UIColor*) normalColor NormalImage:(NSString *)noramlImage SelectedFont:(UIFont *) selectedFont SelectColor:(UIColor *) selectColor SelectedImage:(NSString *) selectedImage;
 
 @end

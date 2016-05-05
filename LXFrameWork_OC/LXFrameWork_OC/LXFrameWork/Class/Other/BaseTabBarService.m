@@ -11,7 +11,7 @@
 
 @implementation BaseTabBarService
 
-+ (UINavigationController *) addChildViewWithStoryBoardName:(NSString *) storyBoardName tabBarTitle: (NSString *) title NormalImage:(NSString *)noramlImage SelectedImage:(NSString *) selectedImage;
++ (UINavigationController *)addChildViewWithStoryBoardName:(NSString *)storyBoardName tabBarTitle:(NSString *)title NormalFont:(UIFont *)normalFont NoramlColor:(UIColor *)normalColor NormalImage:(NSString *)noramlImage SelectedFont:(UIFont *)selectedFont SelectColor:(UIColor *)selectColor SelectedImage:(NSString *)selectedImage
 {
     UIViewController *controller = [[UIStoryboard storyboardWithName:storyBoardName bundle:nil] instantiateInitialViewController];
     controller.title = title;
@@ -23,12 +23,29 @@
     
     //设置字体普通和选中模式下的颜色
     NSMutableDictionary *normalDict =  [NSMutableDictionary dictionary];
-    normalDict[NSForegroundColorAttributeName] = [UIColor grayColor];
-    normalDict[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    if (normalFont == nil) {
+        normalDict[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    }else{
+        normalDict[NSFontAttributeName] = normalFont;
+    }
+    if (normalColor == nil) {
+        normalDict[NSForegroundColorAttributeName] = [UIColor grayColor];
+    }else{
+        normalDict[NSForegroundColorAttributeName] = normalColor;
+    }
     [controller.tabBarItem setTitleTextAttributes:normalDict forState:UIControlStateNormal];
     
     NSMutableDictionary *selectedDict =  [NSMutableDictionary dictionary];
-    selectedDict[NSForegroundColorAttributeName] = [UIColor redColor];
+    if (selectedFont == nil) {
+        selectedDict[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    }else{
+        selectedDict[NSFontAttributeName] = selectedFont;
+    }
+    if (selectColor == nil) {
+        selectedDict[NSForegroundColorAttributeName] = [UIColor redColor];
+    }else{
+        selectedDict[NSForegroundColorAttributeName] = selectColor;
+    }
     [controller.tabBarItem setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
     
     if (![controller isKindOfClass:[UINavigationController class]]) {
@@ -39,7 +56,7 @@
     return controller;
 }
 
-+ (UINavigationController *) addChildViewWithXibName:(NSString *) xibName ControllerName:(NSString *)controllerName tabBarTitle: (NSString *) title NormalImage:(NSString *)noramlImage SelectedImage:(NSString *) selectedImage;
++ (UINavigationController *) addChildViewWithXibName:(NSString *) xibName ControllerName:(NSString *)controllerName tabBarTitle: (NSString *) title NormalFont:(UIFont *) normalFont NoramlColor:(UIColor*) normalColor NormalImage:(NSString *)noramlImage SelectedFont:(UIFont *) selectedFont SelectColor:(UIColor *) selectColor SelectedImage:(NSString *) selectedImage
 {
     UIViewController *controller = nil;
     if (xibName.length) {
@@ -56,12 +73,29 @@
     
     //设置字体普通和选中模式下的颜色
     NSMutableDictionary *normalDict =  [NSMutableDictionary dictionary];
-    normalDict[NSForegroundColorAttributeName] = [UIColor grayColor];
-    normalDict[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    if (normalFont == nil) {
+        normalDict[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    }else{
+        normalDict[NSFontAttributeName] = normalFont;
+    }
+    if (normalColor == nil) {
+        normalDict[NSForegroundColorAttributeName] = [UIColor grayColor];
+    }else{
+        normalDict[NSForegroundColorAttributeName] = normalColor;
+    }
     [controller.tabBarItem setTitleTextAttributes:normalDict forState:UIControlStateNormal];
     
     NSMutableDictionary *selectedDict =  [NSMutableDictionary dictionary];
-    selectedDict[NSForegroundColorAttributeName] = [UIColor redColor];
+    if (selectedFont == nil) {
+        selectedDict[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    }else{
+        selectedDict[NSFontAttributeName] = selectedFont;
+    }
+    if (selectColor == nil) {
+        selectedDict[NSForegroundColorAttributeName] = [UIColor redColor];
+    }else{
+        selectedDict[NSForegroundColorAttributeName] = selectColor;
+    }
     [controller.tabBarItem setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
     
     if (![controller isKindOfClass:[UINavigationController class]]) {
