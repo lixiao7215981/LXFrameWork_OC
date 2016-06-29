@@ -111,5 +111,11 @@
  *  @return 十六进制字符串
  */
 - (NSString *) toHexStringFromData:(NSData *) data;
+/**
+ *  转换成金额string
+ *
+ *  @return ￥ 字体小于后台金额
+ */
+- (NSAttributedString *) toMoneyString;
 
 @end

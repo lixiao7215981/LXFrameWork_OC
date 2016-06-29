@@ -152,4 +152,11 @@
     return hexStr;
 }
 
+- (NSAttributedString *)toMoneyString
+{
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:self];
+    [attrStr insertAttributedString:[[NSAttributedString alloc] initWithString:@"￥" attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:11]}] atIndex:0];
+    return attrStr;
+}
+
 @end

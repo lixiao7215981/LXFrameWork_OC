@@ -16,6 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self settingTableViewPull];
+}
+
+- (void)setTableViewStyle:(UITableViewStyle)tableViewStyle
+{
+    [super setTableViewStyle:tableViewStyle];
+    [self settingTableViewPull];
+}
+
+- (void) settingTableViewPull
+{
     MJRefreshNormalHeader *headRefresh =  [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     MJRefreshAutoNormalFooter *footerRefresh = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     self.tableView.mj_header = headRefresh;
@@ -24,7 +35,7 @@
 
 - (void) loadNewData
 {
-  
+    
 }
 
 - (void)loadMoreData

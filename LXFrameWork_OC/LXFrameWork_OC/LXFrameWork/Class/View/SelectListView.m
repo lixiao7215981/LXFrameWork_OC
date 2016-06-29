@@ -26,7 +26,8 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
 
 @property (nonatomic,strong) UIImageView *arrowImg;
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) UITextField *textField;
+//@property (nonatomic,strong) UITextField *textField;
+@property (nonatomic,strong) UIButton *selectBtn;
 @property (nonatomic,strong) UIButton *cover;
 
 @end
@@ -37,7 +38,8 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
 {
     if (self) {
         self = [super initWithFrame:frame];
-        [self addSubview:self.textField];
+        self.backgroundColor = [UIColor clearColor];
+        [self addSubview:self.selectBtn];
         [self addSubview:self.arrowImg];
     }
     return self;
@@ -46,11 +48,11 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    [self addSubview:self.textField];
+    [self addSubview:self.selectBtn];
     [self addSubview:self.arrowImg];
 }
 
-- (void)textFieldDropDown
+- (void)DropDownList
 {
     if (!self.dataList.count) return;
     if (_isShowSelectList) return;
@@ -58,7 +60,7 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
     [self rotateArrowImg:YES];
     
     UIWindow *window = [UIWindow getCurrentWindow];
-    CGRect rect = [self.textField convertRect:self.textField.bounds toView:window];
+    CGRect rect = [self.selectBtn convertRect:self.selectBtn.bounds toView:window];
     self.tableView.frame = CGRectMake(rect.origin.x, CGRectGetMaxY(rect), rect.size.width, 0);
     [window addSubview:self.cover];
     [window addSubview:self.tableView];
@@ -100,13 +102,13 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
 - (void)setPlaceholder:(NSString *)placeholder
 {
     _placeholder = placeholder;
-    self.textField.placeholder = placeholder;
+    [self.selectBtn setTitle:placeholder forState:UIControlStateNormal];
 }
 
 - (void)setFont:(UIFont *)font
 {
     _font = font;
-    self.textField.font = font;
+    self.selectBtn.titleLabel.font = font;
 }
 
 - (void)setDataList:(NSArray *)dataList
@@ -115,13 +117,7 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
     [self.tableView reloadData];
 }
 
-#pragma mark - UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
-    [self textFieldDropDown];
-    return NO;
-}
+#pragma mark - UITableViewDataSource,UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -146,7 +142,7 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *title = [self.dataList objectAtIndex:indexPath.row];
-    self.textField.text = title;
+    [self.selectBtn setTitle:title forState:UIControlStateNormal];
     
     if ([self.delegate respondsToSelector:@selector(selectListView:didSelectRowAtIndexPath:)]) {
         [self.delegate selectListView:self didSelectRowAtIndexPath:indexPath];
@@ -156,15 +152,19 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
 
 #pragma mark - 懒加载控件
 
-- (UITextField *)textField
+- (UIButton *)selectBtn
 {
-    if (!_textField) {
-        _textField = [[UITextField alloc]initWithFrame:self.bounds];
-        _textField.borderStyle = UITextBorderStyleRoundedRect;
-        _textField.font = [UIFont systemFontOfSize:textFont];
-        _textField.delegate = self;
+    if (!_selectBtn) {
+        _selectBtn.backgroundColor = [UIColor clearColor];
+        _selectBtn = [[UIButton alloc] initWithFrame:self.bounds];
+        _selectBtn.titleLabel.font = [UIFont systemFontOfSize:textFont];
+        _selectBtn.adjustsImageWhenHighlighted = NO;
+        _selectBtn.titleEdgeInsets = UIEdgeInsetsMake(0, - _selectBtn.width * 0.4 , 0, 0);
+        [_selectBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_selectBtn setBackgroundImage:[[BundleTool getImage:@"selectListView_input_back" FromBundle:LXFrameWorkBundle]resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4) resizingMode:UIImageResizingModeStretch] forState:UIControlStateNormal];
+        [_selectBtn addTarget:self action:@selector(DropDownList) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _textField;
+    return _selectBtn;
 }
 
 - (UIButton *)cover
@@ -195,7 +195,7 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
 {
     if (!_arrowImg) {
         UIImage *image = [BundleTool getImage:@"messagescenter_arrow_up" FromBundle:LXFrameWorkBundle];
-        _arrowImg = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.bounds) - 15, 13 * 0.5, 13, 13)];
+        _arrowImg = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(self.bounds) - 15, self.bounds.size.height * 0.5 -  13 * 0.5, 13, 13)];
         _arrowImg.image = image;
     }
     return _arrowImg;

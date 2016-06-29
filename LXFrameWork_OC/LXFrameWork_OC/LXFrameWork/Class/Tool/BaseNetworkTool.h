@@ -20,9 +20,9 @@
 /**
  *  是否连接上互联网
  *
- *  @return YES：连接上  NO：未连接
+ *  @return YES：未连接  NO：连接上
  */
-+ (BOOL)isConnectNetWork;
++ (BOOL)isNotConnectNetWork;
 
 /**
  *  是否WIFI

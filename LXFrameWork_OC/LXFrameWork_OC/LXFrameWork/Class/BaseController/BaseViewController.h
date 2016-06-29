@@ -34,6 +34,7 @@
 #import <IQKeyboardReturnKeyHandler.h>
 #import <SVProgressHUD.h>
 #import "NavigationBar.h"
+#import "NSString+Extension.h"
 #import "UIView+Extension.h"
 #import "BlockButton.h"
 #import "BundleTool.h"

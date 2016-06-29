@@ -18,7 +18,6 @@
     [super viewDidLoad];
     [self setNavTitle:@"Cell样式展示"];
     self.tableViewStyle = UITableViewStyleGrouped;
-    self.tableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
     [self addDataList];
 }
 

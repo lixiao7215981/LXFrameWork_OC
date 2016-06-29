@@ -25,14 +25,19 @@
 /**
  *  是否 QQ 格式
  */
-- (BOOL)isQQ;
+- (BOOL) isQQ;
 /**
  *  是否为手机号格式
  */
-- (BOOL)isPhoneNumber;
+- (BOOL) isPhoneNumber;
 /**
  *  是否 IP 地址格式
  */
-- (BOOL)isIPAddress;
+- (BOOL) isIPAddress;
+
+/**
+ *  是否含有 Emoji 表情
+ */
+- (BOOL) containsHaveEmoji;
 
 @end

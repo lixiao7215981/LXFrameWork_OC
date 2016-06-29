@@ -50,7 +50,12 @@
                 [self setTitle: @"重新获取"forState:UIControlStateNormal];
             });
         }else{
-            NSInteger seconds = timeout % 60;
+            NSInteger seconds ;
+            if (timeout == 60) {
+                seconds = timeout;
+            }else{
+                seconds = timeout % 60;
+            }
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self setTitle: [NSString stringWithFormat:@"%ld秒后重试",seconds] forState:UIControlStateNormal];
             });

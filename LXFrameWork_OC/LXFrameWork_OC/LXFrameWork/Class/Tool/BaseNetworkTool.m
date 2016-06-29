@@ -43,15 +43,18 @@
     }
 }
 
-+ (BOOL)isConnectNetWork{
-    return (![[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] == NotReachable);
++ (BOOL)isNotConnectNetWork
+{
+    return ([[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] == NotReachable);
 }
 
-+ (BOOL)isConnectWIFI {
++ (BOOL)isConnectWIFI
+{
     return ([[Reachability reachabilityForLocalWiFi] currentReachabilityStatus] == ReachableViaWiFi);
 }
 
-+ (BOOL)isConnect3G4G {
++ (BOOL)isConnect3G4G
+{
     return ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == ReachableViaWWAN);
 }
 

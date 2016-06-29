@@ -67,7 +67,11 @@ static NSString * const DownTableViewID = @"DownMenuTableViewID";
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.textColor = [UIColor blackColor];
-    cell.textLabel.text = [self.dataList objectAtIndex : indexPath.row];
+    if ([[self.dataList objectAtIndex:indexPath.row] isKindOfClass:[NSDictionary class]]) {
+        cell.textLabel.text = [[[self.dataList objectAtIndex:indexPath.row]allKeys]firstObject];
+    }else{
+        cell.textLabel.text = [self.dataList objectAtIndex:indexPath.row];
+    }
     return cell;
 }
 

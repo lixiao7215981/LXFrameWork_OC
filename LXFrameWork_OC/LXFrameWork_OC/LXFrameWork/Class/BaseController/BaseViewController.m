@@ -186,6 +186,7 @@
     }
     if (title.length) {
         [button setTitle:title forState:UIControlStateNormal];
+        button.width = [title sizeWithFont:font].width;
         [button setTitleColor:manager.navigationBar_textColor forState:UIControlStateNormal];
     }
     button.titleLabel.font = font;

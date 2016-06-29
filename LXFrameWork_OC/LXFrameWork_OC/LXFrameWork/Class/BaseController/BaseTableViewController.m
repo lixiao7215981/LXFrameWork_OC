@@ -54,6 +54,7 @@ static NSString *LX_BaseTableViewControllerCellID = @"BaseTableViewControllerCel
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view bringSubviewToFront:self.navView];
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableView.width, 0.01f)];
 }
 
 - (void)setTableViewStyle:(UITableViewStyle)tableViewStyle
@@ -101,7 +102,7 @@ static NSString *LX_BaseTableViewControllerCellID = @"BaseTableViewControllerCel
     if (self.scaleImage) {
         CGFloat down = -(_scaleHeight) - scrollView.contentOffset.y;
         if (down > 0){
-            _scrollHeight.constant = _scaleHeight + down * 5;
+            _scrollHeight.constant = _scaleHeight + down * 3.5;
         }
     }
     

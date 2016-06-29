@@ -27,4 +27,11 @@
  */
 + (id) getUserDefaultsForKey:(NSString *) key;
 
+/**
+ *  删除偏好设置
+ *
+ *  @param key 所使用的Key
+ */
++ (void) removeUserDefaultsForKey:(NSString *) key;
+
 @end

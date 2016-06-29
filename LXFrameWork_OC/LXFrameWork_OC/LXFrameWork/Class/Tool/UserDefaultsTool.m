@@ -10,17 +10,27 @@
 
 @implementation UserDefaultsTool
 
+static NSUserDefaults *_Udefaults;
+
++ (void)initialize
+{
+    _Udefaults = [NSUserDefaults standardUserDefaults];
+}
+
 + (void) setUserDefaultsWith:(id) obj forKey:(NSString *) key
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:obj forKey:key];
-    [defaults synchronize];
+    [_Udefaults setObject:obj forKey:key];
+    [_Udefaults synchronize];
 }
 
 + (id) getUserDefaultsForKey:(NSString *) key
 {
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    return [userDefaults objectForKey:key];
+    return [_Udefaults objectForKey:key];
+}
+
++ (void)removeUserDefaultsForKey:(NSString *)key
+{
+    [_Udefaults removeObjectForKey:key];
 }
 
 @end
