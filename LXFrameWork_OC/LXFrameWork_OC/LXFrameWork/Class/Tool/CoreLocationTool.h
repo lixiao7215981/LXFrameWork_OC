@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-#import <MJExtension.h>
 #import "UserAddressModel.h"
 
 /**

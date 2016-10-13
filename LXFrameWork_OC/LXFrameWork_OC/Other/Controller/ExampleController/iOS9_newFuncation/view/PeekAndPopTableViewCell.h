@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseLineTableViewCell.h"
 
-@interface PeekAndPopTableViewCell : UITableViewCell
+@interface PeekAndPopTableViewCell : BaseLineTableViewCell
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "QRCodeViewController.h"
+#import "BundleTool.h"
 
 @interface QRCodeViewController() <AVCaptureMetadataOutputObjectsDelegate>
 {
@@ -78,9 +79,14 @@
     }
 }
 
+- (void)startCaptureSession
+{
+    [_capSession startRunning];
+}
+
 - (void) updateTimer
 {
-    _topCos.constant = _scanBgImg.height - 20;
+    _topCos.constant = _scanBgImg.frame.size.height - 20;
     [UIView animateWithDuration:1.5f animations:^{
         [self.view layoutIfNeeded];
     }completion:^(BOOL finished) {

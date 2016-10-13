@@ -9,9 +9,10 @@
 #import "PeekAndPopViewController.h"
 #import "CustomQRCodeViewController.h"
 #import "UIWindow+Extension.h"
-#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#import "PeekAndPopTableViewCell.h"
+#import <SVProgressHUD.h>
 
-@interface PeekAndPopViewController ()<UIViewControllerPreviewingDelegate>
+@interface PeekAndPopViewController ()<UIViewControllerPreviewingDelegate,UITableViewDelegate>
 {
     CGRect _highilghtRowFrame;
 }
@@ -21,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavTitle:@"iOS9 新功能 peek and pop"];
+    [self setNavTitle:@"peek and pop"];
+    self.tableView.separatorStyle = UITableViewScrollPositionNone;
     
     // 添加数据
     [self addDataList];
@@ -50,6 +52,10 @@
 
 - (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location
 {
+    
+    NSLog(@"Touch-Point = %@",NSStringFromCGPoint(location));
+    
+    
     CustomQRCodeViewController *childVC = [[CustomQRCodeViewController alloc] init];
     //        childVC.preferredContentSize = CGSizeMake(320.0f,300.0f);  // 设置弹出窗口的大小
     
@@ -67,6 +73,19 @@
 
 #pragma mark - UITableViewDelegate
 
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PeekAndPopTableViewCell *cell = [PeekAndPopTableViewCell createCellWithXibName:@"PeekAndPopTableViewCell" TableView:tableView Identifier:@"PeekAndPopTableViewCellIdentifier"];
+    [cell cellAsLastTableCell];
+    [cell cellAsArrowImgCell:NO];
+    return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 180;
+}
+
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -78,7 +97,6 @@
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
     return @"删除";
 }
-
 
 - (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {

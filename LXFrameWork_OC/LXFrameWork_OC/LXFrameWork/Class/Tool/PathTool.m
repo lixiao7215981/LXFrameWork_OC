@@ -7,6 +7,7 @@
 //
 
 #import "PathTool.h"
+#import "NSString+Extension.h"
 
 @implementation PathTool
 
@@ -14,7 +15,6 @@
 {
     return [[NSString getApplicationDocumentsDirectory] stringByAppendingPathComponent:@"User.data"];
 }
-
 
 + (BOOL)haveFolderPath:(NSString *)path Create:(BOOL)isCreate
 {
@@ -32,7 +32,6 @@
     }
     return YES;
 }
-
 
 + (BOOL)haveFilePath:(NSString *)path Create:(BOOL)isCreate
 {

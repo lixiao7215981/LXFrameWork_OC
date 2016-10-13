@@ -41,7 +41,6 @@
         return NO;
     }
     return [self match:@"[1][0123456789]\\d{9}"];
-    
 }
 
 - (BOOL)isIPAddress
@@ -49,12 +48,35 @@
     return [self match:@"^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"];
 }
 
-- (BOOL)isNULL
+- (BOOL)isNullString
 {
-    if (!self.length || [self isEqualToString:@""]) {
+    if (self == nil || self == NULL) {
+        return YES;
+    }
+    if ([self isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    if ([self isEqualToString:@""]) {
+        return YES;
+    }
+    if ([[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
         return YES;
     }
     return NO;
+}
+
+- (BOOL)canParseDouble
+{
+    NSScanner* scan = [NSScanner scannerWithString:self];
+    double val;
+    return[scan scanFloat:&val] && [scan isAtEnd];
+}
+
+- (BOOL)canParseInteger
+{
+    NSScanner* scan = [NSScanner scannerWithString:self];
+    NSInteger val;
+    return[scan scanInt:&val] && [scan isAtEnd];
 }
 
 - (BOOL)containsHaveEmoji

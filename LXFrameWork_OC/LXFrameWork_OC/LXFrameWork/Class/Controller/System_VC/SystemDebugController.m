@@ -12,6 +12,7 @@
 #import "SysetmHttpDebugController.h"
 #import "SystemExceptionDebugController.h"
 #import "SystemSelectServiceViewController.h"
+#import <SVProgressHUD.h>
 @interface SystemDebugController ()
 
 @end

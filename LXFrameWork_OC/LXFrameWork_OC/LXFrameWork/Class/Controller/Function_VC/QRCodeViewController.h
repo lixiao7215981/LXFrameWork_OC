@@ -44,4 +44,7 @@
 @property (nonatomic,strong) UIImage *scanCaseImg;
 
 
+- (void)startCaptureSession;
+
+
 @end

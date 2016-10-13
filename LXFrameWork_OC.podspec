@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LXFrameWork_OC"
-  s.version      = "2.6.2"
+  s.version      = "2.6.3"
   s.summary      = "This is my(lixiao) LXFrameWork_OC"
   s.homepage     = "https://github.com/lixiao7215981"
   s.license      = "MIT"
@@ -10,43 +10,43 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://weibo.com/2106002880/profile?topnav=1&wvr=6"
   s.source       = { :git => "https://github.com/lixiao7215981/LXFrameWork_OC.git", :tag => s.version }
 
-  #s.source_files  = "LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/**/*.{h,m}"
+  s.source_files  = "LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/**/*.{h,m}"
   s.resources = "LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/source/**/LXFrameWork.bundle"
 
-  s.subspec 'Other' do |other|
-    other.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/Other/**/*.{h,m}'
+  #s.subspec 'Other' do |other|
+    #other.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/Other/**/*.{h,m}'
     #other.exclude_files = '' 排除的文件
-  end
+  #end
 
-  s.subspec 'Tool' do |tool|
-    tool.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/Tool/**/*.{h,m}'
+  #s.subspec 'Tool' do |tool|
+    #tool.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/Tool/**/*.{h,m}'
     #tool.exclude_files = '' 排除的文件
-  end
+  #end
 
-  s.subspec 'Category' do |category|
-    category.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/Category/*.{h,m}'
+  #s.subspec 'Category' do |category|
+    #category.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/Category/*.{h,m}'
     #category.exclude_files = '' 排除的文件
-  end
+  #end
 
-  s.subspec 'Model' do |model|
-    model.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/Model/**/*.{h,m}'
+  #s.subspec 'Model' do |model|
+    #model.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/Model/**/*.{h,m}'
     #model.exclude_files = '' 排除的文件
-  end
+  #end
 
-  s.subspec 'View' do |view|
-    view.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/View/**/*.{h,m}'
+  #s.subspec 'View' do |view|
+    #view.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/View/**/*.{h,m}'
     #view.exclude_files = '' 排除的文件
-  end
+  #end
 
-  s.subspec 'BaseController' do |bc|
-    bc.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/BaseController/*.{h,m}'
+  #s.subspec 'BaseController' do |bc|
+    #bc.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/BaseController/*.{h,m}'
     #bc.exclude_files = '' 排除的文件
-  end
+  #end
 
-  s.subspec 'Controller' do |controller|
-    controller.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/Controller/**/*.{h,m}'
+  #s.subspec 'Controller' do |controller|
+    #controller.source_files = 'LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/Class/Controller/**/*.{h,m}'
     #controller.exclude_files = '' 排除的文件
-  end
+  #end
 
   
   s.dependency 'FMDB'

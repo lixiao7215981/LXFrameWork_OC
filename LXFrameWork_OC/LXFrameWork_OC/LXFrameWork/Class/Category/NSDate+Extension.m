@@ -94,7 +94,11 @@
 + (NSInteger)compareStrData:(NSString *)date1 WithDate:(NSString *)date2
 {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    if (date1.length > 10 && date2.length > 10) {
+        [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    }else{
+        [df setDateFormat:@"yyyy-MM-dd"];
+    }
     NSDate *dt1 = [df dateFromString:date1];
     NSDate *dt2 = [df dateFromString:date2];
     return  [self compareData:dt1 WithDate:dt2];

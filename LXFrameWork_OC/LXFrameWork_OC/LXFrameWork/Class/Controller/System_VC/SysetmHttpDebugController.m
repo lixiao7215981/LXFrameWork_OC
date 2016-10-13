@@ -12,10 +12,6 @@
 #import "SystemHttpDetailCell.h"
 #import "BundleTool.h"
 
-#define MYBUNDLE_NAME @ "LXFrameWork.bundle"
-#define MYBUNDLE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
-#define MYBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]
-
 @interface SysetmHttpDebugController ()<UITableViewDelegate>
 {
     NSInteger _pageIndex;

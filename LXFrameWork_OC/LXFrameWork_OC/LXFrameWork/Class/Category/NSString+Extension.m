@@ -159,4 +159,9 @@
     return attrStr;
 }
 
+- (NSString *)toClearBlankString
+{
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+}
+
 @end

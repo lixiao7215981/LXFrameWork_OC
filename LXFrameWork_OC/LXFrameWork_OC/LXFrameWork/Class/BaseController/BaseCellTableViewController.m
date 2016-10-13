@@ -145,9 +145,9 @@
     BaseCellItem *item = group.item[indexPath.row];
     if ([item isKindOfClass:[BaseIconItem class]]) {
         return 70;
-    }else if (IS_IPHONE_6_OR_6S) {
+    }else if (IS_IPHONE_4_7_INCH) {
         return 49;
-    }else if (IS_IPHONE_6P_OR_6PS){
+    }else if (IS_IPHONE_5_5_INCH){
         return 54;
     }
     return 44;

@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSString+Extension.h"
 
 typedef enum {
     kUser_Path_file,

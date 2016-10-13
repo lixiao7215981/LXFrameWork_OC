@@ -25,4 +25,11 @@
  */
 + (NSString *) getApp_Version;
 
+/**
+ *  获取当前APP的BundleIdentifier
+ *
+ *  @return BundleIdentifier
+ */
++ (NSString *) getApp_BundleIdentifier;
+
 @end

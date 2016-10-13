@@ -29,4 +29,9 @@
 }
 
 
++ (NSString *) getApp_BundleIdentifier
+{
+    return [[NSBundle mainBundle] bundleIdentifier];
+}
+
 @end

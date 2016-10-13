@@ -31,36 +31,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <IQKeyboardReturnKeyHandler.h>
-#import <SVProgressHUD.h>
+#import "LXFrameWorkManager.h"
 #import "NavigationBar.h"
-#import "NSString+Extension.h"
 #import "UIView+Extension.h"
-#import "BlockButton.h"
-#import "BundleTool.h"
-
-#define kRGBColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
-#define kWindowWidth [UIScreen mainScreen].bounds.size.width
-
-// 屏幕宽高
-#define kWindowWidth [UIScreen mainScreen].bounds.size.width
-#define kWindowHeight [UIScreen mainScreen].bounds.size.height
-#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
-#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
-#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
-
-#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
-
-#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
-#define IS_IPHONE_5_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH <=568.0)
-#define IS_IPHONE_5_OR_5S (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
-#define IS_IPHONE_6_OR_6S (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
-#define IS_IPHONE_6P_OR_6PS (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
-
-#define kLINE_1_PX (1.0f / [UIScreen mainScreen].scale)
+#import "LXFrameWorkDefine.h"
+#import <PureLayout.h>
 
 #pragma mark - Block
 typedef void (^ClickButton)();

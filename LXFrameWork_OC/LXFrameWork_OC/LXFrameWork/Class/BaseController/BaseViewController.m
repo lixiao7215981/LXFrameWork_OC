@@ -7,6 +7,11 @@
 //
 
 #import "BaseViewController.h"
+#import <SVProgressHUD.h>
+#import <IQKeyboardReturnKeyHandler.h>
+#import "BlockButton.h"
+#import "BundleTool.h"
+#import "NSString+Extension.h"
 
 @interface BaseViewController ()
 {
@@ -172,6 +177,7 @@
     LXFrameWorkManager *manager = [LXFrameWorkManager sharedLXFrameWorkManager];
     BlockButton *button = [[BlockButton alloc] init];
     button.titleLabel.font = BaseNavBarTextFont;
+    button.titleLabel.font = font;
     if (normalImg) {
         [button setImage:normalImg forState:UIControlStateNormal];
     }
@@ -189,7 +195,7 @@
         button.width = [title sizeWithFont:font].width;
         [button setTitleColor:manager.navigationBar_textColor forState:UIControlStateNormal];
     }
-    button.titleLabel.font = font;
+    
     button.ClickOption = clickOption;
     return button;
 }

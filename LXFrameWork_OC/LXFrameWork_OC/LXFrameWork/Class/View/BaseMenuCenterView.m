@@ -7,10 +7,13 @@
 //
 
 #import "BaseMenuCenterView.h"
+#import <PureLayout.h>
+#import "UIWindow+Extension.h"
+#import "BundleTool.h"
 
 #define defaultTintColor kRGBColor(38, 123, 223, 1)
-#define defaultCellSelectedImage @"Cart_home_roundBtn_selected"
-#define defaultCellNormalImage  @"Cart_home_roundBtn_normal"
+#define defaultCellSelectedImage [BundleTool getImage:@"BaseMenuView_selectCell_selected" FromBundle:LXFrameWorkBundle];
+#define defaultCellNormalImage  [BundleTool getImage:@"BaseMenuView_selectCell_noraml" FromBundle:LXFrameWorkBundle];
 
 static NSString * const BaseMenuCenterViewCellID = @"BaseMenuCenterViewCellID";
 
@@ -166,9 +169,9 @@ static NSString * const BaseMenuCenterViewCellID = @"BaseMenuCenterViewCellID";
     }
     if(self.selectType == Multiselect){
         if([self.selectDict objectForKey:indexPath]){
-            cell.imageView.image = [UIImage imageNamed:defaultCellSelectedImage];
+            cell.imageView.image = defaultCellSelectedImage;
         }else{
-            cell.imageView.image = [UIImage imageNamed:defaultCellNormalImage];
+            cell.imageView.image = defaultCellNormalImage;
         }
     }
     cell.textLabel.text = [self.dataList objectAtIndex:indexPath.row];
@@ -187,10 +190,10 @@ static NSString * const BaseMenuCenterViewCellID = @"BaseMenuCenterViewCellID";
         
         if([self.selectDict objectForKey:indexPath]){
             [self.selectDict removeObjectForKey:indexPath];
-            cell.imageView.image = [UIImage imageNamed:defaultCellNormalImage];
+            cell.imageView.image = defaultCellNormalImage;
         }else{
             [self.selectDict setObject:indexPath forKey:indexPath];
-            cell.imageView.image = [UIImage imageNamed:defaultCellSelectedImage];
+            cell.imageView.image = defaultCellSelectedImage;
         }
     }
 }

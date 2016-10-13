@@ -51,9 +51,10 @@
     if (![controller isKindOfClass:[UINavigationController class]]) {
         BaseNavigationController *navigationVC = [[BaseNavigationController alloc] initWithRootViewController:controller];
         return navigationVC;
+    }else{
+        return (UINavigationController *)controller;
     }
-    
-    return controller;
+    return nil;
 }
 
 + (UINavigationController *) addChildViewWithXibName:(NSString *) xibName ControllerName:(NSString *)controllerName tabBarTitle: (NSString *) title NormalFont:(UIFont *) normalFont NoramlColor:(UIColor*) normalColor NormalImage:(NSString *)noramlImage SelectedFont:(UIFont *) selectedFont SelectColor:(UIColor *) selectColor SelectedImage:(NSString *) selectedImage
@@ -101,8 +102,10 @@
     if (![controller isKindOfClass:[UINavigationController class]]) {
         BaseNavigationController *navigationVC = [[BaseNavigationController alloc] initWithRootViewController:controller];
         return navigationVC;
+    }else{
+        return (UINavigationController *)controller;
     }
-    return controller;
+    return nil;
 }
 
 @end

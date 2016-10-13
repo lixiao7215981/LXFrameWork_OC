@@ -10,8 +10,10 @@
 
 @interface NSString (RegularExpression)
 
-- (BOOL) isNULL;
-
+/**
+ *  是否为空字符串 NSNULL class
+ */
+- (BOOL) isNullString;
 /**
  *  验证用户名是否合法
  *  用户名由 3-10位的字母下划线和数字组成。不能以数字或下划线开头。只能已字母开头。允许全部是字母
@@ -34,10 +36,20 @@
  *  是否 IP 地址格式
  */
 - (BOOL) isIPAddress;
-
 /**
  *  是否含有 Emoji 表情
  */
 - (BOOL) containsHaveEmoji;
+
+/**
+ *  是否可转换成 Double 类型
+ */
+- (BOOL) canParseDouble;
+
+/**
+ *  是否可转换成 Int 类型
+ */
+- (BOOL) canParseInteger;
+
 
 @end

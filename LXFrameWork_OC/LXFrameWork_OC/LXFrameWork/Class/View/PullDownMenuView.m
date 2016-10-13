@@ -9,11 +9,10 @@
 #import "PullDownMenuView.h"
 #import "UIView+Extension.h"
 #import "UIWindow+Extension.h"
-#import "PureLayout.h"
+#import "LXFrameWorkDefine.h"
+#import <PureLayout.h>
 
 #define kRowHeight 35
-#define kLINE_1_PX (1.0f / [UIScreen mainScreen].scale)
-#define kRGBColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 
 static NSString * const DownTableViewID = @"DownMenuTableViewID";
 

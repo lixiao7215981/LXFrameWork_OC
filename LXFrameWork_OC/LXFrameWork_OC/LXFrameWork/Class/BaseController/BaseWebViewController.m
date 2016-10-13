@@ -7,6 +7,7 @@
 //
 
 #import "BaseWebViewController.h"
+#import <SVProgressHUD.h>
 
 @interface BaseWebViewController ()<UIWebViewDelegate>
 

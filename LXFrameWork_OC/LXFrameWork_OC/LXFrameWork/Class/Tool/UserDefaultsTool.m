@@ -31,6 +31,7 @@ static NSUserDefaults *_Udefaults;
 + (void)removeUserDefaultsForKey:(NSString *)key
 {
     [_Udefaults removeObjectForKey:key];
+    [_Udefaults synchronize];
 }
 
 @end

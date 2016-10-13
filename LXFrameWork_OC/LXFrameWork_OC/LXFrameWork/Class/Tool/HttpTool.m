@@ -17,7 +17,7 @@
 @implementation HttpTool
 
 /** 请求超时时间 **/
-static NSTimeInterval const defaultRequestTimeout = 30;
+static NSTimeInterval const defaultRequestTimeout = 15;
 /** 上传数据超时时间 **/
 static NSTimeInterval const defaultUploadTimeout = 60;
 

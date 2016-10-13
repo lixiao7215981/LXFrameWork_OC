@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-#define LXFrameWorkBundle @ "LXFrameWork.bundle"
+#import "LXFrameWorkDefine.h"
 
 @interface BundleTool : NSObject
 

@@ -29,7 +29,7 @@ LXSingletonH(LXFrameWorkManager);
 /**
  * 设置NavigationBar 字体颜色
  */
-@property (nonatomic,assign) UIColor *navigationBar_textColor;
+@property (nonatomic,strong) UIColor *navigationBar_textColor;
 /**
  *  设置View 默认背景颜色（默认白色）
  */

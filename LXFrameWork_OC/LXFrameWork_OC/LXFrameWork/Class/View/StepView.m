@@ -7,8 +7,11 @@
 //
 
 #import "StepView.h"
-
-#define kWindowWidth [UIScreen mainScreen].bounds.size.width
+#import "InterchangeButton.h"
+#import "UIView+Extension.h"
+#import "BundleTool.h"
+#import "LXFrameWorkDefine.h"
+#import <PureLayout.h>
 
 @interface StepView()
 {

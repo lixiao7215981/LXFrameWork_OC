@@ -11,10 +11,6 @@
 #import "SystemExceptionDebugModel.h"
 #import "SystemExceptionDebugCell.h"
 
-#define MYBUNDLE_NAME @ "LXFrameWork.bundle"
-#define MYBUNDLE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
-#define MYBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]
-
 @interface SystemExceptionDebugController ()<UITableViewDelegate>
 {
     NSInteger _pageIndex;

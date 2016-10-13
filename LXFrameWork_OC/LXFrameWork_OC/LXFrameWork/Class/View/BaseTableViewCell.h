@@ -22,7 +22,7 @@
  */
 @property (nonatomic,strong) BaseCellItem *items;
 /**
- *  快速创建Cell
+ *  快速创建 BaseTableView 显示的Cell
  *
  */
 + (instancetype)createProfileBaseCellWithTableView:(UITableView *)tableView CellStyle:(UITableViewCellStyle)cellStyle WithIdentifier:(NSString *)identifier;

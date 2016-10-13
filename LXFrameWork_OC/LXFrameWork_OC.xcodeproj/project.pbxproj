@@ -32,6 +32,7 @@
 		4E2C9A1B1C9FE6DB005AF230 /* SelectListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2C9A1A1C9FE6DB005AF230 /* SelectListView.m */; };
 		4E3BB8E41B8F131A007A077D /* CoreLocationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */; };
 		4E3BB8E71B8F1324007A077D /* UserAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BB8E61B8F1324007A077D /* UserAddressModel.m */; };
+		4E3EF7DE1DAE65FF00A8519A /* BaseMenuCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EF7DD1DAE65FF00A8519A /* BaseMenuCenterView.m */; };
 		4E4B491E1BFB05A700F0F958 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */; };
 		4E4B49211BFB0FB400F0F958 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B49201BFB0FB400F0F958 /* UIColor+Extension.m */; };
 		4E56B7E11B51799600184403 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E01B51799600184403 /* HttpTool.m */; };
@@ -39,6 +40,8 @@
 		4E56B7F61B54F5FF00184403 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F51B54F5FF00184403 /* StepView.m */; };
 		4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F81B54FAD600184403 /* InterchangeButton.m */; };
 		4E59A1881B7D7E5000EA6D06 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59A1871B7D7E5000EA6D06 /* BaseWebViewController.m */; };
+		4E5CC7DD1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5CC7DB1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.m */; };
+		4E5CC7DE1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5CC7DC1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.xib */; };
 		4E63088D1C75CF4600AAF3D4 /* SystemHttpDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E63088B1C75CF4600AAF3D4 /* SystemHttpDetailCell.m */; };
 		4E63088E1C75CF4600AAF3D4 /* SystemHttpDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E63088C1C75CF4600AAF3D4 /* SystemHttpDetailCell.xib */; };
 		4E6308911C76C4B800AAF3D4 /* SystemExceptionDebugController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6308901C76C4B800AAF3D4 /* SystemExceptionDebugController.m */; };
@@ -47,8 +50,10 @@
 		4E6308991C76DFFA00AAF3D4 /* SystemExceptionDebugCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E6308971C76DFFA00AAF3D4 /* SystemExceptionDebugCell.xib */; };
 		4E63089D1C76E8B800AAF3D4 /* SystemExceptionDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E63089B1C76E8B800AAF3D4 /* SystemExceptionDetailController.m */; };
 		4E63089E1C76E8B800AAF3D4 /* SystemExceptionDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E63089C1C76E8B800AAF3D4 /* SystemExceptionDetailController.xib */; };
+		4E6450201DAF6B45002434B5 /* MenuCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E64501F1DAF6B45002434B5 /* MenuCenterViewController.m */; };
 		4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */; };
 		4E72C19C1B4FEE6400C16C1E /* PlistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E72C1991B4FEE6400C16C1E /* PlistTool.m */; };
+		4E7B2ECC1DABA1AA00878216 /* BaseLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7B2ECB1DABA1AA00878216 /* BaseLineTableViewCell.m */; };
 		4E8D4BA21CCF0B3500D6B2C3 /* PullDownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D4BA11CCF0B3500D6B2C3 /* PullDownMenuView.m */; };
 		4EA29A761B56005E0084E72D /* StepNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA29A751B56005E0084E72D /* StepNextView.m */; };
 		4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA374B01B4CD25700680B92 /* NavigationBar.m */; };
@@ -114,6 +119,7 @@
 		4EE9814B1C07FE4400CA44FA /* SystemHttpDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE981461C07FE4400CA44FA /* SystemHttpDetailController.xib */; };
 		4EE9814E1C07FFF200CA44FA /* SystemSelectServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9814D1C07FFF200CA44FA /* SystemSelectServiceViewController.m */; };
 		4EEA74341C23DFDA0048BA8F /* LocalAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA74331C23DFDA0048BA8F /* LocalAuthenticationViewController.m */; };
+		4EF321B71D8E632D004BDB2E /* NSMutableArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF321B61D8E632D004BDB2E /* NSMutableArray+Extension.m */; };
 		4EF8DCCB1C1FB484000036E7 /* SelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8DCCA1C1FB484000036E7 /* SelectCityViewController.m */; };
 		4EF8DCD01C1FB49B000036E7 /* SelectCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8DCCD1C1FB49B000036E7 /* SelectCity.m */; };
 		4EF8DCD11C1FB49B000036E7 /* SelectCityGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF8DCCF1C1FB49B000036E7 /* SelectCityGroups.m */; };
@@ -228,6 +234,10 @@
 		4E3BB8E31B8F131A007A077D /* CoreLocationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationTool.m; sourceTree = "<group>"; };
 		4E3BB8E51B8F1324007A077D /* UserAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAddressModel.h; sourceTree = "<group>"; };
 		4E3BB8E61B8F1324007A077D /* UserAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAddressModel.m; sourceTree = "<group>"; };
+		4E3EF7DC1DAE65FF00A8519A /* BaseMenuCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMenuCenterView.h; sourceTree = "<group>"; };
+		4E3EF7DD1DAE65FF00A8519A /* BaseMenuCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMenuCenterView.m; sourceTree = "<group>"; };
+		4E46B78E1DAF375000C3505C /* LXFrameWork_OC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFrameWork_OC.h; sourceTree = "<group>"; };
+		4E46B7911DAF559300C3505C /* LXFrameWorkDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFrameWorkDefine.h; sourceTree = "<group>"; };
 		4E4B491C1BFB05A700F0F958 /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
 		4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
 		4E4B491F1BFB0FB400F0F958 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
@@ -242,6 +252,9 @@
 		4E56B7F81B54FAD600184403 /* InterchangeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterchangeButton.m; sourceTree = "<group>"; };
 		4E59A1861B7D7E5000EA6D06 /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
 		4E59A1871B7D7E5000EA6D06 /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
+		4E5CC7DA1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeekAndPopTableViewCell.h; sourceTree = "<group>"; };
+		4E5CC7DB1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeekAndPopTableViewCell.m; sourceTree = "<group>"; };
+		4E5CC7DC1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeekAndPopTableViewCell.xib; sourceTree = "<group>"; };
 		4E63088A1C75CF4600AAF3D4 /* SystemHttpDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemHttpDetailCell.h; sourceTree = "<group>"; };
 		4E63088B1C75CF4600AAF3D4 /* SystemHttpDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemHttpDetailCell.m; sourceTree = "<group>"; };
 		4E63088C1C75CF4600AAF3D4 /* SystemHttpDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemHttpDetailCell.xib; sourceTree = "<group>"; };
@@ -255,11 +268,14 @@
 		4E63089A1C76E8B800AAF3D4 /* SystemExceptionDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemExceptionDetailController.h; sourceTree = "<group>"; };
 		4E63089B1C76E8B800AAF3D4 /* SystemExceptionDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemExceptionDetailController.m; sourceTree = "<group>"; };
 		4E63089C1C76E8B800AAF3D4 /* SystemExceptionDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemExceptionDetailController.xib; sourceTree = "<group>"; };
+		4E64501E1DAF6B45002434B5 /* MenuCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCenterViewController.h; sourceTree = "<group>"; };
+		4E64501F1DAF6B45002434B5 /* MenuCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCenterViewController.m; sourceTree = "<group>"; };
 		4E72C1921B4FEE6400C16C1E /* BaseTabBarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarService.h; sourceTree = "<group>"; };
 		4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarService.m; sourceTree = "<group>"; };
-		4E72C1941B4FEE6400C16C1E /* ImportClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportClass.h; sourceTree = "<group>"; };
 		4E72C1981B4FEE6400C16C1E /* PlistTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistTool.h; sourceTree = "<group>"; };
 		4E72C1991B4FEE6400C16C1E /* PlistTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistTool.m; sourceTree = "<group>"; };
+		4E7B2ECA1DABA1AA00878216 /* BaseLineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLineTableViewCell.h; sourceTree = "<group>"; };
+		4E7B2ECB1DABA1AA00878216 /* BaseLineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLineTableViewCell.m; sourceTree = "<group>"; };
 		4E8D4BA01CCF0B3500D6B2C3 /* PullDownMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullDownMenuView.h; sourceTree = "<group>"; };
 		4E8D4BA11CCF0B3500D6B2C3 /* PullDownMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullDownMenuView.m; sourceTree = "<group>"; };
 		4EA29A741B56005E0084E72D /* StepNextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepNextView.h; sourceTree = "<group>"; };
@@ -387,6 +403,8 @@
 		4EEA74321C23DFDA0048BA8F /* LocalAuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalAuthenticationViewController.h; sourceTree = "<group>"; };
 		4EEA74331C23DFDA0048BA8F /* LocalAuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalAuthenticationViewController.m; sourceTree = "<group>"; };
 		4EEA743A1C23F9FB0048BA8F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		4EF321B51D8E632D004BDB2E /* NSMutableArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Extension.h"; sourceTree = "<group>"; };
+		4EF321B61D8E632D004BDB2E /* NSMutableArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Extension.m"; sourceTree = "<group>"; };
 		4EF8DCC91C1FB484000036E7 /* SelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityViewController.h; sourceTree = "<group>"; };
 		4EF8DCCA1C1FB484000036E7 /* SelectCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCityViewController.m; sourceTree = "<group>"; };
 		4EF8DCCC1C1FB49B000036E7 /* SelectCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCity.h; sourceTree = "<group>"; };
@@ -500,6 +518,16 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		4E5CC7D91DAB8BC600850DE9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4E5CC7DA1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.h */,
+				4E5CC7DB1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.m */,
+				4E5CC7DC1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		4E72C1911B4FEE6400C16C1E /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,11 +536,12 @@
 				4ECECF981B5C9BA50036B721 /* BaseDelegate.m */,
 				4E72C1921B4FEE6400C16C1E /* BaseTabBarService.h */,
 				4E72C1931B4FEE6400C16C1E /* BaseTabBarService.m */,
-				4E72C1941B4FEE6400C16C1E /* ImportClass.h */,
 				4E10A2421B8AE53C00832576 /* LXFrameWorkConst.h */,
 				4E10A2431B8AE53C00832576 /* LXFrameWorkConst.m */,
 				4ED532111C19636300A2BDA2 /* LXFrameWorkManager.h */,
 				4ED532121C19636300A2BDA2 /* LXFrameWorkManager.m */,
+				4E46B78E1DAF375000C3505C /* LXFrameWork_OC.h */,
+				4E46B7911DAF559300C3505C /* LXFrameWorkDefine.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -547,14 +576,14 @@
 		4EB853361B4A1A3A00C35F6D /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
-				4EB853371B4A1A3A00C35F6D /* BasePullTableViewController.h */,
-				4EB853381B4A1A3A00C35F6D /* BasePullTableViewController.m */,
-				4EB853391B4A1A3A00C35F6D /* BaseTableViewController.h */,
-				4EB8533A1B4A1A3A00C35F6D /* BaseTableViewController.m */,
-				4EE788FB1BA902C400635387 /* BaseCellTableViewController.h */,
-				4EE788FC1BA902C400635387 /* BaseCellTableViewController.m */,
 				4EB8533B1B4A1A3A00C35F6D /* BaseViewController.h */,
 				4EB8533C1B4A1A3A00C35F6D /* BaseViewController.m */,
+				4EB853391B4A1A3A00C35F6D /* BaseTableViewController.h */,
+				4EB8533A1B4A1A3A00C35F6D /* BaseTableViewController.m */,
+				4EB853371B4A1A3A00C35F6D /* BasePullTableViewController.h */,
+				4EB853381B4A1A3A00C35F6D /* BasePullTableViewController.m */,
+				4EE788FB1BA902C400635387 /* BaseCellTableViewController.h */,
+				4EE788FC1BA902C400635387 /* BaseCellTableViewController.m */,
 				4ED167121B4A6BA000B3C618 /* BaseNavigationController.h */,
 				4ED167131B4A6BA000B3C618 /* BaseNavigationController.m */,
 				4ECECFA91B5D0A690036B721 /* BaseStepViewController.h */,
@@ -642,6 +671,8 @@
 		4EB8BAE91B2EB49C00315CEF /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				4EF321B51D8E632D004BDB2E /* NSMutableArray+Extension.h */,
+				4EF321B61D8E632D004BDB2E /* NSMutableArray+Extension.m */,
 				4E4B491C1BFB05A700F0F958 /* UIWindow+Extension.h */,
 				4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */,
 				4E56B7E51B54AD3400184403 /* NSMutableURLRequest+Upload.h */,
@@ -704,8 +735,12 @@
 		4EB8BAED1B2EB49C00315CEF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E3EF7DC1DAE65FF00A8519A /* BaseMenuCenterView.h */,
+				4E3EF7DD1DAE65FF00A8519A /* BaseMenuCenterView.m */,
 				4EB853461B4A3DBB00C35F6D /* BaseTableViewCell.h */,
 				4EB853471B4A3DBB00C35F6D /* BaseTableViewCell.m */,
+				4E7B2ECA1DABA1AA00878216 /* BaseLineTableViewCell.h */,
+				4E7B2ECB1DABA1AA00878216 /* BaseLineTableViewCell.m */,
 				4EA374AF1B4CD25700680B92 /* NavigationBar.h */,
 				4EA374B01B4CD25700680B92 /* NavigationBar.m */,
 				4EA374B41B4D39DD00680B92 /* BlockButton.h */,
@@ -823,6 +858,8 @@
 				4EB9EE4A1CD0E24E000B84A6 /* CustomWidgetViewController.h */,
 				4EB9EE4B1CD0E24E000B84A6 /* CustomWidgetViewController.m */,
 				4EB9EE4D1CD1B31F000B84A6 /* CustomWidgetViewController.xib */,
+				4E64501E1DAF6B45002434B5 /* MenuCenterViewController.h */,
+				4E64501F1DAF6B45002434B5 /* MenuCenterViewController.m */,
 			);
 			path = Base_function;
 			sourceTree = "<group>";
@@ -849,6 +886,7 @@
 		4EE981381C07FCF000CA44FA /* iOS9_newFuncation */ = {
 			isa = PBXGroup;
 			children = (
+				4E5CC7D91DAB8BC600850DE9 /* view */,
 				4EE981391C07FCF000CA44FA /* PeekAndPopViewController.h */,
 				4EE9813A1C07FCF000CA44FA /* PeekAndPopViewController.m */,
 				4ED633CC1C2A41C700AF6FFA /* SessionMessageController.h */,
@@ -986,19 +1024,20 @@
 		4EB8BAA61B2E8CB800315CEF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = LXFrameWork;
 				TargetAttributes = {
 					4E2C0E461C27FC590063DBB9 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 93UPVRSXPA;
 					};
 					4E2C0E521C27FC590063DBB9 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 9RHGQHNHRA;
+						DevelopmentTeam = 93UPVRSXPA;
 					};
 					4EB8BAAD1B2E8CB800315CEF = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 9RHGQHNHRA;
+						DevelopmentTeam = 93UPVRSXPA;
 					};
 				};
 			};
@@ -1051,6 +1090,7 @@
 				4E63088E1C75CF4600AAF3D4 /* SystemHttpDetailCell.xib in Resources */,
 				4EE9814B1C07FE4400CA44FA /* SystemHttpDetailController.xib in Resources */,
 				4EE981371C07FAC500CA44FA /* WriteViewController.xib in Resources */,
+				4E5CC7DE1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.xib in Resources */,
 				4EC4F73F1B4E2A4500ACEE5F /* LaunchScreen.xib in Resources */,
 				4ED633BC1C293DB900AF6FFA /* Assets.xcassets in Resources */,
 				4EE45CF11B78952300C30B7D /* LXFrameWork.bundle in Resources */,
@@ -1150,6 +1190,7 @@
 				4EE981471C07FE4400CA44FA /* QRCodeViewController.m in Sources */,
 				4ED633CE1C2A41C700AF6FFA /* SessionMessageController.m in Sources */,
 				4EE789021BA912D500635387 /* CHKeychainTool.m in Sources */,
+				4EF321B71D8E632D004BDB2E /* NSMutableArray+Extension.m in Sources */,
 				4EA374B11B4CD25700680B92 /* NavigationBar.m in Sources */,
 				4EEA74341C23DFDA0048BA8F /* LocalAuthenticationViewController.m in Sources */,
 				4E63089D1C76E8B800AAF3D4 /* SystemExceptionDetailController.m in Sources */,
@@ -1161,6 +1202,7 @@
 				4E2C9A1B1C9FE6DB005AF230 /* SelectListView.m in Sources */,
 				4E59A1881B7D7E5000EA6D06 /* BaseWebViewController.m in Sources */,
 				4EC4F7401B4E2A4500ACEE5F /* main.m in Sources */,
+				4E3EF7DE1DAE65FF00A8519A /* BaseMenuCenterView.m in Sources */,
 				4EE45C841B74A90C00C30B7D /* BaseCenterTitleCellItem.m in Sources */,
 				4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */,
 				4EB9EE4C1CD0E24E000B84A6 /* CustomWidgetViewController.m in Sources */,
@@ -1184,6 +1226,7 @@
 				4EE981321C07FAC500CA44FA /* UserIconCellController.m in Sources */,
 				4ECECFAB1B5D0A690036B721 /* BaseStepViewController.m in Sources */,
 				4EE45C871B74A90C00C30B7D /* BaseSwitchCellItem.m in Sources */,
+				4E7B2ECC1DABA1AA00878216 /* BaseLineTableViewCell.m in Sources */,
 				4EA4457B1B4FDA9300844282 /* NSString+RegularExpression.m in Sources */,
 				4EA4457D1B4FDA9300844282 /* UITextView+Extension.m in Sources */,
 				4E3BB8E71B8F1324007A077D /* UserAddressModel.m in Sources */,
@@ -1200,6 +1243,7 @@
 				4EE9814E1C07FFF200CA44FA /* SystemSelectServiceViewController.m in Sources */,
 				4E6308941C76C4F300AAF3D4 /* SystemExceptionDebugModel.m in Sources */,
 				4EB8533D1B4A1A3A00C35F6D /* BasePullTableViewController.m in Sources */,
+				4E5CC7DD1DAB8BEC00850DE9 /* PeekAndPopTableViewCell.m in Sources */,
 				4EE9813B1C07FCF000CA44FA /* PeekAndPopViewController.m in Sources */,
 				4ED633BF1C29515500AF6FFA /* AppDelegate.m in Sources */,
 				4E56B7F91B54FAD600184403 /* InterchangeButton.m in Sources */,
@@ -1209,6 +1253,7 @@
 				4EE9812F1C07FAC500CA44FA /* HeadImageScorllController.m in Sources */,
 				4EE981481C07FE4400CA44FA /* SysetmHttpDebugController.m in Sources */,
 				4EE9812D1C07FAC500CA44FA /* CustomQRCodeViewController.m in Sources */,
+				4E6450201DAF6B45002434B5 /* MenuCenterViewController.m in Sources */,
 				4E0A465D1B70C1BD007C94C8 /* TimeButton.m in Sources */,
 				4EA445791B4FDA9300844282 /* NSString+Extension.m in Sources */,
 				4E63088D1C75CF4600AAF3D4 /* SystemHttpDetailCell.m in Sources */,
@@ -1249,6 +1294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 93UPVRSXPA;
 				IBSC_MODULE = LXFrameWork_WatchOS_Extension;
 				INFOPLIST_FILE = LXFrameWork_WatchOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp";
@@ -1265,6 +1311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 93UPVRSXPA;
 				IBSC_MODULE = LXFrameWork_WatchOS_Extension;
 				INFOPLIST_FILE = LXFrameWork_WatchOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp";
@@ -1283,6 +1330,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 93UPVRSXPA;
 				INFOPLIST_FILE = "LXFrameWork_WatchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp.watchkitextension";
@@ -1301,6 +1349,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 93UPVRSXPA;
 				INFOPLIST_FILE = "LXFrameWork_WatchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp.watchkitextension";
@@ -1326,8 +1375,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1370,8 +1421,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1401,9 +1454,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 93UPVRSXPA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LXFrameWork_OC/Other/System/PCH.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/LXFrameWork_OC/Other/System/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1418,9 +1472,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 93UPVRSXPA;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LXFrameWork_OC/Other/System/PCH.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/LXFrameWork_OC/Other/System/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

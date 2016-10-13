@@ -7,6 +7,7 @@
 //
 
 #import "CoreLocationTool.h"
+#import <MJExtension.h>
 
 @interface CoreLocationTool ()<CLLocationManagerDelegate>
 /**

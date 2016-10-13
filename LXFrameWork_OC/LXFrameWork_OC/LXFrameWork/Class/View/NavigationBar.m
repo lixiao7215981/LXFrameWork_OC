@@ -7,6 +7,8 @@
 //
 
 #import "NavigationBar.h"
+#import "LXFrameWorkManager.h"
+#import <PureLayout.h>
 
 // NavBar最下边 Line 的颜色
 #define lineView_BackageGroundColor [[UIColor lightGrayColor] colorWithAlphaComponent:0.5]
@@ -70,7 +72,7 @@
     //    leftView.backgroundColor = [UIColor redColor];
     //    NSLog(@"leftViewRect = %@",NSStringFromCGRect(rect));
     [leftView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ? 40 : rect.size.width + 26, rect.size.height == 0 ? (_btnViewEdgesTop.constant == 0 ? 32 : 44) : rect.size.height)];
-    [leftView autoPinEdgeToSuperviewEdge:kCALayerLeftEdge];
+    [leftView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
 }
 
 - (void)setRightView:(UIView *)rightView
@@ -85,7 +87,7 @@
     //    rightView.backgroundColor = [UIColor blueColor];
     //    NSLog(@"rightViewRect = %@",NSStringFromCGRect(rect));
     [rightView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ? 40 : rect.size.width + 26, rect.size.height == 0 ? (_btnViewEdgesTop.constant == 0 ? 32 : 44) : rect.size.height)];
-    [rightView autoPinEdgeToSuperviewEdge:kCALayerRightEdge];
+    [rightView autoPinEdgeToSuperviewEdge:ALEdgeRight];
 }
 
 - (void) setCenterView:(UIView *)centerView

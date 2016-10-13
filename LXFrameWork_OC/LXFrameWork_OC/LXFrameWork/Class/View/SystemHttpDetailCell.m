@@ -9,10 +9,6 @@
 #import "SystemHttpDetailCell.h"
 #import "BundleTool.h"
 
-#define MYBUNDLE_NAME @ "LXFrameWork.bundle"
-#define MYBUNDLE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
-#define MYBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]
-
 @interface SystemHttpDetailCell()
 @property (weak, nonatomic) IBOutlet UILabel *httpUrl;
 @property (weak, nonatomic) IBOutlet UILabel *requestTime;
@@ -44,10 +40,5 @@
         self.stateImage.image = [BundleTool getImage:@"http_error" FromBundle:LXFrameWorkBundle];
     }
 }
-
-- (void)awakeFromNib {
-    
-}
-
 
 @end

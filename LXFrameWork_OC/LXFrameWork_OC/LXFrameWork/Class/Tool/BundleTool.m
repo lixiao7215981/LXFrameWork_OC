@@ -8,10 +8,6 @@
 
 #import "BundleTool.h"
 
-#define BUNDLE_PATH(name) [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: (name)]
-#define MYBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]
-#define SYSTEM_VERSION_LESS_THAN(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
-
 @implementation BundleTool
 
 

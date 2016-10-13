@@ -117,5 +117,11 @@
  *  @return ￥ 字体小于后台金额
  */
 - (NSAttributedString *) toMoneyString;
+/**
+ *  去掉字符串左右两边的空格
+ *
+ *  @return 去掉空格后的字符串
+ */
+- (NSString *) toClearBlankString;
 
 @end

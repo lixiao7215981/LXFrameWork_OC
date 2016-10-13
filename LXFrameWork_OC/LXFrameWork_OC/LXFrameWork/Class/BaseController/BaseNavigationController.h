@@ -31,4 +31,6 @@
 #import "BaseViewController.h"
 @interface BaseNavigationController : UINavigationController
 
+- (void)dragging:(UIPanGestureRecognizer *)recognizer;
+
 @end

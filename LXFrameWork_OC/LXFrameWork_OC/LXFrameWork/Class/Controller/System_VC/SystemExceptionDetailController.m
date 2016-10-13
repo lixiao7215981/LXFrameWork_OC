@@ -7,6 +7,8 @@
 //
 
 #import "SystemExceptionDetailController.h"
+#import "LXFrameWorkManager.h"
+#import <SVProgressHUD.h>
 #import "NSDate+Extension.h"
 #import "BundleTool.h"
 

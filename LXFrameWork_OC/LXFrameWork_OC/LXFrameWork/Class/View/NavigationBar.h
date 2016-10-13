@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LXFrameWorkManager.h"
-#import "PureLayout.h"
 
 typedef enum
 {

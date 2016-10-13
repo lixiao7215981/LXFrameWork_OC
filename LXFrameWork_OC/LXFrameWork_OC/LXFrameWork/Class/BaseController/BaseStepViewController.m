@@ -8,6 +8,7 @@
 
 #import "BaseStepViewController.h"
 #import "UIColor+Extension.h"
+#import "BundleTool.h"
 
 @interface BaseStepViewController ()<StepViewDelegate>
 {

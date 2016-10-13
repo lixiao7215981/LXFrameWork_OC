@@ -10,10 +10,6 @@
 #import "NSDate+Extension.h"
 #import "BundleTool.h"
 
-#define MYBUNDLE_NAME @ "LXFrameWork.bundle"
-#define MYBUNDLE_PATH [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: MYBUNDLE_NAME]
-#define MYBUNDLE [NSBundle bundleWithPath: MYBUNDLE_PATH]
-
 @interface SystemExceptionDebugCell()
 @property (weak, nonatomic) IBOutlet UILabel *exception_name;
 @property (weak, nonatomic) IBOutlet UILabel *exception_time;
@@ -46,8 +42,5 @@
     }
 }
 
-- (void)awakeFromNib {
-    // Initialization code
-}
 
 @end
