@@ -30,6 +30,7 @@
 #import "BaseWebViewController.h"
 #import "BasePullTableViewController.h"
 #import "BaseCellTableViewController.h"
+#import "BaseLineTableViewCell.h"
 #import "BaseStepViewController.h"
 #import "BaseMenuCenterView.h"
 #import "BaseDelegate.h"
