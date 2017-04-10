@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>H5 调用手机相册和相机 </title>
+        <style>
+            #camera{
+                font-size: 100px;
+                right: 0;
+                top: 0;
+                opacity: 0;
+                width: 128px;
+                height: 30px;
+                position: absolute;
+                display:block;
+            }
+        </style>
+        <script type="text/javascript">
+            window.handleFiles = function (element) {
+                if (!element.files[0]) {
+                    return;
+                }
+                for (var prop in element.files[0]) {
+                    console.log('file info '+prop+':'+element.files[0][prop]);
+                }
+            }；
+        </script>
+    </head>
+    <body>
+        <a>参考网页</a><br/>
+        <li><a href="http://www.jianshu.com/p/2705c2576590">Link one </a></li>
+        <li><a href="http://www.bbsmax.com/A/lk5aBKOmd1/">Link two</a></li>
+        <!--        <input type="file" accept="audio/*;capture=microphone">-->
+        <!--<input type="file" accept="video/*;capture=camcorder">-->
+        <!--        <input type="file" accept="image/*;capture=camera">-->
+        </br>
+        <input type="file" id="img-file" opacity=0 capture="camera" multiple accept="image/*" onchange="handleFiles(this)"/>
+    </body>
+</html>

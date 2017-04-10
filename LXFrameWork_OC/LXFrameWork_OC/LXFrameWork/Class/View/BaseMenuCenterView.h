@@ -67,6 +67,7 @@ typedef enum {
 /**
  *  显示 MenuCenterView
  */
+- (void) showViewOnView:(UIView *) view;
 - (void) showView;
 
 /**

@@ -35,6 +35,10 @@
 		4E3EF7DE1DAE65FF00A8519A /* BaseMenuCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3EF7DD1DAE65FF00A8519A /* BaseMenuCenterView.m */; };
 		4E4B491E1BFB05A700F0F958 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */; };
 		4E4B49211BFB0FB400F0F958 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4B49201BFB0FB400F0F958 /* UIColor+Extension.m */; };
+		4E513FED1E9B698A00DCB35D /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E513FEC1E9B698A00DCB35D /* WebViewController.m */; };
+		4E513FF01E9B6A9800DCB35D /* HttpLoadWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E513FEF1E9B6A9800DCB35D /* HttpLoadWebViewController.m */; };
+		4E513FF21E9B6B8300DCB35D /* HtmlCallUpSystemCamera.html in Resources */ = {isa = PBXBuildFile; fileRef = 4E513FF11E9B6B8300DCB35D /* HtmlCallUpSystemCamera.html */; };
+		4E513FF51E9B6BA500DCB35D /* HtmlCallUpCamearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E513FF41E9B6BA500DCB35D /* HtmlCallUpCamearViewController.m */; };
 		4E56B7E11B51799600184403 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E01B51799600184403 /* HttpTool.m */; };
 		4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7E61B54AD3400184403 /* NSMutableURLRequest+Upload.m */; };
 		4E56B7F61B54F5FF00184403 /* StepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E56B7F51B54F5FF00184403 /* StepView.m */; };
@@ -107,7 +111,6 @@
 		4EE981301C07FAC500CA44FA /* NavBarScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9811C1C07FAC500CA44FA /* NavBarScrollController.m */; };
 		4EE981311C07FAC500CA44FA /* SetNavBarLeftRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9811E1C07FAC500CA44FA /* SetNavBarLeftRightViewController.m */; };
 		4EE981321C07FAC500CA44FA /* UserIconCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981201C07FAC500CA44FA /* UserIconCellController.m */; };
-		4EE981331C07FAC500CA44FA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981221C07FAC500CA44FA /* WebViewController.m */; };
 		4EE981351C07FAC500CA44FA /* HttpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE981281C07FAC500CA44FA /* HttpViewController.m */; };
 		4EE981361C07FAC500CA44FA /* WriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9812B1C07FAC500CA44FA /* WriteViewController.m */; };
 		4EE981371C07FAC500CA44FA /* WriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE9812C1C07FAC500CA44FA /* WriteViewController.xib */; };
@@ -242,6 +245,13 @@
 		4E4B491D1BFB05A700F0F958 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
 		4E4B491F1BFB0FB400F0F958 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		4E4B49201BFB0FB400F0F958 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		4E513FEB1E9B698A00DCB35D /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		4E513FEC1E9B698A00DCB35D /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4E513FEE1E9B6A9800DCB35D /* HttpLoadWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpLoadWebViewController.h; sourceTree = "<group>"; };
+		4E513FEF1E9B6A9800DCB35D /* HttpLoadWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpLoadWebViewController.m; sourceTree = "<group>"; };
+		4E513FF11E9B6B8300DCB35D /* HtmlCallUpSystemCamera.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HtmlCallUpSystemCamera.html; sourceTree = "<group>"; };
+		4E513FF31E9B6BA500DCB35D /* HtmlCallUpCamearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlCallUpCamearViewController.h; sourceTree = "<group>"; };
+		4E513FF41E9B6BA500DCB35D /* HtmlCallUpCamearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlCallUpCamearViewController.m; sourceTree = "<group>"; };
 		4E56B7DF1B51799600184403 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		4E56B7E01B51799600184403 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		4E56B7E51B54AD3400184403 /* NSMutableURLRequest+Upload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Upload.h"; sourceTree = "<group>"; };
@@ -380,8 +390,6 @@
 		4EE9811E1C07FAC500CA44FA /* SetNavBarLeftRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNavBarLeftRightViewController.m; sourceTree = "<group>"; };
 		4EE9811F1C07FAC500CA44FA /* UserIconCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserIconCellController.h; sourceTree = "<group>"; };
 		4EE981201C07FAC500CA44FA /* UserIconCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIconCellController.m; sourceTree = "<group>"; };
-		4EE981211C07FAC500CA44FA /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		4EE981221C07FAC500CA44FA /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		4EE981271C07FAC500CA44FA /* HttpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpViewController.h; sourceTree = "<group>"; };
 		4EE981281C07FAC500CA44FA /* HttpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpViewController.m; sourceTree = "<group>"; };
 		4EE9812A1C07FAC500CA44FA /* WriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteViewController.h; sourceTree = "<group>"; };
@@ -841,6 +849,7 @@
 		4EE981141C07FAC500CA44FA /* Base_function */ = {
 			isa = PBXGroup;
 			children = (
+				4E513FF11E9B6B8300DCB35D /* HtmlCallUpSystemCamera.html */,
 				4EE981151C07FAC500CA44FA /* CustomQRCodeViewController.h */,
 				4EE981161C07FAC500CA44FA /* CustomQRCodeViewController.m */,
 				4EE981171C07FAC500CA44FA /* HavePullViewController.h */,
@@ -853,13 +862,17 @@
 				4EE9811E1C07FAC500CA44FA /* SetNavBarLeftRightViewController.m */,
 				4EE9811F1C07FAC500CA44FA /* UserIconCellController.h */,
 				4EE981201C07FAC500CA44FA /* UserIconCellController.m */,
-				4EE981211C07FAC500CA44FA /* WebViewController.h */,
-				4EE981221C07FAC500CA44FA /* WebViewController.m */,
 				4EB9EE4A1CD0E24E000B84A6 /* CustomWidgetViewController.h */,
 				4EB9EE4B1CD0E24E000B84A6 /* CustomWidgetViewController.m */,
 				4EB9EE4D1CD1B31F000B84A6 /* CustomWidgetViewController.xib */,
 				4E64501E1DAF6B45002434B5 /* MenuCenterViewController.h */,
 				4E64501F1DAF6B45002434B5 /* MenuCenterViewController.m */,
+				4E513FEB1E9B698A00DCB35D /* WebViewController.h */,
+				4E513FEC1E9B698A00DCB35D /* WebViewController.m */,
+				4E513FEE1E9B6A9800DCB35D /* HttpLoadWebViewController.h */,
+				4E513FEF1E9B6A9800DCB35D /* HttpLoadWebViewController.m */,
+				4E513FF31E9B6BA500DCB35D /* HtmlCallUpCamearViewController.h */,
+				4E513FF41E9B6BA500DCB35D /* HtmlCallUpCamearViewController.m */,
 			);
 			path = Base_function;
 			sourceTree = "<group>";
@@ -1029,15 +1042,15 @@
 				TargetAttributes = {
 					4E2C0E461C27FC590063DBB9 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 93UPVRSXPA;
+						DevelopmentTeam = 8QRUNYQB4B;
 					};
 					4E2C0E521C27FC590063DBB9 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 93UPVRSXPA;
+						DevelopmentTeam = 8QRUNYQB4B;
 					};
 					4EB8BAAD1B2E8CB800315CEF = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 93UPVRSXPA;
+						DevelopmentTeam = 8QRUNYQB4B;
 					};
 				};
 			};
@@ -1085,6 +1098,7 @@
 			files = (
 				4E63089E1C76E8B800AAF3D4 /* SystemExceptionDetailController.xib in Resources */,
 				4E6308991C76DFFA00AAF3D4 /* SystemExceptionDebugCell.xib in Resources */,
+				4E513FF21E9B6B8300DCB35D /* HtmlCallUpSystemCamera.html in Resources */,
 				4EC4F73C1B4E2A4500ACEE5F /* Main.storyboard in Resources */,
 				4EB9EE4E1CD1B31F000B84A6 /* CustomWidgetViewController.xib in Resources */,
 				4E63088E1C75CF4600AAF3D4 /* SystemHttpDetailCell.xib in Resources */,
@@ -1183,7 +1197,6 @@
 				4EB8533F1B4A1A3A00C35F6D /* BaseViewController.m in Sources */,
 				4E10A24E1B8AF23E00832576 /* PathTool.m in Sources */,
 				4EA374B61B4D39DD00680B92 /* BlockButton.m in Sources */,
-				4EE981331C07FAC500CA44FA /* WebViewController.m in Sources */,
 				4EE788FD1BA902C400635387 /* BaseCellTableViewController.m in Sources */,
 				4E10A2441B8AE53C00832576 /* LXFrameWorkConst.m in Sources */,
 				4EE981351C07FAC500CA44FA /* HttpViewController.m in Sources */,
@@ -1207,6 +1220,7 @@
 				4E72C19A1B4FEE6400C16C1E /* BaseTabBarService.m in Sources */,
 				4EB9EE4C1CD0E24E000B84A6 /* CustomWidgetViewController.m in Sources */,
 				4E56B7F61B54F5FF00184403 /* StepView.m in Sources */,
+				4E513FED1E9B698A00DCB35D /* WebViewController.m in Sources */,
 				4ECECF991B5C9BA50036B721 /* BaseDelegate.m in Sources */,
 				4E56B7E71B54AD3400184403 /* NSMutableURLRequest+Upload.m in Sources */,
 				4E72C19C1B4FEE6400C16C1E /* PlistTool.m in Sources */,
@@ -1237,6 +1251,7 @@
 				4EE981301C07FAC500CA44FA /* NavBarScrollController.m in Sources */,
 				4E8D4BA21CCF0B3500D6B2C3 /* PullDownMenuView.m in Sources */,
 				4EA4457C1B4FDA9300844282 /* UIImage+Extension.m in Sources */,
+				4E513FF01E9B6A9800DCB35D /* HttpLoadWebViewController.m in Sources */,
 				4EA445771B4FDA9300844282 /* Foundation+Log.m in Sources */,
 				4E6308911C76C4B800AAF3D4 /* SystemExceptionDebugController.m in Sources */,
 				4E1BA0E81C152C0F00E232D3 /* GTMBase64.m in Sources */,
@@ -1252,6 +1267,7 @@
 				4E4B49211BFB0FB400F0F958 /* UIColor+Extension.m in Sources */,
 				4EE9812F1C07FAC500CA44FA /* HeadImageScorllController.m in Sources */,
 				4EE981481C07FE4400CA44FA /* SysetmHttpDebugController.m in Sources */,
+				4E513FF51E9B6BA500DCB35D /* HtmlCallUpCamearViewController.m in Sources */,
 				4EE9812D1C07FAC500CA44FA /* CustomQRCodeViewController.m in Sources */,
 				4E6450201DAF6B45002434B5 /* MenuCenterViewController.m in Sources */,
 				4E0A465D1B70C1BD007C94C8 /* TimeButton.m in Sources */,
@@ -1294,7 +1310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 93UPVRSXPA;
+				DEVELOPMENT_TEAM = 8QRUNYQB4B;
 				IBSC_MODULE = LXFrameWork_WatchOS_Extension;
 				INFOPLIST_FILE = LXFrameWork_WatchOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp";
@@ -1311,7 +1327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 93UPVRSXPA;
+				DEVELOPMENT_TEAM = 8QRUNYQB4B;
 				IBSC_MODULE = LXFrameWork_WatchOS_Extension;
 				INFOPLIST_FILE = LXFrameWork_WatchOS/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp";
@@ -1330,7 +1346,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 93UPVRSXPA;
+				DEVELOPMENT_TEAM = 8QRUNYQB4B;
 				INFOPLIST_FILE = "LXFrameWork_WatchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp.watchkitextension";
@@ -1349,7 +1365,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 93UPVRSXPA;
+				DEVELOPMENT_TEAM = 8QRUNYQB4B;
 				INFOPLIST_FILE = "LXFrameWork_WatchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.LXFrameWork.LXFrameWork-OC.watchkitapp.watchkitextension";
@@ -1454,7 +1470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 93UPVRSXPA;
+				DEVELOPMENT_TEAM = 8QRUNYQB4B;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LXFrameWork_OC/Other/System/PCH.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/LXFrameWork_OC/Other/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1472,7 +1488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 93UPVRSXPA;
+				DEVELOPMENT_TEAM = 8QRUNYQB4B;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LXFrameWork_OC/Other/System/PCH.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/LXFrameWork_OC/Other/System/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

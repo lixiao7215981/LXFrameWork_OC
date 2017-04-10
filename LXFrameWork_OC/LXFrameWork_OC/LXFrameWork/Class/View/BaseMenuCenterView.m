@@ -221,6 +221,26 @@ static NSString * const BaseMenuCenterViewCellID = @"BaseMenuCenterViewCellID";
     }];
 }
 
+- (void)showViewOnView:(UIView *)view
+{
+    self.coverBtn.alpha = 0;
+    self.alpha = 0;
+    [view addSubview:self.coverBtn];
+    [view addSubview:self];
+    [_coverBtn autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    [self autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [self autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    CGFloat height = 200;
+    if (self.dataList.count > 5 ) {
+        height = view.frame.size.height * 0.5;
+    }
+    [self autoSetDimensionsToSize:CGSizeMake(view.frame.size.width * 0.5, height)];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.alpha = 1;
+        self.coverBtn.alpha = 0.3;
+    }];
+}
+
 - (void) dismissView
 {
     [UIView animateWithDuration:0.25 animations:^{

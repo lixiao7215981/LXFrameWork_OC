@@ -22,6 +22,7 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
 {
     BOOL _isAnimate;
     BOOL _isShowSelectList;
+    BOOL _isDownShow;
 }
 
 @property (nonatomic,strong) UIImageView *arrowImg;
@@ -61,15 +62,31 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
     
     UIWindow *window = [UIWindow getCurrentWindow];
     CGRect rect = [self.selectBtn convertRect:self.selectBtn.bounds toView:window];
-    self.tableView.frame = CGRectMake(rect.origin.x, CGRectGetMaxY(rect), rect.size.width, 0);
+    CGFloat viewH = self.tableHeight ? self.tableHeight : tableViewHeight;
+    CGFloat viewW = rect.size.width;
+    CGRect viewRect;
     [window addSubview:self.cover];
     [window addSubview:self.tableView];
-    
-    [UIView animateWithDuration:animateDuration animations:^{
-        self.tableView.height = self.tableHeight ? self.tableHeight : tableViewHeight;
-    }completion:^(BOOL finished) {
-        _isShowSelectList = YES;
-    }];
+    if ((kWindowHeight - CGRectGetMaxY(rect)) < viewH) {
+        _isDownShow = NO;
+        viewRect = CGRectMake(rect.origin.x,rect.origin.y,viewW, 0);
+        self.tableView.frame = viewRect;
+        [UIView animateWithDuration:animateDuration animations:^{
+            self.tableView.y = rect.origin.y - viewH;
+            self.tableView.height = viewH;
+        }completion:^(BOOL finished) {
+            _isShowSelectList = YES;
+        }];
+    }else{
+        _isDownShow = YES;
+        viewRect = CGRectMake(rect.origin.x, CGRectGetMaxY(rect),viewW, 0);
+        self.tableView.frame = viewRect;
+        [UIView animateWithDuration:animateDuration animations:^{
+            self.tableView.height = viewH;
+        }completion:^(BOOL finished) {
+            _isShowSelectList = YES;
+        }];
+    }
 }
 
 - (void)coverClick
@@ -77,13 +94,26 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
     [self rotateArrowImg:NO];
     [self.cover removeFromSuperview];
     
-    [UIView animateWithDuration:animateDuration animations:^{
-        self.tableView.height = 0;
-    } completion:^(BOOL finished) {
-        self.arrowImg.transform = CGAffineTransformIdentity;
-        [self.tableView removeFromSuperview];
-        _isShowSelectList = NO;
-    }];
+    if (_isDownShow) {
+        [UIView animateWithDuration:animateDuration animations:^{
+            self.tableView.height = 0;
+        } completion:^(BOOL finished) {
+            self.arrowImg.transform = CGAffineTransformIdentity;
+            [self.tableView removeFromSuperview];
+            _isShowSelectList = NO;
+        }];
+    }else{
+        [UIView animateWithDuration:animateDuration animations:^{
+            UIWindow *window = [UIWindow getCurrentWindow];
+            CGRect rect = [self.selectBtn convertRect:self.selectBtn.bounds toView:window];
+            self.tableView.height = 0;
+            self.tableView.y = rect.origin.y;
+        } completion:^(BOOL finished) {
+            self.arrowImg.transform = CGAffineTransformIdentity;
+            [self.tableView removeFromSuperview];
+            _isShowSelectList = NO;
+        }];
+    }
 }
 
 - (void) rotateArrowImg:(BOOL) flg
@@ -159,7 +189,8 @@ static NSString * const selectListViewCellID = @"SelectListViewCell";
         _selectBtn = [[UIButton alloc] initWithFrame:self.bounds];
         _selectBtn.titleLabel.font = [UIFont systemFontOfSize:textFont];
         _selectBtn.adjustsImageWhenHighlighted = NO;
-        _selectBtn.titleEdgeInsets = UIEdgeInsetsMake(0, - _selectBtn.width * 0.4 , 0, 0);
+        //        _selectBtn.titleEdgeInsets = UIEdgeInsetsMake(0, - _selectBtn.width * 0.4 , 0, 0);
+        _selectBtn.titleEdgeInsets = UIEdgeInsetsMake(0,0, 0, 10);
         [_selectBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_selectBtn setBackgroundImage:[[BundleTool getImage:@"selectListView_input_back" FromBundle:LXFrameWorkBundle]resizableImageWithCapInsets:UIEdgeInsetsMake(4, 4, 4, 4) resizingMode:UIImageResizingModeStretch] forState:UIControlStateNormal];
         [_selectBtn addTarget:self action:@selector(DropDownList) forControlEvents:UIControlEventTouchUpInside];
