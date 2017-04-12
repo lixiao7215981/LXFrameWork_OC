@@ -25,6 +25,7 @@
     self.displayNav = NO;
     
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
+    
 }
 
 
