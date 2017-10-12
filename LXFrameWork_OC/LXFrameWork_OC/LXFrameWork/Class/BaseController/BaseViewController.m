@@ -44,12 +44,22 @@
     self.returnKeyHandler = [[IQKeyboardReturnKeyHandler alloc] initWithViewController:self];
     self.returnKeyHandler.lastTextFieldReturnKeyType = UIReturnKeyDone;
     
+    if (IS_IPAD) return;
+    // 检测当前屏幕是横屏还是竖屏
+    if (self.interfaceOrientation == 4 || self.interfaceOrientation == 3) {
+        _navBarHeight.constant = 32;
+        [self.navView setNavBarInterfaceOrientation:LeftRight];
+    }else if (self.interfaceOrientation == 1 || self.interfaceOrientation == 2 ){
+        _navBarHeight.constant = kTopHeight;
+        [self.navView setNavBarInterfaceOrientation:PortraitUpsideDown];
+    }
 }
 
 - (void)dealloc
 {
     self.returnKeyHandler = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"%@ is dealloc",self);
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -57,15 +67,15 @@
     [super viewWillAppear:animated];
     [self.view bringSubviewToFront:self.navView];
     
-    if (IS_IPAD) return;
-    // 检测当前屏幕是横屏还是竖屏
-    if (self.interfaceOrientation == 4 || self.interfaceOrientation == 3) {
-        _navBarHeight.constant = 32;
-        [self.navView setNavBarInterfaceOrientation:LeftRight];
-    }else if (self.interfaceOrientation == 1 || self.interfaceOrientation == 2 ){
-        _navBarHeight.constant = 64;
-        [self.navView setNavBarInterfaceOrientation:PortraitUpsideDown];
-    }
+//    if (IS_IPAD) return;
+//    // 检测当前屏幕是横屏还是竖屏
+//    if (self.interfaceOrientation == 4 || self.interfaceOrientation == 3) {
+//        _navBarHeight.constant = 32;
+//        [self.navView setNavBarInterfaceOrientation:LeftRight];
+//    }else if (self.interfaceOrientation == 1 || self.interfaceOrientation == 2 ){
+//        _navBarHeight.constant = 64;
+//        [self.navView setNavBarInterfaceOrientation:PortraitUpsideDown];
+//    }
 }
 
 #pragma mark - 设置左右中View
@@ -75,7 +85,7 @@
     [self.navigationController.navigationBar removeFromSuperview];
     [self.view addSubview:self.navView];
     [self.navView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
-    _navBarHeight = [self.navView autoSetDimension:ALDimensionHeight toSize:64];
+    _navBarHeight = [self.navView autoSetDimension:ALDimensionHeight toSize:kTopHeight];
 }
 
 - (void)setLeftView:(UIView *)leftView
@@ -143,6 +153,7 @@
     UIView *btnView = [UIView newAutoLayoutView];
     __block CGFloat btnW = 0;
     __block CGFloat btnH = 35;
+    __block CGFloat margin = 10;
     [btnArray enumerateObjectsUsingBlock:^(UIButton *btn, NSUInteger idx, BOOL *stop) {
         if (btn.width == 0 || btn.height == 0) {
             btn.size = CGSizeMake(btnH, btnH);
@@ -151,7 +162,7 @@
         [btnView addSubview:btn];
         [btn autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
         [btn autoSetDimensionsToSize:btn.size];
-        [btn autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:btn.width * idx];
+        [btn autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:(btn.width * idx + margin)];
         btnW += btn.width;
     }];
     btnView.size = CGSizeMake(btnW, 40);
@@ -242,7 +253,7 @@
         _navBarHeight.constant = 32;
         [self.navView setNavBarInterfaceOrientation:LeftRight];
     }else if (interfaceOrientation == 1 || interfaceOrientation == 2 ){
-        _navBarHeight.constant = 64;
+        _navBarHeight.constant = kTopHeight;
         [self.navView setNavBarInterfaceOrientation:PortraitUpsideDown];
     }
 }

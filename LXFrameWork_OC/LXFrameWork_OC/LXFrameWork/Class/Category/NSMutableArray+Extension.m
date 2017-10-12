@@ -13,10 +13,9 @@
 - (NSString *)toStringSeparatedByComma
 {
     NSMutableString *commaStr = [NSMutableString string];
-    NSLog(@"%@",self);
     [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSString *str;
-        if (obj != nil && [obj isKindOfClass:[NSString class]]) {
+        if (obj != nil) {
             str = [NSString stringWithFormat:@"%@",obj];
         }
         if (str && str.length) {

@@ -9,11 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "LXSingleton.h"
 
-typedef enum Sex{
+typedef enum {
     defaultBase,
     writeBase,
     blackBase
-} navBarBackColor;
+} NavBarBackColor;
+
+typedef enum {
+    statusBarStyleDefault         = 0,
+    statusBarStyleLightContent    = 1,
+    statusBarViewControllerCustom  = 2,
+    
+} StatusBarStyle;
 
 @interface LXFrameWorkManager : NSObject
 LXSingletonH(LXFrameWorkManager);
@@ -41,11 +48,11 @@ LXSingletonH(LXFrameWorkManager);
 /**
  *  设置全局statusBar 颜色
  */
-@property (nonatomic,assign) UIStatusBarStyle statusBarStyle;
+@property (nonatomic,assign) StatusBarStyle statusBarStyle;
 /**
  *  返回按钮的颜色
  */
-@property (nonatomic,assign) navBarBackColor backState;
+@property (nonatomic,assign) NavBarBackColor backState;
 /**
  *  异常信息邮件接收者（添加多个收件人以逗号隔开）
  *  例： lxiao723@163.com,1019661666@qq.com

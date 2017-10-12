@@ -48,7 +48,7 @@ LXSingletonM(LXFrameWorkManager);
     }
 }
 
-- (navBarBackColor)backState
+- (NavBarBackColor)backState
 {
     if (_backState == defaultBase || _backState == blackBase) {
         return blackBase;

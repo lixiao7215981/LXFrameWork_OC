@@ -8,6 +8,7 @@
 
 #import "NavigationBar.h"
 #import "LXFrameWorkManager.h"
+#import "LXFrameWorkDefine.h"
 #import <PureLayout.h>
 
 // NavBar最下边 Line 的颜色
@@ -41,7 +42,7 @@
         _btnView = [UIView newAutoLayoutView];
         _btnView.backgroundColor = [UIColor clearColor];
         [self addSubview:_btnView];
-        NSArray * array = [_btnView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(20, 0, 0, 0)];
+        NSArray * array = [_btnView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(kStatusBarHeight, 0, 0, 0)];
         _btnViewEdgesTop = [array firstObject];
         
         // 设置底部线
@@ -99,9 +100,9 @@
     [_btnView addSubview:centerView];
     [centerView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [centerView autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    //    centerView.backgroundColor = [UIColor yellowColor];
+//        centerView.backgroundColor = [UIColor yellowColor];
     //    NSLog(@"centerViewRect = %@",NSStringFromCGRect(rect));
-    [centerView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ? 200 :rect.size.width, rect.size.height == 0 ? (_btnViewEdgesTop.constant == 0 ? 32 : 44) : rect.size.height)];
+    [centerView autoSetDimensionsToSize:CGSizeMake(rect.size.width == 0 ? (_btnViewEdgesTop.constant == 0 ? 500 : 200) :rect.size.width, rect.size.height == 0 ? (_btnViewEdgesTop.constant == 0 ? 32 : 44) : rect.size.height)];
 }
 
 - (void) setScrollNavigationBarBackColor:(UIColor *) color
@@ -133,7 +134,7 @@
 - (void) setNavBarInterfaceOrientation:(NavBarInterface)interface
 {
     if (interface == PortraitUpsideDown) {
-        _btnViewEdgesTop.constant = 20;
+        _btnViewEdgesTop.constant = kStatusBarHeight;
     }else if(interface == LeftRight){
         _btnViewEdgesTop.constant = 0;
     }

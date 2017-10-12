@@ -41,20 +41,36 @@
 #define IS_RETINA   ([[UIScreen mainScreen] scale] >= 2.0)
 
 /*-------- INCHES TYPE ---------*/
-#define IS_IPHONE_3_5_INCH (IS_IPHONE && SCREEN_MAX_LENGTH == 480.0)
-#define IS_IPHONE_4_0_INCH (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
-#define IS_IPHONE_4_7_INCH (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
-#define IS_IPHONE_5_5_INCH (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+#define IS_IPHONE_3_5_INCH (IS_IPHONE && SCREEN_MAX_LENGTH == 480.0)    //  4/4s
+#define IS_IPHONE_4_0_INCH (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)    //  5/5s/5c
+#define IS_IPHONE_4_7_INCH (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)    //  6/6s/7/8
+#define IS_IPHONE_5_5_INCH (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)    //  6+/6s+/7+/8+
+#define IS_IPHONE_5_8_INCH (IS_IPHONE && SCREEN_MAX_LENGTH == 812.0)    //  X
 
 #define IS_IPHONE_3_5_INCH_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH <= 480.0)
 #define IS_IPHONE_4_0_INCH_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH <= 568.0)
 #define IS_IPHONE_4_7_INCH_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH <= 667.0)
 #define IS_IPHONE_5_5_INCH_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH <= 736.0)
+#define IS_IPHONE_5_8_INCH_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH <= 812.0)
 
 #define IS_IPHONE_3_5_INCH_OR_GREATER (IS_IPHONE && SCREEN_MAX_LENGTH >= 480.0)
 #define IS_IPHONE_4_0_INCH_OR_GREATER (IS_IPHONE && SCREEN_MAX_LENGTH >= 568.0)
 #define IS_IPHONE_4_7_INCH_OR_GREATER (IS_IPHONE && SCREEN_MAX_LENGTH >= 667.0)
 #define IS_IPHONE_5_5_INCH_OR_GREATERE (IS_IPHONE && SCREEN_MAX_LENGTH >= 736.0)
+#define IS_IPHONE_5_8_INCH_OR_GREATERE (IS_IPHONE && SCREEN_MAX_LENGTH >= 812.0)
+
+/*-------- INCHES MODEL ---------*/
+#define IS_IPHONE_4_4S          IS_IPHONE_3_5_INCH
+#define IS_IPHONE_5_5S_5C       IS_IPHONE_4_0_INCH
+#define IS_IPHONE_6_6S_7_8      IS_IPHONE_4_7_INCH
+#define IS_IPHONE_6P_6SP_7P_8P  IS_IPHONE_5_5_INCH
+#define IS_IPHONE_X             IS_IPHONE_5_8_INCH
+
+/*-------- IPHONE X  ---------*/
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavBarHeight 44.0
+#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define kTopHeight (kStatusBarHeight + kNavBarHeight)
 
 /*-------- NOTIFICATION ---------*/
 #define kNotificationCenter [NSNotificationCenter defaultCenter]

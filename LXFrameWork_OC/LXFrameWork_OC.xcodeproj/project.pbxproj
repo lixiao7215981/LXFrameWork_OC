@@ -669,7 +669,6 @@
 			isa = PBXGroup;
 			children = (
 				4EC4F71C1B4E2A4500ACEE5F /* Controller */,
-				4EC4F7231B4E2A4500ACEE5F /* Lib */,
 				4EC4F72E1B4E2A4500ACEE5F /* StoryBoard */,
 				4EC4F7301B4E2A4500ACEE5F /* System */,
 			);
@@ -783,13 +782,6 @@
 				4EE45C551B7356DC00C30B7D /* MainTableViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		4EC4F7231B4E2A4500ACEE5F /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lib;
 			sourceTree = "<group>";
 		};
 		4EC4F72E1B4E2A4500ACEE5F /* StoryBoard */ = {

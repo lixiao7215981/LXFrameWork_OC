@@ -172,10 +172,18 @@
 
 #pragma mark - 设置状态栏颜色
 
+- (UIViewController *)childViewControllerForStatusBarStyle{
+    LXFrameWorkManager *manager = [LXFrameWorkManager sharedLXFrameWorkManager];
+    if (manager.statusBarStyle == statusBarViewControllerCustom) {
+        return self.topViewController;
+    }
+    return nil;
+}
+
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     LXFrameWorkManager *manager = [LXFrameWorkManager sharedLXFrameWorkManager];
-    return manager.statusBarStyle;
+    return (UIStatusBarStyle)manager.statusBarStyle;
 }
 
 #pragma mark - 设置页面是否支持横竖屏操作

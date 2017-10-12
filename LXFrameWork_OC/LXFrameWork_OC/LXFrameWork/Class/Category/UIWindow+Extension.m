@@ -40,7 +40,12 @@
 
 + (UIWindow *)getCurrentWindow
 {
-    return [[UIApplication sharedApplication].windows lastObject];
+    NSArray *windows = [UIApplication sharedApplication].windows;
+    for(UIWindow *window in [windows reverseObjectEnumerator]) {
+        if ([window isMemberOfClass:[UIWindow class]] && CGRectEqualToRect(window.bounds, [UIScreen mainScreen].bounds))
+            return window;
+    }
+    return [UIApplication sharedApplication].keyWindow;
 }
 
 @end
